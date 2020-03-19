@@ -278,19 +278,28 @@ namespace UplanTest
 
 
 
-            var tasksonMon = col.Find(Query.EQ("DueDate", Monday));
+           var tasksonMon = col.Find(Query.EQ("DueDate", Monday));
+            //var tasksonMon = col.Find(x => x.DueDate == Monday);
 
+            //var tasksonMon = col.FindAll().Where(x => x.DueDate==Monday);
             var tasksonTue = col.Find(Query.EQ("DueDate", Tuesday));
+            //var tasksonTue = col.Find(x => x.DueDate == Tuesday);
 
-            var tasksonWed = col.Find(Query.EQ("DueDate", Wednesday));
+           var tasksonWed = col.Find(Query.EQ("DueDate", Wednesday));
+           // var tasksonWed = col.Find(x => x.DueDate == Wednesday);
 
             var tasksonThu = col.Find(Query.EQ("DueDate", Thursday));
+           // var tasksonThu = col.Find(x => x.DueDate == Thursday);
 
-            var tasksonFri = col.Find(Query.EQ("DueDate", Friday));
+             var tasksonFri = col.Find(Query.EQ("DueDate", Friday));
+            //var tasksonFri = col.FindAll().Where(x => x.DueDate == Friday);
+          //  var tasksonFri = col.Find(x => x.DueDate == Friday);
 
             var tasksonSat = col.Find(Query.EQ("DueDate", Saturday));
+           // var tasksonSat = col.Find(x => x.DueDate == Saturday);
 
             var tasksonSun = col.Find(Query.EQ("DueDate", Sunday));
+           // var tasksonSun = col.Find(x => x.DueDate == Monday);
 
 
 
@@ -410,9 +419,9 @@ namespace UplanTest
 
 
 
+            int test = tasksonMon.Count<SchoolTask>();
 
-
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (test >= rang+1)
 
             {
 
@@ -449,7 +458,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -479,7 +488,7 @@ namespace UplanTest
 
             rang = 1;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang+1)
 
             {
 
@@ -515,7 +524,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -547,7 +556,7 @@ namespace UplanTest
 
             rang = 2;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang+1)
 
             {
 
@@ -583,7 +592,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -615,7 +624,7 @@ namespace UplanTest
 
             rang = 3;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -651,7 +660,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -679,7 +688,7 @@ namespace UplanTest
 
             rang = 4;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -715,7 +724,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -745,7 +754,7 @@ namespace UplanTest
 
             rang = 5;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -781,7 +790,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -811,7 +820,7 @@ namespace UplanTest
 
             rang = 6;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -847,7 +856,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -877,7 +886,7 @@ namespace UplanTest
 
             rang = 7;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -913,7 +922,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -943,7 +952,7 @@ namespace UplanTest
 
             rang = 8;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -979,7 +988,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -1009,7 +1018,7 @@ namespace UplanTest
 
             rang = 9;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -1045,7 +1054,7 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonMon.Count<SchoolTask>() >= rang + 1)
 
             {
 
@@ -1081,17 +1090,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue1.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue1.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue1.BackgroundColor = Color.FromHex(colour);
 
@@ -1117,15 +1126,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1149,17 +1158,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue2.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue2.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue2.BackgroundColor = Color.FromHex(colour);
 
@@ -1185,15 +1194,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1217,17 +1226,17 @@ namespace UplanTest
 
             rang = 2;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue3.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue3.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue3.BackgroundColor = Color.FromHex(colour);
 
@@ -1253,15 +1262,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>()>=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1285,11 +1294,11 @@ namespace UplanTest
 
             rang = 3;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
@@ -1321,15 +1330,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1349,17 +1358,17 @@ namespace UplanTest
 
             rang = 4;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue5.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue5.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue5.BackgroundColor = Color.FromHex(colour);
 
@@ -1385,15 +1394,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1415,17 +1424,17 @@ namespace UplanTest
 
             rang = 5;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue6.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue6.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue6.BackgroundColor = Color.FromHex(colour);
 
@@ -1451,15 +1460,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1481,17 +1490,17 @@ namespace UplanTest
 
             rang = 6;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue7.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue7.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue7.BackgroundColor = Color.FromHex(colour);
 
@@ -1517,15 +1526,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1547,17 +1556,17 @@ namespace UplanTest
 
             rang = 7;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() != 0)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue8.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue8.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue8.BackgroundColor = Color.FromHex(colour);
 
@@ -1583,15 +1592,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1613,17 +1622,17 @@ namespace UplanTest
 
             rang = 8;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() != 0)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue9.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue9.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue9.BackgroundColor = Color.FromHex(colour);
 
@@ -1649,15 +1658,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1679,17 +1688,17 @@ namespace UplanTest
 
             rang = 9;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() != 0)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null && (tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    tue10.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    tue10.Text = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonTue.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     tue10.BackgroundColor = Color.FromHex(colour);
 
@@ -1715,15 +1724,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonTue.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonTue.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonTue.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1751,17 +1760,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>()>=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed1.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed1.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed1.BackgroundColor = Color.FromHex(colour);
 
@@ -1787,15 +1796,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1819,17 +1828,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed2.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed2.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed2.BackgroundColor = Color.FromHex(colour);
 
@@ -1855,15 +1864,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1887,17 +1896,17 @@ namespace UplanTest
 
             rang = 2;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed3.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed3.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed3.BackgroundColor = Color.FromHex(colour);
 
@@ -1923,15 +1932,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -1955,17 +1964,17 @@ namespace UplanTest
 
             rang = 3;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed4.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed4.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed4.BackgroundColor = Color.FromHex(colour);
 
@@ -1991,15 +2000,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2019,17 +2028,17 @@ namespace UplanTest
 
             rang = 4;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed5.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed5.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed5.BackgroundColor = Color.FromHex(colour);
 
@@ -2055,15 +2064,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2085,17 +2094,17 @@ namespace UplanTest
 
             rang = 5;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed6.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed6.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed6.BackgroundColor = Color.FromHex(colour);
 
@@ -2121,15 +2130,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2151,17 +2160,17 @@ namespace UplanTest
 
             rang = 6;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed7.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed7.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed7.BackgroundColor = Color.FromHex(colour);
 
@@ -2187,15 +2196,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2217,17 +2226,17 @@ namespace UplanTest
 
             rang = 7;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed8.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed8.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed8.BackgroundColor = Color.FromHex(colour);
 
@@ -2253,15 +2262,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2283,17 +2292,17 @@ namespace UplanTest
 
             rang = 8;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed9.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed9.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed9.BackgroundColor = Color.FromHex(colour);
 
@@ -2319,15 +2328,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2349,17 +2358,17 @@ namespace UplanTest
 
             rang = 9;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null && (tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    wed10.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    wed10.Text = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonWed.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     wed10.BackgroundColor = Color.FromHex(colour);
 
@@ -2385,15 +2394,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonWed.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonWed.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonWed.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2421,17 +2430,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu1.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu1.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu1.BackgroundColor = Color.FromHex(colour);
 
@@ -2457,15 +2466,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2489,17 +2498,17 @@ namespace UplanTest
 
 
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu2.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu2.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu2.BackgroundColor = Color.FromHex(colour);
 
@@ -2525,15 +2534,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2557,17 +2566,17 @@ namespace UplanTest
 
             rang = 2;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu3.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu3.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu3.BackgroundColor = Color.FromHex(colour);
 
@@ -2593,15 +2602,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2625,17 +2634,17 @@ namespace UplanTest
 
             rang = 3;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu4.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu4.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu4.BackgroundColor = Color.FromHex(colour);
 
@@ -2661,15 +2670,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2689,17 +2698,17 @@ namespace UplanTest
 
             rang = 4;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu5.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu5.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu5.BackgroundColor = Color.FromHex(colour);
 
@@ -2725,15 +2734,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2755,17 +2764,17 @@ namespace UplanTest
 
             rang = 5;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu6.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu6.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu6.BackgroundColor = Color.FromHex(colour);
 
@@ -2791,15 +2800,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2821,17 +2830,17 @@ namespace UplanTest
 
             rang = 6;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu7.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu7.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu7.BackgroundColor = Color.FromHex(colour);
 
@@ -2857,15 +2866,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2887,17 +2896,17 @@ namespace UplanTest
 
             rang = 7;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu8.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu8.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu8.BackgroundColor = Color.FromHex(colour);
 
@@ -2923,15 +2932,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -2953,17 +2962,17 @@ namespace UplanTest
 
             rang = 8;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu9.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu9.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu9.BackgroundColor = Color.FromHex(colour);
 
@@ -2989,15 +2998,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3019,17 +3028,17 @@ namespace UplanTest
 
             rang = 9;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null && (tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    thu10.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    thu10.Text = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonThu.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     thu10.BackgroundColor = Color.FromHex(colour);
 
@@ -3055,15 +3064,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonThu.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonThu.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonThu.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3087,17 +3096,18 @@ namespace UplanTest
 
             rang = 0;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+
+            if (tasksonFri.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri1.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri1.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri1.BackgroundColor = Color.FromHex(colour);
 
@@ -3123,15 +3133,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >=rang+1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3149,17 +3159,17 @@ namespace UplanTest
 
             rang = 1;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri2.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri2.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri2.BackgroundColor = Color.FromHex(colour);
 
@@ -3185,15 +3195,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3211,17 +3221,17 @@ namespace UplanTest
 
             rang = 2;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri3.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri3.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri3.BackgroundColor = Color.FromHex(colour);
 
@@ -3247,15 +3257,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3273,17 +3283,17 @@ namespace UplanTest
 
             rang = 3;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri4.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri4.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri4.BackgroundColor = Color.FromHex(colour);
 
@@ -3309,15 +3319,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3335,17 +3345,17 @@ namespace UplanTest
 
             rang = 4;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri5.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri5.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri5.BackgroundColor = Color.FromHex(colour);
 
@@ -3371,15 +3381,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3397,17 +3407,17 @@ namespace UplanTest
 
             rang = 5;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri6.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri6.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri6.BackgroundColor = Color.FromHex(colour);
 
@@ -3433,15 +3443,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3459,17 +3469,17 @@ namespace UplanTest
 
             rang = 6;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri7.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri7.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri7.BackgroundColor = Color.FromHex(colour);
 
@@ -3495,15 +3505,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3521,17 +3531,17 @@ namespace UplanTest
 
             rang = 7;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri8.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri8.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri8.BackgroundColor = Color.FromHex(colour);
 
@@ -3557,15 +3567,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3583,17 +3593,17 @@ namespace UplanTest
 
             rang = 8;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri9.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri9.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri9.BackgroundColor = Color.FromHex(colour);
 
@@ -3619,15 +3629,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
@@ -3645,17 +3655,17 @@ namespace UplanTest
 
             rang = 9;
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null && (tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null && (tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "PERSONAL" && MeView || tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc == "SCHOOL" && WorkView))
 
                 {
 
-                    fri10.Text = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
+                    fri10.Text = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryDesc;
 
-                    var colour = tasksonMon.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
+                    var colour = tasksonFri.ElementAt<SchoolTask>(rang).TaskCategoryColourDesc;
 
                     fri10.BackgroundColor = Color.FromHex(colour);
 
@@ -3681,15 +3691,15 @@ namespace UplanTest
 
             //string message = "pas de task";
 
-            if (tasksonMon.Count<SchoolTask>() != 0)
+            if (tasksonFri.Count<SchoolTask>() >= rang + 1)
 
             {
 
-                if (tasksonMon.ElementAt<SchoolTask>(rang) != null)
+                if (tasksonFri.ElementAt<SchoolTask>(rang) != null)
 
                 {
 
-                    message = tasksonMon.ElementAt<SchoolTask>(rang).SubDesc;
+                    message = tasksonFri.ElementAt<SchoolTask>(rang).SubDesc;
 
                 }
 
