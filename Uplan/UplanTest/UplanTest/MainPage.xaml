@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Uplan"
+             
+             
+             MasterBehavior="SplitOnLandscape"
+             x:Class="UplanTest.MainPage">
+    
+
+    <MasterDetailPage.Master>
+        
+        <ContentPage Padding="10"  Title="Uplan" BackgroundImageSource="Assets/bleu.png">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Color x:Key="txtColor">Red</Color>
+                    <Color x:Key="txtBgColor"></Color>
+                    <Button x:Key="buttonstyle" BorderWidth="4"></Button>
+                    
+                    <Style TargetType="Button" x:Key="ButtonStyle"/>
+
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            <ContentPage.Content>
+                <Grid Margin="20,30,40,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                  
+                    <ImageButton Source="Assets/Calendar.png" HeightRequest="45" BorderWidth="4" Grid.Row="0" Grid.Column="0" BackgroundColor="{StaticResource txtBgColor}"  Clicked="Button_Clicked1"  CornerRadius="5"></ImageButton>
+                    <Label Text="Calendar" TextColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/task.png" Grid.Row="1" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}"  Clicked="Button_Clicked2"></ImageButton>
+                    <Label Text="Add Task"  TextColor="White" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/eye2.png" Grid.Row="2" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}"  Clicked="Button_Clicked3"></ImageButton>
+                    <Label Text="See Tasks" TextColor="White" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+
+
+                    <ImageButton Source="Assets/FoodC2.png" Grid.Row="3" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked4"></ImageButton>
+                    <Label Text="Food Plan" TextColor="White" Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/FoodFish.png" Grid.Row="4" HeightRequest="45"   BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked5"></ImageButton>
+                    <Label Text="Food Choices" TextColor="White" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/shopping.png"  Grid.Row="5" HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked6"></ImageButton>
+                    <Label Text="Shopping List" Grid.Row="5" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/yoga.png" Grid.Row="6" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked7"></ImageButton>
+                    <Label Text="My Well Being" Grid.Row="6" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/settings.png"  HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="7"></ImageButton>
+                    <Label Text="About Me" Grid.Row="7" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="8"></ImageButton>
+                    <Label Text="About Us" Grid.Row="8" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                    
+                    
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="10" >
+            <ContentPage.Content>
+
+                <Grid BackgroundColor="AliceBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Welcome to:" Grid.Row="0" Grid.Column="0" TextColor="CadetBlue" FontSize="35" Grid.ColumnSpan="3"/>
+                    <Image Source="Assets/default.png" HeightRequest="450" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Grid.Column="1"/>
+
+                    <Label Text="We hope our application will help you in your daily activities " Grid.Row="6" Grid.Column="1" TextColor="BlueViolet" FontSize="20" Grid.ColumnSpan="3"/>
+                    <Label Text="Start your organised life today by exploring our navigation menu on the left hand side" Grid.Row="7" Grid.Column="1" TextColor="CadetBlue" FontSize="20" Grid.ColumnSpan="3"/>
+
+
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+    
+
+</MasterDetailPage>

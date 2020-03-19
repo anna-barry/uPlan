@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="Assets/uplanteam.png"
+             x:Class="UplanTest.AboutUs">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+            </Grid.RowDefinitions>
+
+
+            <Button Text="Hades"  Grid.Column="1" Grid.Row="0" Clicked="HadesClicked"/>
+            <Button Text="Athena" Grid.Column="0" Grid.Row="0" Clicked="AthenaClicked" />
+            <Button Text="Hera"  Grid.Column="2" Grid.Row="0" Clicked="HeraClicked"/>
+            <Button Text="Apollon" Grid.Column="3" Grid.Row="0" Clicked="ApollonClicked" />
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>
