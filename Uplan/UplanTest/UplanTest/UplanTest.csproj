@@ -17,46 +17,46 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="MainPage.xaml.cs">
+    <Compile Update="Entry and main page\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="WeekFood.xaml.cs">
+    <Compile Update="Food\WeekFood.xaml.cs">
       <DependentUpon>WeekFood.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AboutMe.xaml">
+    <EmbeddedResource Update="About\AboutMe.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AboutUs.xaml">
+    <EmbeddedResource Update="About\AboutUs.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AccountPage.xaml">
+    <EmbeddedResource Update="Entry and main page\AccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AddEvent.xaml">
+    <EmbeddedResource Update="Tasks and Calendar\AddEvent.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="EntryPage.xaml">
+    <EmbeddedResource Update="Entry and main page\EntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="FoodPlan.xaml">
+    <EmbeddedResource Update="Food\FoodPlan.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="FoodW.xaml">
+    <EmbeddedResource Update="Food\FoodW.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SeeTasks.xaml">
+    <EmbeddedResource Update="Tasks and Calendar\SeeTasks.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ShoppingList.xaml">
+    <EmbeddedResource Update="Food\ShoppingList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="WeekFood.xaml">
+    <EmbeddedResource Update="Food\WeekFood.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="WellBeing.xaml">
+    <EmbeddedResource Update="Well Being\WellBeing.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
