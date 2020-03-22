@@ -20,7 +20,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -56,25 +57,26 @@
 
                 <Label Text="Add Task" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="Red" />
                 <Label Text="Type of task" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
-                <Picker x:Name="Task_type" WidthRequest="200" Grid.Row="2" Grid.Column="1"   /> 
-
-                <Label Text="Subtype of task"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"/>
-                <Picker x:Name="Task_subtype" WidthRequest="200" Grid.Row="3" Grid.Column="1" />
+           <!-- <Picker x:Name="Task_type"  Grid.Row="2" Grid.Column="1" FontSize="10"  /> -->
+            <Button x:Name="Pers" Text="Personal" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnPersonClicked"  BorderColor="BlueViolet"/>
+            <Button x:Name="Sch" Text="For School" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnWordClicked" BorderColor="BlueViolet" />
+            <Label Text="Subtype of task"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Picker x:Name="Task_subtype" Grid.Row="3" Grid.Column="1" FontSize="10" Grid.ColumnSpan="2"/>
 
                 <Label Text="Task Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" />
-                <Entry x:Name="Desc" WidthRequest="200" Placeholder="Task_Name" Grid.Row="4" Grid.Column="1" />
+            <Entry x:Name="Desc" WidthRequest="200" Placeholder="Task_Name" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
 
                 <Label Text="Task Description" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" />
-                <Entry x:Name="SubDesc" WidthRequest="200" Placeholder="Task_Description" Grid.Row="5" Grid.Column="1" />
+            <Entry x:Name="SubDesc" WidthRequest="400" Placeholder="Task_Description" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
 
                 <Label Text="Colour tag for task"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center"/>
-                <Picker x:Name="Task_colour" WidthRequest="200" Grid.Row="6" Grid.Column="1" />
+            <Picker x:Name="Task_colour" Grid.Row="6" Grid.Column="1" FontSize="10" Grid.ColumnSpan="2" />
 
                 <Label Text="How time consuming is this task?"  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center"/>
-                <Picker x:Name="Task_consuming" WidthRequest="200" Grid.Row="7" Grid.Column="1" />
+            <Picker x:Name="Task_consuming" Grid.Row="7" Grid.Column="1" FontSize="10" Grid.ColumnSpan="2" />
 
                 <Label Text="When is this event due?" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" />
-                <DatePicker x:Name="dp" Grid.Row="8" Grid.Column="1" DateSelected="DatePicker_DateSelected"/>
+            <DatePicker x:Name="dp" Grid.Row="8" Grid.Column="1" DateSelected="DatePicker_DateSelected"  Grid.ColumnSpan="2"/>
 
                 <!-- Button x:Name="BackButton" Clicked="Back_Click" Style="{StaticResource NavigationBackButtonNormalStyle}"/> -->
 
