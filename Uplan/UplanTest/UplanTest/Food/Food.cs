@@ -108,6 +108,71 @@ namespace UplanTest
                 }
                 ) ;
         }
+        
+        public static List<Food> GetAllTasks()
+        {
+            List<Food> res = new List<Food>();
+            var col = Database.db.GetCollection<Food>("EntriesforFood");
+            var result = col.Find(Query.All());
+
+            foreach (var test in result)
+            {
+                res.Add(test);
+            }
+            return res;
+
+        }
+
+        public static void InsertFood(User FoodWeekForUser,
+            ListEntry FoodforCategoryProtchoix1,
+            ListEntry FoodforCategoryProtchoix2,
+            ListEntry FoodforCategoryProtchoix3,
+            ListEntry FoodCategoryCarbchoix1,
+            ListEntry FoodCategoryCarbchoix2,
+            ListEntry FoodCategoryCarbchoix3,
+            ListEntry FoodCategoryVeggieschoix1,
+            ListEntry FoodCategoryVeggieschoix2,
+            ListEntry FoodCategoryVeggieschoix3,
+            string Description,
+            bool IsComplete,
+            DateTime DueDate)
+        {
+            // Get a collection (or create, if doesn't exist)
+            var col = Database.db.GetCollection<Food>("EntriesforFood");
+
+            col.EnsureIndex(x => x.FoodWeekForUser);
+            col.EnsureIndex(x => x.FoodCategoryDescProt1);
+            col.EnsureIndex(x => x.FoodCategoryDescProt2);
+            col.EnsureIndex(x => x.FoodCategoryDescProt3);
+            col.EnsureIndex(x => x.FoodCategoryDescCarb1);
+            col.EnsureIndex(x => x.FoodCategoryDescCarb2);
+            col.EnsureIndex(x => x.FoodCategoryDescCarb3);
+            col.EnsureIndex(x => x.FoodCategoryDescVeggies1);
+            col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
+            col.EnsureIndex(x => x.FoodCategoryDescVeggies3);
+            col.EnsureIndex(x => x.IsComplete);
+            col.EnsureIndex(x => x.DueDate);
+
+            col.Insert(
+                 new Food
+                 {
+                     FoodWeekForUser = MyUser.me,
+                     FoodforCategoryProtchoix1 = FoodforCategoryProtchoix1,
+                     FoodforCategoryProtchoix2 = FoodforCategoryProtchoix2,
+                     FoodforCategoryProtchoix3 = FoodforCategoryProtchoix3,
+                     FoodforCategoryCarbchoix1 = FoodCategoryCarbchoix1,
+                     FoodforCategoryCarbchoix2 = FoodCategoryCarbchoix2,
+                     FoodforCategoryCarbchoix3 = FoodCategoryCarbchoix3,
+                     FoodforCategoryVeggieschoix1 = FoodCategoryVeggieschoix1,
+                     FoodforCategoryVeggieschoix2 = FoodCategoryVeggieschoix2,
+                     FoodforCategoryVeggieschoix3 = FoodCategoryVeggieschoix3,
+
+                     Description = "Utiliser uPlan!",
+                     IsComplete = false,
+                     DueDate = DateTime.Now.AddDays(7)
+                 }
+                 );
+        }
 
         public Food()
         {
