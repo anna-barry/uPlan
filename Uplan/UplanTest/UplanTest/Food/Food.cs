@@ -109,7 +109,7 @@ namespace UplanTest
                 ) ;
         }
         
-        public static List<Food> GetAllTasks()
+        public static List<Food> GetAllFood()
         {
             List<Food> res = new List<Food>();
             var col = Database.db.GetCollection<Food>("EntriesforFood");
