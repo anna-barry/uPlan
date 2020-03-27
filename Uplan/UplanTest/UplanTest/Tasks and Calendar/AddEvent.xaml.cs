@@ -29,14 +29,14 @@ namespace UplanTest
 
         ListHelper eventype;
 
-        ListHelper eventsoutype;
-
         ListHelper coloursforevent;
 
         ListHelper timeconsuminglevel;
+        //TaskSubType = ListEntry.getEntryfromTypeAndCode("TASK_SUBTYPE_SC", "BY_HEART");
 
         Boolean pers=false;
         Boolean school=false;
+        public string subtype= "BY_HEART";
 
         public DateTime? FavoriteDay { get; set; }
 
@@ -48,111 +48,11 @@ namespace UplanTest
 
             InitializeComponent();
 
-
-
-            /*eventype = new ListHelper("TASK_CATEGORIES", -1, "");
-
-            // pListType, int pCurrentId, string pCurrentCode
-
-            Task_type.ItemsSource = eventype.DisplayList;
-
-            Task_type.SelectedIndex = eventype.CurrentIndex;
-
-            string sl = Convert.ToString(Task_type.SelectedItem);
-
-            
-            Task_type.SelectedIndexChanged += (sender, args) =>
-            {   
-                Task_subtype.ItemsSource = null;
-                string test = Convert.ToString(Task_type.SelectedItem);
-                OnPropertyChanged();
-
-                if (test== "Personal")
-
-                {
-
-                    eventsoutype = new ListHelper("TASK_SUBTYPE_PERS", -1, "");
-
-                    Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                    Task_subtype.SelectedIndex = eventsoutype.CurrentIndex; 
-
-                }
-
-                else
-
-                {
-
-                    eventsoutype = new ListHelper("TASK_SUBTYPE_SC", -1, "");
-
-                    Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                    Task_subtype.SelectedIndex = eventsoutype.CurrentIndex; 
-
-                }
-
-            };
-
-            if (sl == "Personal")
-
-            {
-
-                eventsoutype = new ListHelper("TASK_SUBTYPE_PERS", -1, "");
-
-                Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
-
-            }
-
-            else
-
-            {
-
-                eventsoutype = new ListHelper("TASK_SUBTYPE_SC", -1, "");
-
-                Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
-
-            }
-            
-
-
-            if(school)
-            {
-
-                eventsoutype = new ListHelper("TASK_SUBTYPE_SC", -1, "");
-
-                Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
-
-            }
-            else
-            {
-
-                eventsoutype = new ListHelper("TASK_SUBTYPE_PERS", -1, "");
-
-                Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-                Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
-
-            } */
-
-
             coloursforevent = new ListHelper("COLOURS", -1, "");
-
-            // pListType, int pCurrentId, string pCurrentCode
-
-            //Task_colour.ItemsSource = coloursforevent.CodeList;
             Task_colour.ItemsSource = coloursforevent.DisplayList;
-
             Task_colour.SelectedIndex = coloursforevent.CurrentIndex;
             string colorName2 = Task_colour.Items[Task_colour.SelectedIndex];
-            //Task_colour.TextColor(getColor(colorName2));
-            
-           // Task_colour.BackgroundColor = Color.FromHex(coloursforevent.CurrentDesc);
+         
 
             Task_colour.SelectedIndexChanged += (sender, args) =>
             {
@@ -164,17 +64,6 @@ namespace UplanTest
                 {
 
                     string colorName = Task_colour.Items[Task_colour.SelectedIndex];
-                    /* string colorName = Task_colour.SelectedIndex;
-                     //boxView.Color = nameToColor[colorName];
-                     Task_colour.BackgroundColor = Color.FromHex(colorName);
-                     //ColorTranslator 
-
-                     //Task_colour.BackgroundColor = ColorTranslator.FromHtml(Task_colour.Items[Task_colour.SelectedIndex]);
-                     var converter = new ColorTypeConverter();
-                     var test = converter.ConvertFromInvariantString(colorName);
-                     Task_colour.BackgroundColor = (Color) test;
-
-                     //Task_colour.BackgroundColor = (Color)(Task_colour.Items[Task_colour.SelectedIndex]); */
                     Task_colour.BackgroundColor = getColor(colorName);
 
                 }
@@ -194,18 +83,22 @@ namespace UplanTest
         async void OnButtonClicked(object sender, EventArgs args)
 
         {
-
-            var TaskCategory = ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", "PERSONAL");
-            if(school)
+            //ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", "PERSONAL"),
+            string subtyype = "TASK_SUBTYPE_PERS";
+            string tyype = "PERSONAL";
+            if (school)
             {
-                TaskCategory = ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", "SCHOOL");
+                subtyype = "TASK_SUBTYPE_SC";
+                tyype = "SCHOOL";
             }
+
             //eventype.ListEntryList[Task_type.SelectedIndex]
-            SchoolTask.InsertSchoolTask(MyUser.me, TaskCategory,
+            //TaskSubType = ListEntry.getEntryfromTypeAndCode("TASK_SUBTYPE_SC", "BY_HEART");
+            SchoolTask.InsertSchoolTask(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
 
                 coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
 
-                eventsoutype.ListEntryList[Task_subtype.SelectedIndex], Desc.Text, SubDesc.Text, false, test);
+                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test);
 
 
 
@@ -219,12 +112,10 @@ namespace UplanTest
             school = false;
             Pers.Text = "Adding personal Task or Event";
             Sch.Text = "For School";
-            eventsoutype = new ListHelper("TASK_SUBTYPE_PERS", -1, "");
-
-            Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-            Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
-
+            st1.Text = "Health appointment";
+            st2.Text = "Sport";
+            st3.Text = "Social life";
+            st4.Text = "Hobies";
 
         }
         async void OnWordClicked(object sender, EventArgs args)
@@ -234,14 +125,100 @@ namespace UplanTest
             school = true;
             Sch.Text = "Adding a work task";
             Pers.Text = "Personal";
-            eventsoutype = new ListHelper("TASK_SUBTYPE_SC", -1, "");
-
-            Task_subtype.ItemsSource = eventsoutype.DisplayList;
-
-            Task_subtype.SelectedIndex = eventsoutype.CurrentIndex;
+            st1.Text = "By heart";
+            st2.Text = "Small exercise";
+            st3.Text = "Big project";
+            st4.Text = "";
 
         }
 
+        async void Onsub1Clicked(object sender, EventArgs args)
+
+        {
+           if(school)
+            {
+                subtype = "BY_HEART";
+                st1.Text = "Subtype: By heart";
+                st2.Text = "Small exercise";
+                st3.Text = "Big project";
+                st4.Text = "";
+            }
+           else
+            {
+                subtype = "HEALTH";
+                st1.Text = "Subtype: Health appointment";
+                st2.Text = "Sport";
+                st3.Text = "Social life";
+                st4.Text = "Hobies";
+            }
+        }
+
+        async void Onsub2Clicked(object sender, EventArgs args)
+
+        {
+            if (school)
+            {
+                subtype = "EXERCICE";
+                st1.Text = "By heart";
+                st2.Text = "Subtype: Small exercise";
+                st3.Text = "Big project";
+                st4.Text = "";
+            }
+            else
+            {
+                subtype = "SPORT";
+                st1.Text = "Health appointment";
+                st2.Text = "Subtype: Sport";
+                st3.Text = "Social life";
+                st4.Text = "Hobies";
+            }
+
+
+        }
+        async void Onsub3Clicked(object sender, EventArgs args)
+
+        {
+            if (school)
+            {
+                subtype = "PROJECT";
+                st1.Text = "By heart";
+                st2.Text = "Small exercise";
+                st3.Text = "Subtype: Big project";
+                st4.Text = "";
+            }
+            else
+            {
+                subtype = "SOCIAL_LIFE";
+                st1.Text = "Health appointment";
+                st2.Text = "Sport";
+                st3.Text = "Subtype: Social life";
+                st4.Text = "Hobies";
+            }
+
+
+        }
+        async void Onsub4Clicked(object sender, EventArgs args)
+
+        {
+            if (school)
+            {
+                subtype = "";
+                st1.Text = "By heart";
+                st2.Text = "Small exercise";
+                st3.Text = "Big project";
+                st4.Text = "Click on a subtype";
+            }
+            else
+            {
+                subtype = "HOBIES";
+                st1.Text = "Health appointment";
+                st2.Text = "Sport";
+                st3.Text = "Social life";
+                st4.Text = "Subtype: Hobies";
+            }
+
+
+        }
 
         private DateTime test = DateTime.Now;
 
