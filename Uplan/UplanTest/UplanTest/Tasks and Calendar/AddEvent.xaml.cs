@@ -98,7 +98,7 @@ namespace UplanTest
 
                 coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
 
-                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test);
+                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
 
 
 
@@ -250,7 +250,7 @@ namespace UplanTest
             switch (col)
             {
                 case "Blue":
-                    res = Color.Beige;
+                    res = Color.Blue;
                     break;
                 case "Green":
                     res = Color.Green;
@@ -262,7 +262,7 @@ namespace UplanTest
                     res = Color.Purple;
                     break;
                 case "Beige":
-                    res = Color.Purple;
+                    res = Color.Beige;
                     break;
                 case "Blue Violet":
                     res = Color.BlueViolet;
@@ -271,7 +271,7 @@ namespace UplanTest
                     res = Color.Brown;
                     break;
                 case "Coral":
-                    res = Color.Beige;
+                    res = Color.Coral;
                     break;
                 case "Dark blue":
                     res = Color.DarkBlue;

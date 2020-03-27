@@ -106,19 +106,19 @@ namespace UplanTest
 
             //DEFINIR LES AUTRES JOURS DE LA SEMAINE
 
-            DateTime Monday=localTime;
+            var Monday=localTime;
 
-            DateTime Tuesday = localTime;
+            var Tuesday = localTime;
 
-            DateTime Wednesday = localTime;
+            var Wednesday = localTime;
 
-            DateTime Thursday = localTime;
+            var Thursday = localTime;
 
-            DateTime Friday = localTime;
+            var Friday = localTime;
 
-            DateTime Saturday = localTime;
+            var Saturday = localTime;
 
-            DateTime Sunday = localTime;
+            var Sunday = localTime;
 
 
 
@@ -126,7 +126,7 @@ namespace UplanTest
 
             {
 
-                Monday = localTime;
+               // Monday = localTime.Day;
 
                 Tuesday = localTime.AddDays(1);
 
@@ -146,7 +146,7 @@ namespace UplanTest
 
             {
 
-                Tuesday = localTime;
+                //Tuesday = localTime.Day;
 
                 Monday = localTime.AddDays(-1);
 
@@ -166,7 +166,7 @@ namespace UplanTest
 
             {
 
-                Wednesday = localTime;
+               // Wednesday = localTime;
 
                 Monday = localTime.AddDays(-2);
 
@@ -186,7 +186,7 @@ namespace UplanTest
 
             {
 
-                Thursday = localTime;
+               // Thursday = localTime;
 
                 Monday = localTime.AddDays(-3);
 
@@ -206,7 +206,7 @@ namespace UplanTest
 
             {
 
-                Friday = localTime;
+                //Friday = localTime.Day;
 
                 Monday = localTime.AddDays(-4);
 
@@ -238,7 +238,7 @@ namespace UplanTest
 
                 Saturday = localTime.AddDays(-1);
 
-                Sunday = localTime;
+                //Sunday = localTime.Day;
 
             }
 
@@ -276,29 +276,29 @@ namespace UplanTest
 
             //Database.Initiate();
 
+        
 
-
-           var tasksonMon = col.Find(Query.EQ("DueDate", Monday));
+           var tasksonMon = col.Find(Query.EQ("DueDate", Monday.Date));
             //var tasksonMon = col.Find(x => x.DueDate == Monday);
 
             //var tasksonMon = col.FindAll().Where(x => x.DueDate==Monday);
-            var tasksonTue = col.Find(Query.EQ("DueDate", Tuesday));
+            var tasksonTue = col.Find(Query.EQ("DueDate", Tuesday.Date));
             //var tasksonTue = col.Find(x => x.DueDate == Tuesday);
 
-           var tasksonWed = col.Find(Query.EQ("DueDate", Wednesday));
+           var tasksonWed = col.Find(Query.EQ("DueDate", Wednesday.Date));
            // var tasksonWed = col.Find(x => x.DueDate == Wednesday);
 
-            var tasksonThu = col.Find(Query.EQ("DueDate", Thursday));
+            var tasksonThu = col.Find(Query.EQ("DueDate", Thursday.Date));
            // var tasksonThu = col.Find(x => x.DueDate == Thursday);
 
-            // var tasksonFri = col.Find(Query.EQ("DueDate", Friday));
-            var tasksonFri = col.FindAll().Where(x => x.DueDate == Friday);
+            var tasksonFri = col.Find(Query.EQ("DueDate", Friday.Date));
+            //var tasksonFri = col.FindAll().Where(x => x.DueDate == Friday);
           //  var tasksonFri = col.Find(x => x.DueDate == Friday);
 
-            var tasksonSat = col.Find(Query.EQ("DueDate", Saturday));
+            var tasksonSat = col.Find(Query.EQ("DueDate", Saturday.Date));
            // var tasksonSat = col.Find(x => x.DueDate == Saturday);
 
-            var tasksonSun = col.Find(Query.EQ("DueDate", Sunday));
+            var tasksonSun = col.Find(Query.EQ("DueDate", Sunday.Date));
            // var tasksonSun = col.Find(x => x.DueDate == Monday);
 
 
@@ -5029,7 +5029,7 @@ namespace UplanTest
 
 
 
-            var tasktoday = col.Find(Query.EQ("DueDate", localTime));
+            var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date));
 
             var nbtask = tasktoday.Count();
 
