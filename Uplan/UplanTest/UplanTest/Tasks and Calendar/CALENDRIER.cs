@@ -5029,7 +5029,8 @@ namespace UplanTest
 
 
 
-            var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date));
+            var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date
+                ));
 
             var nbtask = tasktoday.Count();
 
