@@ -75,13 +75,14 @@
 
 
 
-            <ImageButton Source="save).png" Grid.Row="9"  HorizontalOptions="Center"
+          <!--  <ImageButton Source="save).png" Grid.Row="9"  HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" HeightRequest="10" 
-                    Clicked="OnButtonClicked"></ImageButton>
-            <Button x:Name="save" Text="Save" Grid.Row="9" Grid.Column="3"  HorizontalOptions="Center"
-                    VerticalOptions="Center"  TextColor="MediumVioletRed" BorderColor="CornflowerBlue" 
-                    Clicked="OnButtonClicked"></Button>
-
+                    Clicked="OnButtonClicked"></ImageButton> 
+            <Button x:Name="save" Text="Save      " Grid.Row="9" Grid.Column="3"  HorizontalOptions="Center"
+                    VerticalOptions="Center"  TextColor="MediumVioletRed" BorderColor="AliceBlue" 
+                    ></Button> -->
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="90" WidthRequest="60" Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"  ></ImageButton>
+            
 
 
 
