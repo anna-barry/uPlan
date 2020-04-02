@@ -418,7 +418,7 @@ namespace UplanTest
 
                 Button mon1 = new Button();
 
-                int rang = 0;
+              
             bool conti1 = tasksonMon.Count<SchoolTask>() >= 1;
             bool continuee = false;
             if(conti1)
