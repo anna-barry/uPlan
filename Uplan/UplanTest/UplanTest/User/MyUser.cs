@@ -8,7 +8,7 @@ namespace UplanTest
     // This call is static and is to make easy call for the current user.
     // For example, in rest of code can reference MyUser.me.Name, MyUser.me.EmailAddress, MyUser.me.ShoppingDayDesc etc...
     // The Initiate call is done in Database.Initiate and it will be called in User.UpdateMyUser.
-    // Keeping this MyUser class updated allows use to reference these variables rather than reading database each time (which takes time).
+    
     public static class MyUser
     {
         public static User me;

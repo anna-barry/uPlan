@@ -102,14 +102,12 @@ namespace UplanTest
                     FoodforCategoryVeggieschoix2 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BUTTERNUT"),
                     FoodforCategoryVeggieschoix3 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BEETROOT"),
 
-                    //Description = "Utiliser uPlan!",
-                    //IsComplete=false,
-                    //DueDate= DateTime.Now.AddDays(7)
+                    
                 }
                 ) ;
         }
         
-        public static List<Food> GetAllFood()
+        /*public static List<Food> GetAllFood()
         {
             List<Food> res = new List<Food>();
             var col = Database.db.GetCollection<Food>("EntriesforFood");
@@ -121,9 +119,9 @@ namespace UplanTest
             }
             return res;
 
-        }
+        }*/
 
-        public static void InsertFood(User FoodWeekForUser,
+        public void InsertFood(
             ListEntry FoodforCategoryProtchoix1,
             ListEntry FoodforCategoryProtchoix2,
             ListEntry FoodforCategoryProtchoix3,
@@ -132,15 +130,12 @@ namespace UplanTest
             ListEntry FoodCategoryCarbchoix3,
             ListEntry FoodCategoryVeggieschoix1,
             ListEntry FoodCategoryVeggieschoix2,
-            ListEntry FoodCategoryVeggieschoix3,
-            string Description,
-            bool IsComplete,
-            DateTime DueDate)
+            ListEntry FoodCategoryVeggieschoix3)
         {
             // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<Food>("EntriesforFood");
+            Food foodthisweek = col.FindById(Id);
 
-            col.EnsureIndex(x => x.FoodWeekForUser);
             col.EnsureIndex(x => x.FoodCategoryDescProt1);
             col.EnsureIndex(x => x.FoodCategoryDescProt2);
             col.EnsureIndex(x => x.FoodCategoryDescProt3);
@@ -153,10 +148,10 @@ namespace UplanTest
             //col.EnsureIndex(x => x.IsComplete);
             //col.EnsureIndex(x => x.DueDate);
 
-            col.Insert(
+            /*col.Insert(
                  new Food
                  {
-                     FoodWeekForUser = MyUser.me,
+                     
                      FoodforCategoryProtchoix1 = FoodforCategoryProtchoix1,
                      FoodforCategoryProtchoix2 = FoodforCategoryProtchoix2,
                      FoodforCategoryProtchoix3 = FoodforCategoryProtchoix3,
@@ -167,11 +162,22 @@ namespace UplanTest
                      FoodforCategoryVeggieschoix2 = FoodCategoryVeggieschoix2,
                      FoodforCategoryVeggieschoix3 = FoodCategoryVeggieschoix3,
 
-                     //Description = "Utiliser uPlan!",
-                     //IsComplete = false,
-                     //DueDate = DateTime.Now.AddDays(7)
+                     
                  }
-                 );
+                 );*/
+
+            foodthisweek.FoodforCategoryProtchoix1 = FoodforCategoryProtchoix1;
+            foodthisweek.FoodforCategoryProtchoix2 = FoodforCategoryProtchoix2;
+            foodthisweek.FoodforCategoryProtchoix3 = FoodforCategoryProtchoix3;
+            foodthisweek.FoodforCategoryCarbchoix1 = FoodCategoryCarbchoix1;
+            foodthisweek.FoodforCategoryCarbchoix2 = FoodCategoryCarbchoix2;
+            foodthisweek.FoodforCategoryCarbchoix3 = FoodCategoryCarbchoix3;
+            foodthisweek.FoodforCategoryVeggieschoix1 = FoodCategoryVeggieschoix1;
+            foodthisweek.FoodforCategoryVeggieschoix2 = FoodCategoryVeggieschoix2;
+            foodthisweek.FoodforCategoryVeggieschoix3 = FoodCategoryVeggieschoix3;
+
+            // And call collection update to commit changes
+            col.Update(foodthisweek);
         }
 
         public Food()
