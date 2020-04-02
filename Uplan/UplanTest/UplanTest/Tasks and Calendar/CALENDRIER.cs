@@ -30,6 +30,21 @@ namespace UplanTest
 
         private string message = "no task";
 
+        public List<Button> buttonsonMon = new List<Button>();
+        public List<Button> buttonsonTue = new List<Button>();
+        public List<Button> buttonsonWed = new List<Button>();
+        public List<Button> buttonsonThu = new List<Button>();
+        public List<Button> buttonsonFri = new List<Button>();
+        public List<Button> buttonsonSat = new List<Button>();
+        public List<Button> buttonsonSun = new List<Button>();
+
+        IEnumerable<SchoolTask> tasksonMon = null;
+        IEnumerable<SchoolTask> tasksonTue = null;
+        IEnumerable<SchoolTask> tasksonWed = null;
+        IEnumerable<SchoolTask> tasksonThu = null;
+        IEnumerable<SchoolTask> tasksonFri = null;
+        IEnumerable<SchoolTask> tasksonSat = null;
+        IEnumerable<SchoolTask> tasksonSun = null;
 
 
         //Button mon1;
@@ -278,27 +293,27 @@ namespace UplanTest
 
         
 
-           var tasksonMon = col.Find(Query.EQ("DueDate", Monday.Date));
+              tasksonMon = col.Find(Query.EQ("DueDate", Monday.Date));
             //var tasksonMon = col.Find(x => x.DueDate == Monday);
 
             //var tasksonMon = col.FindAll().Where(x => x.DueDate==Monday);
-            var tasksonTue = col.Find(Query.EQ("DueDate", Tuesday.Date));
+             tasksonTue = col.Find(Query.EQ("DueDate", Tuesday.Date));
             //var tasksonTue = col.Find(x => x.DueDate == Tuesday);
 
-           var tasksonWed = col.Find(Query.EQ("DueDate", Wednesday.Date));
+            tasksonWed = col.Find(Query.EQ("DueDate", Wednesday.Date));
            // var tasksonWed = col.Find(x => x.DueDate == Wednesday);
 
-            var tasksonThu = col.Find(Query.EQ("DueDate", Thursday.Date));
+             tasksonThu = col.Find(Query.EQ("DueDate", Thursday.Date));
            // var tasksonThu = col.Find(x => x.DueDate == Thursday);
 
-            var tasksonFri = col.Find(Query.EQ("DueDate", Friday.Date));
+             tasksonFri = col.Find(Query.EQ("DueDate", Friday.Date));
             //var tasksonFri = col.FindAll().Where(x => x.DueDate == Friday);
           //  var tasksonFri = col.Find(x => x.DueDate == Friday);
 
-            var tasksonSat = col.Find(Query.EQ("DueDate", Saturday.Date));
+             tasksonSat = col.Find(Query.EQ("DueDate", Saturday.Date));
            // var tasksonSat = col.Find(x => x.DueDate == Saturday);
 
-            var tasksonSun = col.Find(Query.EQ("DueDate", Sunday.Date));
+             tasksonSun = col.Find(Query.EQ("DueDate", Sunday.Date));
             // var tasksonSun = col.Find(x => x.DueDate == Monday);
 
 
@@ -429,7 +444,7 @@ namespace UplanTest
                 SetButton(tasksonMon, 0, ref mon1, continuee);
                 mon1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 0));
                 grid.Children.Add(mon1, 0, 2);
-
+                buttonsonMon.Add(mon1);
 
                 //_____________________________________________________________________
 
@@ -451,10 +466,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 1, ref mon2, continueem);
                 mon2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 1));
                 grid.Children.Add(mon2, 0, 3);
+                 buttonsonMon.Add(mon2);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____3__________________________________
+            //________________________Lundi_____3__________________________________
 
                 Button mon3 = new Button();
                 bool conti13 = tasksonMon.Count<SchoolTask>() >= 3;
@@ -470,10 +486,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 2, ref mon3, continuee3);
                 mon3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 2));
                 grid.Children.Add(mon3, 0, 4);
+                buttonsonMon.Add(mon3);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____4__________________________________
+            //________________________Lundi_____4__________________________________
 
                 Button mon4 = new Button();
                 bool conti14 = tasksonMon.Count<SchoolTask>() >= 4;
@@ -489,10 +506,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 3, ref mon4, continuee);
                 mon4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 3));
                 grid.Children.Add(mon4, 0, 5);
+                buttonsonMon.Add(mon4);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____5__________________________________
+            //________________________Lundi_____5__________________________________
 
                 Button mon5 = new Button();
                 bool conti15 = tasksonMon.Count<SchoolTask>() >= 5;
@@ -508,12 +526,13 @@ namespace UplanTest
                 SetButton(tasksonMon, 4, ref mon5, continuee5);
                 mon5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 4));
                 grid.Children.Add(mon5, 0, 6);
+                buttonsonMon.Add(mon5);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____6__________________________________
+            //________________________Lundi_____6__________________________________
 
-                Button mon6 = new Button();
+            Button mon6 = new Button();
                 bool m66 = tasksonMon.Count<SchoolTask>() >= 6;
                 bool m6 = false;
                 if (m66)
@@ -527,13 +546,14 @@ namespace UplanTest
                 SetButton(tasksonMon, 5, ref mon6, m6);
                 mon6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 5));
                 grid.Children.Add(mon6, 0, 7);
+                buttonsonMon.Add(mon6);
 
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____7__________________________________
+            //________________________Lundi_____7__________________________________
 
-                Button mon7 = new Button();
+            Button mon7 = new Button();
                 bool ma7 = tasksonMon.Count<SchoolTask>() >= 7;
                 bool m7 = false;
                 if (ma7)
@@ -547,10 +567,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 6, ref mon7, m7);
                 mon7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 6));
                 grid.Children.Add(mon7, 0, 8);
+                buttonsonMon.Add(mon7);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____8__________________________________
+            //________________________Lundi_____8__________________________________
 
                 Button mon8 = new Button();
                 bool m68 = tasksonMon.Count<SchoolTask>() >= 8;
@@ -566,10 +587,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 7, ref mon8, m8);
                 mon8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 7));
                 grid.Children.Add(mon8, 0, 2 + 7);
+                buttonsonMon.Add(mon8);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____9__________________________________
+            //________________________Lundi_____9__________________________________
 
                 Button mon9 = new Button();
                 bool m69 = tasksonMon.Count<SchoolTask>() >= 9;
@@ -585,10 +607,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 8, ref mon9, m9);
                 mon9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 8));
                 grid.Children.Add(mon9, 0, 2 + 8);
+                buttonsonMon.Add(mon9);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Lundi_____10__________________________________
+            //________________________Lundi_____10__________________________________
 
                 Button mon10 = new Button();
                 bool m10 = tasksonMon.Count<SchoolTask>() >= 10;
@@ -604,10 +627,11 @@ namespace UplanTest
                 SetButton(tasksonMon, 9, ref mon10, m610);
                 mon10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 9));
                 grid.Children.Add(mon10, 0, 2 + 9);
+                buttonsonMon.Add(mon10);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi___1____________________________________
+            //________________________Mardi___1____________________________________
 
                 Button tue1 = new Button();
 
@@ -625,6 +649,7 @@ namespace UplanTest
                 SetButton(tasksonTue, 0, ref tue1, btue1);
                 tue1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 0));
                 grid.Children.Add(tue1, 1, 2);
+                buttonsonTue.Add(tue1);
 
 
                 //_____________________________________________________________________
@@ -647,12 +672,13 @@ namespace UplanTest
                 SetButton(tasksonTue, 1, ref tue2, btue2);
                 tue2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 1));
                 grid.Children.Add(tue2, 1, 3);
+                buttonsonTue.Add(tue2);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____3__________________________________
+            //________________________Mardi_____3__________________________________
 
-                Button tue3 = new Button();
+            Button tue3 = new Button();
                 bool tuee3 = tasksonTue.Count<SchoolTask>() >= 3;
                 bool btue3 = false;
                 if (tuee3)
@@ -666,10 +692,11 @@ namespace UplanTest
                 SetButton(tasksonTue, 2, ref tue3, btue3);
                 tue3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 2));
                 grid.Children.Add(tue3, 1, 4);
+                buttonsonTue.Add(tue3);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____4__________________________________
+            //________________________Mardi_____4__________________________________
 
                 Button tue4 = new Button();
                 bool tuee4 = tasksonTue.Count<SchoolTask>() >= 4;
@@ -685,10 +712,11 @@ namespace UplanTest
                 SetButton(tasksonTue, 3, ref tue4, btue4);
                 tue4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 3));
                 grid.Children.Add(tue4, 1, 5);
+                buttonsonTue.Add(tue4);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____5__________________________________
+            //________________________Mardi_____5__________________________________
 
                 Button tue5 = new Button();
                 bool tuee5 = tasksonTue.Count<SchoolTask>() >= 5;
@@ -704,10 +732,11 @@ namespace UplanTest
                 SetButton(tasksonTue, 4, ref tue5, btue5);
                 tue5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 4));
                 grid.Children.Add(tue5, 1, 6);
+                buttonsonTue.Add(tue5);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____6__________________________________
+            //________________________Mardi_____6__________________________________
 
                 Button tue6 = new Button();
                 bool tuee6 = tasksonTue.Count<SchoolTask>() >= 6;
@@ -723,11 +752,12 @@ namespace UplanTest
                 SetButton(tasksonTue, 5, ref tue6, btue6);
                 tue6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 5));
                 grid.Children.Add(tue6, 1, 7);
+                buttonsonTue.Add(tue6);
 
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____7__________________________________
+            //________________________Mardi_____7__________________________________
 
                 Button tue7 = new Button();
                 bool tuee7 = tasksonTue.Count<SchoolTask>() >= 7;
@@ -743,10 +773,11 @@ namespace UplanTest
                 SetButton(tasksonTue, 6, ref tue7, btue7);
                 tue7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 6));
                 grid.Children.Add(tue7, 1, 8);
+                buttonsonTue.Add(tue7);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____8__________________________________
+            //________________________Mardi_____8__________________________________
 
                 Button tue8 = new Button();
                 bool tuee8 = tasksonTue.Count<SchoolTask>() >= 8;
@@ -762,10 +793,11 @@ namespace UplanTest
                 SetButton(tasksonTue, 7, ref tue8, btue8);
                 tue8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 7));
                 grid.Children.Add(tue8, 1, 2 + 7);
+                buttonsonTue.Add(tue8);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mardi_____9__________________________________
+            //________________________Mardi_____9__________________________________
 
                 Button tue9 = new Button();
                 bool tuee9 = tasksonTue.Count<SchoolTask>() >= 9;
@@ -781,10 +813,10 @@ namespace UplanTest
                 SetButton(tasksonTue, 8, ref tue9, btue9);
                 tue9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 8));
                 grid.Children.Add(tue9, 1, 2 + 8);
+                buttonsonTue.Add(tue9);
+                 //_____________________________________________________________________
 
-                //_____________________________________________________________________
-
-                //________________________Mardi_____10__________________________________
+                 //________________________Mardi_____10__________________________________
 
                 Button tue10 = new Button();
                 bool tuee10 = tasksonTue.Count<SchoolTask>() >= 10;
@@ -800,9 +832,9 @@ namespace UplanTest
                 SetButton(tasksonTue, 9, ref tue10, btue10);
                 tue10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 9));
                 grid.Children.Add(tue10, 1, 2 + 9);
+                buttonsonTue.Add(tue10);
 
-
-                //_____________________________________________________________________
+                 //_____________________________________________________________________
 
                 //________________________Mercredi___1____________________________________
 
@@ -821,7 +853,7 @@ namespace UplanTest
                 SetButton(tasksonWed, 0, ref wed1, bwed1);
                 wed1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 0));
                 grid.Children.Add(wed1, 2, 2);
-
+                buttonsonWed.Add(wed1);
 
                 //_____________________________________________________________________
 
@@ -843,8 +875,8 @@ namespace UplanTest
                 SetButton(tasksonWed, 1, ref wed2, bwed2);
                 wed2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 1));
                 grid.Children.Add(wed2, 2, 3);
-
-                //_____________________________________________________________________
+                buttonsonWed.Add(wed2);
+                 //_____________________________________________________________________
 
                 //________________________Mercredi_____3__________________________________
 
@@ -862,10 +894,11 @@ namespace UplanTest
                 SetButton(tasksonWed, 2, ref wed3, bwed3);
                 wed3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 2));
                 grid.Children.Add(wed3, 2, 4);
+                buttonsonWed.Add(wed3);
 
-                //_____________________________________________________________________
+                 //_____________________________________________________________________
 
-                //________________________Mercredi_____4__________________________________
+                 //________________________Mercredi_____4__________________________________
 
                 Button wed4 = new Button();
                 bool wedd4 = tasksonWed.Count<SchoolTask>() >= 4;
@@ -881,10 +914,11 @@ namespace UplanTest
                 SetButton(tasksonWed, 3, ref wed4, bwed4);
                 wed4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 3));
                 grid.Children.Add(wed4, 2, 5);
+                buttonsonWed.Add(wed4);
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Mercredi_____5__________________________________
+            //________________________Mercredi_____5__________________________________
 
                 Button wed5 = new Button();
                 bool wedd5 = tasksonWed.Count<SchoolTask>() >= 5;
@@ -900,10 +934,11 @@ namespace UplanTest
                 SetButton(tasksonWed, 4, ref wed5, bwed5);
                 wed5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 4));
                 grid.Children.Add(wed5, 2, 6);
+                buttonsonWed.Add(wed5);
 
-                //_____________________________________________________________________
+               //_____________________________________________________________________
 
-                //________________________Mercredi_____6__________________________________
+               //________________________Mercredi_____6__________________________________
 
                 Button wed6 = new Button();
                 bool wedd6 = tasksonWed.Count<SchoolTask>() >= 6;
@@ -919,11 +954,12 @@ namespace UplanTest
                 SetButton(tasksonWed, 5, ref wed6, bwed6);
                 wed6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 5));
                 grid.Children.Add(wed6, 2, 7);
+                buttonsonWed.Add(wed6);
 
 
                 //_____________________________________________________________________
 
-                //________________________Mercredi_____7__________________________________
+               //________________________Mercredi_____7__________________________________
 
                 Button wed7 = new Button();
                 bool wedd7 = tasksonWed.Count<SchoolTask>() >= 7;
@@ -939,8 +975,8 @@ namespace UplanTest
                 SetButton(tasksonWed, 6, ref wed7, bwed7);
                 wed7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 6));
                 grid.Children.Add(wed7, 2, 8);
-
-                //_____________________________________________________________________
+                buttonsonWed.Add(wed7);
+                 //_____________________________________________________________________
 
                 //________________________Mercredi_____8__________________________________
 
@@ -958,6 +994,7 @@ namespace UplanTest
                 SetButton(tasksonWed, 7, ref wed8, bwed8);
                 wed8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 7));
                 grid.Children.Add(wed8, 2, 2 + 7);
+                buttonsonWed.Add(wed8);
 
                 //_____________________________________________________________________
 
@@ -977,8 +1014,9 @@ namespace UplanTest
                 SetButton(tasksonWed, 8, ref wed9, bwed9);
                 wed9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 8));
                 grid.Children.Add(wed9, 2, 2 + 8);
+                buttonsonWed.Add(wed9);
 
-                //_____________________________________________________________________
+                 //_____________________________________________________________________
 
                 //________________________Mercredi_____10__________________________________
 
@@ -996,6 +1034,7 @@ namespace UplanTest
                 SetButton(tasksonWed, 9, ref wed10, bwed10);
                 wed10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 9));
                 grid.Children.Add(wed10, 2, 2 + 9);
+                buttonsonWed.Add(wed10);
 
                 //_____________________________________________________________________
 
@@ -1192,6 +1231,18 @@ namespace UplanTest
                 SetButton(tasksonThu, 9, ref thu10, bthu10);
                 thu10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 9));
                 grid.Children.Add(thu10, 3, 2 + 9);
+
+                //__________________Add All Thursday buttons__________________________
+                buttonsonThu.Add(thu1);
+                buttonsonThu.Add(thu2);
+                buttonsonThu.Add(thu3);
+                buttonsonThu.Add(thu4);
+                buttonsonThu.Add(thu5);
+                buttonsonThu.Add(thu6);
+                buttonsonThu.Add(thu7);
+                buttonsonThu.Add(thu8);
+                buttonsonThu.Add(thu9);
+                buttonsonThu.Add(thu10);
                 //_____________________________________________________________________
 
                 //________________________Vendredi___1____________________________________
@@ -1388,6 +1439,17 @@ namespace UplanTest
                 fri10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 9));
                 grid.Children.Add(fri10, 4, 2 + 9);
 
+                //__________________Add All Friday buttons__________________________
+                buttonsonFri.Add(fri1);
+                buttonsonFri.Add(fri2);
+                buttonsonFri.Add(fri3);
+                buttonsonFri.Add(fri4);
+                buttonsonFri.Add(fri5);
+                buttonsonFri.Add(fri6);
+                buttonsonFri.Add(fri7);
+                buttonsonFri.Add(fri8);
+                buttonsonFri.Add(fri9);
+                buttonsonFri.Add(fri10);
                 //_____________________________________________________________________
 
                 //________________________Samedi___1____________________________________
@@ -1584,9 +1646,21 @@ namespace UplanTest
                 sat10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 9));
                 grid.Children.Add(sat10, 5, 2 + 9);
 
+              //__________________Add All Saturday buttons__________________________
+                buttonsonSat.Add(sat1);
+                buttonsonSat.Add(sat2);
+                buttonsonSat.Add(sat3);
+                buttonsonSat.Add(sat4);
+                buttonsonSat.Add(sat5);
+                buttonsonSat.Add(sat6);
+                buttonsonSat.Add(sat8);
+                buttonsonSat.Add(sat9);
+                buttonsonSat.Add(sat7);
+                buttonsonSat.Add(sat10);
+
                 //_____________________________________________________________________
 
-                //________________________Dimanche___1____________________________________
+                 //________________________Dimanche___1____________________________________
 
                 Button sun1 = new Button();
 
@@ -1780,7 +1854,17 @@ namespace UplanTest
                 sun10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 9));
                 grid.Children.Add(sun10, 6, 2 + 9);
 
-            
+             //__________________Add All Sunday buttons__________________________
+            buttonsonSun.Add(sun1);
+            buttonsonSun.Add(sun2);
+            buttonsonSun.Add(sun3);
+            buttonsonSun.Add(sun4);
+            buttonsonSun.Add(sun5);
+            buttonsonSun.Add(sun6);
+            buttonsonSun.Add(sun8);
+            buttonsonSun.Add(sun9);
+            buttonsonSun.Add(sun7);
+            buttonsonSun.Add(sun10);
 
             // NOTIFICATION CENTER 
 
@@ -1900,6 +1984,7 @@ private void Switch_OnToggled(object sender, ToggledEventArgs e)
 {
 
             WorkView = !WorkView; //e.Value;
+            RefreshAll();
 
 }
 
@@ -1910,6 +1995,7 @@ private void Switch2_OnToggled(object sender, ToggledEventArgs e)
 {
 
             MeView = !MeView; //e.Value;
+            RefreshAll();
 
 
 }
@@ -1928,11 +2014,13 @@ private void SetButton(IEnumerable<SchoolTask> tasks, int rang, ref Button tasks
                 else
                 {
                     tasksButton.Text = "";
+                    tasksButton.BackgroundColor = Color.Gray;
                 }
             }
             else
             {
                 tasksButton.Text = "";
+                tasksButton.BackgroundColor = Color.Gray;
             }
         }
        
@@ -1948,52 +2036,157 @@ if (tasks.Count<SchoolTask>() >= rang + 1)
 }
 return thismessage;
 }
+        private void RefreshAll()
+        {
+            bool continuee1 = true;
+            bool continuee2 = true;
+            //Monday___________________________________________
+            for (int i=0; i<buttonsonMon.Count; i++)
+            {
+                continuee1 = tasksonMon.Count<SchoolTask>() >= i+1;
+                continuee2 = false;
+                Button thisbutton = buttonsonMon[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonMon.ElementAt<SchoolTask>(i) != null)&& (tasksonMon.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonMon.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonMon, i, ref thisbutton, continuee2);
 
-public static Color getColor(string col)
-{
-Color res = Color.White;
-switch (col)
-{
-    case "Blue":
-        res = Color.Blue;
+            }
+
+            //Tuesday______________________________________________
+            for (int i = 0; i < buttonsonTue.Count; i++)
+            {
+                continuee1 = tasksonTue.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonTue[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonTue.ElementAt<SchoolTask>(i) != null) && (tasksonTue.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonTue.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonTue, i, ref thisbutton, continuee2);
+
+            }
+            //Wednesday__________________________________________
+            for (int i = 0; i < buttonsonWed.Count; i++)
+            {
+                continuee1 = tasksonWed.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonWed[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonWed.ElementAt<SchoolTask>(i) != null) && (tasksonWed.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonWed.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonWed, i, ref thisbutton, continuee2);
+
+            }
+            //Thursday____________________________________________________
+            for (int i = 0; i < buttonsonThu.Count; i++)
+            {
+                continuee1 = tasksonThu.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonThu[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonThu.ElementAt<SchoolTask>(i) != null) && (tasksonThu.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonThu.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonThu, i, ref thisbutton, continuee2);
+
+            }
+            //Friday______________________________________________________
+            for (int i = 0; i < buttonsonFri.Count; i++)
+            {
+                continuee1 = tasksonFri.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonFri[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonFri.ElementAt<SchoolTask>(i) != null) && (tasksonFri.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonFri.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonFri, i, ref thisbutton, continuee2);
+
+            }
+            //Saturday________________________________________________
+            for (int i = 0; i < buttonsonSat.Count; i++)
+            {
+                continuee1 = tasksonSat.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonSat[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonSat.ElementAt<SchoolTask>(i) != null) && (tasksonSat.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonSat.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonSat, i, ref thisbutton, continuee2);
+
+            }
+            //Sunday________________________________________________
+            for (int i = 0; i < buttonsonSun.Count; i++)
+            {
+                continuee1 = tasksonSun.Count<SchoolTask>() >= i + 1;
+                continuee2 = false;
+                Button thisbutton = buttonsonSun[i];
+                if (continuee1)
+                {
+                    continuee2 = (tasksonSun.ElementAt<SchoolTask>(i) != null) && (tasksonSun.ElementAt<SchoolTask>(i).TaskCategoryDesc == "Personal" && !MeView ||
+                                tasksonSun.ElementAt<SchoolTask>(i).TaskCategoryDesc == "School" && !WorkView);
+                }
+                SetButton(tasksonSun, i, ref thisbutton, continuee2);
+
+            }
+        }
+
+
+        public static Color getColor(string col)
+    {
+      Color res = Color.White;
+      switch (col)
+       {
+         case "Blue":
+          res = Color.Blue;
+          break;
+         case "Green":
+         res = Color.Green;
+          break;
+         case "Red":
+          res = Color.Red;
+         break;
+         case "Purple":
+            res = Color.Purple;
+         break;
+         case "Beige":
+           res = Color.Beige;
+           break;
+         case "Blue Violet":
+            res = Color.BlueViolet;
+             break;
+        case "Brown":
+          res = Color.Brown;
+          break;
+        case "Coral":
+         res = Color.Coral;
+         break;
+        case "Dark blue":
+         res = Color.DarkBlue;
+         break;
+        case "Dark Magenta":
+            res = Color.DarkMagenta;
+            break;
+         case "Forest Green":
+            res = Color.ForestGreen;
+            break;
+        case "Fuchsia":
+          res = Color.Fuchsia;
+            break;
+        case "Gold":
+            res = Color.Gold;
         break;
-    case "Green":
-        res = Color.Green;
-        break;
-    case "Red":
-        res = Color.Red;
-        break;
-    case "Purple":
-        res = Color.Purple;
-        break;
-    case "Beige":
-        res = Color.Beige;
-        break;
-    case "Blue Violet":
-        res = Color.BlueViolet;
-        break;
-    case "Brown":
-        res = Color.Brown;
-        break;
-    case "Coral":
-        res = Color.Coral;
-        break;
-    case "Dark blue":
-        res = Color.DarkBlue;
-        break;
-    case "Dark Magenta":
-        res = Color.DarkMagenta;
-        break;
-    case "Forest Green":
-        res = Color.ForestGreen;
-        break;
-    case "Fuchsia":
-        res = Color.Fuchsia;
-        break;
-    case "Gold":
-        res = Color.Gold;
-        break;
-    case "Gray":
+            case "Gray":
         res = Color.Gray;
         break;
 
