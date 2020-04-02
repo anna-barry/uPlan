@@ -51,9 +51,9 @@ namespace UplanTest
         [BsonRef("ListEntries")]
         private ListEntry FoodforCategoryVeggieschoix3 { get; set; }
 
-        public string Description { get; set; }
-        public Boolean IsComplete { get; set; }
-        public DateTime DueDate { get; set; }
+        //public string Description { get; set; }
+        //public Boolean IsComplete { get; set; }
+        //public DateTime DueDate { get; set; }
         public DateTime CompletionDate { get; set; }
 
         // ----------------------------------------------------
@@ -85,8 +85,8 @@ namespace UplanTest
             col.EnsureIndex(x => x.FoodCategoryDescVeggies1);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies3);
-            col.EnsureIndex(x => x.IsComplete);
-            col.EnsureIndex(x => x.DueDate);
+            //col.EnsureIndex(x => x.IsComplete);
+            //col.EnsureIndex(x => x.DueDate);
 
             col.Insert(
                 new Food
@@ -102,9 +102,9 @@ namespace UplanTest
                     FoodforCategoryVeggieschoix2 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BUTTERNUT"),
                     FoodforCategoryVeggieschoix3 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BEETROOT"),
 
-                    Description = "Utiliser uPlan!",
-                    IsComplete=false,
-                    DueDate= DateTime.Now.AddDays(7)
+                    //Description = "Utiliser uPlan!",
+                    //IsComplete=false,
+                    //DueDate= DateTime.Now.AddDays(7)
                 }
                 ) ;
         }
@@ -150,8 +150,8 @@ namespace UplanTest
             col.EnsureIndex(x => x.FoodCategoryDescVeggies1);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies3);
-            col.EnsureIndex(x => x.IsComplete);
-            col.EnsureIndex(x => x.DueDate);
+            //col.EnsureIndex(x => x.IsComplete);
+            //col.EnsureIndex(x => x.DueDate);
 
             col.Insert(
                  new Food
@@ -167,9 +167,9 @@ namespace UplanTest
                      FoodforCategoryVeggieschoix2 = FoodCategoryVeggieschoix2,
                      FoodforCategoryVeggieschoix3 = FoodCategoryVeggieschoix3,
 
-                     Description = "Utiliser uPlan!",
-                     IsComplete = false,
-                     DueDate = DateTime.Now.AddDays(7)
+                     //Description = "Utiliser uPlan!",
+                     //IsComplete = false,
+                     //DueDate = DateTime.Now.AddDays(7)
                  }
                  );
         }

@@ -309,19 +309,18 @@ namespace UplanTest
 
             //CREATION DES BOUTONDS POUR LES MODES
 
-            
+
 
             Switch swiSchool = new Switch
 
             {
+                IsToggled= true,
 
                 HorizontalOptions = LayoutOptions.Center,
 
                 VerticalOptions = LayoutOptions.CenterAndExpand,
 
                 OnColor = Color.BlueViolet
-
-                
 
             };
             //swiSchool.IsEnabled = true;
@@ -342,6 +341,7 @@ namespace UplanTest
             Switch swiMe = new Switch
 
             {
+                IsToggled=true,
 
                 HorizontalOptions = LayoutOptions.Center,
 
@@ -408,1381 +408,1379 @@ namespace UplanTest
 
             //CR2ATION DES 70 BOUTONS
 
-           
+          
+                //_____________________________________________________________________
 
-
-
-            //_____________________________________________________________________
-
-            //________________________Lundi___1____________________________________
+                //________________________Lundi___1____________________________________
 
                 Button mon1 = new Button();
 
-              
-            bool conti1 = tasksonMon.Count<SchoolTask>() >= 1;
-            bool continuee = false;
-            if(conti1)
-            {
-                continuee =  (tasksonMon.ElementAt<SchoolTask>(0) != null) /* || 
-                            (tasksonMon.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
-                            tasksonMon.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
-
-            
-             SetButton(tasksonMon, 0, ref mon1, continuee);
-             mon1.Clicked += (sender, e) => Alert_Clicked( InitiateButtonGetMsg(tasksonMon, 0) );
-             grid.Children.Add(mon1, 0, 2);
-
-
-            //_____________________________________________________________________
-
-            //________________________Lundi_______2________________________________
+                bool conti1 = tasksonMon.Count<SchoolTask>() >= 1;
+                bool continuee = false;
+                if (conti1)
+                {
+                continuee = (tasksonMon.ElementAt<SchoolTask>(0) != null); /*&&
+                                (tasksonMon.ElementAt<SchoolTask>(0).TaskCategoryDesc == "Personal" && MeView ||
+                                tasksonMon.ElementAt<SchoolTask>(0).TaskCategoryDesc == "School" && WorkView);*/
+                }
 
 
 
-            Button mon2 = new Button();
-            bool contim = tasksonMon.Count<SchoolTask>() >= 2;
-            bool continueem = false;
-            if (contim)
-            {
-                continueem = (tasksonMon.ElementAt<SchoolTask>(1) != null) /* || 
+                SetButton(tasksonMon, 0, ref mon1, continuee);
+                mon1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 0));
+                grid.Children.Add(mon1, 0, 2);
+
+
+                //_____________________________________________________________________
+
+                //________________________Lundi_______2________________________________
+
+
+
+                Button mon2 = new Button();
+                bool contim = tasksonMon.Count<SchoolTask>() >= 2;
+                bool continueem = false;
+                if (contim)
+                {
+                    continueem = (tasksonMon.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 1, ref mon2, continueem);
-            mon2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 1));
-            grid.Children.Add(mon2, 0, 3);
+                SetButton(tasksonMon, 1, ref mon2, continueem);
+                mon2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 1));
+                grid.Children.Add(mon2, 0, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____3__________________________________
-            
-            Button mon3 = new Button();
-            bool conti13 = tasksonMon.Count<SchoolTask>() >= 3;
-            bool continuee3 = false;
-            if (conti13)
-            {
-                continuee3 = (tasksonMon.ElementAt<SchoolTask>(2) != null) /* || 
+                //________________________Lundi_____3__________________________________
+
+                Button mon3 = new Button();
+                bool conti13 = tasksonMon.Count<SchoolTask>() >= 3;
+                bool continuee3 = false;
+                if (conti13)
+                {
+                    continuee3 = (tasksonMon.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 2, ref mon3, continuee3);
-            mon3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 2));
-            grid.Children.Add(mon3, 0, 4);
+                SetButton(tasksonMon, 2, ref mon3, continuee3);
+                mon3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 2));
+                grid.Children.Add(mon3, 0, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____4__________________________________
+                //________________________Lundi_____4__________________________________
 
-            Button mon4 = new Button();
-            bool conti14 = tasksonMon.Count<SchoolTask>() >= 4;
-            bool continuee4 = false;
-            if (conti14)
-            {
-                continuee4 = (tasksonMon.ElementAt<SchoolTask>(3) != null) /* || 
+                Button mon4 = new Button();
+                bool conti14 = tasksonMon.Count<SchoolTask>() >= 4;
+                bool continuee4 = false;
+                if (conti14)
+                {
+                    continuee4 = (tasksonMon.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 3, ref mon4, continuee);
-            mon4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 3));
-            grid.Children.Add(mon4, 0, 5);
+                SetButton(tasksonMon, 3, ref mon4, continuee);
+                mon4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 3));
+                grid.Children.Add(mon4, 0, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____5__________________________________
+                //________________________Lundi_____5__________________________________
 
-            Button mon5 = new Button();
-            bool conti15 = tasksonMon.Count<SchoolTask>() >= 5;
-            bool continuee5 = false;
-            if (conti15)
-            {
-                continuee5 = (tasksonMon.ElementAt<SchoolTask>(4) != null) /* || 
+                Button mon5 = new Button();
+                bool conti15 = tasksonMon.Count<SchoolTask>() >= 5;
+                bool continuee5 = false;
+                if (conti15)
+                {
+                    continuee5 = (tasksonMon.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 4, ref mon5, continuee5);
-            mon5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 4));
-            grid.Children.Add(mon5, 0, 6);
+                SetButton(tasksonMon, 4, ref mon5, continuee5);
+                mon5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 4));
+                grid.Children.Add(mon5, 0, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____6__________________________________
+                //________________________Lundi_____6__________________________________
 
-            Button mon6 = new Button();
-            bool m66 = tasksonMon.Count<SchoolTask>() >= 6;
-            bool m6 = false;
-            if (m66)
-            {
-                m6 = (tasksonMon.ElementAt<SchoolTask>(5) != null) /* || 
+                Button mon6 = new Button();
+                bool m66 = tasksonMon.Count<SchoolTask>() >= 6;
+                bool m6 = false;
+                if (m66)
+                {
+                    m6 = (tasksonMon.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 5, ref mon6, m6);
-            mon6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 5));
-            grid.Children.Add(mon6, 0, 7);
+                SetButton(tasksonMon, 5, ref mon6, m6);
+                mon6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 5));
+                grid.Children.Add(mon6, 0, 7);
 
-            
-            //_____________________________________________________________________
 
-            //________________________Lundi_____7__________________________________
+                //_____________________________________________________________________
 
-            Button mon7 = new Button();
-            bool ma7 = tasksonMon.Count<SchoolTask>() >= 7;
-            bool m7 = false;
-            if (ma7)
-            {
-                m7 = (tasksonMon.ElementAt<SchoolTask>(6) != null) /* || 
+                //________________________Lundi_____7__________________________________
+
+                Button mon7 = new Button();
+                bool ma7 = tasksonMon.Count<SchoolTask>() >= 7;
+                bool m7 = false;
+                if (ma7)
+                {
+                    m7 = (tasksonMon.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 6, ref mon7, m7);
-            mon7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 6));
-            grid.Children.Add(mon7, 0, 8);
+                SetButton(tasksonMon, 6, ref mon7, m7);
+                mon7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 6));
+                grid.Children.Add(mon7, 0, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____8__________________________________
+                //________________________Lundi_____8__________________________________
 
-            Button mon8 = new Button();
-            bool m68 = tasksonMon.Count<SchoolTask>() >= 8;
-            bool m8 = false;
-            if (m68)
-            {
-                m8 = (tasksonMon.ElementAt<SchoolTask>(7) != null) /* || 
+                Button mon8 = new Button();
+                bool m68 = tasksonMon.Count<SchoolTask>() >= 8;
+                bool m8 = false;
+                if (m68)
+                {
+                    m8 = (tasksonMon.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 7, ref mon8, m8);
-            mon8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 7));
-            grid.Children.Add(mon8, 0, 2 + 7);
+                SetButton(tasksonMon, 7, ref mon8, m8);
+                mon8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 7));
+                grid.Children.Add(mon8, 0, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____9__________________________________
+                //________________________Lundi_____9__________________________________
 
-            Button mon9 = new Button();
-            bool m69 = tasksonMon.Count<SchoolTask>() >= 9;
-            bool m9 = false;
-            if (m69)
-            {
-                m9 = (tasksonMon.ElementAt<SchoolTask>(8) != null) /* || 
+                Button mon9 = new Button();
+                bool m69 = tasksonMon.Count<SchoolTask>() >= 9;
+                bool m9 = false;
+                if (m69)
+                {
+                    m9 = (tasksonMon.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 8, ref mon9, m9);
-            mon9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 8));
-            grid.Children.Add(mon9, 0, 2 + 8);
+                SetButton(tasksonMon, 8, ref mon9, m9);
+                mon9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 8));
+                grid.Children.Add(mon9, 0, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____10__________________________________
+                //________________________Lundi_____10__________________________________
 
-            Button mon10 = new Button();
-            bool m10 = tasksonMon.Count<SchoolTask>() >= 10;
-            bool m610 = false;
-            if (m10)
-            {
-                m610 = (tasksonMon.ElementAt<SchoolTask>(9) != null) /* || 
+                Button mon10 = new Button();
+                bool m10 = tasksonMon.Count<SchoolTask>() >= 10;
+                bool m610 = false;
+                if (m10)
+                {
+                    m610 = (tasksonMon.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonMon.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonMon.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonMon, 9, ref mon10, m610);
-            mon10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 9));
-            grid.Children.Add(mon10, 0, 2 + 9);
-            
-            //_____________________________________________________________________
+                SetButton(tasksonMon, 9, ref mon10, m610);
+                mon10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 9));
+                grid.Children.Add(mon10, 0, 2 + 9);
 
-            //________________________Mardi___1____________________________________
+                //_____________________________________________________________________
 
-            Button tue1 = new Button();
+                //________________________Mardi___1____________________________________
 
-            
-            bool tuee1 = tasksonTue.Count<SchoolTask>() >= 1;
-            bool btue1 = false;
-            if (tuee1)
-            {
-                btue1 = (tasksonTue.ElementAt<SchoolTask>(0) != null) /* || 
+                Button tue1 = new Button();
+
+
+                bool tuee1 = tasksonTue.Count<SchoolTask>() >= 1;
+                bool btue1 = false;
+                if (tuee1)
+                {
+                    btue1 = (tasksonTue.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 0, ref tue1, btue1);
-            tue1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 0));
-            grid.Children.Add(tue1, 1, 2);
+                SetButton(tasksonTue, 0, ref tue1, btue1);
+                tue1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 0));
+                grid.Children.Add(tue1, 1, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_______2________________________________
+                //________________________Mardi_______2________________________________
 
 
 
-            Button tue2 = new Button();
-            bool tuee2 = tasksonTue.Count<SchoolTask>() >= 2;
-            bool btue2 = false;
-            if (tuee2)
-            {
-                btue2 = (tasksonTue.ElementAt<SchoolTask>(1) != null) /* || 
+                Button tue2 = new Button();
+                bool tuee2 = tasksonTue.Count<SchoolTask>() >= 2;
+                bool btue2 = false;
+                if (tuee2)
+                {
+                    btue2 = (tasksonTue.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 1, ref tue2, btue2);
-            tue2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 1));
-            grid.Children.Add(tue2, 1, 3);
+                SetButton(tasksonTue, 1, ref tue2, btue2);
+                tue2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 1));
+                grid.Children.Add(tue2, 1, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____3__________________________________
+                //________________________Mardi_____3__________________________________
 
-            Button tue3 = new Button();
-            bool tuee3 = tasksonTue.Count<SchoolTask>() >= 3;
-            bool btue3 = false;
-            if (tuee3)
-            {
-                btue3 = (tasksonTue.ElementAt<SchoolTask>(2) != null) /* || 
+                Button tue3 = new Button();
+                bool tuee3 = tasksonTue.Count<SchoolTask>() >= 3;
+                bool btue3 = false;
+                if (tuee3)
+                {
+                    btue3 = (tasksonTue.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 2, ref tue3, btue3);
-            tue3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 2));
-            grid.Children.Add(tue3, 1, 4);
+                SetButton(tasksonTue, 2, ref tue3, btue3);
+                tue3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 2));
+                grid.Children.Add(tue3, 1, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____4__________________________________
+                //________________________Mardi_____4__________________________________
 
-            Button tue4 = new Button();
-            bool tuee4 = tasksonTue.Count<SchoolTask>() >= 4;
-            bool btue4 = false;
-            if (tuee4)
-            {
-                btue4 = (tasksonTue.ElementAt<SchoolTask>(3) != null) /* || 
+                Button tue4 = new Button();
+                bool tuee4 = tasksonTue.Count<SchoolTask>() >= 4;
+                bool btue4 = false;
+                if (tuee4)
+                {
+                    btue4 = (tasksonTue.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 3, ref tue4, btue4);
-            tue4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 3));
-            grid.Children.Add(tue4, 1, 5);
+                SetButton(tasksonTue, 3, ref tue4, btue4);
+                tue4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 3));
+                grid.Children.Add(tue4, 1, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____5__________________________________
+                //________________________Mardi_____5__________________________________
 
-            Button tue5 = new Button();
-            bool tuee5 = tasksonTue.Count<SchoolTask>() >= 5;
-            bool btue5 = false;
-            if (tuee5)
-            {
-                btue5 = (tasksonTue.ElementAt<SchoolTask>(4) != null) /* || 
+                Button tue5 = new Button();
+                bool tuee5 = tasksonTue.Count<SchoolTask>() >= 5;
+                bool btue5 = false;
+                if (tuee5)
+                {
+                    btue5 = (tasksonTue.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 4, ref tue5, btue5);
-            tue5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 4));
-            grid.Children.Add(tue5, 1, 6);
+                SetButton(tasksonTue, 4, ref tue5, btue5);
+                tue5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 4));
+                grid.Children.Add(tue5, 1, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____6__________________________________
+                //________________________Mardi_____6__________________________________
 
-            Button tue6 = new Button();
-            bool tuee6 = tasksonTue.Count<SchoolTask>() >= 6;
-            bool btue6 = false;
-            if (tuee6)
-            {
-                btue6 = (tasksonTue.ElementAt<SchoolTask>(5) != null) /* || 
+                Button tue6 = new Button();
+                bool tuee6 = tasksonTue.Count<SchoolTask>() >= 6;
+                bool btue6 = false;
+                if (tuee6)
+                {
+                    btue6 = (tasksonTue.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 5, ref tue6, btue6);
-            tue6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 5));
-            grid.Children.Add(tue6, 1, 7);
+                SetButton(tasksonTue, 5, ref tue6, btue6);
+                tue6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 5));
+                grid.Children.Add(tue6, 1, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____7__________________________________
+                //________________________Mardi_____7__________________________________
 
-            Button tue7 = new Button();
-            bool tuee7 = tasksonTue.Count<SchoolTask>() >= 7;
-            bool btue7 = false;
-            if (tuee7)
-            {
-                btue7 = (tasksonTue.ElementAt<SchoolTask>(6) != null) /* || 
+                Button tue7 = new Button();
+                bool tuee7 = tasksonTue.Count<SchoolTask>() >= 7;
+                bool btue7 = false;
+                if (tuee7)
+                {
+                    btue7 = (tasksonTue.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 6, ref tue7, btue7);
-            tue7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 6));
-            grid.Children.Add(tue7, 1, 8);
+                SetButton(tasksonTue, 6, ref tue7, btue7);
+                tue7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 6));
+                grid.Children.Add(tue7, 1, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____8__________________________________
+                //________________________Mardi_____8__________________________________
 
-            Button tue8 = new Button();
-            bool tuee8 = tasksonTue.Count<SchoolTask>() >= 8;
-            bool btue8 = false;
-            if (tuee8)
-            {
-                btue8 = (tasksonTue.ElementAt<SchoolTask>(7) != null) /* || 
+                Button tue8 = new Button();
+                bool tuee8 = tasksonTue.Count<SchoolTask>() >= 8;
+                bool btue8 = false;
+                if (tuee8)
+                {
+                    btue8 = (tasksonTue.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 7, ref tue8, btue8);
-            tue8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 7));
-            grid.Children.Add(tue8, 1, 2 + 7);
+                SetButton(tasksonTue, 7, ref tue8, btue8);
+                tue8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 7));
+                grid.Children.Add(tue8, 1, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____9__________________________________
+                //________________________Mardi_____9__________________________________
 
-            Button tue9 = new Button();
-            bool tuee9 = tasksonTue.Count<SchoolTask>() >= 9;
-            bool btue9 = false;
-            if (tuee9)
-            {
-                btue9 = (tasksonTue.ElementAt<SchoolTask>(8) != null) /* || 
+                Button tue9 = new Button();
+                bool tuee9 = tasksonTue.Count<SchoolTask>() >= 9;
+                bool btue9 = false;
+                if (tuee9)
+                {
+                    btue9 = (tasksonTue.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 8, ref tue9, btue9);
-            tue9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 8));
-            grid.Children.Add(tue9, 1, 2 + 8);
+                SetButton(tasksonTue, 8, ref tue9, btue9);
+                tue9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 8));
+                grid.Children.Add(tue9, 1, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____10__________________________________
+                //________________________Mardi_____10__________________________________
 
-            Button tue10 = new Button();
-            bool tuee10 = tasksonTue.Count<SchoolTask>() >= 10;
-            bool btue10 = false;
-            if (tuee10)
-            {
-                btue10 = (tasksonTue.ElementAt<SchoolTask>(9) != null) /* || 
+                Button tue10 = new Button();
+                bool tuee10 = tasksonTue.Count<SchoolTask>() >= 10;
+                bool btue10 = false;
+                if (tuee10)
+                {
+                    btue10 = (tasksonTue.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonTue.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonTue.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonTue, 9, ref tue10, btue10);
-            tue10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 9));
-            grid.Children.Add(tue10, 1, 2 + 9);
+                SetButton(tasksonTue, 9, ref tue10, btue10);
+                tue10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 9));
+                grid.Children.Add(tue10, 1, 2 + 9);
 
-            
-            //_____________________________________________________________________
 
-            //________________________Mercredi___1____________________________________
+                //_____________________________________________________________________
 
-            Button wed1 = new Button();
+                //________________________Mercredi___1____________________________________
 
-            bool wedd1 = tasksonWed.Count<SchoolTask>() >= 1;
-            bool bwed1 = false;
-            if (wedd1)
-            {
-                bwed1 = (tasksonWed.ElementAt<SchoolTask>(0) != null) /* || 
+                Button wed1 = new Button();
+
+                bool wedd1 = tasksonWed.Count<SchoolTask>() >= 1;
+                bool bwed1 = false;
+                if (wedd1)
+                {
+                    bwed1 = (tasksonWed.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 0, ref wed1, bwed1);
-            wed1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 0));
-            grid.Children.Add(wed1, 2, 2);
+                SetButton(tasksonWed, 0, ref wed1, bwed1);
+                wed1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 0));
+                grid.Children.Add(wed1, 2, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_______2________________________________
+                //________________________Mercredi_______2________________________________
 
 
 
-            Button wed2 = new Button();
-            bool wedd2 = tasksonWed.Count<SchoolTask>() >= 2;
-            bool bwed2 = false;
-            if (wedd2)
-            {
-                bwed2 = (tasksonWed.ElementAt<SchoolTask>(1) != null) /* || 
+                Button wed2 = new Button();
+                bool wedd2 = tasksonWed.Count<SchoolTask>() >= 2;
+                bool bwed2 = false;
+                if (wedd2)
+                {
+                    bwed2 = (tasksonWed.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 1, ref wed2, bwed2);
-            wed2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 1));
-            grid.Children.Add(wed2, 2, 3);
+                SetButton(tasksonWed, 1, ref wed2, bwed2);
+                wed2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 1));
+                grid.Children.Add(wed2, 2, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____3__________________________________
+                //________________________Mercredi_____3__________________________________
 
-            Button wed3 = new Button();
-            bool wedd3 = tasksonWed.Count<SchoolTask>() >= 3;
-            bool bwed3 = false;
-            if (wedd3)
-            {
-                bwed3 = (tasksonWed.ElementAt<SchoolTask>(2) != null) /* || 
+                Button wed3 = new Button();
+                bool wedd3 = tasksonWed.Count<SchoolTask>() >= 3;
+                bool bwed3 = false;
+                if (wedd3)
+                {
+                    bwed3 = (tasksonWed.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 2, ref wed3, bwed3);
-            wed3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 2));
-            grid.Children.Add(wed3, 2, 4);
+                SetButton(tasksonWed, 2, ref wed3, bwed3);
+                wed3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 2));
+                grid.Children.Add(wed3, 2, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____4__________________________________
+                //________________________Mercredi_____4__________________________________
 
-            Button wed4 = new Button();
-            bool wedd4 = tasksonWed.Count<SchoolTask>() >= 4;
-            bool bwed4 = false;
-            if (wedd4)
-            {
-                bwed4 = (tasksonWed.ElementAt<SchoolTask>(3) != null) /* || 
+                Button wed4 = new Button();
+                bool wedd4 = tasksonWed.Count<SchoolTask>() >= 4;
+                bool bwed4 = false;
+                if (wedd4)
+                {
+                    bwed4 = (tasksonWed.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 3, ref wed4, bwed4);
-            wed4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 3));
-            grid.Children.Add(wed4, 2, 5);
+                SetButton(tasksonWed, 3, ref wed4, bwed4);
+                wed4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 3));
+                grid.Children.Add(wed4, 2, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____5__________________________________
+                //________________________Mercredi_____5__________________________________
 
-            Button wed5 = new Button();
-            bool wedd5 = tasksonWed.Count<SchoolTask>() >= 5;
-            bool bwed5 = false;
-            if (wedd5)
-            {
-                bwed5 = (tasksonWed.ElementAt<SchoolTask>(4) != null) /* || 
+                Button wed5 = new Button();
+                bool wedd5 = tasksonWed.Count<SchoolTask>() >= 5;
+                bool bwed5 = false;
+                if (wedd5)
+                {
+                    bwed5 = (tasksonWed.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 4, ref wed5, bwed5);
-            wed5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 4));
-            grid.Children.Add(wed5, 2, 6);
+                SetButton(tasksonWed, 4, ref wed5, bwed5);
+                wed5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 4));
+                grid.Children.Add(wed5, 2, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____6__________________________________
+                //________________________Mercredi_____6__________________________________
 
-            Button wed6 = new Button();
-            bool wedd6 = tasksonWed.Count<SchoolTask>() >= 6;
-            bool bwed6 = false;
-            if (wedd6)
-            {
-                bwed6 = (tasksonWed.ElementAt<SchoolTask>(5) != null) /* || 
+                Button wed6 = new Button();
+                bool wedd6 = tasksonWed.Count<SchoolTask>() >= 6;
+                bool bwed6 = false;
+                if (wedd6)
+                {
+                    bwed6 = (tasksonWed.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 5, ref wed6, bwed6);
-            wed6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 5));
-            grid.Children.Add(wed6, 2, 7);
+                SetButton(tasksonWed, 5, ref wed6, bwed6);
+                wed6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 5));
+                grid.Children.Add(wed6, 2, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____7__________________________________
+                //________________________Mercredi_____7__________________________________
 
-            Button wed7 = new Button();
-            bool wedd7 = tasksonWed.Count<SchoolTask>() >= 7;
-            bool bwed7 = false;
-            if (wedd7)
-            {
-                bwed7 = (tasksonWed.ElementAt<SchoolTask>(6) != null) /* || 
+                Button wed7 = new Button();
+                bool wedd7 = tasksonWed.Count<SchoolTask>() >= 7;
+                bool bwed7 = false;
+                if (wedd7)
+                {
+                    bwed7 = (tasksonWed.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 6, ref wed7, bwed7);
-            wed7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 6));
-            grid.Children.Add(wed7, 2, 8);
+                SetButton(tasksonWed, 6, ref wed7, bwed7);
+                wed7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 6));
+                grid.Children.Add(wed7, 2, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____8__________________________________
+                //________________________Mercredi_____8__________________________________
 
-            Button wed8 = new Button();
-            bool wedd8 = tasksonWed.Count<SchoolTask>() >= 8;
-            bool bwed8 = false;
-            if (wedd8)
-            {
-                bwed8 = (tasksonWed.ElementAt<SchoolTask>(7) != null) /* || 
+                Button wed8 = new Button();
+                bool wedd8 = tasksonWed.Count<SchoolTask>() >= 8;
+                bool bwed8 = false;
+                if (wedd8)
+                {
+                    bwed8 = (tasksonWed.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 7, ref wed8, bwed8);
-            wed8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 7));
-            grid.Children.Add(wed8, 2, 2 + 7);
+                SetButton(tasksonWed, 7, ref wed8, bwed8);
+                wed8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 7));
+                grid.Children.Add(wed8, 2, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____9__________________________________
+                //________________________Mercredi_____9__________________________________
 
-            Button wed9 = new Button();
-            bool wedd9 = tasksonWed.Count<SchoolTask>() >= 9;
-            bool bwed9 = false;
-            if (wedd9)
-            {
-                bwed9 = (tasksonWed.ElementAt<SchoolTask>(8) != null) /* || 
+                Button wed9 = new Button();
+                bool wedd9 = tasksonWed.Count<SchoolTask>() >= 9;
+                bool bwed9 = false;
+                if (wedd9)
+                {
+                    bwed9 = (tasksonWed.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 8, ref wed9, bwed9);
-            wed9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 8));
-            grid.Children.Add(wed9, 2, 2 + 8);
+                SetButton(tasksonWed, 8, ref wed9, bwed9);
+                wed9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 8));
+                grid.Children.Add(wed9, 2, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mercredi_____10__________________________________
+                //________________________Mercredi_____10__________________________________
 
-            Button wed10 = new Button();
-            bool wedd10 = tasksonWed.Count<SchoolTask>() >= 10;
-            bool bwed10 = false;
-            if (wedd10)
-            {
-                bwed10 = (tasksonWed.ElementAt<SchoolTask>(9) != null) /* || 
+                Button wed10 = new Button();
+                bool wedd10 = tasksonWed.Count<SchoolTask>() >= 10;
+                bool bwed10 = false;
+                if (wedd10)
+                {
+                    bwed10 = (tasksonWed.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonWed.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonWed.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonWed, 9, ref wed10, bwed10);
-            wed10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 9));
-            grid.Children.Add(wed10, 2, 2 + 9);
+                SetButton(tasksonWed, 9, ref wed10, bwed10);
+                wed10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 9));
+                grid.Children.Add(wed10, 2, 2 + 9);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi___1____________________________________
+                //________________________Jeudi___1____________________________________
 
-            Button thu1 = new Button();
+                Button thu1 = new Button();
 
 
-            bool thud1 = tasksonThu.Count<SchoolTask>() >= 1;
-            bool bthu1 = false;
-            if (thud1)
-            {
-                bthu1 = (tasksonThu.ElementAt<SchoolTask>(0) != null) /* || 
+                bool thud1 = tasksonThu.Count<SchoolTask>() >= 1;
+                bool bthu1 = false;
+                if (thud1)
+                {
+                    bthu1 = (tasksonThu.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 0, ref thu1, bthu1);
-            thu1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 0));
-            grid.Children.Add(thu1, 3, 2);
+                SetButton(tasksonThu, 0, ref thu1, bthu1);
+                thu1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 0));
+                grid.Children.Add(thu1, 3, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_______2________________________________
+                //________________________Jeudi_______2________________________________
 
 
 
-            Button thu2 = new Button();
-            bool thud2 = tasksonThu.Count<SchoolTask>() >= 2;
-            bool bthu2 = false;
-            if (thud2)
-            {
-                bthu2 = (tasksonThu.ElementAt<SchoolTask>(1) != null) /* || 
+                Button thu2 = new Button();
+                bool thud2 = tasksonThu.Count<SchoolTask>() >= 2;
+                bool bthu2 = false;
+                if (thud2)
+                {
+                    bthu2 = (tasksonThu.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 1, ref thu2, bthu2);
-            thu2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 1));
-            grid.Children.Add(thu2, 3, 3);
+                SetButton(tasksonThu, 1, ref thu2, bthu2);
+                thu2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 1));
+                grid.Children.Add(thu2, 3, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____3__________________________________
+                //________________________Jeudi_____3__________________________________
 
-            Button thu3 = new Button();
-            bool thud3 = tasksonThu.Count<SchoolTask>() >= 3;
-            bool bthu3 = false;
-            if (thud3)
-            {
-                bthu3 = (tasksonThu.ElementAt<SchoolTask>(2) != null) /* || 
+                Button thu3 = new Button();
+                bool thud3 = tasksonThu.Count<SchoolTask>() >= 3;
+                bool bthu3 = false;
+                if (thud3)
+                {
+                    bthu3 = (tasksonThu.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 2, ref thu3, bthu3);
-            thu3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 2));
-            grid.Children.Add(thu3, 3, 4);
+                SetButton(tasksonThu, 2, ref thu3, bthu3);
+                thu3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 2));
+                grid.Children.Add(thu3, 3, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____4__________________________________
+                //________________________Jeudi_____4__________________________________
 
-            Button thu4 = new Button();
-            bool thud4 = tasksonThu.Count<SchoolTask>() >= 4;
-            bool bthu4 = false;
-            if (thud4)
-            {
-                bthu4 = (tasksonThu.ElementAt<SchoolTask>(3) != null) /* || 
+                Button thu4 = new Button();
+                bool thud4 = tasksonThu.Count<SchoolTask>() >= 4;
+                bool bthu4 = false;
+                if (thud4)
+                {
+                    bthu4 = (tasksonThu.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 3, ref thu4, bthu4);
-            thu4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 3));
-            grid.Children.Add(thu4, 3, 5);
+                SetButton(tasksonThu, 3, ref thu4, bthu4);
+                thu4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 3));
+                grid.Children.Add(thu4, 3, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____5__________________________________
+                //________________________Jeudi_____5__________________________________
 
-            Button thu5 = new Button();
-            bool thud5 = tasksonThu.Count<SchoolTask>() >= 5;
-            bool bthu5 = false;
-            if (thud5)
-            {
-                bthu5 = (tasksonThu.ElementAt<SchoolTask>(4) != null) /* || 
+                Button thu5 = new Button();
+                bool thud5 = tasksonThu.Count<SchoolTask>() >= 5;
+                bool bthu5 = false;
+                if (thud5)
+                {
+                    bthu5 = (tasksonThu.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 4, ref thu5, bthu5);
-            thu5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 4));
-            grid.Children.Add(thu5, 3, 6);
+                SetButton(tasksonThu, 4, ref thu5, bthu5);
+                thu5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 4));
+                grid.Children.Add(thu5, 3, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____6__________________________________
+                //________________________Jeudi_____6__________________________________
 
-            Button thu6 = new Button();
-            bool thud6 = tasksonThu.Count<SchoolTask>() >= 6;
-            bool bthu6 = false;
-            if (thud6)
-            {
-                bthu6 = (tasksonThu.ElementAt<SchoolTask>(5) != null) /* || 
+                Button thu6 = new Button();
+                bool thud6 = tasksonThu.Count<SchoolTask>() >= 6;
+                bool bthu6 = false;
+                if (thud6)
+                {
+                    bthu6 = (tasksonThu.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 5, ref thu6, bthu6);
-            thu6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 5));
-            grid.Children.Add(thu6, 3, 7);
+                SetButton(tasksonThu, 5, ref thu6, bthu6);
+                thu6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 5));
+                grid.Children.Add(thu6, 3, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____7__________________________________
+                //________________________Jeudi_____7__________________________________
 
-            Button thu7 = new Button();
-            bool thud7 = tasksonThu.Count<SchoolTask>() >= 7;
-            bool bthu7 = false;
-            if (thud7)
-            {
-                bthu7 = (tasksonThu.ElementAt<SchoolTask>(6) != null) /* || 
+                Button thu7 = new Button();
+                bool thud7 = tasksonThu.Count<SchoolTask>() >= 7;
+                bool bthu7 = false;
+                if (thud7)
+                {
+                    bthu7 = (tasksonThu.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 6, ref thu7, bthu7);
-            thu7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 6));
-            grid.Children.Add(thu7, 3, 8);
+                SetButton(tasksonThu, 6, ref thu7, bthu7);
+                thu7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 6));
+                grid.Children.Add(thu7, 3, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____8__________________________________
+                //________________________Jeudi_____8__________________________________
 
-            Button thu8 = new Button();
-            bool thud8 = tasksonThu.Count<SchoolTask>() >= 8;
-            bool bthu8 = false;
-            if (thud8)
-            {
-                bthu8 = (tasksonThu.ElementAt<SchoolTask>(7) != null) /* || 
+                Button thu8 = new Button();
+                bool thud8 = tasksonThu.Count<SchoolTask>() >= 8;
+                bool bthu8 = false;
+                if (thud8)
+                {
+                    bthu8 = (tasksonThu.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 7, ref thu8, bthu8);
-            thu8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 7));
-            grid.Children.Add(thu8, 3, 2 + 7);
+                SetButton(tasksonThu, 7, ref thu8, bthu8);
+                thu8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 7));
+                grid.Children.Add(thu8, 3, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____9__________________________________
+                //________________________Jeudi_____9__________________________________
 
-            Button thu9 = new Button();
-            bool thud9 = tasksonThu.Count<SchoolTask>() >= 9;
-            bool bthu9 = false;
-            if (thud9)
-            {
-                bthu9 = (tasksonThu.ElementAt<SchoolTask>(8) != null) /* || 
+                Button thu9 = new Button();
+                bool thud9 = tasksonThu.Count<SchoolTask>() >= 9;
+                bool bthu9 = false;
+                if (thud9)
+                {
+                    bthu9 = (tasksonThu.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 8, ref thu9, bthu9);
-            thu9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 8));
-            grid.Children.Add(thu9, 3, 2 + 8);
+                SetButton(tasksonThu, 8, ref thu9, bthu9);
+                thu9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 8));
+                grid.Children.Add(thu9, 3, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Jeudi_____10__________________________________
+                //________________________Jeudi_____10__________________________________
 
-            Button thu10 = new Button();
-            bool thud10 = tasksonThu.Count<SchoolTask>() >= 10;
-            bool bthu10 = false;
-            if (thud10)
-            {
-                bthu10 = (tasksonThu.ElementAt<SchoolTask>(9) != null) /* || 
+                Button thu10 = new Button();
+                bool thud10 = tasksonThu.Count<SchoolTask>() >= 10;
+                bool bthu10 = false;
+                if (thud10)
+                {
+                    bthu10 = (tasksonThu.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonThu.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonThu.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonThu, 9, ref thu10, bthu10);
-            thu10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 9));
-            grid.Children.Add(thu10, 3, 2 + 9);
-            //_____________________________________________________________________
+                SetButton(tasksonThu, 9, ref thu10, bthu10);
+                thu10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 9));
+                grid.Children.Add(thu10, 3, 2 + 9);
+                //_____________________________________________________________________
 
-            //________________________Vendredi___1____________________________________
+                //________________________Vendredi___1____________________________________
 
-            Button fri1 = new Button();
+                Button fri1 = new Button();
 
 
-            bool frid1 = tasksonFri.Count<SchoolTask>() >= 1;
-            bool bfri1 = false;
-            if (frid1)
-            {
-                bfri1 = (tasksonFri.ElementAt<SchoolTask>(0) != null) /* || 
+                bool frid1 = tasksonFri.Count<SchoolTask>() >= 1;
+                bool bfri1 = false;
+                if (frid1)
+                {
+                    bfri1 = (tasksonFri.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 0, ref fri1, bfri1);
-            fri1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 0));
-            grid.Children.Add(fri1, 4, 2);
+                SetButton(tasksonFri, 0, ref fri1, bfri1);
+                fri1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 0));
+                grid.Children.Add(fri1, 4, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_______2________________________________
+                //________________________Vendredi_______2________________________________
 
 
 
-            Button fri2 = new Button();
-            bool frid2 = tasksonFri.Count<SchoolTask>() >= 2;
-            bool bfri2 = false;
-            if (frid2)
-            {
-                bfri2 = (tasksonFri.ElementAt<SchoolTask>(1) != null) /* || 
+                Button fri2 = new Button();
+                bool frid2 = tasksonFri.Count<SchoolTask>() >= 2;
+                bool bfri2 = false;
+                if (frid2)
+                {
+                    bfri2 = (tasksonFri.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 1, ref fri2, bfri2);
-            fri2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 1));
-            grid.Children.Add(fri2, 4, 3);
+                SetButton(tasksonFri, 1, ref fri2, bfri2);
+                fri2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 1));
+                grid.Children.Add(fri2, 4, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____3__________________________________
+                //________________________Vendredi_____3__________________________________
 
-            Button fri3 = new Button();
-            bool frid3 = tasksonFri.Count<SchoolTask>() >= 3;
-            bool bfri3 = false;
-            if (frid3)
-            {
-                bfri3 = (tasksonFri.ElementAt<SchoolTask>(2) != null) /* || 
+                Button fri3 = new Button();
+                bool frid3 = tasksonFri.Count<SchoolTask>() >= 3;
+                bool bfri3 = false;
+                if (frid3)
+                {
+                    bfri3 = (tasksonFri.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 2, ref fri3, bfri3);
-            fri3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 2));
-            grid.Children.Add(fri3, 4, 4);
+                SetButton(tasksonFri, 2, ref fri3, bfri3);
+                fri3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 2));
+                grid.Children.Add(fri3, 4, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____4__________________________________
+                //________________________Vendredi_____4__________________________________
 
-            Button fri4 = new Button();
-            bool frid4 = tasksonFri.Count<SchoolTask>() >= 4;
-            bool bfri4 = false;
-            if (frid4)
-            {
-                bfri4 = (tasksonFri.ElementAt<SchoolTask>(3) != null) /* || 
+                Button fri4 = new Button();
+                bool frid4 = tasksonFri.Count<SchoolTask>() >= 4;
+                bool bfri4 = false;
+                if (frid4)
+                {
+                    bfri4 = (tasksonFri.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 3, ref fri4, bfri4);
-            fri4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 3));
-            grid.Children.Add(fri4, 4, 5);
+                SetButton(tasksonFri, 3, ref fri4, bfri4);
+                fri4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 3));
+                grid.Children.Add(fri4, 4, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____5__________________________________
+                //________________________Vendredi_____5__________________________________
 
-            Button fri5 = new Button();
-            bool frid5 = tasksonFri.Count<SchoolTask>() >= 5;
-            bool bfri5 = false;
-            if (frid5)
-            {
-                bfri5 = (tasksonFri.ElementAt<SchoolTask>(4) != null) /* || 
+                Button fri5 = new Button();
+                bool frid5 = tasksonFri.Count<SchoolTask>() >= 5;
+                bool bfri5 = false;
+                if (frid5)
+                {
+                    bfri5 = (tasksonFri.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 4, ref fri5, bfri5);
-            fri5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 4));
-            grid.Children.Add(fri5, 4, 6);
+                SetButton(tasksonFri, 4, ref fri5, bfri5);
+                fri5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 4));
+                grid.Children.Add(fri5, 4, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____6__________________________________
+                //________________________Vendredi_____6__________________________________
 
-            Button fri6 = new Button();
-            bool frid6 = tasksonFri.Count<SchoolTask>() >= 6;
-            bool bfri6 = false;
-            if (frid6)
-            {
-                bfri6 = (tasksonFri.ElementAt<SchoolTask>(5) != null) /* || 
+                Button fri6 = new Button();
+                bool frid6 = tasksonFri.Count<SchoolTask>() >= 6;
+                bool bfri6 = false;
+                if (frid6)
+                {
+                    bfri6 = (tasksonFri.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 5, ref fri6, bfri6);
-            fri6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 5));
-            grid.Children.Add(fri6, 4, 7);
+                SetButton(tasksonFri, 5, ref fri6, bfri6);
+                fri6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 5));
+                grid.Children.Add(fri6, 4, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____7__________________________________
+                //________________________Vendredi_____7__________________________________
 
-            Button fri7 = new Button();
-            bool frid7 = tasksonFri.Count<SchoolTask>() >= 7;
-            bool bfri7 = false;
-            if (frid7)
-            {
-                bfri7 = (tasksonFri.ElementAt<SchoolTask>(6) != null) /* || 
+                Button fri7 = new Button();
+                bool frid7 = tasksonFri.Count<SchoolTask>() >= 7;
+                bool bfri7 = false;
+                if (frid7)
+                {
+                    bfri7 = (tasksonFri.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 6, ref fri7, bfri7);
-            fri7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 6));
-            grid.Children.Add(fri7, 4, 8);
+                SetButton(tasksonFri, 6, ref fri7, bfri7);
+                fri7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 6));
+                grid.Children.Add(fri7, 4, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____8__________________________________
+                //________________________Vendredi_____8__________________________________
 
-            Button fri8 = new Button();
-            bool frid8 = tasksonFri.Count<SchoolTask>() >= 8;
-            bool bfri8 = false;
-            if (frid8)
-            {
-                bfri8 = (tasksonFri.ElementAt<SchoolTask>(7) != null) /* || 
+                Button fri8 = new Button();
+                bool frid8 = tasksonFri.Count<SchoolTask>() >= 8;
+                bool bfri8 = false;
+                if (frid8)
+                {
+                    bfri8 = (tasksonFri.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 7, ref fri8, bfri8);
-            fri8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 7));
-            grid.Children.Add(fri8, 4, 2 + 7);
+                SetButton(tasksonFri, 7, ref fri8, bfri8);
+                fri8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 7));
+                grid.Children.Add(fri8, 4, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____9__________________________________
+                //________________________Vendredi_____9__________________________________
 
-            Button fri9 = new Button();
-            bool frid9 = tasksonFri.Count<SchoolTask>() >= 9;
-            bool bfri9 = false;
-            if (frid9)
-            {
-                bfri9 = (tasksonFri.ElementAt<SchoolTask>(8) != null) /* || 
+                Button fri9 = new Button();
+                bool frid9 = tasksonFri.Count<SchoolTask>() >= 9;
+                bool bfri9 = false;
+                if (frid9)
+                {
+                    bfri9 = (tasksonFri.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 8, ref fri9, bfri9);
-            fri9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 8));
-            grid.Children.Add(fri9, 4, 2 + 8);
+                SetButton(tasksonFri, 8, ref fri9, bfri9);
+                fri9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 8));
+                grid.Children.Add(fri9, 4, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Vendredi_____10__________________________________
+                //________________________Vendredi_____10__________________________________
 
-            Button fri10 = new Button();
-            bool frid10 = tasksonFri.Count<SchoolTask>() >= 10;
-            bool bfri10 = false;
-            if (frid10)
-            {
-                bfri10 = (tasksonFri.ElementAt<SchoolTask>(9) != null) /* || 
+                Button fri10 = new Button();
+                bool frid10 = tasksonFri.Count<SchoolTask>() >= 10;
+                bool bfri10 = false;
+                if (frid10)
+                {
+                    bfri10 = (tasksonFri.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonFri.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonFri.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonFri, 9, ref fri10, bfri10);
-            fri10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 9));
-            grid.Children.Add(fri10, 4, 2 + 9);
+                SetButton(tasksonFri, 9, ref fri10, bfri10);
+                fri10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 9));
+                grid.Children.Add(fri10, 4, 2 + 9);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi___1____________________________________
+                //________________________Samedi___1____________________________________
 
-            Button sat1 = new Button();
+                Button sat1 = new Button();
 
 
-            bool satd1 = tasksonSat.Count<SchoolTask>() >= 1;
-            bool bsat1 = false;
-            if (satd1)
-            {
-                bsat1 = (tasksonSat.ElementAt<SchoolTask>(0) != null) /* || 
+                bool satd1 = tasksonSat.Count<SchoolTask>() >= 1;
+                bool bsat1 = false;
+                if (satd1)
+                {
+                    bsat1 = (tasksonSat.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 0, ref sat1, bsat1);
-            sat1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 0));
-            grid.Children.Add(sat1, 5, 2);
+                SetButton(tasksonSat, 0, ref sat1, bsat1);
+                sat1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 0));
+                grid.Children.Add(sat1, 5, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_______2________________________________
+                //________________________Samedi_______2________________________________
 
 
 
-            Button sat2 = new Button();
-            bool satd2 = tasksonSat.Count<SchoolTask>() >= 2;
-            bool bsat2 = false;
-            if (satd2)
-            {
-                bsat2 = (tasksonSat.ElementAt<SchoolTask>(1) != null) /* || 
+                Button sat2 = new Button();
+                bool satd2 = tasksonSat.Count<SchoolTask>() >= 2;
+                bool bsat2 = false;
+                if (satd2)
+                {
+                    bsat2 = (tasksonSat.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 1, ref sat2, bsat2);
-            sat2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 1));
-            grid.Children.Add(sat2, 5, 3);
+                SetButton(tasksonSat, 1, ref sat2, bsat2);
+                sat2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 1));
+                grid.Children.Add(sat2, 5, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____3__________________________________
+                //________________________Samedi_____3__________________________________
 
-            Button sat3 = new Button();
-            bool satd3 = tasksonSat.Count<SchoolTask>() >= 3;
-            bool bsat3 = false;
-            if (satd3)
-            {
-                bsat3 = (tasksonSat.ElementAt<SchoolTask>(2) != null) /* || 
+                Button sat3 = new Button();
+                bool satd3 = tasksonSat.Count<SchoolTask>() >= 3;
+                bool bsat3 = false;
+                if (satd3)
+                {
+                    bsat3 = (tasksonSat.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 2, ref sat3, bsat3);
-            sat3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 2));
-            grid.Children.Add(sat3, 5, 4);
+                SetButton(tasksonSat, 2, ref sat3, bsat3);
+                sat3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 2));
+                grid.Children.Add(sat3, 5, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____4__________________________________
+                //________________________Samedi_____4__________________________________
 
-            Button sat4 = new Button();
-            bool satd4 = tasksonSat.Count<SchoolTask>() >= 4;
-            bool bsat4 = false;
-            if (satd4)
-            {
-                bsat4 = (tasksonSat.ElementAt<SchoolTask>(3) != null) /* || 
+                Button sat4 = new Button();
+                bool satd4 = tasksonSat.Count<SchoolTask>() >= 4;
+                bool bsat4 = false;
+                if (satd4)
+                {
+                    bsat4 = (tasksonSat.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 3, ref sat4, bsat4);
-            sat4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 3));
-            grid.Children.Add(sat4, 5, 5);
+                SetButton(tasksonSat, 3, ref sat4, bsat4);
+                sat4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 3));
+                grid.Children.Add(sat4, 5, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____5__________________________________
+                //________________________Samedi_____5__________________________________
 
-            Button sat5 = new Button();
-            bool satd5 = tasksonSat.Count<SchoolTask>() >= 5;
-            bool bsat5 = false;
-            if (satd5)
-            {
-                bsat5 = (tasksonSat.ElementAt<SchoolTask>(4) != null) /* || 
+                Button sat5 = new Button();
+                bool satd5 = tasksonSat.Count<SchoolTask>() >= 5;
+                bool bsat5 = false;
+                if (satd5)
+                {
+                    bsat5 = (tasksonSat.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 4, ref sat5, bsat5);
-            sat5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 4));
-            grid.Children.Add(sat5, 5, 6);
+                SetButton(tasksonSat, 4, ref sat5, bsat5);
+                sat5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 4));
+                grid.Children.Add(sat5, 5, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____6__________________________________
+                //________________________Samedi_____6__________________________________
 
-            Button sat6 = new Button();
-            bool satd6 = tasksonSat.Count<SchoolTask>() >= 6;
-            bool bsat6 = false;
-            if (satd6)
-            {
-                bsat6 = (tasksonSat.ElementAt<SchoolTask>(5) != null) /* || 
+                Button sat6 = new Button();
+                bool satd6 = tasksonSat.Count<SchoolTask>() >= 6;
+                bool bsat6 = false;
+                if (satd6)
+                {
+                    bsat6 = (tasksonSat.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 5, ref sat6, bsat6);
-            sat6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 5));
-            grid.Children.Add(sat6, 5, 7);
+                SetButton(tasksonSat, 5, ref sat6, bsat6);
+                sat6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 5));
+                grid.Children.Add(sat6, 5, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____7__________________________________
+                //________________________Samedi_____7__________________________________
 
-            Button sat7 = new Button();
-            bool satd7 = tasksonSat.Count<SchoolTask>() >= 7;
-            bool bsat7 = false;
-            if (satd7)
-            {
-                bsat7 = (tasksonSat.ElementAt<SchoolTask>(6) != null) /* || 
+                Button sat7 = new Button();
+                bool satd7 = tasksonSat.Count<SchoolTask>() >= 7;
+                bool bsat7 = false;
+                if (satd7)
+                {
+                    bsat7 = (tasksonSat.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 6, ref sat7, bsat7);
-            sat7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 6));
-            grid.Children.Add(sat7, 5, 8);
+                SetButton(tasksonSat, 6, ref sat7, bsat7);
+                sat7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 6));
+                grid.Children.Add(sat7, 5, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____8__________________________________
+                //________________________Samedi_____8__________________________________
 
-            Button sat8 = new Button();
-            bool satd8 = tasksonSat.Count<SchoolTask>() >= 8;
-            bool bsat8 = false;
-            if (satd8)
-            {
-                bsat8 = (tasksonSat.ElementAt<SchoolTask>(7) != null) /* || 
+                Button sat8 = new Button();
+                bool satd8 = tasksonSat.Count<SchoolTask>() >= 8;
+                bool bsat8 = false;
+                if (satd8)
+                {
+                    bsat8 = (tasksonSat.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 7, ref sat8, bsat8);
-            sat8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 7));
-            grid.Children.Add(sat8, 5, 2 + 7);
+                SetButton(tasksonSat, 7, ref sat8, bsat8);
+                sat8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 7));
+                grid.Children.Add(sat8, 5, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____9__________________________________
+                //________________________Samedi_____9__________________________________
 
-            Button sat9 = new Button();
-            bool satd9 = tasksonSat.Count<SchoolTask>() >= 9;
-            bool bsat9 = false;
-            if (satd9)
-            {
-                bsat9 = (tasksonSat.ElementAt<SchoolTask>(8) != null) /* || 
+                Button sat9 = new Button();
+                bool satd9 = tasksonSat.Count<SchoolTask>() >= 9;
+                bool bsat9 = false;
+                if (satd9)
+                {
+                    bsat9 = (tasksonSat.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 8, ref sat9, bsat9);
-            sat9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 8));
-            grid.Children.Add(sat9, 5, 2 + 8);
+                SetButton(tasksonSat, 8, ref sat9, bsat9);
+                sat9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 8));
+                grid.Children.Add(sat9, 5, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Samedi_____10__________________________________
+                //________________________Samedi_____10__________________________________
 
-            Button sat10 = new Button();
-            bool satd10 = tasksonSat.Count<SchoolTask>() >= 10;
-            bool bsat10 = false;
-            if (satd10)
-            {
-                bsat10 = (tasksonSat.ElementAt<SchoolTask>(9) != null) /* || 
+                Button sat10 = new Button();
+                bool satd10 = tasksonSat.Count<SchoolTask>() >= 10;
+                bool bsat10 = false;
+                if (satd10)
+                {
+                    bsat10 = (tasksonSat.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonSat.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSat.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSat, 9, ref sat10, bsat10);
-            sat10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 9));
-            grid.Children.Add(sat10, 5, 2 + 9);
+                SetButton(tasksonSat, 9, ref sat10, bsat10);
+                sat10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 9));
+                grid.Children.Add(sat10, 5, 2 + 9);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche___1____________________________________
+                //________________________Dimanche___1____________________________________
 
-            Button sun1 = new Button();
+                Button sun1 = new Button();
 
 
-            bool sund1 = tasksonSun.Count<SchoolTask>() >= 1;
-            bool bsun1 = false;
-            if (sund1)
-            {
-                bsun1 = (tasksonSun.ElementAt<SchoolTask>(0) != null) /* || 
+                bool sund1 = tasksonSun.Count<SchoolTask>() >= 1;
+                bool bsun1 = false;
+                if (sund1)
+                {
+                    bsun1 = (tasksonSun.ElementAt<SchoolTask>(0) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(0).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(0).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 0, ref sun1, bsun1);
-            sun1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 0));
-            grid.Children.Add(sun1, 6, 2);
+                SetButton(tasksonSun, 0, ref sun1, bsun1);
+                sun1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 0));
+                grid.Children.Add(sun1, 6, 2);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_______2________________________________
+                //________________________Dimanche_______2________________________________
 
 
 
-            Button sun2 = new Button();
-            bool sund2 = tasksonSun.Count<SchoolTask>() >= 2;
-            bool bsun2 = false;
-            if (sund2)
-            {
-                bsun2 = (tasksonSun.ElementAt<SchoolTask>(1) != null) /* || 
+                Button sun2 = new Button();
+                bool sund2 = tasksonSun.Count<SchoolTask>() >= 2;
+                bool bsun2 = false;
+                if (sund2)
+                {
+                    bsun2 = (tasksonSun.ElementAt<SchoolTask>(1) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(1).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(1).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 1, ref sun2, bsun2);
-            sun2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 1));
-            grid.Children.Add(sun2, 6, 3);
+                SetButton(tasksonSun, 1, ref sun2, bsun2);
+                sun2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 1));
+                grid.Children.Add(sun2, 6, 3);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____3__________________________________
+                //________________________Dimanche_____3__________________________________
 
-            Button sun3 = new Button();
-            bool sund3 = tasksonSun.Count<SchoolTask>() >= 3;
-            bool bsun3 = false;
-            if (sund3)
-            {
-                bsun3 = (tasksonSun.ElementAt<SchoolTask>(2) != null) /* || 
+                Button sun3 = new Button();
+                bool sund3 = tasksonSun.Count<SchoolTask>() >= 3;
+                bool bsun3 = false;
+                if (sund3)
+                {
+                    bsun3 = (tasksonSun.ElementAt<SchoolTask>(2) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(2).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(2).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 2, ref sun3, bsun3);
-            sun3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 2));
-            grid.Children.Add(sun3, 6, 4);
+                SetButton(tasksonSun, 2, ref sun3, bsun3);
+                sun3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 2));
+                grid.Children.Add(sun3, 6, 4);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____4__________________________________
+                //________________________Dimanche_____4__________________________________
 
-            Button sun4 = new Button();
-            bool sund4 = tasksonSun.Count<SchoolTask>() >= 4;
-            bool bsun4 = false;
-            if (sund4)
-            {
-                bsun4 = (tasksonSun.ElementAt<SchoolTask>(3) != null) /* || 
+                Button sun4 = new Button();
+                bool sund4 = tasksonSun.Count<SchoolTask>() >= 4;
+                bool bsun4 = false;
+                if (sund4)
+                {
+                    bsun4 = (tasksonSun.ElementAt<SchoolTask>(3) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(3).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(3).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 3, ref sun4, bsun4);
-            sun4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 3));
-            grid.Children.Add(sun4, 6, 5);
+                SetButton(tasksonSun, 3, ref sun4, bsun4);
+                sun4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 3));
+                grid.Children.Add(sun4, 6, 5);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____5__________________________________
+                //________________________Dimanche_____5__________________________________
 
-            Button sun5 = new Button();
-            bool sund5 = tasksonSun.Count<SchoolTask>() >= 5;
-            bool bsun5 = false;
-            if (sund5)
-            {
-                bsun5 = (tasksonSun.ElementAt<SchoolTask>(4) != null) /* || 
+                Button sun5 = new Button();
+                bool sund5 = tasksonSun.Count<SchoolTask>() >= 5;
+                bool bsun5 = false;
+                if (sund5)
+                {
+                    bsun5 = (tasksonSun.ElementAt<SchoolTask>(4) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(4).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(4).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 4, ref sun5, bsun5);
-            sun5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 4));
-            grid.Children.Add(sun5, 6, 6);
+                SetButton(tasksonSun, 4, ref sun5, bsun5);
+                sun5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 4));
+                grid.Children.Add(sun5, 6, 6);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____6__________________________________
+                //________________________Dimanche_____6__________________________________
 
-            Button sun6 = new Button();
-            bool sund6 = tasksonSun.Count<SchoolTask>() >= 6;
-            bool bsun6 = false;
-            if (sund6)
-            {
-                bsun6 = (tasksonSun.ElementAt<SchoolTask>(5) != null) /* || 
+                Button sun6 = new Button();
+                bool sund6 = tasksonSun.Count<SchoolTask>() >= 6;
+                bool bsun6 = false;
+                if (sund6)
+                {
+                    bsun6 = (tasksonSun.ElementAt<SchoolTask>(5) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(5).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(5).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 5, ref sun6, bsun6);
-            sun6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 5));
-            grid.Children.Add(sun6, 6, 7);
+                SetButton(tasksonSun, 5, ref sun6, bsun6);
+                sun6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 5));
+                grid.Children.Add(sun6, 6, 7);
 
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____7__________________________________
+                //________________________Dimanche_____7__________________________________
 
-            Button sun7 = new Button();
-            bool sund7 = tasksonSun.Count<SchoolTask>() >= 7;
-            bool bsun7 = false;
-            if (sund7)
-            {
-                bsun7 = (tasksonSun.ElementAt<SchoolTask>(6) != null) /* || 
+                Button sun7 = new Button();
+                bool sund7 = tasksonSun.Count<SchoolTask>() >= 7;
+                bool bsun7 = false;
+                if (sund7)
+                {
+                    bsun7 = (tasksonSun.ElementAt<SchoolTask>(6) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(6).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(6).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 6, ref sun7, bsun7);
-            sun7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 6));
-            grid.Children.Add(sun7, 6, 8);
+                SetButton(tasksonSun, 6, ref sun7, bsun7);
+                sun7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 6));
+                grid.Children.Add(sun7, 6, 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____8__________________________________
+                //________________________Dimanche_____8__________________________________
 
-            Button sun8 = new Button();
-            bool sund8 = tasksonSun.Count<SchoolTask>() >= 8;
-            bool bsun8 = false;
-            if (sund8)
-            {
-                bsun8 = (tasksonSun.ElementAt<SchoolTask>(7) != null) /* || 
+                Button sun8 = new Button();
+                bool sund8 = tasksonSun.Count<SchoolTask>() >= 8;
+                bool bsun8 = false;
+                if (sund8)
+                {
+                    bsun8 = (tasksonSun.ElementAt<SchoolTask>(7) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(7).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(7).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 7, ref sun8, bsun8);
-            sun8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 7));
-            grid.Children.Add(sun8, 6, 2 + 7);
+                SetButton(tasksonSun, 7, ref sun8, bsun8);
+                sun8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 7));
+                grid.Children.Add(sun8, 6, 2 + 7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____9__________________________________
+                //________________________Dimanche_____9__________________________________
 
-            Button sun9 = new Button();
-            bool sund9 = tasksonSun.Count<SchoolTask>() >= 9;
-            bool bsun9 = false;
-            if (sund9)
-            {
-                bsun9 = (tasksonSun.ElementAt<SchoolTask>(8) != null) /* || 
+                Button sun9 = new Button();
+                bool sund9 = tasksonSun.Count<SchoolTask>() >= 9;
+                bool bsun9 = false;
+                if (sund9)
+                {
+                    bsun9 = (tasksonSun.ElementAt<SchoolTask>(8) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(8).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(8).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 8, ref sun9, bsun9);
-            sun9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 8));
-            grid.Children.Add(sun9, 6, 2 + 8);
+                SetButton(tasksonSun, 8, ref sun9, bsun9);
+                sun9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 8));
+                grid.Children.Add(sun9, 6, 2 + 8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Dimanche_____10__________________________________
+                //________________________Dimanche_____10__________________________________
 
-            Button sun10 = new Button();
-            bool sund10 = tasksonSun.Count<SchoolTask>() >= 10;
-            bool bsun10 = false;
-            if (sund10)
-            {
-                bsun10 = (tasksonSun.ElementAt<SchoolTask>(9) != null) /* || 
+                Button sun10 = new Button();
+                bool sund10 = tasksonSun.Count<SchoolTask>() >= 10;
+                bool bsun10 = false;
+                if (sund10)
+                {
+                    bsun10 = (tasksonSun.ElementAt<SchoolTask>(9) != null) /* || 
                             (tasksonSun.ElementAt<SchoolTask>(9).TaskCategoryDesc == "PERSONAL" && MeView || 
                             tasksonSun.ElementAt<SchoolTask>(9).TaskCategoryDesc == "SCHOOL" && WorkView)*/;
-            }
+                }
 
 
-            SetButton(tasksonSun, 9, ref sun10, bsun10);
-            sun10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 9));
-            grid.Children.Add(sun10, 6, 2 + 9);
+                SetButton(tasksonSun, 9, ref sun10, bsun10);
+                sun10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 9));
+                grid.Children.Add(sun10, 6, 2 + 9);
 
+            
 
             // NOTIFICATION CENTER 
 
@@ -1901,7 +1899,7 @@ private void Switch_OnToggled(object sender, ToggledEventArgs e)
 
 {
 
-WorkView = e.Value;
+            WorkView = !WorkView; //e.Value;
 
 }
 
@@ -1911,7 +1909,8 @@ private void Switch2_OnToggled(object sender, ToggledEventArgs e)
 
 {
 
-MeView = e.Value;
+            MeView = !MeView; //e.Value;
+
 
 }
 //tasks.ElementAt<SchoolTask>(rang).TaskCategoryCode
