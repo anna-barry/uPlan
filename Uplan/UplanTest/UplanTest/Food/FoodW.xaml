@@ -13,11 +13,11 @@
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout> -->
 
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
-            <Grid.ColumnDefinitions>
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center" Margin="50">
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -33,50 +33,35 @@
 
 
             </Grid.RowDefinitions>
-            <!-- <Controls:Hamburgermenu x:Name="Test"  Grid.Row="0" Grid.Column="0"
-            <RelativeLayout>
-                <Button />
-                
-            </RelativeLayout>
-  
-                <MenuItem.Accelerator
-            <controls:SplitView Grid.Row="0">
-                <Label>
-                    
-                </Label>
-            </controls:SplitView>
-            <RelativePanel>
-            </RelativePanel> -->
-
-            <ListView />
+           
 
 
-            <Label Text="Food choices for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="Red" />
-            <Label Text="Prot 1" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" />
-            <Picker x:Name="Prot_1" WidthRequest="200" Grid.Row="1" Grid.Column="1"   />
+            <Label Text="Food choices for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Prot 1" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
+            <Picker x:Name="Prot_1" Grid.Row="1" Grid.Column="1"/>
 
-            <Label Text="Prot 2"  Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Label Text="Prot 2"  Grid.Row="2" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Prot_2" WidthRequest="200" Grid.Row="2" Grid.Column="1" />
 
-            <Label Text="Prot 3" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Label Text="Prot 3" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="3" Grid.Column="1" />
 
-            <Label Text="Carb 1" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Label Text="Carb 1" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Carb_1" WidthRequest="200"  Grid.Row="4" Grid.Column="1" />
 
-            <Label Text="Carb 2"  Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Label Text="Carb 2"  Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Carb_2" WidthRequest="200" Grid.Row="5" Grid.Column="1" />
 
-            <Label Text="Carb 3"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Label Text="Carb 3"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="6" Grid.Column="1" />
 
-            <Label Text="Veggies 1" Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Label Text="Veggies 1" Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="7" Grid.Column="1" />
 
-            <Label Text="Veggies 2"  Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Label Text="Veggies 2"  Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="8" Grid.Column="1" />
 
-            <Label Text="Veggies 3"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Label Text="Veggies 3"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
             <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="9" Grid.Column="1" />
 
            <!-- <Label Text="When is this event due?" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" />
@@ -87,8 +72,7 @@
             <!-- <Button x:Name="Exit" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="Button_Tap"/>
                                                     -->
 
-            <Button x:Name="save" Text="Save" Grid.Row="10" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="LightBlue" BorderColor="Red"
-                    Clicked="OnButtonClicked" />
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" Grid.Row="10" Grid.Column="1"></ImageButton>
 
 
 

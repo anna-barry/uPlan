@@ -23,9 +23,10 @@ namespace UplanTest
             //Cette partie est ok : raisonnement 
             //mais le getallfood ne fonctionne pas... comme si c'etait pas intégré dans la database...
 
-            /*
-            var food = Food.GetAllFood();
-            var wfood = food[0];
+
+            //var col = Database.db.GetCollection<Food>("EntriesforFood");
+            // Use FindOne and not Find as we should have only one
+            var wfood = MyFoodWeek.thisweek;
 
 
             //chaque dejeuner est consituté d'une source de prot, d'une source de carb et d'une source de veggies
@@ -76,7 +77,7 @@ namespace UplanTest
             string Dinsun = wfood.FoodCategoryDescCarb3 + "/n" + wfood.FoodCategoryDescProt3 + "/n" + wfood.FoodCategoryDescVeggies3;
             dinsun.Text = Dinsun;
 
-            */
+           
 
         }
     }

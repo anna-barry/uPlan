@@ -81,8 +81,8 @@
             <Button x:Name="save" Text="Save      " Grid.Row="9" Grid.Column="3"  HorizontalOptions="Center"
                     VerticalOptions="Center"  TextColor="MediumVioletRed" BorderColor="AliceBlue" 
                     ></Button> -->
-            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="90" WidthRequest="60" Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"  ></ImageButton>
-            
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked"  Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"  ></ImageButton>
+            <!--HeightRequest="90" WidthRequest="60"-->
 
 
 

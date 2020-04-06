@@ -27,10 +27,11 @@ namespace UplanTest
             ListEntry FoodCategoryVeggieschoix2,
             ListEntry FoodCategoryVeggieschoix3)
         {
-            thisweek.InsertFood(FoodforCategoryProtchoix1, FoodforCategoryProtchoix2, FoodforCategoryProtchoix3,
-             FoodCategoryCarbchoix1, FoodCategoryCarbchoix2, FoodCategoryCarbchoix3, FoodCategoryVeggieschoix1, FoodCategoryVeggieschoix2, FoodCategoryVeggieschoix3);
-            
             Initiate();
+            thisweek.InsertFood(FoodforCategoryProtchoix1, FoodforCategoryProtchoix2, FoodforCategoryProtchoix3,
+             FoodCategoryCarbchoix1, FoodCategoryCarbchoix2, FoodCategoryCarbchoix3, FoodCategoryVeggieschoix1,
+             FoodCategoryVeggieschoix2, FoodCategoryVeggieschoix3);
+            
         }
     }
 }

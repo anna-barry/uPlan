@@ -89,22 +89,22 @@ namespace UplanTest
             //col.EnsureIndex(x => x.DueDate);
 
             col.Insert(
-                new Food
-                {
-                    FoodWeekForUser = MyUser.me,
-                    FoodforCategoryProtchoix1 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "LENTILS"),
-                    FoodforCategoryProtchoix2 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "GAMBAS"),
-                    FoodforCategoryProtchoix3 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "BEEF"),
-                    FoodforCategoryCarbchoix1 = ListEntry.getEntryfromTypeAndCode("CARB", "PASTA"),
-                    FoodforCategoryCarbchoix2 = ListEntry.getEntryfromTypeAndCode("CARB", "WHOLE_PASTA"),
-                    FoodforCategoryCarbchoix3 = ListEntry.getEntryfromTypeAndCode("CARB", "SWEET_POTATO"),
-                    FoodforCategoryVeggieschoix1 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BROCCOLI"),
-                    FoodforCategoryVeggieschoix2 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BUTTERNUT"),
-                    FoodforCategoryVeggieschoix3 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BEETROOT"),
+               new Food
+               {
+                   //FoodWeekForUser = MyUser.me,
+                   FoodforCategoryProtchoix1 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "LENTILS"),
+                   FoodforCategoryProtchoix2 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "GAMBAS"),
+                   FoodforCategoryProtchoix3 = ListEntry.getEntryfromTypeAndCode("PROTEIN", "BEEF"),
+                   FoodforCategoryCarbchoix1 = ListEntry.getEntryfromTypeAndCode("CARB", "PASTA"),
+                   FoodforCategoryCarbchoix2 = ListEntry.getEntryfromTypeAndCode("CARB", "WHOLE_PASTA"),
+                   FoodforCategoryCarbchoix3 = ListEntry.getEntryfromTypeAndCode("CARB", "SWEET_POTATO"),
+                   FoodforCategoryVeggieschoix1 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BROCCOLI"),
+                   FoodforCategoryVeggieschoix2 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BUTTERNUT"),
+                   FoodforCategoryVeggieschoix3 = ListEntry.getEntryfromTypeAndCode("VEGGIES", "BEETROOT"),
 
-                    
-                }
-                ) ;
+
+               }
+               ) ;
         }
         
         /*public static List<Food> GetAllFood()
@@ -136,7 +136,7 @@ namespace UplanTest
             var col = Database.db.GetCollection<Food>("EntriesforFood");
             Food foodthisweek = col.FindById(Id);
 
-            col.EnsureIndex(x => x.FoodCategoryDescProt1);
+           /* col.EnsureIndex(x => x.FoodCategoryDescProt1);
             col.EnsureIndex(x => x.FoodCategoryDescProt2);
             col.EnsureIndex(x => x.FoodCategoryDescProt3);
             col.EnsureIndex(x => x.FoodCategoryDescCarb1);
@@ -144,7 +144,7 @@ namespace UplanTest
             col.EnsureIndex(x => x.FoodCategoryDescCarb3);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies1);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
-            col.EnsureIndex(x => x.FoodCategoryDescVeggies3);
+            col.EnsureIndex(x => x.FoodCategoryDescVeggies3);*/
             //col.EnsureIndex(x => x.IsComplete);
             //col.EnsureIndex(x => x.DueDate);
 

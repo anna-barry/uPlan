@@ -69,7 +69,6 @@ namespace UplanTest
 
         {
 
-
             MyFoodWeek.UpdateFood(prot1.ListEntryList[Prot_1.SelectedIndex], prot2.ListEntryList[Prot_2.SelectedIndex],
                  prot3.ListEntryList[Prot_3.SelectedIndex], carb1.ListEntryList[Carb_1.SelectedIndex], carb2.ListEntryList[Carb_2.SelectedIndex],
                  carb3.ListEntryList[Carb_3.SelectedIndex], veggies1.ListEntryList[Veggies_1.SelectedIndex], veggies2.ListEntryList[Veggies_2.SelectedIndex],
