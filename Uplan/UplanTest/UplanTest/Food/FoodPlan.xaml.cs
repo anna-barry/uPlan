@@ -30,13 +30,15 @@ namespace UplanTest
             //var col = Database.db.GetCollection<Food>("EntriesforFood");
             // Use FindOne and not Find as we should have only one
             //var wfood = col.FindOne(Query.All());
-            //Food.Initiate();
-            //MyFoodWeek.Initiate();
+            
             var wfood = MyFoodWeek.thisweek;
 
-            
+
             //chaque dejeuner est consituté d'une source de prot, d'une source de carb et d'une source de veggies
             //ici on assigne les source préalablement choisies par l'utilisateur, pour chacun des jours
+            //ListEntry.getDescfromEntry
+
+            
 
             //partie dejeuner
             string Lunmon = wfood.FoodCategoryDescCarb1 + '\n' + wfood.FoodCategoryDescProt1 + '\n' + wfood.FoodCategoryDescVeggies1;

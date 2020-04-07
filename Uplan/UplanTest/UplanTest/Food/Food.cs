@@ -14,44 +14,44 @@ namespace UplanTest
 
         public int Id { get; set; }
 
-        [BsonRef("Users")] // "Users" is the collection to be referenced
-        public User FoodWeekForUser { get; set; }
+       /* [BsonRef("Users")] // "Users" is the collection to be referenced
+        public User FoodWeekForUser { get; set; }*/
 
         // ----------------------------------------------------
         // Protein:
 
         [BsonRef("ListEntries")] // "ListEntriesFood" is the collection to be referenced
-        private ListEntry FoodforCategoryProtchoix1 { get; set; }
+        public ListEntry FoodforCategoryProtchoix1 { get; set; }
 
         [BsonRef("ListEntries")] // "ListEntriesFood" is the collection to be referenced
-        private ListEntry FoodforCategoryProtchoix2 { get; set; }
+        public ListEntry FoodforCategoryProtchoix2 { get; set; }
 
         [BsonRef("ListEntries")] // "ListEntriesFood" is the collection to be referenced
-        private ListEntry FoodforCategoryProtchoix3 { get; set; }
+        public ListEntry FoodforCategoryProtchoix3 { get; set; }
 
         // ----------------------------------------------------
         // Carb:
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryCarbchoix1 { get; set; }
+        public ListEntry FoodforCategoryCarbchoix1 { get; set; }
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryCarbchoix2 { get; set; }
+        public ListEntry FoodforCategoryCarbchoix2 { get; set; }
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryCarbchoix3 { get; set; }
+        public ListEntry FoodforCategoryCarbchoix3 { get; set; }
 
         // ----------------------------------------------------
         // Veggies:
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryVeggieschoix1 { get; set; }
+        public ListEntry FoodforCategoryVeggieschoix1 { get; set; }
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryVeggieschoix2 { get; set; }
+        public ListEntry FoodforCategoryVeggieschoix2 { get; set; }
 
         [BsonRef("ListEntries")]
-        private ListEntry FoodforCategoryVeggieschoix3 { get; set; }
+        public ListEntry FoodforCategoryVeggieschoix3 { get; set; }
 
         //public string Description { get; set; }
         //public Boolean IsComplete { get; set; }
@@ -91,7 +91,7 @@ namespace UplanTest
 
         public string FoodCategoryDescVeggies2 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix2); } }
 
-        public string FoodCategoryDescVeggies3 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix3); } }
+        public string FoodCategoryDescVeggies3 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix3); } } 
 
         // ----------------------------------------------------
 
@@ -99,7 +99,7 @@ namespace UplanTest
         {
             var col = Database.db.GetCollection<Food>("EntriesforFood");
 
-            col.EnsureIndex(x => x.FoodWeekForUser);
+            /*col.EnsureIndex(x => x.FoodWeekForUser);
             col.EnsureIndex(x => x.FoodCategoryDescProt1);
             col.EnsureIndex(x => x.FoodCategoryDescProt2);
             col.EnsureIndex(x => x.FoodCategoryDescProt3);
@@ -110,7 +110,7 @@ namespace UplanTest
             col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
             col.EnsureIndex(x => x.FoodCategoryDescVeggies3);
             //col.EnsureIndex(x => x.IsComplete);
-            //col.EnsureIndex(x => x.DueDate);
+            //col.EnsureIndex(x => x.DueDate);*/
 
             col.Insert(
                new Food
@@ -129,6 +129,8 @@ namespace UplanTest
 
                }
                ) ;
+            string test = MyFoodWeek.thisweek.FoodCategoryDescCarb1;
+            
         }
 
        

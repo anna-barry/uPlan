@@ -9,11 +9,15 @@ namespace UplanTest
     public static class MyFoodWeek
     {
         public static Food thisweek;
+        public static bool isDefault;
         public static void Initiate()
         {
             var col = Database.db.GetCollection<Food>("EntriesforFood");
             // Use FindOne and not Find as we should have only one
             thisweek = col.FindOne(Query.All());
+            //thisweek=col.FindAll
+
+            string liltest = thisweek.FoodCategoryDescCarb1;
         }
         
         public static void UpdateFood(
