@@ -24,6 +24,7 @@ namespace UplanTest
                 SchoolTask.Initiate();
                 ListEntryForFood.Initiate();
                 Food.Initiate();
+                MyFoodWeek.Initiate();
                 ListEntryYOGA.Initiate();
 
                 MyUser.isDefault = true;

@@ -15,9 +15,11 @@ namespace UplanTest
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-          
+
 
             //Database.Initiate();
+            //Food.Initiate();
+            //MyFoodWeek.Initiate();
         }
 
         private void Button_Clicked1(object sender, EventArgs e)

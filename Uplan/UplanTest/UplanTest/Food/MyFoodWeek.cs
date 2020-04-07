@@ -15,7 +15,7 @@ namespace UplanTest
             // Use FindOne and not Find as we should have only one
             thisweek = col.FindOne(Query.All());
         }
-
+        
         public static void UpdateFood(
             ListEntry FoodforCategoryProtchoix1,
             ListEntry FoodforCategoryProtchoix2,
@@ -27,11 +27,14 @@ namespace UplanTest
             ListEntry FoodCategoryVeggieschoix2,
             ListEntry FoodCategoryVeggieschoix3)
         {
-            Initiate();
+            
             thisweek.InsertFood(FoodforCategoryProtchoix1, FoodforCategoryProtchoix2, FoodforCategoryProtchoix3,
              FoodCategoryCarbchoix1, FoodCategoryCarbchoix2, FoodCategoryCarbchoix3, FoodCategoryVeggieschoix1,
              FoodCategoryVeggieschoix2, FoodCategoryVeggieschoix3);
-            
+
+            Initiate();
+
+
         }
     }
 }

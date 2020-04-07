@@ -5,11 +5,22 @@ using LiteDB;
 
 namespace UplanTest
 {
-    static class ListEntryForFood
+    public class ListEntryForFood
     {
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
+
         public static void Initiate()
         {
             var col = Database.db.GetCollection<ListEntry>("ListEntries");
+            
+
+            // Index document using these properties
+            col.EnsureIndex(x => x.Type);
+            col.EnsureIndex(x => x.Code);
+
 
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "LUPPIN", Description = "Luppin" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "SPLIT_PEAS", Description = "Split Peas" });
@@ -69,5 +80,74 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "VEGGIES", Code = "PUMKIN", Description = "Pumkin" });
             col.Insert(new ListEntry { Type = "VEGGIES", Code = "EGGPLANT", Description = "Eggplant" });
         }
+
+        public static string getDescfromEntryForFood(Food entry,string DescForWhat)
+        {
+            /*var col = Database.db.GetCollection<Food>("EntriesforFood");
+            //var result = col.FindById(entry.Id);
+            var result= col.FindOne(Query.All());
+            //var result=col.Find(Query.EQ(")
+
+            /*return result.Description;
+
+            string res = "";
+            if(entry!=null)
+            {
+            res= entry.Description;
+                result.
+            }*/
+            
+            var res = entry.FoodCategoryDescCarb1;
+            switch (DescForWhat)
+            {
+                case "Carb1":
+                    res= entry.FoodCategoryDescCarb1;
+                    break;
+                case "Carb2":
+                    res= entry.FoodCategoryDescCarb2;
+                    break;
+                case "Carb3":
+                    res= entry.FoodCategoryDescCarb3;
+                    break;
+                case "Veggie1":
+                    res= entry.FoodCategoryDescVeggies1;
+                    break;
+                case "Veggie2":
+                    res = entry.FoodCategoryDescVeggies2;
+                    break;
+                case "Veggie3":
+                    res = entry.FoodCategoryDescVeggies3;
+                    break;
+                case "Prot1":
+                    res = entry.FoodCategoryDescProt1;
+                    break;
+                case "Prot2":
+                    res = entry.FoodCategoryDescProt2;
+                    break;
+                case "Prot3":
+                    res = entry.FoodCategoryDescProt3;
+                    break;
+            }
+                 
+            return res;
+        }
+
+        public static Food getEntryfromTypeAndCode(string Type, string Code)
+        {
+            var col = Database.db.GetCollection<Food>("EntriesforFood");
+            // Use FindOne and not Find as we should have only one
+            var result = col.FindOne(Query.And(Query.EQ("Code", Code), Query.EQ("Type", Type)));
+
+            return result;
+        }
+
+        /*public static string getDescfromTypeAndCode(string Type, string Code)
+        {
+            var col = Database.db.GetCollection<Food>("EntriesforFood");
+            // Use FindOne and not Find as we should have only one
+            var result = col.FindOne(Query.And(Query.EQ("Code", Code), Query.EQ("Type", Type)));
+
+            return result;
+        } */
     }
 }

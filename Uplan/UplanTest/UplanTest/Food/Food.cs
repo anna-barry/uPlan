@@ -5,11 +5,13 @@ using LiteDB;
 
 namespace UplanTest
 {
+    
     public class Food
     {
+        
         // ----------------------------------------------------
         // Collection document fields:
-       
+
         public int Id { get; set; }
 
         [BsonRef("Users")] // "Users" is the collection to be referenced
@@ -54,19 +56,41 @@ namespace UplanTest
         //public string Description { get; set; }
         //public Boolean IsComplete { get; set; }
         //public DateTime DueDate { get; set; }
-        public DateTime CompletionDate { get; set; }
+        //public DateTime CompletionDate { get; set; }
 
         // ----------------------------------------------------
-        // "Calculated" property methods:
+        /* "Calculated" property methods:
+
+        Food test = MyFoodWeek.thisweek;
+        public string FoodCategoryDescProt1 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Prot1"); } }
+        //public string FoodCategoryDescProt1 = { get { return ListEntryForFood.getDescfromEntry(FoodforCategoryProtchoix1);
+        //public string FoodCategoryDescProt2 { get { return ListEntryForFood.getDescfromEntryForFood(FoodforCategoryProtchoix2, "Prot2"); } }
+        public string FoodCategoryDescProt2 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Prot2"); } }
+        //public string FoodCategoryDescProt3 { get { return ListEntryForFood.getDescfromEntryForFood(FoodforCategoryProtchoix3, "Prot3"); } }
+        public string FoodCategoryDescProt3 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Prot3"); } }
+        public string FoodCategoryDescCarb1 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Carb1"); } }
+        public string FoodCategoryDescCarb2 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Carb2"); } }
+        public string FoodCategoryDescCarb3 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Carb3"); } }
+        public string FoodCategoryDescVeggies1 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Veggie1"); } }
+        public string FoodCategoryDescVeggies2 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Veggie2"); } }
+        public string FoodCategoryDescVeggies3 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Veggie3"); } }*/
 
         public string FoodCategoryDescProt1 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix1); } }
+
         public string FoodCategoryDescProt2 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix2); } }
+
         public string FoodCategoryDescProt3 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix3); } }
+
         public string FoodCategoryDescCarb1 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix1); } }
+
         public string FoodCategoryDescCarb2 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix2); } }
+
         public string FoodCategoryDescCarb3 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix3); } }
+
         public string FoodCategoryDescVeggies1 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix1); } }
+
         public string FoodCategoryDescVeggies2 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix2); } }
+
         public string FoodCategoryDescVeggies3 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix3); } }
 
         // ----------------------------------------------------
@@ -74,7 +98,7 @@ namespace UplanTest
         public static void Initiate()
         {
             var col = Database.db.GetCollection<Food>("EntriesforFood");
-            
+
             col.EnsureIndex(x => x.FoodWeekForUser);
             col.EnsureIndex(x => x.FoodCategoryDescProt1);
             col.EnsureIndex(x => x.FoodCategoryDescProt2);
@@ -106,21 +130,8 @@ namespace UplanTest
                }
                ) ;
         }
-        
-        /*public static List<Food> GetAllFood()
-        {
-            List<Food> res = new List<Food>();
-            var col = Database.db.GetCollection<Food>("EntriesforFood");
-            var result = col.Find(Query.All());
 
-            foreach (var test in result)
-            {
-                res.Add(test);
-            }
-            return res;
-
-        }*/
-
+       
         public void InsertFood(
             ListEntry FoodforCategoryProtchoix1,
             ListEntry FoodforCategoryProtchoix2,
@@ -135,36 +146,6 @@ namespace UplanTest
             // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<Food>("EntriesforFood");
             Food foodthisweek = col.FindById(Id);
-
-           /* col.EnsureIndex(x => x.FoodCategoryDescProt1);
-            col.EnsureIndex(x => x.FoodCategoryDescProt2);
-            col.EnsureIndex(x => x.FoodCategoryDescProt3);
-            col.EnsureIndex(x => x.FoodCategoryDescCarb1);
-            col.EnsureIndex(x => x.FoodCategoryDescCarb2);
-            col.EnsureIndex(x => x.FoodCategoryDescCarb3);
-            col.EnsureIndex(x => x.FoodCategoryDescVeggies1);
-            col.EnsureIndex(x => x.FoodCategoryDescVeggies2);
-            col.EnsureIndex(x => x.FoodCategoryDescVeggies3);*/
-            //col.EnsureIndex(x => x.IsComplete);
-            //col.EnsureIndex(x => x.DueDate);
-
-            /*col.Insert(
-                 new Food
-                 {
-                     
-                     FoodforCategoryProtchoix1 = FoodforCategoryProtchoix1,
-                     FoodforCategoryProtchoix2 = FoodforCategoryProtchoix2,
-                     FoodforCategoryProtchoix3 = FoodforCategoryProtchoix3,
-                     FoodforCategoryCarbchoix1 = FoodCategoryCarbchoix1,
-                     FoodforCategoryCarbchoix2 = FoodCategoryCarbchoix2,
-                     FoodforCategoryCarbchoix3 = FoodCategoryCarbchoix3,
-                     FoodforCategoryVeggieschoix1 = FoodCategoryVeggieschoix1,
-                     FoodforCategoryVeggieschoix2 = FoodCategoryVeggieschoix2,
-                     FoodforCategoryVeggieschoix3 = FoodCategoryVeggieschoix3,
-
-                     
-                 }
-                 );*/
 
             foodthisweek.FoodforCategoryProtchoix1 = FoodforCategoryProtchoix1;
             foodthisweek.FoodforCategoryProtchoix2 = FoodforCategoryProtchoix2;
