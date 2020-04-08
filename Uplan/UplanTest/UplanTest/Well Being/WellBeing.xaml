@@ -6,10 +6,6 @@
              mc:Ignorable="d"
              x:Class="UplanTest.WellBeing">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Label x:Name="Quote"  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
     </ContentPage.Content>
 </ContentPage>

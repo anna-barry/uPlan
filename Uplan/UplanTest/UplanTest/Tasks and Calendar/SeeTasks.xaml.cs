@@ -29,7 +29,7 @@ namespace UplanTest
                 res = res + "Task n°" + i + "\n" + "-";
                 res += (string)task.Description;
                 res += "\n";
-                res += (string)task.SubDesc;
+                res += (string)task.SubDesc +"\n";
 
                 i += 1;
             }

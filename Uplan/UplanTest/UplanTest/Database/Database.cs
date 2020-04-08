@@ -29,8 +29,8 @@ namespace UplanTest
 
                 MyUser.isDefault = true;
             }
-            /* 
-             * var col = db.GetCollection<RowClass>("Collection");
+            
+           /* var col = db.GetCollection<RowClass>("Collection");
             var data_list = col.Find(Query.All(), 0, 20);
 
             foreach (var row in data_list) 
@@ -39,14 +39,15 @@ namespace UplanTest
                 data_return.Add(row);
             }*/
              
+         
             var foodweek =db.GetCollection<Food>("EntriesforFood");
-           /* var data_list = foodweek.Find(Query.All(), 0, 20);
+            /*var data_list = foodweek.Find(Query.All(), 0, 20);
             foreach (var row in data_list)
             {
                 foodweek.Delete(row.Id);
                 
-            }*/
-
+            }
+            */
             
             var col = Database.db.GetCollection<Food>("EntriesforFood");
             // Use FindOne and not Find as we should have only one
@@ -57,11 +58,12 @@ namespace UplanTest
             // var liltest = testweek.FoodCategoryDescCarb1; 
             var sizetest = foodweek.Count();
             var testweek = foodweek.FindOne(Query.All());
-            if (foodweek.Count()==0)
+            if (sizetest==0)
             {
                 MyFoodWeek.isDefault = true;
                 Food.Initiate();
             }
+
             MyUser.Initiate();
             MyFoodWeek.Initiate();
         }

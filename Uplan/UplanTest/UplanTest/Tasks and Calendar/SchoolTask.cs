@@ -133,6 +133,47 @@ namespace UplanTest
 
         }
 
+        public static void Intelligent(User TaskUser,
+                    ListEntry TaskCategory,
+                    ListEntry TaskCategoryColour,
+                    ListEntry TaskComplexity,
+                    ListEntry TaskSubType,
+                    string Description,
+                    string SubDesc,
+                    bool IsComplete,
+                    DateTime DueDate)
+        {
+            //debut de la nouvelle classe (pas sur qu'on initialse tout ici car pas sur qu'il y ai qu'une sous tache en plus
+
+            ListEntry tcat = new ListEntry(); //ca pas de nouvelles non plus ? a moins qu'on en fasse un sous task mais bon chaud
+            ListEntry tcol = new ListEntry(); //couleur plus clair que l'autre
+            ListEntry tomp = new ListEntry(); //pas sur qu'il faille modifier ( reprendre celle de base surement)
+            ListEntry tsub = new ListEntry(); // la pareil pas de modif en fait
+            string desc;
+            string subdesc;
+            DateTime workdate;
+
+            //EN GROS JSP SI FAUT TOUT MODIFIER FAUT JUSTE QU'ON PARLE DE MANI7RE TECHNIQUE L'AJOUT DES TACHES ET QU4ON
+            //VOIT EN DETAILS
+
+            //faire definition d'une couleur plus light que l'autre choisie pour chauqe couleur avec un switch
+
+            //si school sous task
+            //if (TaskCategory.Code == "SCHOOL")
+            //{
+            //en fonction de la complexité faire + ou moins de sous taches
+
+            //}
+            /*à voir si sous tasks pour personal? du genre sport créer un rappel semainier ou jsp
+            else
+            {
+
+            }*/
+
+
+            //A LA FIN INSERTSCHOOLTASK D'un ou plusieurs (pas sur a la fin surement au fur et à mesure mais bon bref
+        }
+
         public SchoolTask()
         {
         }

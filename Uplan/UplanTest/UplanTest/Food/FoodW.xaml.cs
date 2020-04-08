@@ -28,38 +28,47 @@ namespace UplanTest
             InitializeComponent();
 
             prot1 = new ListHelper("PROTEIN", -1, "");
+            Prot_1.FontSize = 10;
             Prot_1.ItemsSource = prot1.DisplayList;
             Prot_1.SelectedIndex = prot1.CurrentIndex;
 
             prot2 = new ListHelper("PROTEIN", -1, "");
+            Prot_2.FontSize = 10;
             Prot_2.ItemsSource = prot2.DisplayList;
             Prot_2.SelectedIndex = prot2.CurrentIndex;
 
             prot3 = new ListHelper("PROTEIN", -1, "");
+            Prot_3.FontSize = 10;
             Prot_3.ItemsSource = prot3.DisplayList;
             Prot_3.SelectedIndex = prot3.CurrentIndex;
 
             carb1 = new ListHelper("CARB", -1, "");
+            Carb_1.FontSize = 10;
             Carb_1.ItemsSource = carb1.DisplayList;
             Carb_1.SelectedIndex = carb1.CurrentIndex;
 
             carb2 = new ListHelper("CARB", -1, "");
+            Carb_2.FontSize = 10;
             Carb_2.ItemsSource = carb2.DisplayList;
             Carb_2.SelectedIndex = carb2.CurrentIndex;
 
             carb3 = new ListHelper("CARB", -1, "");
+            Carb_3.FontSize = 10;
             Carb_3.ItemsSource = carb3.DisplayList;
             Carb_3.SelectedIndex = carb3.CurrentIndex;
 
             veggies1 = new ListHelper("VEGGIES", -1, "");
+            Veggies_1.FontSize = 10;
             Veggies_1.ItemsSource = veggies1.DisplayList;
             Veggies_1.SelectedIndex = veggies1.CurrentIndex;
 
             veggies2 = new ListHelper("VEGGIES", -1, "");
+            Veggies_2.FontSize = 10;
             Veggies_2.ItemsSource = veggies2.DisplayList;
             Veggies_2.SelectedIndex = veggies2.CurrentIndex;
 
             veggies3 = new ListHelper("VEGGIES", -1, "");
+            Veggies_3.FontSize = 10;
             Veggies_3.ItemsSource = veggies3.DisplayList;
             Veggies_3.SelectedIndex = veggies3.CurrentIndex;
 
