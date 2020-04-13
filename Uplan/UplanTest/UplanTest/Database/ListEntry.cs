@@ -38,6 +38,24 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "COLOURS", Code = "GOLD", Description = "Gold" });
             col.Insert(new ListEntry { Type = "COLOURS", Code = "GRAY", Description = "Gray" });
             col.Insert(new ListEntry { Type = "COLOURS", Code = "GREEN", Description = "Green" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "BLUEVIOLET", Description = "Blue Violet" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTBLUE", Description = "Light Blue" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTGREEN", Description = "Light Green" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "MEDIUMVIOLETRED", Description = "Medium VioletRed" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "BISQUE", Description = "Bisque" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "CADETBLUE", Description = "Cadet Blue" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "SANDYBROWN", Description = "Sandy Brown" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTSALMON", Description = "Light Salmon" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "MIDNIGHTBLUE", Description = "Midnight Blue" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "MAGENTA", Description = "Magenta" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LAWNGREEN", Description = "Lawn Green" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTPRINK", Description = "Light Pink" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "BLUEVIOLET", Description = "Blue Violet" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "PALEGOLDENROD", Description = "Pale Goldenrod" });
+            col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTGRAY", Description = "Light Gray" });
+            
+
+
 
             col.Insert(new ListEntry { Type = "ACCOMODATION_TYPES", Code = "ALONE", Description = "Alone in flat" });
             col.Insert(new ListEntry { Type = "ACCOMODATION_TYPES", Code = "SHARING", Description = "With roomate" });

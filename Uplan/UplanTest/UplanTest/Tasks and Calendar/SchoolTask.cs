@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using LiteDB;
+using Xamarin.Forms;
 
 namespace UplanTest
 {
@@ -172,8 +173,312 @@ namespace UplanTest
 
 
             //A LA FIN INSERTSCHOOLTASK D'un ou plusieurs (pas sur a la fin surement au fur et à mesure mais bon bref
+
+            //SCHOOL
+            //__________________________________Exercice_________________________
+            if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code=="EXERCICE")
+            {
+                string taskcomplex = TaskComplexity.Code;
+                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
+                int p = daysleft.Days;
+
+
+            if (taskcomplex== "LOW" || taskcomplex== "MEDIUM")
+            {
+                if(p>=1)
+                {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start working on this today: "+ '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(1));
+                }
+                
+            }
+
+            if (taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
+            {
+                    if (p >= 1)
+                    {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start working on this today: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(1));
+                    }
+                    if (p >= 2)
+                    {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Continue working on this today: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(2));
+                    }
+                    if (p >= 4)
+                    {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Continue working on this today (you can be proud of yourself for all your hard work): " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(4));
+                    }
+
+                }
+            }
+
+            //__________________________________Par coeur_________________________
+            if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code == "BY_HEART")
+            {
+                string taskcomplex = TaskComplexity.Code;
+                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
+                int p = daysleft.Days;
+
+                if (taskcomplex == "LOW" || taskcomplex == "MEDIUM")
+                {
+                    if (p >= 1 && taskcomplex == "LOW")
+                    {
+                        int ecaart = p / 2;
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(1+ecaart));
+
+                    }
+                    if (p >= 1 && taskcomplex == "MEDIUM")
+                    {
+                        if(p==1)
+                        {
+                            InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(1));
+                        }
+
+                        if(p==3)
+                        {
+                            InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(2));
+                        }
+
+                        if (p >= 3)
+                        {
+                            int ecart = p / 3;
+                         InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(p));
+
+                         InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Continue learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(p*2));
+
+                            
+                        }
+
+                    }
+                }
+                if (taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
+                {
+                    if (p >= 1)
+                    {
+                        
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start learning: " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(1));
+
+                    }
+
+                    for (int i=2; i < p; i+=2)
+                    {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Continue learning and don't forget, consistency is the key to sucess! : " + '\n' + SubDesc,
+                         IsComplete,
+                         DateTime.Now.Date.AddDays(i));
+                    }
+                }
+            }
+
+            //__________________________________Projet_________________________
+            // POUR TOUT LES WEEKEND JUSQU'A DUE DATE ON MET UN RAPPEL DE CONTINUER LE PROJET AVEC LE TEMPS LIBRE SI TRES COMPLIQUE
+            // RAPEL QUE LE DIMANCHE SI COMPLIQUE
+           // RAPPEL UN DIMANCHE SUR DEUX SI PEU COMPLIQUE
+            if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code == "PROJECT")
+            {
+                string taskcomplex = TaskComplexity.Code;
+                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
+                int p = daysleft.Days;
+
+                if ( taskcomplex == "VERY_HIGH")
+                {
+
+                    for (int i = 1; i < p; i += 1)
+                    {
+                        DateTime thisday = DateTime.Now.Date.AddDays(i);
+                        if(thisday.DayOfWeek== DayOfWeek.Saturday || thisday.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            InsertSchoolTask(TaskUser, TaskCategory,
+                        IntelligentColor(TaskCategoryColour),
+                        TaskComplexity,
+                        TaskSubType,
+                        Description,
+                        "Weekend means more time to work on this projet: " + '\n' + SubDesc,
+                        IsComplete,
+                        DateTime.Now.Date.AddDays(i));
+                        }
+                    }
+                }
+
+                if (taskcomplex == "HIGH")
+                {
+
+                    for (int i = 1; i < p; i += 1)
+                    {
+                        DateTime thisday = DateTime.Now.Date.AddDays(i);
+                        if (thisday.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            InsertSchoolTask(TaskUser, TaskCategory,
+                        IntelligentColor(TaskCategoryColour),
+                        TaskComplexity,
+                        TaskSubType,
+                        Description,
+                        "Weekend means more time to work on this projet: " + '\n' + SubDesc,
+                        IsComplete,
+                        DateTime.Now.Date.AddDays(i));
+                        }
+                    }
+                }
+
+                if (taskcomplex == "LOW" || taskcomplex == "MEDIUM")
+                {
+                    int lastweek = 0;
+                    for (int i = 1; i < p; i += 1)
+                    {
+                        DateTime thisday = DateTime.Now.Date.AddDays(i);
+                        if (thisday.DayOfWeek == DayOfWeek.Sunday)
+                        {
+                            if (lastweek==0)
+                            {
+                                InsertSchoolTask(TaskUser, TaskCategory,
+                                IntelligentColor(TaskCategoryColour),
+                                TaskComplexity,
+                                TaskSubType,
+                                Description,
+                                "Weekend means more time to work on this projet, work today and have more free time next weekend: " + '\n' + SubDesc,
+                                IsComplete,
+                                DateTime.Now.Date.AddDays(i));
+
+                                lastweek = 1;
+                             }
+                            else
+                            {
+                                lastweek = 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+
         }
 
+        public static ListEntry IntelligentColor(ListEntry TaskCategoryColour)
+        {
+            
+            ListEntry newColor = TaskCategoryColour;
+            
+            switch (TaskCategoryColour.Description)
+            {
+                case "Blue":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTBLUE");
+                    break;
+                case "Green":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTGREEN");
+                    break;
+                case "Red":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MEDIUMVIOLETRED");
+                    break;
+                case "Purple":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "BLUEVIOLET");
+                    break;
+                case "Beige":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "BISQUE");
+                    break;
+                case "Blue Violet":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "CADETBLUE");
+                    break;
+                case "Brown":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "SANDYBROWN");
+                    break;
+                case "Coral":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTSALMON");
+                    break;
+                case "Dark blue":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MIDNIGHTBLUE");
+                    break;
+                case "Dark Magenta":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MAGENTA");
+                    break;
+                case "Forest Green":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LAWNGREEN");
+                    break;
+                case "Fuchsia":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTPRINK");
+                    break;
+                case "Gold":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "PALEGOLDENROD");
+                    break;
+                case "Gray":
+                    newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTGRAY");
+                    break;
+            }
+
+
+            return newColor;
+        }
         public SchoolTask()
         {
         }

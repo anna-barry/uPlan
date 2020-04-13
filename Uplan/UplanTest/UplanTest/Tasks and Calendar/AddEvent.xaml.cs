@@ -100,11 +100,11 @@ namespace UplanTest
 
                 ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
 
-            /*SchoolTask.Intelligent(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
+            SchoolTask.Intelligent(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
 
             coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
 
-                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);*/
+                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
 
 
 
@@ -296,6 +296,45 @@ namespace UplanTest
                     break;
                 case "Gray":
                     res = Color.Gray;
+                    break;
+                case "Light Blue":
+                    res = Color.LightBlue;
+                    break;
+                case "Light Green":
+                    res = Color.LightGreen;
+                    break;
+                case "Medium VioletRed":
+                    res = Color.MediumVioletRed;
+                    break;
+                case "Bisque":
+                    res = Color.Bisque;
+                    break;
+                case "Cadet Blue":
+                    res = Color.CadetBlue;
+                    break;
+                case "Sandy Brown":
+                    res= Color.SandyBrown;
+                    break;
+                case "Light Salmon":
+                    res = Color.LightSalmon;
+                    break;
+                case "Midnight Blue":
+                    res = Color.MidnightBlue;
+                    break;
+                case "Magenta":
+                    res = Color.Magenta;
+                    break;
+                case "Lawn Green":
+                    res = Color.LawnGreen;
+                    break;
+                case "Light Pink":
+                    res = Color.LightPink;
+                    break;
+                case "Pale Goldenrod":
+                    res = Color.PaleGoldenrod;
+                    break;
+                case "Light Gray":
+                    res = Color.LightGray;
                     break;
 
             }

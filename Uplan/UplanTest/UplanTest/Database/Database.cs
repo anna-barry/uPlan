@@ -23,23 +23,12 @@ namespace UplanTest
                 User.Initiate();
                 SchoolTask.Initiate();
                 ListEntryForFood.Initiate();
-                //Food.Initiate();
-               // MyFoodWeek.Initiate();
                 ListEntryYOGA.Initiate();
 
                 MyUser.isDefault = true;
             }
             
-           /* var col = db.GetCollection<RowClass>("Collection");
-            var data_list = col.Find(Query.All(), 0, 20);
-
-            foreach (var row in data_list) 
-            {
-                col.Delete(row.Id);
-                data_return.Add(row);
-            }*/
              
-         
             var foodweek =db.GetCollection<Food>("EntriesforFood");
             /*var data_list = foodweek.Find(Query.All(), 0, 20);
             foreach (var row in data_list)
@@ -48,16 +37,8 @@ namespace UplanTest
                 
             }
             */
-            
-            var col = Database.db.GetCollection<Food>("EntriesforFood");
-            // Use FindOne and not Find as we should have only one
-            //thisweek = col.FindOne(Query.All());
-            
-            
-            
-            // var liltest = testweek.FoodCategoryDescCarb1; 
+           
             var sizetest = foodweek.Count();
-            var testweek = foodweek.FindOne(Query.All());
             if (sizetest==0)
             {
                 MyFoodWeek.isDefault = true;

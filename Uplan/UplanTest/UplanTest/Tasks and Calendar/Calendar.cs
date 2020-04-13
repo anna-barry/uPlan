@@ -2143,60 +2143,99 @@ return thismessage;
 
 
         public static Color getColor(string col)
-    {
-      Color res = Color.White;
-      switch (col)
-       {
-         case "Blue":
-          res = Color.Blue;
-          break;
-         case "Green":
-         res = Color.Green;
-          break;
-         case "Red":
-          res = Color.Red;
-         break;
-         case "Purple":
-            res = Color.Purple;
-         break;
-         case "Beige":
-           res = Color.Beige;
-           break;
-         case "Blue Violet":
-            res = Color.BlueViolet;
-             break;
-        case "Brown":
-          res = Color.Brown;
-          break;
-        case "Coral":
-         res = Color.Coral;
-         break;
-        case "Dark blue":
-         res = Color.DarkBlue;
-         break;
-        case "Dark Magenta":
-            res = Color.DarkMagenta;
-            break;
-         case "Forest Green":
-            res = Color.ForestGreen;
-            break;
-        case "Fuchsia":
-          res = Color.Fuchsia;
-            break;
-        case "Gold":
-            res = Color.Gold;
-        break;
-            case "Gray":
-        res = Color.Gray;
-        break;
+        {
+            Color res = Color.White;
+            switch (col)
+            {
+                case "Blue":
+                    res = Color.Blue;
+                    break;
+                case "Green":
+                    res = Color.Green;
+                    break;
+                case "Red":
+                    res = Color.Red;
+                    break;
+                case "Purple":
+                    res = Color.Purple;
+                    break;
+                case "Beige":
+                    res = Color.Beige;
+                    break;
+                case "Blue Violet":
+                    res = Color.BlueViolet;
+                    break;
+                case "Brown":
+                    res = Color.Brown;
+                    break;
+                case "Coral":
+                    res = Color.Coral;
+                    break;
+                case "Dark blue":
+                    res = Color.DarkBlue;
+                    break;
+                case "Dark Magenta":
+                    res = Color.DarkMagenta;
+                    break;
+                case "Forest Green":
+                    res = Color.ForestGreen;
+                    break;
+                case "Fuchsia":
+                    res = Color.Fuchsia;
+                    break;
+                case "Gold":
+                    res = Color.Gold;
+                    break;
+                case "Gray":
+                    res = Color.Gray;
+                    break;
+                case "Light Blue":
+                    res = Color.LightBlue;
+                    break;
+                case "Light Green":
+                    res = Color.LightGreen;
+                    break;
+                case "Medium VioletRed":
+                    res = Color.MediumVioletRed;
+                    break;
+                case "Bisque":
+                    res = Color.Bisque;
+                    break;
+                case "Cadet Blue":
+                    res = Color.CadetBlue;
+                    break;
+                case "Sandy Brown":
+                    res = Color.SandyBrown;
+                    break;
+                case "Light Salmon":
+                    res = Color.LightSalmon;
+                    break;
+                case "Midnight Blue":
+                    res = Color.MidnightBlue;
+                    break;
+                case "Magenta":
+                    res = Color.Magenta;
+                    break;
+                case "Lawn Green":
+                    res = Color.LawnGreen;
+                    break;
+                case "Light Pink":
+                    res = Color.LightPink;
+                    break;
+                case "Pale Goldenrod":
+                    res = Color.PaleGoldenrod;
+                    break;
+                case "Light Gray":
+                    res = Color.LightGray;
+                    break;
 
-}
+            }
 
 
-return res;
-}
+            return res;
+        }
 
-}
+    }
 
 }
  
