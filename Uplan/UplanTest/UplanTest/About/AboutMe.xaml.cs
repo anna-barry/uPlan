@@ -73,11 +73,13 @@ namespace UplanTest
          */
         async void OnButtonClicked(object sender, EventArgs args)
         {
+            
             var col = Database.db.GetCollection<ListEntry>("ListEntries");
             // Use FindOne and not Find as we should have only one
             var resultWhite = col.FindOne(Query.And(Query.EQ("Code", "WHITE"), Query.EQ("Type", "COLOURS")));
             resultWhite.Description= White.Text;
             col.Update(resultWhite);
+
 
             ListEntry.getEntryfromTypeAndCode("COLOURS", "BLUE").Description = Blue.Text;
             var resultBlue = col.FindOne(Query.And(Query.EQ("Code", "BLUE"), Query.EQ("Type", "COLOURS")));

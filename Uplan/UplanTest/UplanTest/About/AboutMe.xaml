@@ -41,7 +41,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Label Text="About me"
-         Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="28" />
+         Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="24" />
           <Label x:Name="info" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Chocolate" FontSize="15" Grid.RowSpan="4"/>
             <Label Text="Define the tags for each colour: " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet"  FontSize="18" />
            
@@ -76,7 +76,8 @@
             <Label Text="Gray: " Grid.Row="19" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Gray" FontSize="16" />
             <Entry x:Name="Gray" WidthRequest="175" FontSize="14" Placeholder="Gray" Grid.Row="19" Grid.Column="1"  />
 
-            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="100" Grid.Row="20" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"  ></ImageButton>
+            <Button Text="Save" Clicked="OnButtonClicked" BackgroundColor="AliceBlue" BorderColor="DarkMagenta" TextColor="IndianRed" Grid.Row="20" Grid.RowSpan="2" Grid.Column="1" /> 
+            <!--<ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="100" Grid.Row="20" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"  ></ImageButton> -->
             
         </Grid>
     </ContentPage.Content>
