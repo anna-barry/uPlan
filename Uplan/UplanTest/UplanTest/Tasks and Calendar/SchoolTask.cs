@@ -34,6 +34,7 @@ namespace UplanTest
 
         public string TaskCategoryDesc { get { return ListEntry.getDescfromEntry(TaskCategory); } }
         public string TaskCategoryColourDesc { get { return ListEntry.getDescfromEntry(TaskCategoryColour); } }
+        public string TaskCategoryColourCode { get { return ListEntry.getCodefromEntry(TaskCategoryColour); } }
         public string TaskComplexityDesc { get { return ListEntry.getDescfromEntry(TaskComplexity); } }
 
         public string infoSubtype;
@@ -430,48 +431,48 @@ namespace UplanTest
             
             ListEntry newColor = TaskCategoryColour;
             
-            switch (TaskCategoryColour.Description)
+            switch (TaskCategoryColour.Code)
             {
-                case "Blue":
+                case "BLUE":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTBLUE");
                     break;
-                case "Green":
+                case "GREEN":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTGREEN");
                     break;
-                case "Red":
+                case "RED":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MEDIUMVIOLETRED");
                     break;
-                case "Purple":
+                case "PURPLE":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "BLUEVIOLET");
                     break;
-                case "Beige":
+                case "BEIGE":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "BISQUE");
                     break;
-                case "Blue Violet":
+                case "BLUEVIOLET":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "CADETBLUE");
                     break;
-                case "Brown":
+                case "BROWN":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "SANDYBROWN");
                     break;
-                case "Coral":
+                case "CORAL":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTSALMON");
                     break;
-                case "Dark blue":
+                case "DARKBLUE":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MIDNIGHTBLUE");
                     break;
-                case "Dark Magenta":
+                case "DARKMAGERNTA":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "MAGENTA");
                     break;
-                case "Forest Green":
+                case "FORESTGREEN":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LAWNGREEN");
                     break;
-                case "Fuchsia":
+                case "FUCHSIA":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTPRINK");
                     break;
-                case "Gold":
+                case "GOLD":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "PALEGOLDENROD");
                     break;
-                case "Gray":
+                case "GRAY":
                     newColor = ListEntry.getEntryfromTypeAndCode("SUBCOLOURS", "LIGHTGRAY");
                     break;
             }

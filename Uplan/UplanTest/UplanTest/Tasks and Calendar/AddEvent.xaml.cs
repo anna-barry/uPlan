@@ -255,85 +255,85 @@ namespace UplanTest
             Color res = Color.White;
             switch (col)
             {
-                case "Blue":
+                case "BLUE":
                     res = Color.Blue;
                     break;
-                case "Green":
+                case "GREEN":
                     res = Color.Green;
                     break;
-                case "Red":
+                case "RED":
                     res = Color.Red;
                     break;
-                case "Purple":
+                case "PURPLE":
                     res = Color.Purple;
                     break;
-                case "Beige":
+                case "BEIGE":
                     res = Color.Beige;
                     break;
-                case "Blue Violet":
+                case "BLUEVIOLET":
                     res = Color.BlueViolet;
                     break;
-                case "Brown":
+                case "BROWN":
                     res = Color.Brown;
                     break;
-                case "Coral":
+                case "CORAL":
                     res = Color.Coral;
                     break;
-                case "Dark blue":
+                case "DARKBLUE":
                     res = Color.DarkBlue;
                     break;
-                case "Dark Magenta":
+                case "DARKMAGERNTA":
                     res = Color.DarkMagenta;
                     break;
-                case "Forest Green":
+                case "FORESTGREEN":
                     res = Color.ForestGreen;
                     break;
-                case "Fuchsia":
+                case "FUCHSIA":
                     res = Color.Fuchsia;
                     break;
-                case "Gold":
+                case "GOLD":
                     res = Color.Gold;
                     break;
-                case "Gray":
+                case "GRAY":
                     res = Color.Gray;
                     break;
-                case "Light Blue":
+                case "LIGHTBLUE":
                     res = Color.LightBlue;
                     break;
-                case "Light Green":
+                case "LIGHTGREEN":
                     res = Color.LightGreen;
                     break;
-                case "Medium VioletRed":
+                case "MEDIUMVIOLETRED":
                     res = Color.MediumVioletRed;
                     break;
-                case "Bisque":
+                case "BISQUE":
                     res = Color.Bisque;
                     break;
-                case "Cadet Blue":
+                case "CADETBLUE":
                     res = Color.CadetBlue;
                     break;
-                case "Sandy Brown":
-                    res= Color.SandyBrown;
+                case "SANDYBROWN":
+                    res = Color.SandyBrown;
                     break;
-                case "Light Salmon":
+                case "LIGHTSALMON":
                     res = Color.LightSalmon;
                     break;
-                case "Midnight Blue":
+                case "MIDNIGHTBLUE":
                     res = Color.MidnightBlue;
                     break;
-                case "Magenta":
+                case "MAGENTA":
                     res = Color.Magenta;
                     break;
-                case "Lawn Green":
+                case "LAWNGREEN":
                     res = Color.LawnGreen;
                     break;
-                case "Light Pink":
+                case "LIGHTPRINK":
                     res = Color.LightPink;
                     break;
-                case "Pale Goldenrod":
+                case "PALEGOLDENROD":
                     res = Color.PaleGoldenrod;
                     break;
-                case "Light Gray":
+                case "LIGHTGRAY":
                     res = Color.LightGray;
                     break;
 

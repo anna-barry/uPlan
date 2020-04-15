@@ -37,7 +37,6 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "COLOURS", Code = "FUCHSIA", Description = "Fuchsia" });
             col.Insert(new ListEntry { Type = "COLOURS", Code = "GOLD", Description = "Gold" });
             col.Insert(new ListEntry { Type = "COLOURS", Code = "GRAY", Description = "Gray" });
-            col.Insert(new ListEntry { Type = "COLOURS", Code = "GREEN", Description = "Green" });
             col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "BLUEVIOLET", Description = "Blue Violet" });
             col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTBLUE", Description = "Light Blue" });
             col.Insert(new ListEntry { Type = "SUBCOLOURS", Code = "LIGHTGREEN", Description = "Light Green" });
@@ -122,6 +121,13 @@ namespace UplanTest
             return result.Description;
         }
 
+        public static string getCodefromEntry(ListEntry entry)
+        {
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");
+            var result = col.FindById(entry.Id);
+
+            return result.Code;
+        }
         public ListEntry()
         {
         }
