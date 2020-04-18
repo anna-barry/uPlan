@@ -64,7 +64,9 @@ namespace UplanTest
                 {
 
                     string colorName = Task_colour.Items[Task_colour.SelectedIndex];
-                    Task_colour.BackgroundColor = getColor(colorName);
+                    ListEntry test= coloursforevent.ListEntryList[Task_colour.SelectedIndex];
+                    string lilcolour = test.Code;
+                    Task_colour.BackgroundColor = getColor(lilcolour);
 
                 }
             };
