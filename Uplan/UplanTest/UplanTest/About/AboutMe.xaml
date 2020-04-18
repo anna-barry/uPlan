@@ -40,8 +40,8 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Label Text="About me"
-         Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="24" />
+        <Label Text="About me" 
+         Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="24" HorizontalTextAlignment="Center" />
           <Label x:Name="info" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Chocolate" FontSize="15" Grid.RowSpan="4"/>
             <Label Text="Define the tags for each colour: " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet"  FontSize="18" />
            

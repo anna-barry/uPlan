@@ -32,36 +32,39 @@
 
 
             <Label Text="Food choices for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
-            
-            <Label Text="Prot 1" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Prot_1" Grid.Row="1" Grid.Column="1"  BackgroundColor="SkyBlue" />
-
-            <Label Text="Prot 2"  Grid.Row="2" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="2" Grid.Column="1" BackgroundColor="SkyBlue"  />
-
-            <Label Text="Prot 3" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="3" Grid.Column="1"  BackgroundColor="SkyBlue" />
-
-            <Label Text="Carb 1" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Carb_1" WidthRequest="200"  Grid.Row="4" Grid.Column="1"  BackgroundColor="SkyBlue"  />
-
-            <Label Text="Carb 2"  Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Carb_2" WidthRequest="200" Grid.Row="5" Grid.Column="1"  BackgroundColor="SkyBlue" />
-
-            <Label Text="Carb 3"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="6" Grid.Column="1" BackgroundColor="SkyBlue"  />
-
-            <Label Text="Veggies 1" Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="7" Grid.Column="1"  BackgroundColor="SkyBlue" />
-
-            <Label Text="Veggies 2"  Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="8" Grid.Column="1"  BackgroundColor="SkyBlue" />
-
-            <Label Text="Veggies 3"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="25"/>
-            <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="9" Grid.Column="1" BackgroundColor="SkyBlue" />
 
 
-            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" Grid.Row="10" Grid.Column="1"></ImageButton>
+            <Image Source="Assets/culinary-recipe.gif" Grid.Row="0" Grid.Column="1" WidthRequest="400" HeightRequest="400" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Scale="2.7"/>
+            <Label Text="Help us create your very own food plan by telling us what you want to eat this week!" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="SaddleBrown" FontSize="17.8" />
+            <Label Text="Protein choice n°1 for this week" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="1"  BackgroundColor="AliceBlue" />
+
+            <Label Text="Protein choice n°2 for this week "  Grid.Row="3" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Protein choice n°3 for this week" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="4" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16"/>
+
+            <Label Text="Carbohydrate choice n°1 for this week " Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Carb_1" WidthRequest="200"  Grid.Row="5" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Carbohydrate choice n°2 for this week "  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Carb_2" WidthRequest="200" Grid.Row="6" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Carbohydrate choice n°3 for this week "  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="7" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Vegetable of choice for this week n°1" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="8" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Vegetable of choice for this week n°2"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="9" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+
+            <Label Text="Vegetable of choice for this week n°3"  Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="10" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+
+
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" Grid.Row="12" Grid.Column="1" Scale="3"></ImageButton>
 
 
         </Grid>
