@@ -2010,6 +2010,7 @@ private void SetButton(IEnumerable<SchoolTask> tasks, int rang, ref Button tasks
                     tasksButton.Text = tasks.ElementAt<SchoolTask>(rang).Description;
                     var colour = tasks.ElementAt<SchoolTask>(rang).TaskCategoryColourCode;
                     tasksButton.BackgroundColor = getColor(colour);
+                    tasksButton.TextColor = getColorForText(colour);
                 }
                 else
                 {
@@ -2235,6 +2236,98 @@ return thismessage;
             return res;
         }
 
+        public static Color getColorForText(string col)
+        {
+            Color res = Color.Black;
+            switch (col)
+            {
+                case "BLUE":
+                    res = Color.White;
+                    break;
+                case "GREEN":
+                    res = Color.White;
+                    break;
+                case "RED":
+                    res = Color.White;
+                    break;
+                case "PURPLE":
+                    res = Color.White;
+                    break;
+                case "BEIGE":
+                    res = Color.Black;
+                    break;
+                case "BLUEVIOLET":
+                    res = Color.White;
+                    break;
+                case "BROWN":
+                    res = Color.White;
+                    break;
+                case "CORAL":
+                    res = Color.Black;
+                    break;
+                case "DARKBLUE":
+                    res = Color.White;
+                    break;
+                case "DARKMAGERNTA":
+                    res = Color.White;
+                    break;
+                case "FORESTGREEN":
+                    res = Color.White;
+                    break;
+                case "FUCHSIA":
+                    res = Color.Black;
+                    break;
+                case "GOLD":
+                    res = Color.Black;
+                    break;
+                case "GRAY":
+                    res = Color.Black;
+                    break;
+                case "LIGHTBLUE":
+                    res = Color.Black;
+                    break;
+                case "LIGHTGREEN":
+                    res = Color.Black;
+                    break;
+                case "MEDIUMVIOLETRED":
+                    res = Color.Black;
+                    break;
+                case "BISQUE":
+                    res = Color.Black;
+                    break;
+                case "CADETBLUE":
+                    res = Color.Black;
+                    break;
+                case "SANDYBROWN":
+                    res = Color.Black;
+                    break;
+                case "LIGHTSALMON":
+                    res = Color.Black;
+                    break;
+                case "MIDNIGHTBLUE":
+                    res = Color.Black;
+                    break;
+                case "MAGENTA":
+                    res = Color.White;
+                    break;
+                case "LAWNGREEN":
+                    res = Color.Black;
+                    break;
+                case "LIGHTPRINK":
+                    res = Color.Black;
+                    break;
+                case "PALEGOLDENROD":
+                    res = Color.Black;
+                    break;
+                case "LIGHTGRAY":
+                    res = Color.Black;
+                    break;
+
+            }
+
+
+            return res;
+        }
     }
 
 }
