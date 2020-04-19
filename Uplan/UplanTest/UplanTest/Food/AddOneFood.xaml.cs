@@ -50,9 +50,9 @@ namespace UplanTest
 
         }
 
-        async void OnCloseClicked(object sender, EventArgs args)
+        /*async void OnCloseClicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new FoodW());
-        }
+        }*/
     }
 }
