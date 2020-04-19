@@ -41,42 +41,42 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Label Text="About me" 
-         Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="24" HorizontalTextAlignment="Center" />
-          <Label x:Name="info" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Chocolate" FontSize="15" Grid.RowSpan="4"/>
-            <Label Text="Define the tags for each colour: " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet"  FontSize="18" />
+         Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" TextColor="MediumVioletRed" FontSize="24" TextDecorations="Underline"/>
+          <Label x:Name="info" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" TextColor="SkyBlue" FontSize="15" Grid.RowSpan="4"/>
+            <Label Text="Define the tags for each colour: " Grid.Row="6" Grid.Column="0" Grid.RowSpan="2" TextColor="MediumVioletRed"  FontSize="18"  TextDecorations="Underline" />
            
-            <Label Text="White: " Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Black" FontSize="16" />
-            <Entry x:Name="White" WidthRequest="175" FontSize="12" Placeholder="White" Grid.Row="5" Grid.Column="1" />
-            <Label Text="Blue: " Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Blue" FontSize="16" />
-            <Entry x:Name="Blue" WidthRequest="175" FontSize="12" Placeholder="Blue" Grid.Row="6" Grid.Column="1" />
-            <Label Text="Green: " Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Green" FontSize="16" />
-            <Entry x:Name="Green" WidthRequest="175" FontSize="12" Placeholder="Green" Grid.Row="7" Grid.Column="1"  />
-            <Label Text="Red: " Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Red" FontSize="16" />
-            <Entry x:Name="Red" WidthRequest="175" FontSize="12" Placeholder="Red" Grid.Row="8" Grid.Column="1"  />
-            <Label Text="Purple: " Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Purple" FontSize="16" />
-            <Entry x:Name="Purple" WidthRequest="175" FontSize="12" Placeholder="Purple" Grid.Row="9" Grid.Column="1"  />
-            <Label Text="Beige: " Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Black" FontSize="16" />
-            <Entry x:Name="Beige" WidthRequest="175" FontSize="12" Placeholder="Beige" Grid.Row="10" Grid.Column="1"  />
-            <Label Text="Blue Violet: " Grid.Row="11" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="16" />
-            <Entry x:Name="Blue_Violet" WidthRequest="175" FontSize="12" Placeholder="Blue Violet" Grid.Row="11" Grid.Column="1"  />
-            <Label Text="Brown: " Grid.Row="12" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Brown" FontSize="16" />
-            <Entry x:Name="Brown" WidthRequest="175" FontSize="12" Placeholder="Brown" Grid.Row="12" Grid.Column="1"  />
-            <Label Text="Coral: " Grid.Row="13" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Coral" FontSize="16" />
-            <Entry x:Name="Coral" WidthRequest="175" FontSize="12" Placeholder="Coral" Grid.Row="13" Grid.Column="1"  />
-            <Label Text="Dark blue: " Grid.Row="14" Grid.Column="0" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="16" />
-            <Entry x:Name="Dark_blue" WidthRequest="175" FontSize="12" Placeholder="Dark blue" Grid.Row="14" Grid.Column="1"  />
-            <Label Text="Dark Magenta: " Grid.Row="15" Grid.Column="0" VerticalTextAlignment="Center" TextColor="DarkMagenta" FontSize="16" />
-            <Entry x:Name="Dark_Magenta" WidthRequest="175" FontSize="12" Placeholder="Dark Magenta" Grid.Row="15" Grid.Column="1"  />
-            <Label Text="Forest Green" Grid.Row="16" Grid.Column="0" VerticalTextAlignment="Center" TextColor="ForestGreen" FontSize="16" />
-            <Entry x:Name="Forest_Green" WidthRequest="175" FontSize="12" Placeholder="Forest Green" Grid.Row="16" Grid.Column="1"  />
-            <Label Text="Fuchsia" Grid.Row="17" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Fuchsia" FontSize="16" />
-            <Entry x:Name="Fuchsia" WidthRequest="175" FontSize="12" Placeholder="Fuchsia" Grid.Row="17" Grid.Column="1"  />
-            <Label Text="Gold: " Grid.Row="18" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Gold" FontSize="16" />
-            <Entry x:Name="Gold" WidthRequest="175" FontSize="12" Placeholder="Gold" Grid.Row="18" Grid.Column="1"  />
-            <Label Text="Gray: " Grid.Row="19" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Gray" FontSize="16" />
-            <Entry x:Name="Gray" WidthRequest="175" FontSize="12" Placeholder="Gray" Grid.Row="19" Grid.Column="1"  />
+            <Label Text="White: " Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Black" FontSize="16" />
+            <Entry x:Name="White" WidthRequest="175" FontSize="12" Placeholder="White" Grid.Row="7" Grid.Column="1" />
+            <Label Text="Blue: " Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Blue" FontSize="16" />
+            <Entry x:Name="Blue" WidthRequest="175" FontSize="12" Placeholder="Blue" Grid.Row="8" Grid.Column="1" />
+            <Label Text="Green: " Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Green" FontSize="16" />
+            <Entry x:Name="Green" WidthRequest="175" FontSize="12" Placeholder="Green" Grid.Row="9" Grid.Column="1"  />
+            <Label Text="Red: " Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Red" FontSize="16" />
+            <Entry x:Name="Red" WidthRequest="175" FontSize="12" Placeholder="Red" Grid.Row="10" Grid.Column="1"  />
+            <Label Text="Purple: " Grid.Row="11" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Purple" FontSize="16" />
+            <Entry x:Name="Purple" WidthRequest="175" FontSize="12" Placeholder="Purple" Grid.Row="11" Grid.Column="1"  />
+            <Label Text="Beige: " Grid.Row="12" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Black" FontSize="16" />
+            <Entry x:Name="Beige" WidthRequest="175" FontSize="12" Placeholder="Beige" Grid.Row="12" Grid.Column="1"  />
+            <Label Text="Blue Violet: " Grid.Row="13" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="16" />
+            <Entry x:Name="Blue_Violet" WidthRequest="175" FontSize="12" Placeholder="Blue Violet" Grid.Row="13" Grid.Column="1"  />
+            <Label Text="Brown: " Grid.Row="14" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Brown" FontSize="16" />
+            <Entry x:Name="Brown" WidthRequest="175" FontSize="12" Placeholder="Brown" Grid.Row="14" Grid.Column="1"  />
+            <Label Text="Coral: " Grid.Row="15" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Coral" FontSize="16" />
+            <Entry x:Name="Coral" WidthRequest="175" FontSize="12" Placeholder="Coral" Grid.Row="15" Grid.Column="1"  />
+            <Label Text="Dark blue: " Grid.Row="16" Grid.Column="0" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="16" />
+            <Entry x:Name="Dark_blue" WidthRequest="175" FontSize="12" Placeholder="Dark blue" Grid.Row="16" Grid.Column="1"  />
+            <Label Text="Dark Magenta: " Grid.Row="17" Grid.Column="0" VerticalTextAlignment="Center" TextColor="DarkMagenta" FontSize="16" />
+            <Entry x:Name="Dark_Magenta" WidthRequest="175" FontSize="12" Placeholder="Dark Magenta" Grid.Row="17" Grid.Column="1"  />
+            <Label Text="Forest Green" Grid.Row="18" Grid.Column="0" VerticalTextAlignment="Center" TextColor="ForestGreen" FontSize="16" />
+            <Entry x:Name="Forest_Green" WidthRequest="175" FontSize="12" Placeholder="Forest Green" Grid.Row="18" Grid.Column="1"  />
+            <Label Text="Fuchsia" Grid.Row="19" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Fuchsia" FontSize="16" />
+            <Entry x:Name="Fuchsia" WidthRequest="175" FontSize="12" Placeholder="Fuchsia" Grid.Row="19" Grid.Column="1"  />
+            <Label Text="Gold: " Grid.Row="20" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Gold" FontSize="16" />
+            <Entry x:Name="Gold" WidthRequest="175" FontSize="12" Placeholder="Gold" Grid.Row="20" Grid.Column="1"  />
+            <Label Text="Gray: " Grid.Row="21" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Gray" FontSize="16" />
+            <Entry x:Name="Gray" WidthRequest="175" FontSize="12" Placeholder="Gray" Grid.Row="21" Grid.Column="1"  />
 
-            <Button Text="Save" Clicked="OnButtonClicked" BackgroundColor="AliceBlue" BorderColor="DarkMagenta" TextColor="IndianRed" Grid.Row="20" Grid.RowSpan="2" Grid.Column="1" /> 
+            <Button Text="Save" Clicked="OnButtonClicked" BackgroundColor="AliceBlue" BorderColor="DarkMagenta" TextColor="IndianRed" Grid.Row="23" Grid.RowSpan="2" Grid.Column="1" /> 
             <!--<ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="100" Grid.Row="20" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"  ></ImageButton> -->
             
         </Grid>
