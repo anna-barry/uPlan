@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e660861-0b39-4767-a37b-8da04d838a80" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Food/FoodPlan.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Food/FoodPlan.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Food/FoodW.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Food/FoodW.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/AddEvent.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/AddEvent.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/Calendar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/Calendar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/SeeTasks.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Uplan/UplanTest/UplanTest/Tasks and Calendar/SeeTasks.xaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1alSmGqFKqVvLzF3r9l3DXDw17V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e660861-0b39-4767-a37b-8da04d838a80" name="Default Changelist" comment="" />
+      <created>1587308845049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587308845049</updated>
+      <workItem from="1587308851051" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>

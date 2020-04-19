@@ -29,7 +29,7 @@
 
             </Grid.RowDefinitions>
             <!--title-->
-            <Label Text="Food Plan for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="7" Grid.RowSpan="2"/>
+            <Label Text="Food Plan for the week" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="7" Grid.RowSpan="2"/>
             
             <!--DAYS-->
             <Label Text="Monday" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>

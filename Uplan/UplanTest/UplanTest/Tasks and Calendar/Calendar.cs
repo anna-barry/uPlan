@@ -87,11 +87,11 @@ namespace UplanTest
 
             }
 
-            grid.BackgroundColor = Color.AliceBlue; 
+            grid.BackgroundColor = Color.AliceBlue;
 
 
 
-            var Myweek = new Label { Text = "My week", FontSize = 30 };
+            var Myweek = new Label { Text = "My week", FontSize = 30, FontAttributes= FontAttributes.Bold, TextColor=Color.BlueViolet };
 
 
 

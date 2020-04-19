@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Food W"
+             Title="Food Choices"
              x:Class="UplanTest.FoodW">
     <ContentPage.Content>
 
@@ -32,17 +32,14 @@
            
 
 
-            <Label Text="Food choices for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
-
+            <Label Text="Food choices for the week" Grid.Row="0"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
 
             
-            <Label Text="Help us create your very own food plan by telling us what you want to eat this week!" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="SaddleBrown" FontSize="17.8" />
+            <Label Text="Help us create your very own food plan by telling us what you want to eat this week!" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="MediumVioletRed" FontSize="17.8" />
             <Label Text="Protein choice n°1 for this week" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="10" />
-            <Label Text="hi" Grid.Row="2" Grid.Column="2"/>
-
             <Label Text="Protein choice n°2 for this week "  Grid.Row="3" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16"/>
 
             <Label Text="Protein choice n°3 for this week" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="4" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16"/>
@@ -56,13 +53,13 @@
             <Label Text="Carbohydrate choice n°3 for this week "  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="7" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
 
-            <Label Text="Vegetable of choice for this week n°1" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Label Text="Vegetable choice n°1 for this week" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="8" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
 
-            <Label Text="Vegetable of choice for this week n°2"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Label Text="Vegetable choice  n°2 for this week"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="9" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
 
-            <Label Text="Vegetable of choice for this week n°3"  Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
+            <Label Text="Vegetable choice n°3 for this week"  Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="10" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
 
 
