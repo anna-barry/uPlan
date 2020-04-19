@@ -16,24 +16,43 @@ namespace UplanTest
         public SeeTasks()
         {
             InitializeComponent();
-            string res = "Tasks:" + "\n" ;
+            string res = "These are the tasks for today you selected (" + DateTime.Today.Date.ToString("dd/MM/yyyy") + "):" + "\n" + "\n";
+            //saytheday.Text= "These are the tasks for today you selected (" + DateTime.Today.Date.ToString("dd/MM/yyyy") + "):";
             editorr.Text = res;
+            
+            //saytheday.FontAttributes = FontAttributes.Bold;
+            //saytheday.TextColor = Color.MediumVioletRed;
             var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
             //Database.Initiate();
-            res = "These are the tasks for today you selected";
+           
+           
             var tasksonday = col.Find(Query.EQ("DueDate", DateTime.Today));
             int i = 1;
+            
+
             foreach (var task in tasksonday)
             {
-
-                res = res + "Task n°" + i + "\n" + "-";
+                
+                res = res + "Task n°" + i + "\n" + "-" ;
                 res += (string)task.Description;
                 res += "\n";
                 res += (string)task.SubDesc +"\n";
-
+                res += "\n";
                 i += 1;
             }
             editorr.Text = res;
+            editorr.TextColor = Color.RoyalBlue;
+
+            /* thistackLayout.Children.Add(editorr);
+             thisscroll.Content = thistackLayout;
+             Content = thisscroll;*/
+
+            /*var scroll = new ScrollView();
+            Content = scroll;
+            var stack = new StackLayout();
+            stack.Children.Add(new BoxView { BackgroundColor = Color.Red, HeightRequest = 600, WidthRequest = 600 });
+            stack.Children.Add(new Entry());*/
+
         }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
@@ -46,7 +65,9 @@ namespace UplanTest
             {
                  var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
                 //Database.Initiate();
-                string res = "These are the tasks for the day you selected";
+                date = dpp.Date;
+                string lildate = date.ToString("dd/MM/yyyy");
+                string res = "These are the tasks for the day you selected ("+ lildate + "): " + "\n" + "\n";
                 var tasksonday = col.Find(Query.EQ("DueDate", selectedDate1));
                 int i = 1;
                 foreach(var task in tasksonday)
@@ -59,6 +80,7 @@ namespace UplanTest
                     i += 1;
                 }
                 editorr.Text = res;
+                
 
             }
 
