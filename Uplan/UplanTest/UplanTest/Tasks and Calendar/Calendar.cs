@@ -382,43 +382,65 @@ namespace UplanTest
             //Creation des jours de la semaine
 
             var Lun = new Label { Text = "Monday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if(dayofweektoday == DayOfWeek.Monday)
+            {
+                Lun.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Lun, 0, 1);
 
 
 
             var Mar = new Label { Text = "Tuesday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Tuesday)
+            {
+                Mar.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Mar, 1, 1);
 
 
 
             var Mer = new Label { Text = "Wednesday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Wednesday)
+            {
+                Mer.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Mer, 2, 1);
 
 
 
             var Jeu = new Label { Text = "Thursday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Thursday)
+            {
+                Jeu.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Jeu, 3, 1);
 
 
 
             var Fri = new Label { Text = "Friday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Friday)
+            {
+                Fri.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Fri, 4, 1);
 
 
 
             var Sam = new Label { Text = "Saturday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Saturday)
+            {
+                Sam.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Sam, 5, 1);
 
 
 
             var Dim = new Label { Text = "Sunday", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
-
+            if (dayofweektoday == DayOfWeek.Sunday)
+            {
+                
+                Dim.TextColor = Color.BlueViolet;
+            }
             grid.Children.Add(Dim, 6, 1);
 
             //CR2ATION DES 70 BOUTONS

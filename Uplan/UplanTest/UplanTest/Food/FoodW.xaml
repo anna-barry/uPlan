@@ -12,6 +12,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="500"/>
                 <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="500"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -34,10 +35,11 @@
             <Label Text="Food choices for the week" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextDecorations="Underline" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
 
 
-            <Image Source="Assets/culinary-recipe.gif" Grid.Row="0" Grid.Column="1" WidthRequest="400" HeightRequest="400" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Scale="2.7"/>
+            
             <Label Text="Help us create your very own food plan by telling us what you want to eat this week!" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="SaddleBrown" FontSize="17.8" />
             <Label Text="Protein choice n°1 for this week" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="1"  BackgroundColor="AliceBlue" />
+            <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="10" />
+            <Label Text="hi" Grid.Row="2" Grid.Column="2"/>
 
             <Label Text="Protein choice n°2 for this week "  Grid.Row="3" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
             <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />

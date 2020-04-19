@@ -6,50 +6,6 @@
              mc:Ignorable="d"
              x:Class="UplanTest.SeeTasks">
     <ContentPage.Content>
-        <!--
-        <ScrollView>
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-
-
-                </Grid.RowDefinitions>
-
-                <Label Text="Chose a date to see all the tasks due that date" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-                <Label Text="Select a date" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="16"/>
-                <DatePicker x:Name="dpp" Grid.Row="3" Grid.Column="1" DateSelected="DatePicker_DateSelected"  Grid.ColumnSpan="5"/>
-
-                <Label x:Name="saytheday" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"/>
-
-                <ScrollView x:Name="thisscroll"   Grid.Row="5" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="4" >
-                <StackLayout x:Name="thistackLayout" Grid.Row="5" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="4">
-                    <BoxView BackgroundColor="LavenderBlush" HeightRequest="200" WidthRequest="150" Grid.Row="5" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="4"/>
-                    <Label x:Name="editorr" HeightRequest="100"  />
-                </StackLayout>
-            </ScrollView> 
-                 <ScrollView Orientation="Vertical" Grid.Row="5" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="4">// Since you want it to scroll vertically 
-        <Label x:Name="editorr" HeightRequest="100" Grid.Row="5" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="4"  />
-
-
-         </ScrollView> 
-
-
-           </Grid>
-        </ScrollView>-->
 
         <ScrollView>
             <StackLayout Orientation="Vertical" Spacing="0.0" Padding="0,10">
