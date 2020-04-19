@@ -1,0 +1,32 @@
+NORMALEMENT LA NAVIGATION EST OK
+
+Dans le code on a:
+
+INDEX:
+    la page principale
+
+DOWNLOAD:
+    la page pour telecharger
+
+EVOLUTION:
+    la page de l'evolution du groupe
+    
+WHATSUPLAN:
+    la page d'explication de UPLAN
+    
+
+En +: On a un fichier "theme.css", c'est le theme commun a toutes les pages html,
+      Quand on initialise une page on a un corps consacré à l'unification du site qui est donc relié à theme.css
+      ATTENTION: il faut créer un nouverau body ensuite pour le contenu de chaque page, qui sera lui relié au fichier css corespondant
+      
+
+Les langues:
+    chaques pages sont doubles anglais et fr, leurs html est different car les textes sont différents, mais le layout est le meme donc meme .css
+    
+
+Les images:
+    faire des noms compréhensibles, c'est mieux de telecharger pour la comprehesnion du code et de mettre ensuite dans le dossier "images" car un lien ca peut etre gros
+    
+    
+POUR VOIR LE LAYOUT Desiré RETROUVER LA PHOTO ENVOYé du schéma de chacune des pages
+    

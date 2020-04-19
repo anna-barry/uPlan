@@ -1,0 +1,93 @@
+/*themes*/
+
+body {
+    scroll-behavior: smooth;
+    text-align: center;
+  background: pink;
+    font: georgia;
+}
+/*la bannièere/image*/
+/*ici toutes les images*/
+img{
+    border-radius: 15px;  /*ca c'est pour les angles arrondis*/
+}   
+
+img#presentation{
+    position:relative;
+    top: 15%;
+    left:5%; 
+    height: 200;
+    width: 500;
+}
+/* tete de page*/
+h1 {
+    font-size: 50;
+    font-weight:900;
+    color: mediumpurple;
+    font:georgia;
+}
+/*DEFINITION GOBALE A TOUS LES BUTONS*/
+
+a
+{
+    position:absolute;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+//*MENU*/
+a.b1
+{
+    position:absolute
+    border-radius: 15px;
+    top:15%;
+    left:95%;
+     background-color: none;
+}
+a.b2
+{
+    position:absolute;
+    border-radius: 15px;
+    top:22%;
+    left:95%;
+    background-color: none;
+}
+a.b3
+{
+    position:absolute;
+    border-radius: 15px;
+    top:29%;
+    left:95%;
+    background-color: none;
+}
+a.b4
+{
+    position:absolute;
+    border-radius: 15px;
+    top:36%;
+    left:95%;
+    background-color: none;
+}
+/*LANGUES*/
+a.bFR
+{
+    top:1%;
+    left:5;
+    height: 10;
+    width: 20;
+}
+a.bEN
+{ 
+    top:1%;
+    left:60;
+     height:10;
+    width:20;
+}
+
+/*PLACE LOGO*/
+a.logo
+{
+    top :1%;
+    left:90%;
+}
+    

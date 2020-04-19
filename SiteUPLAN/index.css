@@ -1,0 +1,153 @@
+
+body {
+    scroll-behavior: smooth;
+    text-align: center;
+  background: pink;
+    font: georgia;
+}
+/*ici on defini les parametres globaux de toutes les images de la page*/
+img{
+    border-radius: 15px;  /*ca c'est pour les angles arrondis*/
+}   
+
+/*la c'est l'image de new york il faut ajouter le phrase dessus*/
+img#presentation{
+    position:absolute;
+    top: 15%;
+    left:5%; 
+    height: 200;
+    width: 500;
+}
+
+h1 {
+    font-size: 50;
+    font-weight:900;
+    color: mediumpurple;
+    font:georgia;
+}
+a
+{
+    position:absolute;
+    border-radius: 15px;
+    text-decoration: none;
+}
+a.bou1
+{
+    top:400;
+    left:5%;
+}
+a.bou2
+{
+    top:750;
+    left:5%;
+}
+a.bou3
+{
+    top:1100;
+    left:5%;
+}
+a.bou4
+{
+    top:1450;
+    left:5%;
+}
+
+a.bouton1 {
+    top:400;
+    left:50%;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.bouton1:hover {
+    background: orange;
+}
+
+a.bouton2 {
+    top:750;
+    left:50%;
+    padding: 10px 30px; 
+    background: blue; 
+    color: white; 
+    font: georgia;
+}
+a.bouton2:hover {
+    background: orange; 
+}
+
+a.bouton3 
+{    
+    top:1100;
+    left:50%;
+    padding: 10px 30px; 
+    background: blue; 
+    color: white; 
+    font: georgia;
+}
+a.bouton3:hover 
+{
+    background: orange; 
+}
+
+a.bouton4
+{
+    top:1450;
+    left:50%;
+    padding: 10px 30px; 
+    background: blue;
+    color: white; 
+    font: georgia;
+}
+a.bouton4:hover 
+{
+    background: orange; 
+}
+/*LANGUES*/
+a.bFR
+{
+    top:1%;
+    left:5;
+    height: 10;
+    width: 20;
+}
+a.bEN
+{
+    top:1%;
+    left:60;
+     height:10;
+    width: 20;
+}
+/*MENU*/
+a.b1
+{
+    border-radius: 15px;
+    position:absolute;
+    top:15%;
+    left:95%;
+     background-color: none;
+}
+a.b2
+{
+    border-radius: 15px;
+    position:absolute;
+    top:22%;
+    left:95%;
+    background-color: none;
+}
+a.b3
+{
+    border-radius: 15px;
+    position:absolute;
+    top:29%;
+    left:95%;
+    background-color: none;
+}
+a.b4
+{
+    border-radius: 15px;
+    position:absolute;
+    top:36%;
+    left:95%;
+    background-color: none;
+}

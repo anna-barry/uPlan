@@ -1,0 +1,163 @@
+h2
+{
+    top:350;
+    font-size: 15;
+    font: georgia;
+    text-align: center;
+    position:absolute;
+}
+
+/*ici c'est les mots clés de l'appli*/
+a{
+     border-radius: 0px;
+}
+a.orga {
+    background: url(images/plan.png);
+    background-color:blue;
+    background-size:contain;
+    height: 250;
+    width:290;
+    top:460;
+    left:0%; 
+
+}
+a.orga:hover {
+    background: url(images/team.png);
+    
+}
+
+a.eatclean {
+   background: url(images/evol.jpg);
+    height: 250;
+    width:290;
+    top:460;
+    left:25%;
+}
+a.eatclean:hover {
+     
+       background: url(images/team.png);
+    
+}
+
+
+a.relaxed
+{   
+    background: url(images/evol.jpg);
+    height: 250;
+    width:290;
+    top:460;
+    left:50%;
+
+}
+a.relaxed:hover 
+{
+    background: url(images/team.png);
+    
+}
+
+a.tidy
+{ 
+    background: url(images/evol.jpg);
+    height: 250;
+    width:290;
+    top:460;
+    left:75%;
+}
+a.tidy:hover 
+{
+    background: url(images/team.png);
+}
+
+
+a.menu {
+    top:750;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.menu:hover {
+    background: orange;}
+
+a.Calendar {
+    top:790;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.Calendar:hover {
+    background: orange;}
+
+a.AddTask {
+    top:830;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.AddTask:hover {
+    background: orange;}
+
+a.SeeTask {
+    top:870;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.SeeTask:hover {
+    background: orange;}
+
+a.FoodPlan {
+    top:910;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.FoodPlan:hover {
+    background: orange;}
+a.FoodChoice {
+    top:950;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.FoodChoice:hover {
+    background: orange;}
+a.WellBeing {
+    top:990;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.WellBeing:hover {
+    background: orange;}
+a.AboutMe {
+    top:1030;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:blue;
+    color: white; 
+    font: georgia;
+}
+a.AboutMe:hover {
+    background: orange;}
