@@ -85,6 +85,14 @@ namespace UplanTest
 
         }
 
+        async void Add(object sender, EventArgs args)
+
+        {
+           
+            await Navigation.PushAsync(new AddOneFood());
+        }
+       
+
         /*public static void Update(
            string uName, string uEmailAddress, ListEntry uAccomodationType,
            string uShoppingDay, string uCleaningDay)

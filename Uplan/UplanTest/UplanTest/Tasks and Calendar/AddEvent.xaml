@@ -68,9 +68,9 @@
             <Label Text="When is this event due?" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
             <DatePicker x:Name="dp" Grid.Row="8" Grid.Column="2" DateSelected="DatePicker_DateSelected"  Grid.ColumnSpan="3" BackgroundColor="SkyBlue" />
 
-                
-            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked"  Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"  ></ImageButton>
-            <!--HeightRequest="90" WidthRequest="60"-->
+
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked"  Grid.Row="9" Grid.Column="4" HeightRequest="90" WidthRequest="60"  ></ImageButton>
+            <!-- Grid.RowSpan="2" Grid.ColumnSpan="2"-->
 
 
 

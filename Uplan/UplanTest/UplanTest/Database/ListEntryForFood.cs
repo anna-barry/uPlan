@@ -141,13 +141,17 @@ namespace UplanTest
             return result;
         }
 
-        /*public static string getDescfromTypeAndCode(string Type, string Code)
+        public static void InsertNewFood(string Type, string Code, string Desc)
         {
-            var col = Database.db.GetCollection<Food>("EntriesforFood");
-            // Use FindOne and not Find as we should have only one
-            var result = col.FindOne(Query.And(Query.EQ("Code", Code), Query.EQ("Type", Type)));
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");
 
-            return result;
-        } */
+
+            // Index document using these properties
+            col.EnsureIndex(x => x.Type);
+            col.EnsureIndex(x => x.Code);
+
+            col.Insert(new ListEntry { Type = Type, Code = Code, Description = Desc });
+
+        }
     }
 }

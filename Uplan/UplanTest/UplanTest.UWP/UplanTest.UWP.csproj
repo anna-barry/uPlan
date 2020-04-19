@@ -121,6 +121,7 @@
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\NewFood.png" />
+    <Content Include="Assets\plus.png" />
     <Content Include="Assets\save%29.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />

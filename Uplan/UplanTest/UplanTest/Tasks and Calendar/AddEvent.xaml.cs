@@ -136,7 +136,7 @@ namespace UplanTest
             st1.Text = "By heart";
             st2.Text = "Small exercise";
             st3.Text = "Big project";
-            st4.Text = "";
+            st4.Text = "Other";
 
         }
 
