@@ -18,6 +18,7 @@ namespace UplanTest
         public AddOneFood()
         {
             InitializeComponent();
+            Prot.BackgroundColor = Color.PaleVioletRed;
 
         }
 
@@ -25,6 +26,9 @@ namespace UplanTest
 
         {
             foodtype = "PROTEIN";
+            Prot.BackgroundColor = Color.PaleVioletRed;
+            Carb.BackgroundColor = Color.AliceBlue;
+            Veg.BackgroundColor = Color.AliceBlue;
 
         }
 
@@ -32,6 +36,9 @@ namespace UplanTest
 
         {
             foodtype = "CARB";
+            Prot.BackgroundColor = Color.AliceBlue;
+            Carb.BackgroundColor = Color.PaleVioletRed;
+            Veg.BackgroundColor = Color.AliceBlue;
 
         }
 
@@ -39,7 +46,9 @@ namespace UplanTest
 
         {
             foodtype = "VEGGIES";
-
+            Prot.BackgroundColor = Color.AliceBlue;
+            Carb.BackgroundColor = Color.AliceBlue;
+            Veg.BackgroundColor = Color.PaleVioletRed;
         }
 
         async void OnSaveClicked(object sender, EventArgs args)
@@ -50,9 +59,9 @@ namespace UplanTest
 
         }
 
-        /*async void OnCloseClicked(object sender, EventArgs args)
+        async void OnCloseClicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new FoodW());
-        }*/
+        }
     }
 }
