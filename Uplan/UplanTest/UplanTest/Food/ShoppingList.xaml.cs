@@ -15,6 +15,62 @@ namespace UplanTest
         public ShoppingList()
         {
             InitializeComponent();
+
+           
+
+
+
+        }
+        public static void GetShoppinForWeek()
+        {
+            var col = Database.db.GetCollection<FoodItem>("FoodItems");
+            //INSERT FOOD ITEM FOR EACH FOOD OF THIS WEEK
+            // for the dueDate the idea is that for the next Sunday the food must be eaten (new food plan after that) 
+            //-> we need to add the possibility to change all due Dates
+
+            string typeForCarb1 = MyFoodWeek.thisweek.FoodforCategoryCarbchoix1.Type;
+            string codeForCarb1 = MyFoodWeek.thisweek.FoodforCategoryCarbchoix1.Code;
+            string descForCarb1 = MyFoodWeek.thisweek.FoodforCategoryCarbchoix1.Description;
+            DateTime resCarb1 = GetNextSunday();
+            FoodItem.InsertFoodItem(typeForCarb1, codeForCarb1, descForCarb1, resCarb1);
+            
+        }
+
+        public static DateTime GetNextSunday()
+        {
+            DateTime res = DateTime.Now;
+            if(res.DayOfWeek!=DayOfWeek.Sunday)
+            {
+                
+                if (res.DayOfWeek == DayOfWeek.Monday)
+                {
+                    res = res.AddDays(6);
+                }
+                if (res.DayOfWeek == DayOfWeek.Tuesday)
+                {
+                    res = res.AddDays(5);
+                }
+                if (res.DayOfWeek == DayOfWeek.Wednesday)
+                {
+                    res = res.AddDays(4);
+                }
+                if (res.DayOfWeek == DayOfWeek.Thursday)
+                {
+                    res = res.AddDays(3);
+                }
+                if (res.DayOfWeek == DayOfWeek.Friday)
+                {
+                    res = res.AddDays(2);
+                }
+                if (res.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    res = res.AddDays(1);
+                }
+            }
+            return res;
+        }
+        public static void RefreshFoodItems()
+        {
         }
     }
 }
