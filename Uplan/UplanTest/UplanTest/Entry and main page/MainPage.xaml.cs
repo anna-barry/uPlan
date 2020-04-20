@@ -46,7 +46,7 @@ namespace UplanTest
         }
         private void Button_Clicked6(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new ShoppingList());
+            Detail = new NavigationPage(new Shopping_List());
             
         }
         private void Button_Clicked7(object sender, EventArgs e)

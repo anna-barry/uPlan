@@ -128,6 +128,15 @@ namespace UplanTest
 
             return result.Code;
         }
+
+        public static string getTypefromEntry(ListEntry entry)
+        {
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");
+            var result = col.FindById(entry.Id);
+
+            return result.Type;
+        }
+
         public ListEntry()
         {
         }

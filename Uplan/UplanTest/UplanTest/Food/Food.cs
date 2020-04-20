@@ -76,22 +76,39 @@ namespace UplanTest
         public string FoodCategoryDescVeggies3 { get { return ListEntryForFood.getDescfromEntryForFood(test, "Veggie3"); } }*/
 
         public string FoodCategoryDescProt1 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix1); } }
-
+        public string FoodCategoryCodeProt1 { get { return ListEntry.getCodefromEntry(FoodforCategoryProtchoix1); } }
+        public string FoodCategoryTypeProt1 { get { return ListEntry.getTypefromEntry(FoodforCategoryProtchoix1); } }
         public string FoodCategoryDescProt2 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix2); } }
+        public string FoodCategoryCodeProt2 { get { return ListEntry.getCodefromEntry(FoodforCategoryProtchoix2); } }
+        public string FoodCategoryTypeProt2 { get { return ListEntry.getTypefromEntry(FoodforCategoryProtchoix2); } }
 
         public string FoodCategoryDescProt3 { get { return ListEntry.getDescfromEntry(FoodforCategoryProtchoix3); } }
+        public string FoodCategoryCodeProt3 { get { return ListEntry.getCodefromEntry(FoodforCategoryProtchoix3); } }
+        public string FoodCategoryTypeProt3 { get { return ListEntry.getTypefromEntry(FoodforCategoryProtchoix3); } }
 
         public string FoodCategoryDescCarb1 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix1); } }
+        public string FoodCategoryCodeCarb1 { get { return ListEntry.getCodefromEntry(FoodforCategoryCarbchoix1); } }
+        public string FoodCategoryTypeCarb1 { get { return ListEntry.getTypefromEntry(FoodforCategoryCarbchoix1); } }
 
         public string FoodCategoryDescCarb2 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix2); } }
+        public string FoodCategoryCodeCarb2 { get { return ListEntry.getCodefromEntry(FoodforCategoryCarbchoix2); } }
+        public string FoodCategoryTypeCarb2 { get { return ListEntry.getTypefromEntry(FoodforCategoryCarbchoix2); } }
 
         public string FoodCategoryDescCarb3 { get { return ListEntry.getDescfromEntry(FoodforCategoryCarbchoix3); } }
+        public string FoodCategoryCodeCarb3 { get { return ListEntry.getCodefromEntry(FoodforCategoryCarbchoix3); } }
+        public string FoodCategoryTypeCarb3 { get { return ListEntry.getTypefromEntry(FoodforCategoryCarbchoix3); } }
 
         public string FoodCategoryDescVeggies1 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix1); } }
+        public string FoodCategoryCodeVeggies1 { get { return ListEntry.getCodefromEntry(FoodforCategoryVeggieschoix1); } }
+        public string FoodCategoryTypeVeggies1 { get { return ListEntry.getTypefromEntry(FoodforCategoryVeggieschoix1); } }
 
         public string FoodCategoryDescVeggies2 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix2); } }
+        public string FoodCategoryCodeVeggies2 { get { return ListEntry.getCodefromEntry(FoodforCategoryVeggieschoix2); } }
+        public string FoodCategoryTypeVeggies2 { get { return ListEntry.getTypefromEntry(FoodforCategoryVeggieschoix2); } }
 
-        public string FoodCategoryDescVeggies3 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix3); } } 
+        public string FoodCategoryDescVeggies3 { get { return ListEntry.getDescfromEntry(FoodforCategoryVeggieschoix3); } }
+        public string FoodCategoryCodeVeggies3 { get { return ListEntry.getCodefromEntry(FoodforCategoryVeggieschoix3); } }
+        public string FoodCategoryTypeVeggies3 { get { return ListEntry.getTypefromEntry(FoodforCategoryVeggieschoix3); } }
 
         // ----------------------------------------------------
 

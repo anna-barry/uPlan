@@ -11,9 +11,9 @@
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>-->
-        <Grid Margin="50">
-            <!--VerticalOptions="Center" HorizontalOptions ="Center"-->
+        </StackLayout>
+        <Grid Margin="50"
+            VerticalOptions="Center" HorizontalOptions ="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="500"/>
                 <ColumnDefinition Width="500"/>
@@ -35,7 +35,7 @@
 
             <Label Text="My Shopping list" Grid.Row="0"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
 
-            <!--<ListView IsVisible="true" x:Name="ListView"CachingStrategy="RecycleElement" SeparatorColor="Transparent" BackgroundColor="Transparent">
+            <ListView IsVisible="true" x:Name="ListView"CachingStrategy="RecycleElement" SeparatorColor="Transparent" BackgroundColor="Transparent">
 
                    <ListView.ItemTemplate>
 
@@ -53,9 +53,27 @@
 
                 </ListView.ItemTemplate>
 
-            </ListView>-->
+            </ListView>
 
 
-        </Grid>
+        </Grid> -->
+
+        <ScrollView>
+            <RelativeLayout x:Name="RelativeLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"></RowDefinition>
+                        <RowDefinition Height="0.5*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Lil test" TextColor="Brown" Grid.Row="0" Grid.Column="0"/>
+                    
+                </Grid>
+               </RelativeLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

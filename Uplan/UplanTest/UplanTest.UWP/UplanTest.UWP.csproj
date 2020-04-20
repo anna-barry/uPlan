@@ -117,11 +117,13 @@
     <Content Include="Assets\FoodC2.png" />
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
+    <Content Include="Assets\IconMealPlanForSH.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\NewFood.png" />
     <Content Include="Assets\plus.png" />
+    <Content Include="Assets\refresh_Icon.png" />
     <Content Include="Assets\save%29.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
