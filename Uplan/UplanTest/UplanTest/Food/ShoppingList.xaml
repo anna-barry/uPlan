@@ -3,13 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              mc:Ignorable="d"
              x:Class="UplanTest.ShoppingList">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        </StackLayout>-->
+        <Grid Margin="50">
+            <!--VerticalOptions="Center" HorizontalOptions ="Center"-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="My Shopping list" Grid.Row="0"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+
+            <!--<ListView IsVisible="true" x:Name="ListView"CachingStrategy="RecycleElement" SeparatorColor="Transparent" BackgroundColor="Transparent">
+
+                   <ListView.ItemTemplate>
+
+                       <DataTemplate>
+
+                           <ViewCell>
+
+                               <input:CheckBox Text="{Binding Path=name}" Type="Check" Color="White" BoxBackgroundColor="Black" TextColor="White" HeightRequest="40″
+
+                                  CheckChanged="checkbox_CheckChanged" BindingContext="{Binding .}"/>
+
+                </ViewCell>
+
+                </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -101,12 +101,17 @@ namespace UplanTest
                 coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
 
                 ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
+            if (subtype != "OTHER")
+            {
 
-            SchoolTask.Intelligent(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
+                SchoolTask.Intelligent(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
 
-            coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
+                coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
 
-                ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
+                    ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
+            }
+
+            //await Navigation.PushAsync(new Calendar()); on le met? c'est plus visuel?
 
 
 
@@ -118,7 +123,8 @@ namespace UplanTest
         {
             pers = true;
             school = false;
-            Pers.Text = "Adding personal Task or Event";
+            Pers.BackgroundColor = Color.LightBlue;
+            Sch.BackgroundColor = Color.AliceBlue;
             Sch.Text = "For School";
             st1.Text = "Health appointment";
             st2.Text = "Sport";
@@ -131,7 +137,8 @@ namespace UplanTest
         {
             pers = false;
             school = true;
-            Sch.Text = "Adding a work task";
+            Sch.BackgroundColor = Color.LightBlue;
+            Pers.BackgroundColor = Color.AliceBlue;
             Pers.Text = "Personal";
             st1.Text = "By heart";
             st2.Text = "Small exercise";
@@ -143,42 +150,34 @@ namespace UplanTest
         async void Onsub1Clicked(object sender, EventArgs args)
 
         {
-           if(school)
+            st1.BackgroundColor = Color.LightBlue;
+            st2.BackgroundColor = Color.AliceBlue;
+            st3.BackgroundColor = Color.AliceBlue;
+            st4.BackgroundColor = Color.AliceBlue;
+            if (school)
             {
                 subtype = "BY_HEART";
-                st1.Text = "Subtype: By heart";
-                st2.Text = "Small exercise";
-                st3.Text = "Big project";
-                st4.Text = "";
             }
            else
             {
                 subtype = "HEALTH";
-                st1.Text = "Subtype: Health appointment";
-                st2.Text = "Sport";
-                st3.Text = "Social life";
-                st4.Text = "Hobies";
             }
         }
 
         async void Onsub2Clicked(object sender, EventArgs args)
 
         {
+            st1.BackgroundColor = Color.AliceBlue;
+            st2.BackgroundColor = Color.LightBlue;
+            st3.BackgroundColor = Color.AliceBlue;
+            st4.BackgroundColor = Color.AliceBlue;
             if (school)
             {
                 subtype = "EXERCICE";
-                st1.Text = "By heart";
-                st2.Text = "Subtype: Small exercise";
-                st3.Text = "Big project";
-                st4.Text = "";
             }
             else
             {
                 subtype = "SPORT";
-                st1.Text = "Health appointment";
-                st2.Text = "Subtype: Sport";
-                st3.Text = "Social life";
-                st4.Text = "Hobies";
             }
 
 
@@ -186,21 +185,18 @@ namespace UplanTest
         async void Onsub3Clicked(object sender, EventArgs args)
 
         {
+            st1.BackgroundColor = Color.AliceBlue;
+            st3.BackgroundColor = Color.LightBlue;
+            st2.BackgroundColor = Color.AliceBlue;
+            st4.BackgroundColor = Color.AliceBlue;
+
             if (school)
             {
                 subtype = "PROJECT";
-                st1.Text = "By heart";
-                st2.Text = "Small exercise";
-                st3.Text = "Subtype: Big project";
-                st4.Text = "";
             }
             else
             {
                 subtype = "SOCIAL_LIFE";
-                st1.Text = "Health appointment";
-                st2.Text = "Sport";
-                st3.Text = "Subtype: Social life";
-                st4.Text = "Hobies";
             }
 
 
@@ -208,21 +204,17 @@ namespace UplanTest
         async void Onsub4Clicked(object sender, EventArgs args)
 
         {
+            st1.BackgroundColor = Color.AliceBlue;
+            st4.BackgroundColor = Color.LightBlue;
+            st2.BackgroundColor = Color.AliceBlue;
+            st3.BackgroundColor = Color.AliceBlue;
             if (school)
             {
-                subtype = "";
-                st1.Text = "By heart";
-                st2.Text = "Small exercise";
-                st3.Text = "Big project";
-                st4.Text = "Click on a subtype";
+                subtype = "OTHER";
             }
             else
             {
                 subtype = "HOBIES";
-                st1.Text = "Health appointment";
-                st2.Text = "Sport";
-                st3.Text = "Social life";
-                st4.Text = "Subtype: Hobies";
             }
 
 

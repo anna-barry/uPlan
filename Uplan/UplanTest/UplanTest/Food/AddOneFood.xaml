@@ -32,9 +32,9 @@
             <Label Text="Food Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
             <Entry x:Name="desc" WidthRequest="200" Placeholder="Description" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
 
-            <!--<ImageButton Source="Assets/croix.jpg" Clicked="OnCloseClicked"  Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" /> -->
-            
-            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked"  Grid.Row="9" Grid.Column="3"/>
+            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+
+            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="9" Grid.Column="3"/>
             <!-- Grid.RowSpan="2" Grid.ColumnSpan="2"-->
 
 
