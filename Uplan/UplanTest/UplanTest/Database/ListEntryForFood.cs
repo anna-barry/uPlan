@@ -36,17 +36,14 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "MUSSEL", Description = "Mussel" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "CRAB", Description = "Crab" }); 
             col.Insert(new ListEntry { Type = "PROTEIN", Code = " SEE_BASS", Description = "See bass" });
-            col.Insert(new ListEntry { Type = "PROTEIN", Code = "OTHER_F", Description = "Other" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "BEANS", Description = "Beans" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "TOFU", Description = "Tofu" });
-            col.Insert(new ListEntry { Type = "PROTEIN", Code = "OTHER_M", Description = "Other meat" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "BEEF", Description = "Beef" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "SALMON", Description = "Salmon" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "TUNA", Description = "Tuna" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "COB", Description = "Cob" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "SHEEP", Description = "Sheep" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "LAMB", Description = "Lamb" });
-            col.Insert(new ListEntry { Type = "PROTEIN", Code = "BAT", Description = "Bat" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "PROK", Description = "Pork" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "EGGS", Description = "Eggs" });
             col.Insert(new ListEntry { Type = "PROTEIN", Code = "CHICKEN", Description = "Chicken" });

@@ -78,7 +78,7 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "HEALTH", Description = "Health appointment" });
             col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "SPORT", Description = "Sport" });
             col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "SOCIAL_LIFE", Description = "Social life" });
-            col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "HOBIES", Description = "Hobies" });
+            col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "HOBBIES", Description = "Hobies" });
 
 
             /* Well-being

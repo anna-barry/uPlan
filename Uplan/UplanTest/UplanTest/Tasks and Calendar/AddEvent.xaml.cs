@@ -129,7 +129,7 @@ namespace UplanTest
             st1.Text = "Health appointment";
             st2.Text = "Sport";
             st3.Text = "Social life";
-            st4.Text = "Hobies";
+            st4.Text = "Hobbies";
 
         }
         async void OnWordClicked(object sender, EventArgs args)
@@ -214,7 +214,7 @@ namespace UplanTest
             }
             else
             {
-                subtype = "HOBIES";
+                subtype = "HOBBIES";
             }
 
 
