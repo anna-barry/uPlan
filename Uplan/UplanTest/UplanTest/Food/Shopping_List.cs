@@ -55,7 +55,7 @@ namespace UplanTest
 
             var testgrid = new Xamarin.Forms.Grid();
             int roww = 2;
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 testgrid.ColumnDefinitions.Add(new ColumnDefinition()
                 {
@@ -63,7 +63,7 @@ namespace UplanTest
                 });
             }
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 testgrid.RowDefinitions.Add(new RowDefinition()
                 {
@@ -74,9 +74,9 @@ namespace UplanTest
 
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck)
             {
-                checkk.Color = Color.BlueViolet;
+                checkk.Color = Color.BlueViolet; 
                 testgrid.Children.Add(checkk,0,roww);
-                testgrid.Children.Add(labb,1,roww);
+                testgrid.Children.Add(labb,1, roww);
                 roww += 1;
             }
 
@@ -85,11 +85,12 @@ namespace UplanTest
              foreach((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
              {
                  checkk.Color = Color.BlueViolet;
+                 
                  test.Children.Add(checkk);
                  test.Children.Add(labb);
              }
 
-            Content = testgrid;
+            //Content = testgrid;
             Frame frame = new Frame
             {
                 BorderColor = Color.DarkSlateBlue,
@@ -380,7 +381,7 @@ namespace UplanTest
                         {
                             col.Delete(lilres.Id);
                             //orCheck.SetBinding({ x: Reference checkBox}, Path = checkbox.IsChecked);
-                            forCheck.IsVisible = false;
+                            //forCheck.IsVisible = false;
                         }
                     };
 
