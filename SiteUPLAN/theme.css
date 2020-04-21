@@ -3,7 +3,7 @@
 body {
     scroll-behavior: smooth;
     text-align: center;
-  background: pink;
+  background: lightgrey;
     font: georgia;
 }
 /*la bannièere/image*/
@@ -26,8 +26,8 @@ h1 {
     color: mediumpurple;
     font:georgia;
 }
-/*DEFINITION GOBALE A TOUS LES BUTONS*/
 
+/*DEFINITION GOBALE A TOUS LES BUTONS*/
 a
 {
    position:absolute;
@@ -35,12 +35,12 @@ a
     text-decoration: none;
 }
 
-//*MENU*/
+/*MENU*/
 a.b1
 {
     position:absolute;
     border-radius: 15px;
-    top:22%;
+    top:15%;
     left:95%;
     background-color: none;
 }
@@ -69,6 +69,7 @@ a.b4
     left:95%;
     background-color: none;
 }
+
 /*LANGUES*/
 a.bFR
 {
