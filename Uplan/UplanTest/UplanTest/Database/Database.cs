@@ -47,6 +47,7 @@ namespace UplanTest
 
             MyUser.Initiate();
             MyFoodWeek.Initiate();
+            FoodItem.Initiate();
         }
     }
 }

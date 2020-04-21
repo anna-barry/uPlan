@@ -17,7 +17,7 @@ namespace UplanTest
             thisweek = col.FindOne(Query.All());
             //thisweek=col.FindAll
 
-            string liltest = thisweek.FoodCategoryDescCarb1;
+            //string liltest = thisweek.FoodCategoryDescCarb1;
         }
         
         public static void UpdateFood(
@@ -40,5 +40,8 @@ namespace UplanTest
 
 
         }
+
+ 
+
     }
 }

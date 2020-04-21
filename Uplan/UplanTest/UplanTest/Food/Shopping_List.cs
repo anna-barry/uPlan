@@ -44,13 +44,12 @@ namespace UplanTest
             LShopList.Text = "Shopping List";
             LShopList.TextColor = Color.MediumVioletRed;
             LShopList.FontSize = 26;
-            LShopList.TextDecorations = TextDecorations.Underline;
+            LShopList.FontAttributes = FontAttributes.Bold;
             grid.Children.Add(LShopList, 1, 0);
             Grid.SetColumnSpan(LShopList, 3);
             //Add(nom,col,row)
 
             //________________________________________________________
-
             //__________________ Frame = Liste de Courses_________________
             List<(Label, CheckBox)> AllOfLabAndCheck = GetAllFoodItem();
 
@@ -71,22 +70,24 @@ namespace UplanTest
                     Height = new GridLength(100, GridUnitType.Absolute)
                 });
             }
+
+
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck)
             {
                 checkk.Color = Color.BlueViolet;
-                testgrid.Children.Add(checkk,1,roww);
-                testgrid.Children.Add(labb,2,roww);
+                testgrid.Children.Add(checkk,0,roww);
+                testgrid.Children.Add(labb,1,roww);
                 roww += 1;
             }
 
 
             StackLayout test = new StackLayout();
-            foreach((Label labb, CheckBox checkk) in AllOfLabAndCheck)
-            {
-                checkk.Color = Color.BlueViolet;
-                test.Children.Add(checkk);
-                test.Children.Add(labb);
-            }
+             foreach((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
+             {
+                 checkk.Color = Color.BlueViolet;
+                 test.Children.Add(checkk);
+                 test.Children.Add(labb);
+             }
 
             Content = testgrid;
             Frame frame = new Frame
@@ -99,7 +100,7 @@ namespace UplanTest
 
                 //Content = new Label { Text = "Example" }
 
-                
+
                 Content = test
             };
         
@@ -145,14 +146,90 @@ namespace UplanTest
 
             //________________________________________________________________________________
             //__________________ Add Food From Meal Plan _____________________________________
-            
-            ImageButton AddFoodFromMeal = new ImageButton();
+
+            /*ImageButton AddFoodFromMeal = new ImageButton();
             AddFoodFromMeal.Source = "Assets/IconMealPlanForSH.png";
             AddFoodFromMeal.Scale = 0.75;
             AddFoodFromMeal.Clicked += (sender, e) => GetShoppinForWeek();
-            grid.Children.Add(AddFoodFromMeal, 4, 2);
+            grid.Children.Add(AddFoodFromMeal, 4, 2); */
 
 
+            //_________________________________________________________________________
+            //______________ Ajout de chose dans ses placards___________________________
+            Label ADD = new Label();
+            ADD.Text = "Add in my pantry TQT JE SAIS QUE C4ESTATROCe je reprenderai après :)";
+            ADD.TextColor = Color.MediumVioletRed;
+            ADD.FontSize = 26;
+            ADD.FontAttributes = FontAttributes.Bold;
+            grid.Children.Add(ADD, 6, 0);
+            Grid.SetColumnSpan(ADD, 3);
+
+            //___Bouton pour utiliser l'api?_________________________________________
+            Label simpleADD = new Label();
+            simpleADD.Text = "Scan or enter the code of your product";
+            simpleADD.TextColor = Color.MediumVioletRed;
+            simpleADD.FontSize = 15;
+            grid.Children.Add(simpleADD, 6, 1);
+            Grid.SetColumnSpan(simpleADD, 3);
+
+            //entrée du code
+            Entry codeplace = new Entry();
+            string code = codeplace.Text;
+            grid.Children.Add(codeplace,6,2);
+            Grid.SetColumnSpan(codeplace, 2);
+
+            Button save = new Button();
+            save.Text = "ENTER";
+            grid.Children.Add(save, 8, 2);
+            //save.Clicked += (sender, e) => UseTheAPI(); 
+
+            //clique sur un bouton pour utiliser l'api?
+            Button scan = new Button();
+            scan.Text = "SCAN";
+            grid.Children.Add(scan, 6, 3);
+            Grid.SetColumnSpan(scan, 3);
+            //scan.Clicked += (sender, e) => // use code barre -> UseTheAPI();
+
+            // pour rentrer manuellement 
+
+            //titre
+            Label manuADD = new Label();
+            manuADD.Text = "Add by yourslef";
+            manuADD.TextColor = Color.MediumVioletRed;
+            manuADD.FontSize = 15;
+            grid.Children.Add(manuADD, 6, 4);
+            Grid.SetColumnSpan(manuADD, 3);
+
+            //entrée desrciption
+            Label adddesc = new Label();
+            adddesc.Text = "Food Description:";
+            adddesc.TextColor = Color.MediumVioletRed;
+            manuADD.FontSize = 15;
+            grid.Children.Add(adddesc, 6, 5);
+            Grid.SetColumnSpan(adddesc, 3);
+
+            Entry fooddesc = new Entry();
+            string desc = codeplace.Text;
+            grid.Children.Add(fooddesc, 6, 6);
+            Grid.SetColumnSpan(fooddesc, 2);
+
+            //ici faire select a type, avec un petit boouton add a coté au cas ou on veuille en rajouter
+            //le code sera le meme 
+
+            Button added = new Button();
+            added.Text = "Add";
+            grid.Children.Add(added, 6, 7);
+            Grid.SetColumnSpan(added, 3);
+
+
+            //______________ Affichage de ses placards___________________________
+            Label Fridge = new Label();
+            Fridge.Text = "What is in my pantry?";
+            Fridge.TextColor = Color.MediumVioletRed;
+            Fridge.FontSize = 26;
+            Fridge.FontAttributes = FontAttributes.Bold;
+            grid.Children.Add(Fridge, 11, 0);
+            Grid.SetColumnSpan(Fridge, 3);
 
             //________________________________________________________
             ScrollContainer.Content = grid;
@@ -161,7 +238,7 @@ namespace UplanTest
         }
 
 
-        public static void GetShoppinForWeek()
+        /*public static void GetShoppinForWeek()
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             //INSERT FOOD ITEM FOR EACH FOOD OF THIS WEEK
@@ -258,11 +335,13 @@ namespace UplanTest
                 }
             }
             return res;
-        }
-        public static void RefreshFoodItems()
+        }*/
+
+        public void RefreshFoodItems() //async
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             col.DeleteAll();
+           //await Navigation.PushAsync(new Shopping_List());
         }
 
         public static void RefreshView()
@@ -284,7 +363,7 @@ namespace UplanTest
             checkBox.CheckedChanged += (sender, e) =>
                                                                                    */
 
-            var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
+            var col = Database.db.GetCollection<FoodItem>("FoodForShoppinglist");
             var results = col.FindAll();
             
             foreach(var lilres in results)

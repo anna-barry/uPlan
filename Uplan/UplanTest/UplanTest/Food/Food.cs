@@ -146,7 +146,7 @@ namespace UplanTest
 
                }
                ) ;
-            string test = MyFoodWeek.thisweek.FoodCategoryDescCarb1;
+           // string test = MyFoodWeek.thisweek.FoodCategoryDescCarb1;
             
         }
 

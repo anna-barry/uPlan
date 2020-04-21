@@ -64,7 +64,7 @@ namespace UplanTest
         }
         public static FoodItem getEntryfromTypeAndCode(string Type, string Code)
         {
-            var col = Database.db.GetCollection<FoodItem>("FoodItems");
+            var col = Database.db.GetCollection<FoodItem>("FoodItems"); 
             // Use FindOne and not Find as we should have only one
             var result = col.FindOne(Query.And(Query.EQ("NameCode", Code), Query.EQ("Type", Type)));
 
