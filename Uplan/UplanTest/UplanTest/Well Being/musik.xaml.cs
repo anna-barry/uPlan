@@ -44,7 +44,7 @@ namespace UplanTest
         private async void ToPlay1(object sender, EventArgs e)
         {
 
-            p1.Load("jazz.mp3");
+            p1.Load("Assets/jazz.mp3");
 
             p1.Play();
             P0.IsVisible = true;
@@ -72,8 +72,11 @@ namespace UplanTest
         }
         private async void ToPlay2(object sender, EventArgs e)
         {
-            p1.Load("relax2.mp3");
+            if (!p1.IsPlaying)
+            {
+                p1.Load("Assets/relax2.mp3");
             p1.Play();
+            }
             P1.IsVisible = true;
 
             await P1.ProgressTo(1, 290000, Easing.Linear);
@@ -93,7 +96,7 @@ namespace UplanTest
         private async void ToPlay3(object sender, EventArgs e)
         {
 
-            p1.Load("relax3.mp3");
+            p1.Load("Assets/relax3.mp3");
             p1.Play();
             P2.IsVisible = true;
 
@@ -116,7 +119,7 @@ namespace UplanTest
         private async void ToPlay4(object sender, EventArgs e)
         {
 
-            p1.Load("relax4.mp3");
+            p1.Load("Assets/relax4.mp3");
             p1.Play();
             P3.IsVisible = true;
             await P3.ProgressTo(1, 290000, Easing.Linear);
@@ -136,7 +139,7 @@ namespace UplanTest
         private async void ToPlay5(object sender, EventArgs e)
         {
 
-            p1.Load("rock1.mp3");
+            p1.Load("Assets/rock1.mp3");
             p1.Play();
             P4.IsVisible = true;
             await P4.ProgressTo(1, 138000, Easing.Linear);
@@ -156,7 +159,7 @@ namespace UplanTest
         private async void ToPlay6(object sender, EventArgs e)
         {
 
-            p1.Load("rock2.mp3");
+            p1.Load("Assets/rock2.mp3");
             p1.Play();
             P5.IsVisible = true;
             await P5.ProgressTo(1, 231000, Easing.Linear);
@@ -176,7 +179,7 @@ namespace UplanTest
         private async void ToPlay7(object sender, EventArgs e)
         {
 
-            p1.Load("rock3.mp3");
+            p1.Load("Assets/rock3.mp3");
             p1.Play();
             P6.IsVisible = true;
             await P6.ProgressTo(1, 337000, Easing.Linear);
@@ -198,7 +201,7 @@ namespace UplanTest
         private async void ToPlay8(object sender, EventArgs e)
         {
 
-            p1.Load("rock4.mp3");
+            p1.Load("Assets/rock4.mp3");
             p1.Play();
             P7.IsVisible = true;
             await P7.ProgressTo(1, 198000, Easing.Linear);
