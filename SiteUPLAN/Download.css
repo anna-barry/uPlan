@@ -1,0 +1,19 @@
+a.download
+{
+    position:absolute;
+    color: white;
+    font-size: 30;
+    background-color: mediumpurple;
+    left:5%;
+    top: 55%;
+    border-radius: 15px;
+    width: 200;
+    height:50;
+}
+
+a.download:hover{
+    background-color: orange;
+}
+
+
+
