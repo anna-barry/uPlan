@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UplanTest.API
+namespace UplanTest
 {
    public  class FoodResultModel
     {

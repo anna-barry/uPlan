@@ -13,8 +13,14 @@ namespace UplanTest
 {
     class Shopping_List: ContentPage
     {
+        Entry EntréeCodeBarre = new Entry();
+        Entry SortieApi = new Entry();
+
+
         public Shopping_List()
         {
+            ApiHelper.InitializeClient();
+
             ScrollView ScrollContainer = new ScrollView
             {
                 Orientation = ScrollOrientation.Both,
@@ -162,15 +168,16 @@ namespace UplanTest
 
             //entrée du code
 
-            Entry codeplace = new Entry();
-            string code = codeplace.Text;
-            grid.Children.Add(codeplace,6,3);
-            Grid.SetColumnSpan(codeplace, 2);
+            //Entry EntréeCodeBarre = new Entry();
+            string code = EntréeCodeBarre.Text;
+            grid.Children.Add(EntréeCodeBarre, 6,3);
+            Grid.SetColumnSpan(EntréeCodeBarre, 2);
 
             Button save = new Button();
             save.Text = "ENTER";
+            save.Clicked += (sender, e) => Sauvegarder_Clicked(sender, e);
             grid.Children.Add(save, 8, 3);
-            //save.Clicked += (sender, e) => UseTheAPI(); 
+            
 
             //clique sur un bouton pour utiliser l'api?
 
@@ -205,7 +212,7 @@ namespace UplanTest
 
             //picker du type
              Picker foodtype = new Picker();
-            var type = codeplace.Text;
+            var type = EntréeCodeBarre.Text;
             grid.Children.Add(foodtype, 6, 6);
             Grid.SetColumnSpan(foodtype, 2);
 
@@ -226,10 +233,11 @@ namespace UplanTest
             grid.Children.Add(adddesc, 6, 7);
             Grid.SetColumnSpan(adddesc, 3);
 
-            Entry fooddesc = new Entry();
-            string desc = codeplace.Text;
-            grid.Children.Add(fooddesc, 6, 8);
-            Grid.SetColumnSpan(fooddesc, 3);
+            //Entry fooddesc = new Entry();
+            
+            string desc = SortieApi.Text;
+            grid.Children.Add(SortieApi, 6, 8);
+            Grid.SetColumnSpan(SortieApi, 3);
 
             //date de peremtpion
             Label addperemp = new Label();
@@ -269,6 +277,7 @@ namespace UplanTest
             Content = ScrollContainer;
         }
 
+        
 
         public void RefreshFoodItems() //async
         {
@@ -328,6 +337,31 @@ namespace UplanTest
 
             return res;
 
+        }
+
+
+        async private void Sauvegarder_Clicked(System.Object sender, System.EventArgs e)
+        {
+            // if (isNumeric(EntréeCodeBarre.Text))
+            {
+                var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
+                SortieApi.Text = $"info on product {nutriInfo}";
+            }
+        }
+
+        public bool isNumeric(string entree)
+        {
+            bool isNumeric;
+            try
+            {
+                int.Parse(entree);
+                isNumeric = true;
+            }
+            catch
+            {
+                isNumeric = false;
+            }
+            return isNumeric;
         }
 
     }
