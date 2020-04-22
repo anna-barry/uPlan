@@ -33,11 +33,12 @@ namespace UplanTest
             foreach (var task in tasksonday)
             {
                 
-                res = res + "Task n°" + i + "\n" + "-" ;
+                res = res + "Task n°" + i + '\n' + "-" ;
                 res += (string)task.Description;
-                res += "\n";
-                res += (string)task.SubDesc +"\n";
-                res += "\n";
+                res += '\n';
+                res = res+ (string)task.SubDesc +'\n';
+                res += '\n';
+                
                 i += 1;
             }
             editorr.Text = res;
@@ -72,10 +73,10 @@ namespace UplanTest
                 int i = 1;
                 foreach(var task in tasksonday)
                 {
-                    res = res + "Task n°" + i + "\n" + "-";
+                    res = res + "\n" + "Task n°" + i + "\n" + "-";
                     res +=(string) task.Description;
-                    res += "\n";
-                    res += (string)task.SubDesc;
+                    res += '\n';
+                    res += (string)task.SubDesc + '\n';
 
                     i += 1;
                 }

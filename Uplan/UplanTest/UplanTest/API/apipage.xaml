@@ -1,0 +1,12 @@
+﻿
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="UplanTest.apipage">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Padding="15" Margin="15" Text="Sauvegarder" Clicked="Sauvegarder_Clicked" x:Name="Sauvegarder"></Button>
+                    <Entry x:Name="EntréeCodeBarre" Text="Entrez le code bar"/>
+                    <Label x:Name="SortieApi" IsVisible="False" Text="abc"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>

@@ -37,5 +37,11 @@ namespace UplanTest
             DisplayAlert("Athena", "A true warrior at heart, Athena is a strategist and can easily conquer the world that is made of applications and the ideas of the other groups. Marine, better known as Athena, is a real asset for our team. She has a creative mind that visualises the ideas put forward by the group, her brush is her sword that kills any ideas that are anywhere as clear as AFIT instructions. In a past life, she was a student at Notre Dame High School in Belleguard and discovered that her destiny was to face the computer problems she encountered in computer it and develop tools to make her new visions come to life. This project is like her shield with Medusa’s head to fight the judgments around women in computer science. Goddess of wisdom, Marine knows how to listen to the group and collaborate every step of the way of this project.", "ok wow");
         }
 
+        private void DisplaySite(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://ijg8h0bvrymprrzkpcfm6q-on.drv.tw/SiteUplan/SiteUPLAN/"));
+
+
+        }
     }
 }
