@@ -106,8 +106,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\alert.mp3" />
+    <Content Include="Assets\backf.png" />
     <Content Include="Assets\bleu.png" />
     <Content Include="Assets\bleuwall.jpg" />
+    <Content Include="Assets\break.png" />
+    <Content Include="Assets\breakf.png" />
     <Content Include="Assets\Calendar.png" />
     <Content Include="Assets\croix.png" />
     <Content Include="Assets\culinary-recipe.gif" />
@@ -122,9 +126,20 @@
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\NewFood.png" />
+    <Content Include="Assets\pause.png" />
+    <Content Include="Assets\play.png" />
+    <Content Include="Assets\playfi.png" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\refresh_Icon.png" />
+    <Content Include="Assets\relax2.mp3" />
+    <Content Include="Assets\relax3.mp3" />
+    <Content Include="Assets\relax4.mp3" />
+    <Content Include="Assets\rock1.mp3" />
+    <Content Include="Assets\rock2.mp3" />
+    <Content Include="Assets\rock3.mp3" />
+    <Content Include="Assets\rock4.mp3" />
     <Content Include="Assets\save%29.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
