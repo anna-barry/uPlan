@@ -340,29 +340,37 @@ namespace UplanTest
         }
 
 
-        async private void Sauvegarder_Clicked(System.Object sender, System.EventArgs e)
+        /* async private void Sauvegarder_Clicked(System.Object sender, System.EventArgs e)
         {
             // if (isNumeric(EntréeCodeBarre.Text))
             {
                 var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
                 SortieApi.Text = $"info on product {nutriInfo}";
             }
-        }
+        }*/
 
-        public bool isNumeric(string entree)
+        
+          
+
+  async private void Sauvegarder_Clicked(System.Object sender, System.EventArgs e)
         {
-            bool isNumeric;
             try
             {
-                int.Parse(entree);
-                isNumeric = true;
+                var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
+                SortieApi.Text = $"info on product {nutriInfo.Nutrition_grades}";
             }
-            catch
+            catch (NullReferenceException)
             {
-                isNumeric = false;
+                SortieApi.Text = "Code Barre Invalide";
             }
-            return isNumeric;
         }
+
+
+
+
+
+
+
 
     }
 
