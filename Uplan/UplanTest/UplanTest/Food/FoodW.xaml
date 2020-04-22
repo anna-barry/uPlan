@@ -67,7 +67,8 @@
 <!--bouton add-->
             <Label Text="Add a new  food to the list" Grid.Row="12"  VerticalTextAlignment="Center" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="15"/>
             <ImageButton Source="Asset/plus.png" Grid.Row="12" Clicked="Add"></ImageButton>
-
+            
+            <Label Text="Add to Shopping List" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center"  TextColor="MediumVioletRed" FontSize="15"/>
             <Switch  x:Name="switch" Grid.Row="0" Grid.Column="1" OnColor="PaleVioletRed" Toggled="OnToggled" IsToggled="true"/>
 
 

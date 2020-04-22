@@ -1,80 +1,87 @@
-h2
+button.textpres
 {
-    top:350;
-    font-size: 15;
+    border-radius: 15px;
+    top:400;
+    left:20%;
+    font-size: 30;
     font: georgia;
     text-align: center;
     position:absolute;
+    color:mediumpurple;
+    background-color: transparent;
+    border-color: transparent;
 }
+
 
 /*ici c'est les mots clés de l'appli*/
 a{
      border-radius: 0px;
 }
 a.orga {
-    background: url(images/plan.png);
+    background: url(images/stayorganized.png);
     background-color:blue;
     background-size:contain;
     height: 250;
     width:290;
-    top:460;
-    left:0%; 
+    top:15%;
+    left:1%; 
 
 }
 a.orga:hover {
-    background: url(images/team.png);
+    background: url(images/stayorganizedhover.png);
     
 }
 
 a.eatclean {
-   background: url(images/evol.jpg);
+   background: url(images/eatclean.png);
     height: 250;
     width:290;
-    top:460;
-    left:25%;
+    top:15%;
+    left:20%;
 }
 a.eatclean:hover {
      
-       background: url(images/team.png);
+       background: url(images/eatcleanhover.png);
     
 }
 
 
 a.relaxed
 {   
-    background: url(images/evol.jpg);
+    background: url(images/berelaxed.png);
     height: 250;
     width:290;
-    top:460;
-    left:50%;
+    top:15%;
+    left:44%;
 
 }
 a.relaxed:hover 
 {
-    background: url(images/team.png);
+    background: url(images/bereaxedhover.png);
     
 }
 
 a.tidy
 { 
-    background: url(images/evol.jpg);
+    background: url(images/tidyup.png);
     height: 250;
     width:290;
-    top:460;
-    left:75%;
+    top:15%;
+    left:66%;
 }
 a.tidy:hover 
 {
-    background: url(images/team.png);
+    background: url(images/tidyuphover.png);
 }
 
 
 a.menu {
-    top:750;
+    position:fixed;
+    top:50%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
@@ -82,11 +89,12 @@ a.menu:hover {
     background: orange;}
 
 a.Calendar {
-    top:790;
+    position:fixed;
+    top:55%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
@@ -94,11 +102,12 @@ a.Calendar:hover {
     background: orange;}
 
 a.AddTask {
-    top:830;
+    position:fixed;
+    top:60%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
@@ -106,58 +115,244 @@ a.AddTask:hover {
     background: orange;}
 
 a.SeeTask {
-    top:870;
+    position:fixed;
+    top:65%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
 a.SeeTask:hover {
     background: orange;}
 
-a.FoodPlan {
-    top:910;
-    left:2%;
-    width: 100;
-    padding: 10px 30px; 
-    background:blue;
-    color: white; 
-    font: georgia;
-}
-a.FoodPlan:hover {
-    background: orange;}
 a.FoodChoice {
-    top:950;
+    position:fixed;
+    top:70%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
 a.FoodChoice:hover {
     background: orange;}
-a.WellBeing {
-    top:990;
+
+a.ShoppingList {
+    position:fixed;
+    top:75%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
+    color: white; 
+    font: georgia;
+}
+a.ShoppingList:hover {
+    background: orange;}
+
+a.WellBeing {
+    position:fixed;
+    top: 80%;
+    left:2%;
+    width: 100;
+    padding: 10px 30px; 
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
 a.WellBeing:hover {
     background: orange;}
 a.AboutMe {
-    top:1030;
+    position:fixed;
+    top:85%;
     left:2%;
     width: 100;
     padding: 10px 30px; 
-    background:blue;
+    background:mediumpurple;
     color: white; 
     font: georgia;
 }
 a.AboutMe:hover {
     background: orange;}
+
+/*placement des images*/
+
+img#mmenu{ 
+    position:absolute;
+    top:130%;
+    left: 20%;
+}
+
+img#ccalendar{
+    text-align: center;
+    font-size: 30;
+    font-style: bold;
+    position:absolute;
+    top:230%;
+    left: 20%;
+}
+
+img#aaddtask{
+    text-align: center;
+    font-size: 30;
+    font-style: bold;
+    position:absolute;
+    top:330%;
+    left: 20%;
+}
+
+img#sseetask{
+    text-align: center;
+    font-size: 30;
+    font-style: bold;
+    position:absolute;
+    top:430%;
+    left: 20%;
+}
+
+img#ffoodchoice{
+    position:absolute;
+    top:530%;
+    left: 20%;
+}
+
+img#sshoppinglist{
+    position:absolute;
+    top:630%;
+    left: 20%;
+}
+
+img#wwellbeing{
+    position:absolute;
+    top:730%;
+    left: 20%;
+}
+
+img#aaboutme{
+    position:absolute;
+    top:830%;
+    left: 20%;
+}
+
+
+/*placement du text*/
+
+text#menu{ 
+    position:absolute;
+    text-align: center;
+    top:100%;
+    left: 20%;
+}
+
+text.MENU{
+    text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:110%;
+}
+
+text#calendar{
+    position:absolute;
+    text-align: center;
+    top:200%;
+    left: 20%;
+}
+
+text.CAL
+{
+    text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:210%;
+}
+
+text#addtask{
+    position:absolute;
+    text-align: center;
+    top:300%;
+    left: 20%;
+}
+text.ADD{
+text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:310%;
+}
+
+text#seetask{
+    position:absolute;
+    text-align: center;
+    top:400%;
+    left: 20%;
+}
+text.SEE{
+    text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:410%;
+}
+
+text#foodchoice{
+    position:absolute;
+    text-align: center;
+    top:500%;
+    left: 20%;
+}
+text.CHOICE{
+text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:510%;
+}
+
+text#shoppinglist{
+    position:absolute;
+    text-align: center;
+    top:600%;
+    left: 20%;
+}
+
+text.LIST{
+text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:610%;
+}
+
+
+text#wellbeing{
+    position:absolute;
+    text-align: center;
+    top:700%;
+    left: 20%;
+}
+text.WELL{
+text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:710%;
+}
+
+text#aboutme{
+    position:absolute;
+    top:800%;
+    left: 20%;
+}
+text.ME{
+text-align: center;
+    font-size: 50;
+    font-style: bold;
+    position:absolute;
+    top:810%;
+}
+

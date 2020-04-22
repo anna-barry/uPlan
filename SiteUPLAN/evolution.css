@@ -3,7 +3,7 @@
 body {
     scroll-behavior: smooth;
     text-align: center;
-  background: pink;
+  background: lightgrey;
     font: georgia;
 }
 /*la bannièere/image*/
@@ -42,7 +42,7 @@ a.b1
     border-radius: 15px;
     top:15%;
     left:95%;
-     background-color: none;
+    background-color: none;
 }
 a.b2
 {

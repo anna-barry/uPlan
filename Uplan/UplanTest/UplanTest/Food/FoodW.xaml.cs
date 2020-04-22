@@ -123,10 +123,8 @@ namespace UplanTest
                 bool veggie3 = (resultveggie3 == null);
 
 
-                //if(prot1 & prot2 & prot3 & carb1 & carb2 & carb3 & veggie1 & veggie2 & veggie3)
-               // {
-                    GetShoppinForWeek();
-               // }
+                 GetShoppinForWeek();
+               
             }
 
         }
@@ -138,7 +136,7 @@ namespace UplanTest
             await Navigation.PushAsync(new AddOneFood());
         }
 
-        public static async void GetShoppinForWeek()
+        public static void GetShoppinForWeek()
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             //INSERT FOOD ITEM FOR EACH FOOD OF THIS WEEK

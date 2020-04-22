@@ -1,0 +1,46 @@
+sub {
+    font-size: 30;
+    font-weight:900;
+    color: mediumpurple;
+    font:georgia;
+    padding-left: 200px;
+}
+
+test{
+    
+}
+
+
+h3{
+    font-style: italic;
+    align-content: left;
+    text-align: left;
+    
+    
+
+}
+h2{
+    text-align: left;
+    color: firebrick
+}
+p{
+    text-align: left;
+    font-size: 18;
+    border-color: antiquewhite;
+    border-style:solid;
+        
+}
+
+.tourne {
+  transform: rotate(90deg); /* Équivalent à rotateZ(45deg) */
+  background-color: pink;
+}
+
+
+h4{
+    font-size: 30;
+    font-weight:900;
+    color: mediumpurple;
+    font:georgia;
+    text-align: left
+}

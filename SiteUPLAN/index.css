@@ -2,7 +2,7 @@
 body {
     scroll-behavior: smooth;
     text-align: center;
-  background: pink;
+  background: lightgrey;
     font: georgia;
 }
 /*ici on defini les parametres globaux de toutes les images de la page*/
@@ -50,6 +50,7 @@ a.bou4
 {
     top:1450;
     left:5%;
+    scal
 }
 
 a.bouton1 {

@@ -1,289 +1,656 @@
+
 <head>
-  
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+
 <link rel='stylesheet' href='/evolution.css'></head>
+
 <!DOCTYPE html>
+
 <html>
+
   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
     <link rel="stylesheet" href="evolution.css">
+
   </head>
+
   <body>
+
       <h1>
+
       <text>Uplan's evolution
+
           <br>
+
       </text>
+
     <sub style="font-size: 14">Everything you need to know about the application that will change the way you organise your life</sub>
+
       </h1>
+
     <!--logo-->
-      <img id="presentation" src="images/evol.jpg"/>
+
+      <img id="presentation" src="images/PhotoForEvolution.jpg"/>
+
       <a class="logo" href=index.html ><img src="images/logo.png" alt="UPLAN logo" width="100" height="100"/></a> 
+
       
+
       <!--ici il faut mettre l'equivalent d'ans l'autre langue*/-->
+
       <a class="bFR" href=evolutionFR.html ><img  style="float: left;" src="images/flagFR.jpeg" alt="FR flag" width="40" height="20"/></a>
-     <a class="bEN"><img  src="images/flagEN.webp" alt="UK flag"width="40" height="20"/></a>
+
+     <a class="bEN"><img  src="images/flagEN.jpg" alt="UK flag"width="40" height="20"/></a>
+
     
-   <!--la c'est la barre de menu-->
-      <a href="Download.html" class="b1"><img src="images/download.png" width="50" height="50"></a>
-      <a href="WhatsUplan.html" class="b2"><img src="images/what.webp" width="50" height="50"></a>
+
+      
+
+     <!--la c'est la barre de menu-->
+
+      <a style="padding-left: 355px" href="Download.html"><img style="align-self: right " src="images/download.png" width="50" height="50"> </a>
+
+      <a href="WhatsUplan.html" class="b2"><img src="images/what.png" width="50" height="50"></a>
+
       <a href="evolution.html" class="b3"><img src="images/evolution.png" width="50" height="50"></a>
+
       <a href="team.html" class="b4"><img src="images/team.png" width="50" height="50"></a>
+
       
+
+      <a style="padding-left: 300px"></a>
+
       
-      
+
   </body>
+
 </html>
 
 
+
+
+
 <!--PARTIE PROPRE A CETTE PAGE-->
+
 <!DOCTYPE html>
+
 <html>
+
     <head>
+
         <meta name="Uplan's evolution" content="Everything you need to know about the application that will change the way you organise your life">
+
         
+
         <link rel=“stylesheet” href=“evolution.css” type="text/css" /> 
+
        
+
     </head>
+
     <body>
 
-        
-        <blockquote>We started off this project not knowing much about what a database was, how to create or even use one. We envisioned the ultimate student app, one that would not only help us in our work organisation but our life too. Being a young adult can be overwhelming and it is important that we manage our social life, work life and personal wellbeing, this is the sole purpose of our application.</blockquote>
+
 
         
+
+        <blockquote style="padding-right: 40px">We started off this project not knowing much about what a database was, how to create or even use one. We envisioned the ultimate student app, one that would not only help us in our work organisation but our life too. Being a young adult can be overwhelming and it is important that we manage our social life, work life and personal wellbeing, this is the sole purpose of our application.</blockquote>
+
+
+
+        
+
         <!-- Explication de la base de donnée-->
+
         <h4 style="align-self: left" style="text-align: left;" >What the&nbsp;<img src="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2014%2F04%2F02%2F10%2F47%2Fred-304570_1280.png&amp;data=02%7C01%7C%7C9d8e24c51cbe4296350608d7e2e124c7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C637227328913526634&amp;sdata=wJ%2B63qo27%2FE4vNq0WfHPGgn9LodjDJJ2Q3dvoz2vRFA%3D&amp;reserved=0" alt="heart" width="16" height="15" />&nbsp; is a&nbsp;Lite&nbsp;Db&nbsp;Database?</h4>
 
+
+
         
+
         <p style="padding-right: 40px; text-align: left">For this application it is crucial to use a database to whom we send information (data) about our tasks, activities and personal choices but also ask for some of that data with a query. We also need the format of the database to be flexible so that we can use any data wether it comes in a music format or just a simple text. LiteDB is a &ldquo;simple, fast and lightweight embedded .NET document database.&rdquo;, it's a no SQL database so it's perfectly adaptable for any of our needs. For more info visit: &nbsp <a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.litedb.org%2Fdocs%2F&amp;data=02%7C01%7C%7C9d8e24c51cbe4296350608d7e2e124c7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C637227328913526634&amp;sdata=qpNkf%2FeIN0EAsnXLR3wIq6MhKqT5HY56rt9uFJoPb5o%3D&amp;reserved=0"> LiteDb.org</a></p>
 
+
+
         
+
         <!-- Exemple de list entry -->
+
         <p style="text-align: left"><span style="font-size: medium; align-self: left">Example of&nbsp;data&nbsp;type for the&nbsp;collection&nbsp;"ListEntry":</span></p>
 
+
+
         
+
         <table style="height: 118px; width: 388px; border-color: black;" border="black">
 
+
+
             <tbody>
+
             <tr>
+
                 <td style="width: 28.765625px;">id</td>
+
                 <td style="width: 172.234375px;"><span style="background-color: #99ccff;">Type</span></td>
+
                 <td style="width: 78px;"><span style="background-color: #99ccff;">Code</span></td>
+
                 <td style="width: 81px;"><span style="background-color: #99ccff;">Description</span></td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td style="width: 28.765625px;"><span style="color: #800080;">5</span></td>
+
+                <td style="width: 172.234375px;"><span style="color: #3366ff;">COLOUR</span></td>
+
+                <td style="width: 78px;"><span style="color: #3366ff;">BLUE</span></td>
+
+                <td style="width: 81px;"><span style="color: #3366ff;">blue</span></td>
+
             </tr>
 
             <tr>
-                <td style="width: 28.765625px;"><span style="color: #800080;">5</span></td>
-                <td style="width: 172.234375px;"><span style="color: #3366ff;">COLOUR</span></td>
-                <td style="width: 78px;"><span style="color: #3366ff;">BLUE</span></td>
-                <td style="width: 81px;"><span style="color: #3366ff;">blue</span></td>
-            </tr>
-            <tr>
+
                 
+
                 <td style="width: 28.765625px;"><span style="color: #800080;">6</span></td>
+
                 <td style="width: 172.234375px;"><span style="color: #3366ff;">ACCOMODATION TYPE</span></td>
+
                 <td style="width: 78px;"><span style="color: #3366ff;">ALONE</span></td>
+
                 <td style="width: 81px;"><span style="color: #3366ff;">living on&nbsp;your own</span></td>
+
             </tr>
+
             </tbody>
+
         </table>
 
+
+
         <hr />
+
         <h3 style="align-self: left; text-align: left"><strong>- Starting&nbsp;Point&nbsp;</strong></h3>
+
         
+
         <!-- From this -->
+
         <p style="padding-left: 470px;"><span style="font-size: medium; color: #333399;"><strong>From&nbsp;this:&nbsp;&nbsp;</strong></span></p>
+
         
+
+
 
         <table style="height: 105px; width: 230px; float: right;" border="black">
 
+
+
             <tbody>
+
                 
+
+
 
                 <tr style="height: 36px;">
+
                     
+
                     <td style="width: 64.9375px; height: 36px;">&nbsp;</td>
+
                     
+
                     <td style="width: 48.0625px; height: 36px;"><span style="color: #333399;">Done</span></td>
+
                     <td style="width: 39px; height: 36px;"><span style="color: #333399;">In&nbsp;the&nbsp;process</span></td>
+
                     
+
                     <td style="width: 49px; height: 36px;"><span style="color: #333399;">Not done</span></td>
+
                 </tr>
+
                 
+
                 <tr style="height: 18px; color: #333399">
+
                     <td style="width: 64.9375px; height: 18px;">Calendar</td>
+
                     <td style="width: 48.0625px; height: 18px;">&nbsp;</td>
 
+
+
                     <td style="width: 39px; text-align: center; height: 18px;">X</td>
+
                     <td style="width: 49px; height: 18px;">&nbsp;</td>
+
                 </tr>
+
                 
+
                 <tr style="height: 18px; color: #333399">
+
+
 
                     <td style="width: 64.9375px; height: 18px;">Add Task</td>
+
                     <td style="width: 48.0625px; height: 18px;">&nbsp;</td>
 
+
+
                     <td style="width: 39px; text-align: center; height: 18px;">X</td>
+
                     <td style="width: 49px; height: 18px;">&nbsp;</td>
+
                 </tr>
+
                 
+
                 <tr style="height: 36px; color: #333399">
+
                     <td style="width: 64.9375px; height: 36px;">Intelligent Add</td>
+
                     <td style="width: 48.0625px; height: 36px;">&nbsp;</td>
+
                     <td style="width: 39px; height: 36px;">&nbsp;</td>
 
+
+
                     <td style="width: 49px; text-align: center; height: 36px;">X</td>
+
                 </tr>
+
+
 
                 <tr style="height: 54px; color: #333399">
+
                     
+
                     <td style="width: 64.9375px; height: 54px;">Food Choices&nbsp;+ Meal&nbsp;Plan</td>
+
                     <td style="width: 48.0625px; height: 54px;">&nbsp;</td>
+
                     <td style="width: 39px; height: 54px;">&nbsp;</td>
 
+
+
                     <td style="width: 49px; text-align: center; height: 54px;">X</td>
+
                 </tr>
+
+
 
                 <tr style="height: 36px; color: #333399">
+
                     <td style="width: 64.9375px; height: 36px;">Shopping list</td>
+
                     <td style="width: 48.0625px; height: 36px;">&nbsp;</td>
+
                     <td style="width: 39px; height: 36px;">&nbsp;</td>
+
                     <td style="width: 49px; text-align: center; height: 36px;">X</td>
+
                 </tr>
+
                 
+
                 <tr style="height: 20.71875px; color: #333399">
+
                     <td style="width: 64.9375px; height: 20.71875px;">Sport</td>
+
                     <td style="width: 48.0625px; height: 20.71875px;">&nbsp;</td>
+
                     <td style="width: 39px; height: 20.71875px;">&nbsp;</td>
+
                     <td style="width: 49px; text-align: center; height: 20.71875px;">X</td>
+
                 </tr>
+
             </tbody>
+
         </table>
+
         
+
         <!-- Texte avant les 1eres soutenances-->
+
         
+
         <p style="align-self: left; padding-right: 280px; text-align: left"><span style="font-size: medium; ">We started off with half of the group working on the layout (R&eacute;mi &amp; Thomas), how to get the navigation going while the other half of the team (Marine &amp; Anna) works on creating the database and its initial data. In order to create the initial data it was crucial that we oversaw everything we would need for the project, data that we wouldn't use at first. A lot of brainstorming resulted in us having a clear vision of what our application shall become:&nbsp;</span>
+
         </p>
+
         
+
         <!-- Schéma de base -->
+
         <img src="images/schemabase.png" width="300px" style=" border-style:dotted; border-color: purple; border-radius: 20%;  ">
+
         
+
         
+
         <!--Texte explicatif-->
 
+
+
         <p style="text-align:  left; padding-right: 280px;  ">As we didn't know much on how to actually code all of this, it took a lot of time for us to educate ourselves on the subject, to tryout different things and failing (many times) to achieve our goals. At the end of this first step towards making the best student app that the world has ever known, our dataBase was ready to be used, our navigation system was done. We also started working on our calendar and on the way to add a task to our database. We knew there was a problem but we didn't know if it came from adding the task to our DataBase or showing it in the calendar (spoiler: there was a problem with both)</p>
+
         
+
         <!-- Photo de l'évolution -->
+
         
+
         <p style="text-align: left">A few pictures of the 1st version of Uplan: </p>
+
         <figure>
+
+
 
             <img src="images/1stEntryPage.png" alt="EntryPage" title="First Version of EntryPage" width="370px" align="left">
+
             
+
              <img src="images/1stLogin.png" alt="Login Page" title="First Version of Login Page" width="370px" style="padding-right: 130px;" >
 
-            <br>
-            <br>
-            <figcaption>First Version of Uplan's EntryPage and Login Page </figcaption> </figure>
-        
-        <figure>
+
+
             <br>
 
+            <br>
+
+            <figcaption>First Version of Uplan's EntryPage and Login Page </figcaption> </figure>
+
+        
+
+        <figure>
+
+            <br>
+
+
+
             <img src="images/1stCalendar.png" alt="Calendar" title="First Version of Calendar" width="370px" align="left">
+
             
+
              <img src="images/1stAddEvent.png" alt="Add Event" title="First Version of Add Event Page" width="370px" style="padding-right: 130px;">
+
             <br>
+
             <br>
+
             
+
+
 
             <figcaption>First Version of Uplan's Calendar and Add Event Page </figcaption> </figure>
 
+
+
         
+
         
+
         <figure>
+
             <br>
+
+
 
             <img src="images/1stAboutMe.png" alt="About Me" title="First Version of AboutMe" width="370px" align="left">
+
             
+
              <img src="images/1stAboutUs.png" alt="About Us" title="First Version of AboutUs" width="370px" style="padding-right: 130px;">
+
             <br>
+
             <br>
+
             
+
+
 
             <figcaption>First Version of Uplan's About Me and About Us Page </figcaption> </figure>
+
         <br>
+
         <br>
+
         <br>
+
         <br>
+
         
+
         <!--Après premières soutenances -->
+
         
+
         <!-- Grid de réussite-->
+
         <h3 style="text-align: left"><strong>- Step&nbsp;1</strong></h3>
 
+
+
         <p style="text-align: center; padding-left: 470px;"><span style="color: #333399;"><strong>To&nbsp;this:</strong></span></p>
+
         
+
         <table style="height: 172px; width: 186px; border-color: grey; float: right;" border="grey">
 
+
+
             <tbody style="color: #333399 ">
+
                 <tr>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 39px;">Done</td>
+
                     <td style="width: 39px;">In&nbsp;the&nbsp;process</td>
+
                     <td style="width: 43px;">Not done</td>
+
                 </tr>
+
                 
+
                 <tr>
+
                     <td style="width: 39px;">Calendar</td>
+
                     <td style="width: 39px; text-align: center;">X</td>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 43px;">&nbsp;</td>
+
                 </tr>
+
                 
+
                 <tr>
+
                     <td style="width: 39px;">Add Task</td>
+
                     <td style="width: 39px; text-align: center;">X</td>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 43px;">&nbsp;</td>
+
                 </tr>
 
+
+
                 <tr>
+
                     <td style="width: 39px;">Intelligent Add</td>
+
                     <td style="width: 39px; text-align: center;">X</td>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 43px;">&nbsp;</td>
+
                 </tr>
 
+
+
                 <tr>
+
                     <td style="width: 39px;">Food Choices&nbsp;+ Meal&nbsp;Plan</td>
+
                     <td style="width: 39px; text-align: center;">X</td>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 43px;">&nbsp;</td>
+
                     </tr>
+
                 
+
                 <tr>
+
                     <td style="width: 39px;">>Shopping list</td>
+
                     <td style="width: 39px;">&nbsp;</td>
+
                     <td style="width: 39px; text-align: center;">X</td>
+
                     <td style="width: 43px;">&nbsp;</td>
+
                 </tr>
+
+
 
                 <tr>
-                    <td style="width: 39px;">Sport</td>
-                    <td style="width: 39px;">&nbsp;</td>
-                    <td style="width: 39px;">&nbsp;</td>
-                    <td style="width: 43px; text-align: center;">X</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <!-- Text -->
-        <p style="align-self: left; padding-right: 280px; text-align: left">Now that we knew a lot more on how to actually code what we had envisioned, the amount of work and problems weren't as daunting as the first time around. We quite quickly realised that we had trouble with getting the right information for the subtype of any task because the picker wasn't updating its data source. In other words, the picker would always go for the &ldquo;by default&rdquo; code and none of the subtype were accurate, to face this issue, we deleted the picker for a few buttons that represented the subtypes and were easily updated. This resolved our AddTask issue! After that, we added a few more functionalities that added subtasks when the work is hard, a secret algorithm that we are not allowed to talk about. For the calendar, we just needed to query for a specific day not a specific date with its hours and minutes (what we were originally doing without noticing it), with that rectified and other issues that came with the page, our calendar was up and running!</p>
-        
-        <!--Photos of 2nd Version -->
-        
-        <p>Photo</p>
 
-        <p style="align-self: left; padding-right: 280px; text-align: left">We also started looking at the nutritional aspect of the application by letting the user to chose what ingredients he would want to have as a source of carb/protein or what veggies we wants for the week. This information is sent to our Database and we give the user a meal plan.</p>
+                    <td style="width: 39px;">Sport</td>
+
+                    <td style="width: 39px;">&nbsp;</td>
+
+                    <td style="width: 39px;">&nbsp;</td>
+
+                    <td style="width: 43px; text-align: center;">X</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        
+
+        <!-- Text -->
+
+        <p style="align-self: left; padding-right: 280px; text-align: left">Now that we knew a lot more on how to actually code what we had envisioned, the amount of work and problems weren't as daunting as the first time around. We quite quickly realised that we had trouble with getting the right information for the subtype of any task because the picker wasn't updating its data source. In other words, the picker would always go for the &ldquo;by default&rdquo; code and none of the subtype were accurate, to face this issue, we deleted the picker for a few buttons that represented the subtypes and were easily updated. This resolved our AddTask issue! After that, we added a few more functionalities that added subtasks when the work is hard, a secret algorithm that we are not allowed to talk about. For the calendar, we just needed to query for a specific day not a specific date with its hours and minutes (what we were originally doing without noticing it), with that rectified and other issues that came with the page, our calendar was up and running!</p>
+
+        
+
+        <!--Photos of 2nd Version -->
+
+        
+
+        <p style="text-align: left">A few pictures of the 2nd version of Uplan: </p>
+
+            <br>
+
+        <figure>
+
+            <img src="images/2eSoutenanceCalendar.png" alt="Calendar" title="Second Version of Calendar" width="370px" align="left">
+
             
+
+             <img src="images/2eSoutenanceAddTask.png" alt="Add Event" title="Second Version of Add Event Page" width="370px" style="padding-right: 130px;">
+
+            <br>
+
+            <br>
+
             
+
+
+
+            <figcaption>Second Version of Uplan's Calendar and Add Event Page </figcaption> </figure>
+
+
+
+        
+
+        
+
+        <figure>
+
+            <br>
+
+
+
+            <img src="images/2eSoutenanceAboutME.png" alt="About Me" title="Second Version of AboutMe" width="370px" align="left">
+
+            
+
+             <img src="images/2eSoutenanceAddEventColour.PNG" alt="About Us" title="Second Version of Add Event Colour wise" width="370px" style="padding-right: 130px;">
+
+            <br>
+
+            <br>
+
+            
+
+
+
+            <figcaption>Second Version of Uplan's Add Event Page and About Me where you can chose the name of your tags </figcaption> </figure>
+
+        <br>
+
+        
+
+
+
+        <p style="align-self: left; padding-right: 280px; text-align: left">We also started looking at the nutritional aspect of the application by letting the user to chose what ingredients he would want to have as a source of carb/protein or what veggies we wants for the week. This information is sent to our Database and we give the user a meal plan. We also send this data in order to add the ingredients to your Shopping List</p>
+
+            
+
+        <figure>
+
+            <br>
+
+
+
+            <img src="images/2eSoutenanceFoodPlan.PNG" alt="Food Plan" title="Food Plan" width="370px" align="left">
+
+            
+
+             <img src="images/ShoppingList2eSoutenance.png" alt="shopping list" title=" Shopping List" width="370px" style="padding-right: 130px;">
+
+            <br>
+
+            <br>
+
+            
+
+
+
+            <figcaption> 1st version of food plan and Shopping List </figcaption> </figure>
+
+            
+
     </body>
+
     </html>
+
+
 
