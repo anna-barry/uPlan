@@ -25,9 +25,9 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
 
 
@@ -37,7 +37,7 @@
 
 
 
-            <Label Grid.Column="2" Text="Welcome To Our Music Page" HorizontalOptions="Center" FontSize="Large" />
+            <Label Grid.Column="1" Text="Welcome To Our Music Page" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" FontSize="Large" />
 
 
             <Label Text="RelaxSongs" FontSize="Large" TextColor="BlueViolet" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" />
@@ -48,7 +48,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay1" HeightRequest="30" />
                     <ImageButton Source="Assets/pause.png" Clicked="ToPause1" HeightRequest="30" />
-                    <ProgressBar x:Name="P0" ProgressColor="#890489" WidthRequest="150" HeightRequest="5" Progress=".0" IsVisible="True"/>
+                    <ProgressBar x:Name="P0" ProgressColor="#890489"  WidthRequest="150" HeightRequest="5" Progress=".0" IsVisible="True"/>
 
 
                 </StackLayout>
