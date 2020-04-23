@@ -26,7 +26,7 @@
 
             <Label Text="Welcome to WellBeing Page! " Grid.Row="1" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Violet"/>
 
-            <Label Text="Slecect the end of your break :" TextColor="Violet" Grid.Row="2" HorizontalTextAlignment="End" FontSize="Large"/>
+            <Label Text="Select the end of your break :" TextColor="Violet" Grid.Row="2" HorizontalTextAlignment="End" FontSize="Large"/>
 
             <TimePicker x:Name="Chrono"
                     Time="11:00:00"

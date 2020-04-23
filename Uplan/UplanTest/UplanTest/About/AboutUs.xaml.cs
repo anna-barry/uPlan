@@ -39,7 +39,7 @@ namespace UplanTest
 
         private void DisplaySite(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://ijg8h0bvrymprrzkpcfm6q-on.drv.tw/SiteUplan/SiteUPLAN/"));
+            Device.OpenUri(new Uri("https://uplan.000webhostapp.com/"));
 
 
         }

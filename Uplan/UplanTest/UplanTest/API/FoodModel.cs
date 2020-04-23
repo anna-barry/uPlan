@@ -8,5 +8,7 @@ namespace UplanTest
     {
         public string Nutrition_grades { get; set; }
 
+        public string Nova_groups { get; set; }
+
     }
 }
