@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.AddInShop">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Add a new food to your shopping List" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" Grid.RowSpan="3" FontSize="30"/>
+
+            <Label Text="Type of Food" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
+            <!--Entry x:Name="EntryForType" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/-->
+
+            <Picker x:Name="picker"
+                TitleColor="MediumVioletRed" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Protein for strength</x:String>
+                        <x:String>Carbohydrate for energy</x:String>
+                        <x:String>Veggies for your health</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!--Label Text="Code for Food" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
+            <Entry x:Name="CodeForType" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"/-->
+
+            <Label Text="Description for Food" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
+            <Entry x:Name="DescForType" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
+            
+            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+
+            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked2" Grid.Row="9" Grid.Column="4"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

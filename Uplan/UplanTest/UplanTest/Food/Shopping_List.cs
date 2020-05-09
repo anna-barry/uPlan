@@ -11,11 +11,14 @@ using System.Collections.Specialized;
 
 namespace UplanTest
 {
+    //public Xamarin.Forms.Grid grid = new Xamarin.Forms.Grid();
     class Shopping_List : ContentPage
     {
         Entry EntréeCodeBarre = new Entry();
         Entry SortieApi = new Entry();
-
+        public static Xamarin.Forms.Grid grid = new Xamarin.Forms.Grid();
+        public static StackLayout test = new StackLayout();
+        public static Frame frame = new Frame();
 
         public Shopping_List()
         {
@@ -26,7 +29,7 @@ namespace UplanTest
                 Orientation = ScrollOrientation.Both,
             };
 
-            var grid = new Xamarin.Forms.Grid();
+           // var grid = new Xamarin.Forms.Grid();
 
             int colMax = 15;
             int rowMax = 15;
@@ -90,38 +93,34 @@ namespace UplanTest
             }
 
 
-            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck)
-            {
-                checkk.Color = Color.BlueViolet;
-                testgrid.Children.Add(checkk, 0, roww);
-                testgrid.Children.Add(labb, 1, roww);
-                roww += 1;
-            }
-
-
-            StackLayout test = new StackLayout();
+            //StackLayout test = new StackLayout();
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
             {
                 checkk.Color = Color.BlueViolet;
+                
+               // test.VerticalOptions = LayoutOptions.Center;
+                //test.HorizontalOptions = LayoutOptions.Center;
 
                 test.Children.Add(checkk);
                 test.Children.Add(labb);
+                //test.VerticalOptions = LayoutOptions.CenterAndExpand;
+                test.HorizontalOptions = LayoutOptions.Start;
             }
 
-            //Content = testgrid;
-            Frame frame = new Frame
-            {
-                BorderColor = Color.DarkSlateBlue,
-                CornerRadius = 10,
-                HasShadow = true,
-                ScaleX = 1,
-                ScaleY = 1,
+
+
+
+            frame.BorderColor = Color.DarkSlateBlue;
+            frame.CornerRadius = 10;
+            frame.HasShadow = true;
+            ScaleX = 1;
+            ScaleY = 1;
 
                 //Content = new Label { Text = "Example" }
 
 
-                Content = test
-            };
+                frame.Content = test
+            ;
 
 
             grid.Children.Add(frame, 1, 1);
@@ -137,6 +136,15 @@ namespace UplanTest
             Refresh.Scale = 0.75;
             Refresh.Clicked += (sender, e) => RefreshFoodItems();
             grid.Children.Add(Refresh, 4, 1);
+
+
+            //_____________________________________________________________________________
+            //____________________ Add in Shopping List ___________________________________
+            ImageButton Add_To_SL = new ImageButton();
+            Add_To_SL.Source = "Assets/Add_Food.png";
+            Add_To_SL.Scale = 0.65;
+            Add_To_SL.Clicked += (sender, e) => Add(sender,e);
+            grid.Children.Add(Add_To_SL, 4, 2);
 
             //__________________________________________________________________________
             //______________ Ajout de chose dans ses placards___________________________
@@ -294,27 +302,50 @@ namespace UplanTest
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             col.DeleteAll();
-            //await Navigation.PushAsync(new Shopping_List());
+            RefreshView();
         }
 
         public static void RefreshView()
         {
+            //test.IsVisible = false;
+            
+            grid.Children.Remove(test);
+            grid.Children.Remove(frame);
+            List<(Label, CheckBox)> AllOfLabAndCheck = GetAllFoodItem();
+            StackLayout test2 = new StackLayout();
+            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck)
+            {
+                checkk.Color = Color.BlueViolet;
+                test2.Children.Add(checkk);
+                test2.Children.Add(labb);
+            }
+
+            Frame frame2 = new Frame
+            {
+                BorderColor = Color.DarkSlateBlue,
+                CornerRadius = 10,
+                HasShadow = true,
+                ScaleX = 1,
+                ScaleY = 1,
+
+                //Content = new Label { Text = "Example" }
+
+
+                Content = test2
+            };
+
+
+            grid.Children.Add(frame2, 1, 1);
+            Grid.SetColumnSpan(frame2, 3);
+            Grid.SetRowSpan(frame2, 15);
+
+
 
         }
 
         public static List<(Label, CheckBox)> GetAllFoodItem()
         {
             List<(Label, CheckBox)> res = new List<(Label, CheckBox)>();
-
-            /*___________________ Info ______________________________
-            CheckBox checkBox = new CheckBox { IsChecked = true };
-
-            void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
-                    {
-                        // Perform required operation after examining e.Value
-                                                                                   }
-            checkBox.CheckedChanged += (sender, e) =>
-                                                                                   */
 
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppinglist");
             var results = col.FindAll();
@@ -332,8 +363,6 @@ namespace UplanTest
 
                         {
                             col.Delete(lilres.Id);
-                            //orCheck.SetBinding({ x: Reference checkBox}, Path = checkbox.IsChecked);
-                            //forCheck.IsVisible = false;
                         }
                     };
 
@@ -404,11 +433,13 @@ namespace UplanTest
 
             }
 
+        }
+        //________________ Fonction pour réorienter vers la page Ajouter un élément dans la liste de courses
+        async void Add(object sender, EventArgs args)
 
+        {
 
-
-
-
+            await Navigation.PushAsync(new AddInShop());
         }
 
 
