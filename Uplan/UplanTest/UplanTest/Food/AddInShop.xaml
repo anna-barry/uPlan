@@ -33,11 +33,40 @@
                 </Picker.ItemsSource>
             </Picker>
 
+            
             <!--Label Text="Code for Food" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
             <Entry x:Name="CodeForType" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"/-->
 
-            <Label Text="Description for Food" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
-            <Entry x:Name="DescForType" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
+            <Label Text="Description for Food" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
+            <Entry x:Name="DescForType" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" />
+
+            <Label Text="Amount of the food" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" FontSize="16"/>
+
+            <Picker x:Name="pickerAmount"
+                TitleColor="MediumVioletRed" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>1</x:Int32>
+                        <x:Int32>2</x:Int32>
+                        <x:Int32>3</x:Int32>
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>5</x:Int32>
+                        <x:Int32>6</x:Int32>
+                        <x:Int32>7</x:Int32>
+                        <x:Int32>8</x:Int32>
+                        <x:Int32>9</x:Int32>
+                        <x:Int32>10</x:Int32>
+                        <x:Int32>15</x:Int32>
+                        <x:Int32>20</x:Int32>
+                        <x:Int32>25</x:Int32>
+                        <x:Int32>30</x:Int32>
+                        <x:Int32>35</x:Int32>
+                        <x:Int32>40</x:Int32>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            
             
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
 

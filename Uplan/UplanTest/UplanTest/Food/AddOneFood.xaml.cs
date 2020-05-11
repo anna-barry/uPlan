@@ -14,6 +14,7 @@ namespace UplanTest
     {
         string foodtype = "PROTEIN";
         string foodname = "";
+        
 
         public AddOneFood()
         {

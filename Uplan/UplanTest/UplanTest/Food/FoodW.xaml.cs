@@ -123,7 +123,7 @@ namespace UplanTest
                 bool veggie3 = (resultveggie3 == null);
 
 
-                 GetShoppinForWeek();
+                GetShoppinForWeek();
                
             }
 
@@ -147,17 +147,33 @@ namespace UplanTest
 
             //_______________________________________________________________
             //_____________________ Carb ____________________________________
+
+            //________________________ all the info__________________________
             string typeForCarb1 = MyFoodWeek.thisweek.FoodCategoryTypeCarb1;
             string codeForCarb1 = MyFoodWeek.thisweek.FoodCategoryCodeCarb1;
             string descForCarb1 = MyFoodWeek.thisweek.FoodCategoryDescCarb1;
+
+            string typeForCarb2 = MyFoodWeek.thisweek.FoodCategoryTypeCarb2;
+            string codeForCarb2 = MyFoodWeek.thisweek.FoodCategoryCodeCarb2;
+            string descForCarb2 = MyFoodWeek.thisweek.FoodCategoryDescCarb2;
+
+            string typeForCarb3 = MyFoodWeek.thisweek.FoodCategoryTypeCarb3;
+            string codeForCarb3 = MyFoodWeek.thisweek.FoodCategoryCodeCarb3;
+            string descForCarb3 = MyFoodWeek.thisweek.FoodCategoryDescCarb2;
+
+            //_______________________________________________________________________
+            //_________________________ if result is not found than add with one else 
+            //______________________________ update if result found
+
             //Si n'est pas présent dans food item
             var col2 = Database.db.GetCollection<FoodItem>("FoodItems");
             var resultcarb1 = col2.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb1)));
             bool carb1 = (resultcarb1.Count() == 0);
             if(carb1)
             {
-                FoodItem.InsertFoodItem(typeForCarb1, codeForCarb1, descForCarb1, res);
+                FoodItem.InsertFoodItem(typeForCarb1, codeForCarb1, descForCarb1, res,1);
             }
+            
             //Si n'est pas présent dans food pou liste de courses
             var rescarb1 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb1)));
             bool shcarb1 = (rescarb1.Count() == 0);
@@ -165,21 +181,23 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForCarb1, codeForCarb1));
             }
+            else
+            {
+                var resultforOnlyCarb1 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb1)));
+                resultforOnlyCarb1.Amount += 1;
+                col.Update(resultforOnlyCarb1);
+
+            }
 
 
-
-            string typeForCarb2 = MyFoodWeek.thisweek.FoodCategoryTypeCarb2;
-            string codeForCarb2 = MyFoodWeek.thisweek.FoodCategoryCodeCarb2;
-            string descForCarb2 = MyFoodWeek.thisweek.FoodCategoryDescCarb2;
-            //FoodItem.InsertFoodItem(typeForCarb2, codeForCarb2, descForCarb2, res);
-            //col.Insert(FoodItem.getEntryfromTypeAndCode(typeForCarb2, codeForCarb2));
-            //Si n'est pas présent dans food item
             var resultcarb2 = col2.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb2)));
             bool car2 = (resultcarb2.Count() == 0);
             if (car2)
             {
-                FoodItem.InsertFoodItem(typeForCarb2, codeForCarb2, descForCarb2, res);
+                FoodItem.InsertFoodItem(typeForCarb2, codeForCarb2, descForCarb2, res,1);
             }
+
+
             //Si n'est pas présent dans food pou liste de courses
             var rescarb2 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb2)));
             bool shcarb2 = (rescarb2.Count() == 0);
@@ -187,12 +205,17 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForCarb2, codeForCarb2));
             }
+            else
+            {
+                var resultforOnlyCarb2 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb2)));
+                resultforOnlyCarb2.Amount += 1;
+                col.Update(resultforOnlyCarb2);
+
+            }
 
 
 
-            string typeForCarb3 = MyFoodWeek.thisweek.FoodCategoryTypeCarb3;
-            string codeForCarb3 = MyFoodWeek.thisweek.FoodCategoryCodeCarb3;
-            string descForCarb3 = MyFoodWeek.thisweek.FoodCategoryDescCarb2;
+
             //FoodItem.InsertFoodItem(typeForCarb3, codeForCarb3, descForCarb3, res);
             //col.Insert(FoodItem.getEntryfromTypeAndCode(typeForCarb3, codeForCarb3));
 
@@ -201,7 +224,7 @@ namespace UplanTest
             bool car3 = (resultcarb3.Count() == 0);
             if (car3)
             {
-                FoodItem.InsertFoodItem(typeForCarb3, codeForCarb3, descForCarb3, res);
+                FoodItem.InsertFoodItem(typeForCarb3, codeForCarb3, descForCarb3, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var rescarb3 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb3), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb3)));
@@ -209,6 +232,12 @@ namespace UplanTest
             if (shcarb3)
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForCarb3, codeForCarb3));
+            }
+            else
+            {
+               var resultforOnlyCarb3 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeCarb3), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeCarb3)));
+                resultforOnlyCarb3.Amount += 1;
+                col.Update(resultforOnlyCarb3);
             }
 
             //__________________________________________________________________
@@ -225,7 +254,7 @@ namespace UplanTest
             bool prot1 = (resultprot1.Count() ==0);
             if (prot1)
             {
-                FoodItem.InsertFoodItem(typeForProt1, codeForProt1, descForProt1, res);
+                FoodItem.InsertFoodItem(typeForProt1, codeForProt1, descForProt1, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resprot1 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt1)));
@@ -234,7 +263,13 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForProt1, codeForProt1));
             }
+            else
+            {
+                var updateprot1 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt1)));
+                updateprot1.Amount += 1;
+                col.Update(updateprot1);
 
+            }
 
             string typeForProt2 = MyFoodWeek.thisweek.FoodCategoryTypeProt2;
             string codeForProt2 = MyFoodWeek.thisweek.FoodCategoryCodeProt2;
@@ -247,7 +282,7 @@ namespace UplanTest
             bool prot2 = (resultprot2.Count() == 0);
             if (prot2)
             {
-                FoodItem.InsertFoodItem(typeForProt2, codeForProt2, descForProt2, res);
+                FoodItem.InsertFoodItem(typeForProt2, codeForProt2, descForProt2, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resprot2 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt2)));
@@ -256,6 +291,13 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForProt2, codeForProt2));
             }
+            else
+            {
+                var updateprot2 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt2)));
+                updateprot2.Amount += 1;
+                col.Update(updateprot2);
+            }
+
 
             string typeForProt3 = MyFoodWeek.thisweek.FoodCategoryTypeProt3;
             string codeForProt3 = MyFoodWeek.thisweek.FoodCategoryCodeProt3;
@@ -268,7 +310,7 @@ namespace UplanTest
             bool prot3 = (resultprot3.Count() == 0);
             if (prot3)
             {
-                FoodItem.InsertFoodItem(typeForProt3, codeForProt3, descForProt3, res);
+                FoodItem.InsertFoodItem(typeForProt3, codeForProt3, descForProt3, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resprot3 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt3), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt3)));
@@ -276,6 +318,12 @@ namespace UplanTest
             if (shprot3)
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForProt3, codeForProt3));
+            }
+            else
+            {
+                var updateprot3 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeProt3), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeProt3)));
+                updateprot3.Amount += 1;
+                col.Update(updateprot3);
             }
 
             //_________________________________________________________________________________
@@ -292,7 +340,7 @@ namespace UplanTest
             bool veggie1 = (resultveggie1.Count() == 0);
             if (veggie1)
             {
-                FoodItem.InsertFoodItem(typeForVeggie1, codeForVeggie1, descForVeggie1, res);
+                FoodItem.InsertFoodItem(typeForVeggie1, codeForVeggie1, descForVeggie1, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resveggie1 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies1)));
@@ -301,6 +349,13 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForVeggie1, codeForVeggie1));
             }
+            else
+            {
+                var updateveggie1 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies1), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies1)));
+                updateveggie1.Amount += 1;
+                col.Update(updateveggie1);
+            }
+
 
             string typeForVeggie2 = MyFoodWeek.thisweek.FoodCategoryTypeVeggies2;
             string codeForVeggie2 = MyFoodWeek.thisweek.FoodCategoryCodeVeggies2;
@@ -312,7 +367,7 @@ namespace UplanTest
             bool veggie2 = (resultveggie2.Count() == 0);
             if (veggie2)
             {
-                FoodItem.InsertFoodItem(typeForVeggie2, codeForVeggie2, descForVeggie2, res);
+                FoodItem.InsertFoodItem(typeForVeggie2, codeForVeggie2, descForVeggie2, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resveggie2 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies2)));
@@ -320,6 +375,12 @@ namespace UplanTest
             if (shveggie2)
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForVeggie2, codeForVeggie2));
+            }
+            else
+            {
+                var updateveggie2 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies2)));
+                updateveggie2.Amount += 1;
+                col.Update(updateveggie2);
             }
 
 
@@ -334,7 +395,7 @@ namespace UplanTest
             bool veggie3 = (resultveggie3.Count() == 0);
             if (veggie3)
             {
-                FoodItem.InsertFoodItem(typeForVeggie3, codeForVeggie3, descForVeggie3, res);
+                FoodItem.InsertFoodItem(typeForVeggie3, codeForVeggie3, descForVeggie3, res,1);
             }
             //Si n'est pas présent dans food pou liste de courses
             var resveggie3 = col.Find(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies3), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies3)));
@@ -343,6 +404,13 @@ namespace UplanTest
             {
                 col.Insert(FoodItem.getEntryfromTypeAndCode(typeForVeggie3, codeForVeggie3));
             }
+            else
+            {
+                var updateveggie3 = col.FindOne(Query.And(Query.EQ("NameCode", MyFoodWeek.thisweek.FoodCategoryCodeVeggies2), Query.EQ("Type", MyFoodWeek.thisweek.FoodCategoryTypeVeggies2)));
+                updateveggie3.Amount += 1;
+                col.Update(updateveggie3);
+            }
+
 
         }
 

@@ -19,17 +19,18 @@ namespace UplanTest
         public static Xamarin.Forms.Grid grid = new Xamarin.Forms.Grid();
         public static StackLayout test = new StackLayout();
         public static Frame frame = new Frame();
+        public static Xamarin.Forms.Grid gridforSL = new Xamarin.Forms.Grid();
 
         public Shopping_List()
         {
+            test.Children.Clear();
+            gridforSL.Children.Clear();
             ApiHelper.InitializeClient();
 
             ScrollView ScrollContainer = new ScrollView
             {
                 Orientation = ScrollOrientation.Both,
             };
-
-           // var grid = new Xamarin.Forms.Grid();
 
             int colMax = 15;
             int rowMax = 15;
@@ -74,36 +75,55 @@ namespace UplanTest
             //__________________ Frame = Liste de Courses_________________
             List<(Label, CheckBox)> AllOfLabAndCheck = GetAllFoodItem();
 
-            var testgrid = new Xamarin.Forms.Grid();
-            int roww = 2;
+          
+            
             for (int i = 0; i < 3; i++)
             {
-                testgrid.ColumnDefinitions.Add(new ColumnDefinition()
+                gridforSL.ColumnDefinitions.Add(new ColumnDefinition()
                 {
                     Width = new GridLength(100, GridUnitType.Absolute)
                 });
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 20; i++)
             {
-                testgrid.RowDefinitions.Add(new RowDefinition()
+                gridforSL.RowDefinitions.Add(new RowDefinition()
                 {
                     Height = new GridLength(100, GridUnitType.Absolute)
                 });
             }
-
-
-            //StackLayout test = new StackLayout();
+            //_________________ Testing grid for this #ITWORKSNOW
+            int roww = 0;
+            
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
             {
                 checkk.Color = Color.BlueViolet;
                 
-               // test.VerticalOptions = LayoutOptions.Center;
-                //test.HorizontalOptions = LayoutOptions.Center;
+                
+                gridforSL.Children.Add(checkk, 0,roww);
+                checkk.FlowDirection = FlowDirection.LeftToRight;
+                labb.FontSize = 18;
+                labb.VerticalTextAlignment = TextAlignment.Center;
+                gridforSL.Children.Add(labb,0,roww);
+                Grid.SetColumnSpan(labb, 2);
+                checkk.AnchorY=(-1.2);
+                //Grid.SetColumnSpan(gridforSL, 3);
+                roww += 1;
+
+            }
+            int coundofgrid=gridforSL.Children.Count();
+            frame.Content = gridforSL;
+            frame.BorderColor = Color.DarkSlateBlue;
+            frame.CornerRadius = 10;
+
+            /*_________________________ FOR STACKLAYOUT 
+            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
+            {
+                checkk.Color = Color.BlueViolet;
+                
 
                 test.Children.Add(checkk);
                 test.Children.Add(labb);
-                //test.VerticalOptions = LayoutOptions.CenterAndExpand;
                 test.HorizontalOptions = LayoutOptions.Start;
             }
 
@@ -115,12 +135,9 @@ namespace UplanTest
             frame.HasShadow = true;
             ScaleX = 1;
             ScaleY = 1;
-
-                //Content = new Label { Text = "Example" }
-
-
-                frame.Content = test
-            ;
+                //frame.Content = test
+                frame.Content = gridforSL
+            ;*/
 
 
             grid.Children.Add(frame, 1, 1);
@@ -128,7 +145,6 @@ namespace UplanTest
             Grid.SetRowSpan(frame, 15);
 
             //______________________________________________________________________________
-
             //__________________Refresh button______________________________________________
 
             ImageButton Refresh = new ImageButton();
@@ -302,44 +318,50 @@ namespace UplanTest
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             col.DeleteAll();
+           /* grid.Children.Remove(gridforSL);
+            grid.Children.Remove(frame);
+            frame.BorderColor = Color.DarkSlateBlue;
+            frame.CornerRadius = 10;
+            frame.Content = null;
+            grid.Children.Add(frame, 1, 1);
+            Grid.SetColumnSpan(frame, 3);
+            Grid.SetRowSpan(frame, 15);*/
             RefreshView();
         }
 
         public static void RefreshView()
         {
             //test.IsVisible = false;
-            
-            grid.Children.Remove(test);
-            grid.Children.Remove(frame);
+           // grid.Children.Remove(gridforSL);
+           // grid.Children.Remove(frame);
             List<(Label, CheckBox)> AllOfLabAndCheck = GetAllFoodItem();
-            StackLayout test2 = new StackLayout();
-            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck)
+            gridforSL.Children.Clear();
+            
+            int roww = 0;
+
+            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
             {
                 checkk.Color = Color.BlueViolet;
-                test2.Children.Add(checkk);
-                test2.Children.Add(labb);
+
+
+                gridforSL.Children.Add(checkk, 0, roww);
+                checkk.FlowDirection = FlowDirection.LeftToRight;
+                labb.FontSize = 18;
+                labb.VerticalTextAlignment = TextAlignment.Center;
+                gridforSL.Children.Add(labb, 0, roww);
+                Grid.SetColumnSpan(labb, 2);
+                checkk.AnchorY = (-1.2);
+                //Grid.SetColumnSpan(gridforSL, 3);
+                roww += 1;
+
             }
-
-            Frame frame2 = new Frame
-            {
-                BorderColor = Color.DarkSlateBlue,
-                CornerRadius = 10,
-                HasShadow = true,
-                ScaleX = 1,
-                ScaleY = 1,
-
-                //Content = new Label { Text = "Example" }
-
-
-                Content = test2
-            };
-
-
-            grid.Children.Add(frame2, 1, 1);
-            Grid.SetColumnSpan(frame2, 3);
-            Grid.SetRowSpan(frame2, 15);
-
-
+            int coundofgrid = gridforSL.Children.Count();
+            frame.Content = gridforSL;
+            frame.BorderColor = Color.DarkSlateBlue;
+            frame.CornerRadius = 10;
+            grid.Children.Add(frame, 1, 1);
+            Grid.SetColumnSpan(frame, 3);
+            Grid.SetRowSpan(frame, 15);
 
         }
 
@@ -353,7 +375,7 @@ namespace UplanTest
             foreach (var lilres in results)
             {
                 Label forCheck = new Label();
-                forCheck.Text = lilres.NameDesc;
+                forCheck.Text = "        "+lilres.Amount+" "+lilres.NameDesc;
 
                 CheckBox checkBox = new CheckBox();
                 {

@@ -7,11 +7,18 @@ namespace UplanTest
 {
     public class FoodItem
     {
+        //___________________ ATTRIBUTS DE LA CLASS _____________________
+        //_______________________________________________________________
+
         public int Id { get; set; }
         public string Type { get; set; }
         public string NameCode { get; set; }
         public string NameDesc { get; set; }
         public DateTime DueDate { get; set; }
+        public int Amount { get; set; }
+
+        //________________________________________________________________
+        //________________________________________________________________
 
         public static void Initiate()
         {
@@ -24,21 +31,23 @@ namespace UplanTest
             col.EnsureIndex(x => x.NameCode);
             col.EnsureIndex(x => x.NameDesc);
             col.EnsureIndex(x => x.DueDate);
+            col.EnsureIndex(x => x.Amount);
 
             /* Create initial data*/
             col.Insert(
                 new FoodItem
                 {
-                    Type="CARB",
-                    NameCode="POTATO",
-                    NameDesc="Potato",
-                    DueDate=DateTime.Now.AddDays(-1)
+                    Type = "CARB",
+                    NameCode = "POTATO",
+                    NameDesc = "Potato",
+                    DueDate = DateTime.Now.AddDays(-1),
+                    Amount = 1
 
                 }
-             );
+             ) ;
         }
 
-        public static void InsertFoodItem(string type,string NameCode, string NameDesc, DateTime Duedate)
+        public static void InsertFoodItem(string type,string NameCode, string NameDesc, DateTime Duedate, int amount)
         {
 
             // Get a collection (or create, if doesn't exist)
@@ -50,6 +59,7 @@ namespace UplanTest
             col.EnsureIndex(x => x.NameCode);
             col.EnsureIndex(x => x.NameDesc);
             col.EnsureIndex(x => x.DueDate);
+            col.EnsureIndex(x => x.Amount);
 
             col.Insert(
                 new FoodItem
@@ -57,7 +67,8 @@ namespace UplanTest
                     Type = type,
                     NameCode = NameCode,
                     NameDesc = NameDesc,
-                    DueDate = Duedate
+                    DueDate = Duedate,
+                    Amount=amount
 
                 }
              );

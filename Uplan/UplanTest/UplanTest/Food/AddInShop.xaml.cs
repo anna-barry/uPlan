@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LiteDB;
+
+using System.Linq;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,14 +19,11 @@ namespace UplanTest
         string Code = "";
         string Desc = "";
         public DateTime DueDate = DateTime.Now.AddDays(-1);
+        int amount = 0;
        
         public AddInShop()
         {
             InitializeComponent();
-            // Type = "PROTEIN"
-           
-           
-            
 
         }
 
@@ -47,12 +47,25 @@ namespace UplanTest
             Code = DescForType.Text;
             Code= Code.ToUpper();
             Desc = DescForType.Text;
-            var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
-            FoodItem.InsertFoodItem(Type, Code, Desc, DueDate);
-            FoodItem thisAdd = FoodItem.getEntryfromTypeAndCode(Type, Code);
-            col.Insert(thisAdd);
+            amount = (int) pickerAmount.SelectedItem;
 
-            Shopping_List.RefreshView();
+            var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
+            FoodItem.InsertFoodItem(Type, Code, Desc, DueDate,amount);
+            FoodItem thisAdd = FoodItem.getEntryfromTypeAndCode(Type, Code);
+            
+            var resultforthis = col.FindOne(Query.And(Query.EQ("NameCode", Code), Query.EQ("Type", Type)));
+            if (resultforthis!=null)
+            {
+                resultforthis.Amount += amount;
+                col.Update(resultforthis);
+            }
+            else
+            {
+                col.Insert(thisAdd);
+            }
+            
+
+           Shopping_List.RefreshView();
             await Navigation.PopAsync();
             
 
@@ -61,7 +74,7 @@ namespace UplanTest
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
             
-            Shopping_List.RefreshView();
+           Shopping_List.RefreshView();
             await Navigation.PopAsync();
             
         }
