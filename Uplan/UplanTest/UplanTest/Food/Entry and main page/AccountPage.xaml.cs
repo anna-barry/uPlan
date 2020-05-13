@@ -18,6 +18,7 @@ namespace UplanTest
         ListHelper lh_accom_type;
         ListHelper lh_shop_day;
         ListHelper lh_clean_day;
+        ListHelper rest_day;
 
         public AccountPage()
         {
@@ -38,6 +39,11 @@ namespace UplanTest
             lh_clean_day = new ListHelper("DAYS", 0, MyUser.me.CleaningDay);
             Cleaning_Day.ItemsSource = lh_clean_day.DisplayList;
             Cleaning_Day.SelectedIndex = lh_clean_day.CurrentIndex;
+
+            rest_day= new ListHelper("DAYS", 0, MyUser.me.RestDay);
+            Rest_Day.ItemsSource = rest_day.DisplayList;
+            Rest_Day.SelectedIndex= rest_day.CurrentIndex;
+           
         }
 
         async void OnButtonClicked(object sender, EventArgs args)
@@ -45,7 +51,9 @@ namespace UplanTest
             MyUser.Update(User_Name.Text, Email.Text,
                 lh_accom_type.ListEntryList[Accomodation_type.SelectedIndex],
                 lh_shop_day.CodeList[Shopping_Day.SelectedIndex],
-                lh_clean_day.CodeList[Cleaning_Day.SelectedIndex]);
+                lh_clean_day.CodeList[Cleaning_Day.SelectedIndex],
+                rest_day.CodeList[Rest_Day.SelectedIndex]
+                );
 
             editor.Text = User.GetLoginMessage();
 

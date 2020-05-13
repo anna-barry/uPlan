@@ -32,9 +32,12 @@
             <Label Text="Cleaning Day" Grid.Row="6" Grid.Column="0" VerticalTextAlignment = "Center"/>
             <Picker x:Name="Cleaning_Day" WidthRequest="200" Grid.Row="6" Grid.Column="1" />
 
-            <Button x:Name="save" Text="Save" Grid.Row="7" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
+            <Label Text="Rest Day" Grid.Row="7" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Picker x:Name="Rest_Day" WidthRequest="200" Grid.Row="7" Grid.Column="1" />
 
-            <Editor x:Name="editor" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="" HeightRequest="100"/>
+            <Button x:Name="save" Text="Save" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
+
+            <Editor x:Name="editor" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="" HeightRequest="100"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
