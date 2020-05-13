@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.MainMyWorkouts">
+    <ContentPage.Content>
+        <Grid Margin="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+
+            <Label Text="My workouts" Grid.Row="0" Grid.Column="0"  FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+
+            <ImageButton Source="Assets/WorkoutNow.png" Grid.Row="3" Grid.Column="0" Clicked="WorkoutNowLink"/>
+            <Label Text="Workout Now" Grid.Row="3" Grid.Column="1"  Grid.ColumnSpan="4" FontSize="26"/>
+
+            <ImageButton Source="Assets/SKDlogo.png" Grid.Row="4" Grid.Column="0" Clicked="WorkoutSKLink"/>
+
+            <Label Text="Schedule a workout" Grid.Row="4" Grid.Column="1"   Grid.ColumnSpan="4" FontSize="26"/>
+
+            <ImageButton Source="Assets/ViewWorkouts.png" Grid.Row="5" Grid.Column="0" Clicked="ViewWorklink" Scale="1.2"/>
+            <Label Text="View workouts" Grid.Row="5" Grid.Column="1"   Grid.ColumnSpan="4" FontSize="26"/>
+
+            
+            
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

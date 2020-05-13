@@ -56,13 +56,13 @@ namespace UplanTest
         {
             foodname = desc.Text;
             ListEntryForFood.InsertNewFood(foodtype, foodname, foodname);
-            await Navigation.PushAsync(new FoodW());
+            await Navigation.PopAsync();
 
         }
 
         async void OnCloseClicked(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new FoodW());
+            await Navigation.PopAsync();
         }
     }
 }

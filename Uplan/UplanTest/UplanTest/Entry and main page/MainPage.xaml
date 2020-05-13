@@ -66,11 +66,14 @@
                     <ImageButton Source="Assets/yoga.png" Grid.Row="6" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked7"></ImageButton>
                     <Label Text="My Well Being" Grid.Row="6" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
 
-                    <ImageButton Source="Assets/settings.png"  HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="7"></ImageButton>
-                    <Label Text="About Me" Grid.Row="7" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                    <ImageButton Source="Assets/SportIcon.png" Grid.Row="7" HeightRequest="45"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked10"></ImageButton>
+                    <Label Text="My Workouts" Grid.Row="7" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
 
-                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="8"></ImageButton>
-                    <Label Text="About Us" Grid.Row="8" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                    <ImageButton Source="Assets/settings.png"  HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="8"></ImageButton>
+                    <Label Text="About Me" Grid.Row="8" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+
+                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="9"></ImageButton>
+                    <Label Text="About Us" Grid.Row="9" TextColor="White" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
                     
                     
                 </Grid>

@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Add_Food.png" />
+    <Content Include="Assets\add_round.png" />
     <Content Include="Assets\alert.mp3" />
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\bleu.png" />
@@ -132,6 +133,9 @@
     <Content Include="Assets\FoodC2.png" />
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
+    <Content Include="Assets\GetInfo.png" />
+    <Content Include="Assets\HydratingLOL.gif" />
+    <Content Include="Assets\HydratingLOL2.gif" />
     <Content Include="Assets\IconMealPlanForSH.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -153,12 +157,14 @@
     <Content Include="Assets\save%29.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
+    <Content Include="Assets\SKDlogo.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\SportIcon.png" />
     <Content Include="Assets\Square150x150Logo.scale-100.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-400.png" />
@@ -191,9 +197,11 @@
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
     <Content Include="Assets\uplanteam.png" />
+    <Content Include="Assets\ViewWorkouts.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\WorkoutNow.png" />
     <Content Include="Assets\yoga.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>

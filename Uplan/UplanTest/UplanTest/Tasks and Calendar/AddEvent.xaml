@@ -9,20 +9,12 @@
              BackgroundColor="AliceBlue"
              Title="Add Task"
              x:Class="UplanTest.AddEvent">
-        <ContentPage.Content>
-            <!-- <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout> -->
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    
-                    
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

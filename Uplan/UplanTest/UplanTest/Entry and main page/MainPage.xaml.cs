@@ -65,5 +65,11 @@ namespace UplanTest
             
         }
 
+        private void Button_Clicked10(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new MainMyWorkouts());
+
+        }
+
     }
 }

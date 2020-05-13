@@ -266,7 +266,6 @@ namespace UplanTest
             Grid.SetColumnSpan(adddesc, 3);
 
 
-            //Entry fooddesc = new Entry();
 
             string desc = SortieApi.Text;
             grid.Children.Add(SortieApi, 6, 8);
