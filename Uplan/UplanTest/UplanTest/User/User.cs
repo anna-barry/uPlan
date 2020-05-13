@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using LiteDB;
 
 namespace UplanTest
@@ -15,6 +16,8 @@ namespace UplanTest
         public string ShoppingDay { get; set; }
         public string CleaningDay { get; set; }
 
+        public string RestDay { get; set; }
+
         // not in DB collection ("calculated" columns)
         public string ShoppingDayDesc {
             get { return getDescFromDay(ShoppingDay); }  //   set { ShoppingDayDesc = value; }
@@ -22,6 +25,11 @@ namespace UplanTest
         public string CleaningDayDesc
         {
             get { return getDescFromDay(CleaningDay); }  
+        }
+
+        public string RestDayDesc
+        {
+            get { return getDescFromDay(RestDay); }
         }
         public string AccomodationTypeDesc
         {
@@ -80,7 +88,8 @@ namespace UplanTest
                     AccomodationType = ListEntry.getEntryfromTypeAndCode("ACCOMODATION_TYPES", "ALONE"),
                     EmailAddress = "user.name@epita.fr",
                     ShoppingDay = "MON", // Lundi
-                    CleaningDay = "SAT"
+                    CleaningDay = "SAT",
+                    RestDay= "SUN"
                 }
              ); 
         }
@@ -98,7 +107,7 @@ namespace UplanTest
             // à insérer: ce qu'il ya niveau dates de péremption
 
             return "Hello there " + result.Name + ", I now know that you go shopping on " + result.ShoppingDayDesc + "s"+
-                " and that you clean where you live on " + result.CleaningDayDesc + "s and you live in an accomodation of type " + result.AccomodationTypeDesc +
+                " and that you clean where you live on " + result.CleaningDayDesc +" and that your rest day is on"+result.RestDayDesc +"s and you live in an accomodation of type " + result.AccomodationTypeDesc +
                 " and that you have " + (openTasks-1) + " open task(s)!";
         }
 
@@ -109,16 +118,18 @@ namespace UplanTest
            
             var result = col.FindOne(Query.All());
             if (result == null) { return "No User means no User information!"; }
-            
 
-            return "Name: " + result.Name +"\n" + "Shopping day: " + result.ShoppingDayDesc + "\n" +
-              "Cleaning Day: " + result.CleaningDayDesc + "\n" + "Accomodation type: " + result.AccomodationTypeDesc;
+
+            return "Name: " + result.Name + "\n" + "Shopping day: " + result.ShoppingDayDesc + "\n" +
+              "Cleaning Day: " + result.CleaningDayDesc + "\n" + "Rest Day: " + result.RestDayDesc + "\n" 
+              + "Accomodation type: " + result.AccomodationTypeDesc+ result.RestDay; ;
+             
 
         }
 
         public void UpdateUser(
             string uName, string uEmailAddress, ListEntry uAccomodationType, 
-            string uShoppingDay, string uCleaningDay
+            string uShoppingDay, string uCleaningDay, string uRestDay
             )
         {
             var col = Database.db.GetCollection<User>("Users");
@@ -131,6 +142,7 @@ namespace UplanTest
             user.AccomodationType = uAccomodationType;
             user.ShoppingDay = uShoppingDay;
             user.CleaningDay = uCleaningDay;
+            user.RestDay = uRestDay;
 
             // And call collection update to commit changes
             col.Update(user);

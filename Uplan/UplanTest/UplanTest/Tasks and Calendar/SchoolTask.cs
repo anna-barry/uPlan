@@ -151,27 +151,11 @@ namespace UplanTest
             ListEntry tcol = new ListEntry(); //couleur plus clair que l'autre
             ListEntry tomp = new ListEntry(); //pas sur qu'il faille modifier ( reprendre celle de base surement)
             ListEntry tsub = new ListEntry(); // la pareil pas de modif en fait
-            string desc;
-            string subdesc;
-            DateTime workdate;
-
-            //EN GROS JSP SI FAUT TOUT MODIFIER FAUT JUSTE QU'ON PARLE DE MANI7RE TECHNIQUE L'AJOUT DES TACHES ET QU4ON
-            //VOIT EN DETAILS
-
-            //faire definition d'une couleur plus light que l'autre choisie pour chauqe couleur avec un switch
-
-            //si school sous task
-            //if (TaskCategory.Code == "SCHOOL")
-            //{
-            //en fonction de la complexité faire + ou moins de sous taches
-
-            //}
-            /*à voir si sous tasks pour personal? du genre sport créer un rappel semainier ou jsp
-            else
-            {
-
-            }*/
-
+           
+            string taskcomplex = TaskComplexity.Code;
+            TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
+            int p = daysleft.Days;
+            DateTime date = DateTime.Now.Date;
 
             //A LA FIN INSERTSCHOOLTASK D'un ou plusieurs (pas sur a la fin surement au fur et à mesure mais bon bref
 
@@ -179,13 +163,7 @@ namespace UplanTest
             //__________________________________Exercice_________________________
             if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code=="EXERCICE")
             {
-                string taskcomplex = TaskComplexity.Code;
-                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
-                int p = daysleft.Days;
-
-
-            if (taskcomplex== "LOW" || taskcomplex== "MEDIUM")
-            {
+                //dans tous les cas l'exos doit etre traité le soir meme
                 if(p>=1)
                 {
                         InsertSchoolTask(TaskUser, TaskCategory,
@@ -195,14 +173,12 @@ namespace UplanTest
                          Description,
                         "Start working on this today: "+ '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(1));
+                         date.AddDays(1));
                 }
-                
-            }
 
-            if (taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
-            {
-                    if (p >= 1)
+                if (taskcomplex == "MEDIUM" || taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
+                {
+                    if (p > 3)
                     {
                         InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
@@ -211,9 +187,23 @@ namespace UplanTest
                          Description,
                         "Start working on this today: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(1));
+                         date.AddDays(p / 4 + 1));
                     }
-                    if (p >= 2)
+                    else
+                    {
+                        InsertSchoolTask(TaskUser, TaskCategory,
+                         IntelligentColor(TaskCategoryColour),
+                         TaskComplexity,
+                         TaskSubType,
+                         Description,
+                        "Start working on this today: " + '\n' + SubDesc,
+                         IsComplete,
+                         date.AddDays(2));
+                    }
+                }
+                if (taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
+                {
+                    if (p > 4)
                     {
                         InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
@@ -222,9 +212,13 @@ namespace UplanTest
                          Description,
                         "Continue working on this today: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(2));
+                         date.AddDays(p/3+1));
                     }
-                    if (p >= 4)
+                }
+
+                if (taskcomplex == "VERYHIGH")
+                { 
+                if (p > 5)
                     {
                         InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
@@ -233,7 +227,7 @@ namespace UplanTest
                          Description,
                         "Continue working on this today (you can be proud of yourself for all your hard work): " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(4));
+                         date.AddDays(p/2));
                     }
 
                 }
@@ -242,15 +236,9 @@ namespace UplanTest
             //__________________________________Par coeur_________________________
             if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code == "BY_HEART")
             {
-                string taskcomplex = TaskComplexity.Code;
-                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
-                int p = daysleft.Days;
 
-                if (taskcomplex == "LOW" || taskcomplex == "MEDIUM")
-                {
-                    if (p >= 1 && taskcomplex == "LOW")
+               if (p >= 1 && taskcomplex == "LOW")
                     {
-                        int ecaart = p / 2;
                         InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
                          TaskComplexity,
@@ -258,21 +246,21 @@ namespace UplanTest
                          Description,
                         "Start learning: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(1+ecaart));
+                         date.AddDays(1+p/2));
 
                     }
-                    if (p >= 1 && taskcomplex == "MEDIUM")
+               if (p >= 1 && taskcomplex == "MEDIUM")
                     {
                         if(p==1)
                         {
-                            InsertSchoolTask(TaskUser, TaskCategory,
+                         InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
                          TaskComplexity,
                          TaskSubType,
                          Description,
                         "Start learning: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(1));
+                         date.AddDays(1));
                         }
 
                         if(p==3)
@@ -284,12 +272,11 @@ namespace UplanTest
                          Description,
                         "Start learning: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(2));
+                         date.AddDays(2));
                         }
 
                         if (p >= 3)
                         {
-                            int ecart = p / 3;
                          InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
                          TaskComplexity,
@@ -297,7 +284,7 @@ namespace UplanTest
                          Description,
                         "Start learning: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(p));
+                         date.AddDays(p));
 
                          InsertSchoolTask(TaskUser, TaskCategory,
                          IntelligentColor(TaskCategoryColour),
@@ -306,12 +293,12 @@ namespace UplanTest
                          Description,
                         "Continue learning: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(p*2));
+                         date.AddDays(p*2));
 
                             
                         }
 
-                    }
+                    
                 }
                 if (taskcomplex == "HIGH" || taskcomplex == "VERY_HIGH")
                 {
@@ -323,9 +310,9 @@ namespace UplanTest
                          TaskComplexity,
                          TaskSubType,
                          Description,
-                        "Start learning: " + '\n' + SubDesc,
+                        "Start making notes and doing exercices for: " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(1));
+                         date.AddDays(1));
 
                     }
 
@@ -338,7 +325,7 @@ namespace UplanTest
                          Description,
                         "Continue learning and don't forget, consistency is the key to sucess! : " + '\n' + SubDesc,
                          IsComplete,
-                         DateTime.Now.Date.AddDays(i));
+                         date.AddDays(i));
                     }
                 }
             }
@@ -346,19 +333,19 @@ namespace UplanTest
             //__________________________________Projet_________________________
             // POUR TOUT LES WEEKEND JUSQU'A DUE DATE ON MET UN RAPPEL DE CONTINUER LE PROJET AVEC LE TEMPS LIBRE SI TRES COMPLIQUE
             // RAPEL QUE LE DIMANCHE SI COMPLIQUE
-           // RAPPEL UN DIMANCHE SUR DEUX SI PEU COMPLIQUE
+            // RAPPEL UN DIMANCHE SUR DEUX SI PEU COMPLIQUE
+
+            string restday = MyUser.me.RestDay;
+            var ecartrest = (date.DayOfWeek);
+            daysleft = (DueDate.Date - date.Date);
             if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code == "PROJECT")
             {
-                string taskcomplex = TaskComplexity.Code;
-                TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
-                int p = daysleft.Days;
-
                 if ( taskcomplex == "VERY_HIGH")
                 {
 
                     for (int i = 1; i < p; i += 1)
                     {
-                        DateTime thisday = DateTime.Now.Date.AddDays(i);
+                        DateTime thisday = date.Date.AddDays(i);
                         if(thisday.DayOfWeek== DayOfWeek.Saturday || thisday.DayOfWeek == DayOfWeek.Sunday)
                         {
                             InsertSchoolTask(TaskUser, TaskCategory,
@@ -366,9 +353,9 @@ namespace UplanTest
                         TaskComplexity,
                         TaskSubType,
                         Description,
-                        "Weekend means more time to work on this projet: " + '\n' + SubDesc,
+                        "RestDay means more time to work on this projet: " + '\n' + SubDesc,
                         IsComplete,
-                        DateTime.Now.Date.AddDays(i));
+                        date.AddDays(i));
                         }
                     }
                 }
@@ -388,7 +375,7 @@ namespace UplanTest
                         Description,
                         "Weekend means more time to work on this projet: " + '\n' + SubDesc,
                         IsComplete,
-                        DateTime.Now.Date.AddDays(i));
+                        date.AddDays(i));
                         }
                     }
                 }
@@ -410,7 +397,7 @@ namespace UplanTest
                                 Description,
                                 "Weekend means more time to work on this projet, work today and have more free time next weekend: " + '\n' + SubDesc,
                                 IsComplete,
-                                DateTime.Now.Date.AddDays(i));
+                                date.AddDays(i));
 
                                 lastweek = 1;
                              }

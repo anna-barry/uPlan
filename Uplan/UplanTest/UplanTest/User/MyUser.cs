@@ -23,10 +23,10 @@ namespace UplanTest
 
         public static void Update(
            string uName, string uEmailAddress, ListEntry uAccomodationType,
-           string uShoppingDay, string uCleaningDay)
+           string uShoppingDay, string uCleaningDay, string uRestDay)
 
         {
-            me.UpdateUser(uName, uEmailAddress, uAccomodationType, uShoppingDay, uCleaningDay);
+            me.UpdateUser(uName, uEmailAddress, uAccomodationType, uShoppingDay, uCleaningDay,uRestDay);
 
             // Keep MyUser static variables up to date after this database update
             Initiate();
