@@ -38,9 +38,13 @@ namespace UplanTest
                 case "Carbohydrate for energy":
                     Type = "CARB";
                     break;
-                default:
+                case "Veggies for your health":
                     Type = "VEGGIES";
                     break;
+                default:
+                    Type = "OTHER";
+                    break;
+
             }
 
             

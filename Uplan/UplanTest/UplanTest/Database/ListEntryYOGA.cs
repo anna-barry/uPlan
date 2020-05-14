@@ -52,7 +52,7 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "QUOTES", Code = "34", Description = "Have company/ Enjoy solitude" });
             col.Insert(new ListEntry { Type = "QUOTES", Code = "35", Description = "Be thankfull" });
             col.Insert(new ListEntry { Type = "QUOTES", Code = "36", Description = "Have a good sleep" });
-            col.Insert(new ListEntry { Type = "QUOTES", Code = "37", Description = "Make a vision bard" });
+            col.Insert(new ListEntry { Type = "QUOTES", Code = "37", Description = "Make a vision board" });
             col.Insert(new ListEntry { Type = "QUOTES", Code = "38", Description = "Take time to think" });
             col.Insert(new ListEntry { Type = "QUOTES", Code = "39", Description = "Be mindful" });
             col.Insert(new ListEntry { Type = "QUOTES", Code = "40", Description = "Identify your values" });

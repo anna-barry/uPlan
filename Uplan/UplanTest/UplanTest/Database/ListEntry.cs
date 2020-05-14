@@ -81,9 +81,6 @@ namespace UplanTest
             col.Insert(new ListEntry { Type = "TASK_SUBTYPE_PERS", Code = "HOBBIES", Description = "Hobies" });
 
 
-            /* Well-being
-            col.Insert(new ListEntry { Type = "MEDICAL", Code = "BY_HEART", Description = "By heart" }); */
-
         }
 
         public static ListEntry getEntryfromTypeAndCode(string Type, string Code)
