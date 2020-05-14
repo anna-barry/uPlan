@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
+using System.Xml;
 using LiteDB;
+using Xamarin.Forms;
 
 namespace UplanTest
 {
@@ -118,5 +121,16 @@ namespace UplanTest
         public FoodItem()
         {
         }
+        /*public static void test()
+        {
+
+            var col = Database.db.GetCollection<FoodItem>("FoodItems");
+            foreach (var item in col.FindAll())
+            {
+                string nomboutton = Convert.ToString(item.Id);
+                Button a = new Button();
+            }
+               
+        }*/
     }
 }
