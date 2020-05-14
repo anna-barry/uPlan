@@ -141,6 +141,8 @@
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\NewFood.png" />
+    <Content Include="Assets\noun_Repeat2.png" />
+    <Content Include="Assets\noun_Repeat_219102 %281%29.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\play.png" />
     <Content Include="Assets\playfi.png" />
@@ -149,6 +151,7 @@
     <Content Include="Assets\relax2.mp3" />
     <Content Include="Assets\relax3.mp3" />
     <Content Include="Assets\relax4.mp3" />
+    <Content Include="Assets\repeat once.png" />
     <Content Include="Assets\rock1.mp3" />
     <Content Include="Assets\rock2.mp3" />
     <Content Include="Assets\rock3.mp3" />
