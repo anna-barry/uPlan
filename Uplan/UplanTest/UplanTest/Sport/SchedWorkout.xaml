@@ -46,38 +46,38 @@
             <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
             
             <!-- ABS -->
-                <Label Text="Abs Workouts" TextColor="DarkMagenta" TextDecorations="Underline" Grid.Row="1" Grid.Column="0" FontSize="20" Margin="10" />
+                <Label Text="Abs Workouts" TextColor="DarkMagenta" Grid.Row="1" Grid.Column="0" FontSize="20" Margin="10" />
                 
-                <Label x:Name="Strength" Text="Workout for added strength" FontSize="13" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs1" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" />
+                <Label x:Name="Strength" Text="Workout for added strength" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs1" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="1" Clicked="GetInfoAbs1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="1" VerticalOptions="Start" Clicked="AddAbs1" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
-                <Label x:Name="IronClad" Text="Ironclad Workout Russian twist style" FontSize="12" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs2" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
+                <Label x:Name="IronClad" Text="Ironclad Workout Russian twist style" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs2" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="3" Clicked="GetInfoAbs2" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="3" VerticalOptions="Start" Clicked="AddAbs2" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
-                <Label x:Name="Obliques" Text="Obliques Workout for Hourglass figure" FontSize="12" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs3" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="4" Grid.RowSpan="2" />
+                <Label x:Name="Obliques" Text="Obliques Workout for Hourglass figure" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs3" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="4" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="5" Clicked="GetInfoAbs3" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="5" VerticalOptions="Start" Clicked="AddAbs3" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="WOCrunches" Text="Ab Workout without crunches" FontSize="12" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs4" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="6" Grid.RowSpan="2" />
+                <Label x:Name="WOCrunches" Text="Ab Workout without crunches" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs4" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="6" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="7" Clicked="GetInfoAbs4" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="7" VerticalOptions="Start" Clicked="AddAbs4" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="SumAb1" Text="Summer body Ab Workout n1" FontSize="12" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="8" Grid.RowSpan="2" />
+                <Label x:Name="SumAb1" Text="Summer body Ab Workout n1" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="8" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="9" Clicked="GetInfoAbs5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="9" VerticalOptions="Start" Clicked="AddAbs5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="SumAb2" Text="Summer body Ab Workout n2" FontSize="12" TextColor="DarkMagenta" />
-                <Frame x:Name="Abs6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="10" Grid.RowSpan="2" />
+                <Label x:Name="SumAb2" Text="Summer body Ab Workout n2" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Abs6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="2" Grid.Column="10" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="2" Grid.Column="11" Clicked="GetInfoAbs6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="3" Grid.Column="11" VerticalOptions="Start" Clicked="AddAbs6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
@@ -85,45 +85,154 @@
                 <!---                     end of abs                                              -->
 
                 <!-- Arm Workouts -->
-                <Label Text="Arm Workouts" TextColor="DarkViolet" TextDecorations="Underline" Grid.Row="4" Grid.Column="0" FontSize="20" Margin="10" />
+                <Label Text="Arm Workouts" TextColor="DodgerBlue"  Grid.Row="4" Grid.Column="0" FontSize="20" Margin="10" />
 
-                <Label x:Name="ForArms1" Text="Beginner Arm Workout" FontSize="13" TextColor="DarkViolet" />
-                <Frame x:Name="Arms1" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" />
+                <Label x:Name="ForArms1" Text="Beginner Arm Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms1" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="5" Grid.Column="1" Clicked="GetInfoArms1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="6" Grid.Column="1" VerticalOptions="Start" Clicked="AddArms1" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
-                <Label x:Name="ForArms2" Text="Arm Workout challenge " FontSize="12" TextColor="DarkViolet" />
-                <Frame x:Name="Arms2" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" />
+                <Label x:Name="ForArms2" Text="Arm Workout challenge " FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms2" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="5" Grid.Column="3" Clicked="GetInfoArms2" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="6" Grid.Column="3" VerticalOptions="Start" Clicked="AddArms2" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
-                <Label x:Name="ForArms3" Text="Burn Arm Fat Workout" FontSize="12" TextColor="DarkViolet" />
-                <Frame x:Name="Arms3" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="4" Grid.RowSpan="2" />
+                <Label x:Name="ForArms3" Text="Burn Arm Fat Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms3" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="4" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="5" Grid.Column="5" Clicked="GetInfoArms3" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="6" Grid.Column="5" VerticalOptions="Start" Clicked="AddArms3" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="ForArms4" Text="Toned Arms Workout" FontSize="12" TextColor="DarkViolet" />
-                <Frame x:Name="Arms4" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="6" Grid.RowSpan="2" />
+                <Label x:Name="ForArms4" Text="Toned Arms Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms4" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="6" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="5" Grid.Column="7" Clicked="GetInfoArms4" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="6" Grid.Column="7" VerticalOptions="Start" Clicked="AddArms4" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="ForArms5" Text="Big Arms Workout" FontSize="12" TextColor="DarkViolet" />
-                <Frame x:Name="Arms5" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="8" Grid.RowSpan="2" />
+                <Label x:Name="ForArms5" Text="Big Arms Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms5" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="8" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="4" Grid.Column="9" Clicked="GetInfoArms5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="5" Grid.Column="9" VerticalOptions="Start" Clicked="AddArms5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 
-                <Label x:Name="ForArms6" Text="Triceps Workout" FontSize="12" TextColor="DarkViolet" />
-                <Frame x:Name="Arms6" BackgroundColor="PaleVioletRed" Opacity="0.7" BorderColor="Black" CornerRadius="0.60" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="10" Grid.RowSpan="2" />
+                <Label x:Name="ForArms6" Text="Triceps Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Arms6" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="10" Grid.RowSpan="2" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="5" Grid.Column="11" Clicked="GetInfoArms6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="6" Grid.Column="11" VerticalOptions="Start" Clicked="AddArms6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
                     <!-- end of arms-->
                 <!-- LEGS  -->
+                <Label Text="Leg Workouts" TextColor="DarkMagenta"  Grid.Row="7" Grid.Column="0" FontSize="20" Margin="10" />
+
+                <Label x:Name="ForLeg1" Text="Core strengthening Workout" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg1" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="0" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="1" Clicked="GetInfoLeg1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="1" VerticalOptions="Start" Clicked="AddLeg1" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForLeg2" Text="Thigh workout " FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg2" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="2" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="3" Clicked="GetInfoLeg2" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="3" VerticalOptions="Start" Clicked="AddLeg2" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForLeg3" Text="Toned Legs" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg3" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="4" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="5" Clicked="GetInfoLeg3" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="5" VerticalOptions="Start" Clicked="AddLeg3" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForLeg4" Text="Burn Leg Fat" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg4" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="6" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="7" Clicked="GetInfoLeg4" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="7" VerticalOptions="Start" Clicked="AddLeg4" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForLeg5" Text="Dumbbell workout" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="8" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="9" Clicked="GetInfoLeg5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="9" VerticalOptions="Start" Clicked="AddLeg5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForLeg6" Text="Resistant band workout" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="Leg6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="8" Grid.Column="10" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="8" Grid.Column="11" Clicked="GetInfoLeg6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="9" Grid.Column="11" VerticalOptions="Start" Clicked="AddLeg6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+                
+                <!-- Booty -->
+                <Label Text="Workouts for your glutes" TextColor="DodgerBlue" Grid.Row="10" Grid.Column="0" FontSize="20" Margin="10" />
+
+                <Label x:Name="ForGlutes1" Text="Bubble But Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes1" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="0" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="1" Clicked="GetInfoGlutes1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="1" VerticalOptions="Start" Clicked="AddGlutes1" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForGlutes2" Text="Tighten up workout " FontSize="15" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes2" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="2" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="3" Clicked="GetInfoGlutes2" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="3" VerticalOptions="Start" Clicked="AddGlutes2" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForGlutes3" Text="Bodyweight Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes3" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="4" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="5" Clicked="GetInfoGlutes3" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="5" VerticalOptions="Start" Clicked="AddGlutes3" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForGlutes4" Text="Targeted Glutes Workout" FontSize="15" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes4" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="6" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="7" Clicked="GetInfoGlutes4" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="7" VerticalOptions="Start" Clicked="AddGlutes4" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForGlutes5" Text="Butt Lift Workout" FontSize="16" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes5" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="8" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="9" Clicked="GetInfoGlutes5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="9" VerticalOptions="Start" Clicked="AddGlutes5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForGlutes6" Text="Toned Glutes Workout" FontSize="15" TextColor="DodgerBlue" />
+                <Frame x:Name="Glutes6" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="11" Grid.Column="10" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="11" Grid.Column="11" Clicked="GetInfoGlutes6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="12" Grid.Column="11" VerticalOptions="Start" Clicked="AddGlutes6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+                
+                <!-- Full Body -->
+                <Label Text="Full Body Workouts" TextColor="DarkMagenta"  Grid.Row="13" Grid.Column="0" FontSize="20" Margin="10" />
+
+                <Label x:Name="ForFullBody1" Text="Full Body Blast" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody1" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="0" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="1" Clicked="GetInfoFullBody1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="1" VerticalOptions="Start" Clicked="AddFullBody1" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForFullBody2" Text="High intensity" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody2" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="2" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="3" Clicked="GetInfoFullBody2" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="3" VerticalOptions="Start" Clicked="AddFullBody2" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <Label x:Name="ForFullBody3" Text="Full Body Circuit" FontSize="15" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody3" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="4" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="5" Clicked="GetInfoFullBody3" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="5" VerticalOptions="Start" Clicked="AddFullBody3" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForFullBody4" Text="Beginner HIIT" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody4" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="6" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="7" Clicked="GetInfoFullBody4" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="7" VerticalOptions="Start" Clicked="AddFullBody4" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForFullBody5" Text="Strength workout" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="8" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="9" Clicked="GetInfoFullBody5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="9" VerticalOptions="Start" Clicked="AddFullBody5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+
+                <Label x:Name="ForFullBody6" Text="No-equipment workout" FontSize="16" TextColor="DarkMagenta" />
+                <Frame x:Name="FullBody6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="10" Grid.RowSpan="2" />
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="11" Clicked="GetInfoFullBody6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="11" VerticalOptions="Start" Clicked="AddFullBody6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
+                <!-- End of Full Body workout -->
                 
                 
+
                 <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="23" HeightRequest="90" WidthRequest="60" Scale="0.6" />
             
             
