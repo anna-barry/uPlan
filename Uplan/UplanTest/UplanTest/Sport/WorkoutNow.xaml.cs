@@ -13,6 +13,7 @@ namespace UplanTest
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WorkoutNow : ContentPage
     {
+        List<string> Contents = new List<string>();
         public WorkoutNow()
         {
             InitializeComponent();
@@ -48,9 +49,10 @@ namespace UplanTest
             FullBody5.Content = ForFullBody5;
             FullBody6.Content = ForFullBody6;
             //___________________________________________________________
-
+            ListVieww.ItemsSource = Contents;
 
         }
+
 
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
@@ -69,9 +71,9 @@ namespace UplanTest
 
         private async void AddAbs1(object sender, EventArgs args)
         {
-
+            
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs1");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, DateTime.Now, "Strength");
 
 
         }
@@ -86,7 +88,7 @@ namespace UplanTest
         {
 
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs2");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "IronClad"));
 
 
         }
@@ -100,7 +102,7 @@ namespace UplanTest
         {
 
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs3");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Obliques"));
 
         }
 
@@ -113,7 +115,7 @@ namespace UplanTest
         {
 
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs4");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "WOCrunches"));
 
 
         }
@@ -128,7 +130,7 @@ namespace UplanTest
         {
 
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs5");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "SumAb1"));
 
         }
 
@@ -142,7 +144,7 @@ namespace UplanTest
         {
 
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Abs6");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "SumAb2"));
         }
 
 
@@ -156,7 +158,7 @@ namespace UplanTest
         private async void AddArms1(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms1");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Beginner Arm Workout"));
 
         }
 
@@ -169,7 +171,7 @@ namespace UplanTest
         private async void AddArms2(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms2");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Arm Workout challenge "));
 
 
         }
@@ -183,7 +185,7 @@ namespace UplanTest
         private async void AddArms3(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms3");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Burn Arm Fat Workout"));
 
         }
 
@@ -196,7 +198,7 @@ namespace UplanTest
         private async void AddArms4(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms4");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Toned Arms Workout"));
 
 
         }
@@ -210,7 +212,7 @@ namespace UplanTest
         private async void AddArms5(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms5");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Big Arms Workout"));
 
 
         }
@@ -224,7 +226,7 @@ namespace UplanTest
         private async void AddArms6(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Arms6");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Triceps Workout"));
 
 
         }
@@ -239,7 +241,7 @@ namespace UplanTest
         private async void AddLeg1(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs1");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Core strengthening Workout"));
 
 
         }
@@ -253,7 +255,7 @@ namespace UplanTest
         private async void AddLeg2(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs2");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Thigh workout "));
 
 
         }
@@ -267,7 +269,7 @@ namespace UplanTest
         private async void AddLeg3(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs3");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Toned Legs"));
 
 
         }
@@ -281,7 +283,7 @@ namespace UplanTest
         private async void AddLeg4(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs4");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Burn Leg Fat"));
 
         }
 
@@ -294,7 +296,7 @@ namespace UplanTest
         private async void AddLeg5(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs5");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Dumbbell workout"));
 
 
         }
@@ -308,7 +310,7 @@ namespace UplanTest
         private async void AddLeg6(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Legs6");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Resistant band workout"));
 
 
 
@@ -323,7 +325,7 @@ namespace UplanTest
         private async void AddGlutes1(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty1");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Bubble But Workout"));
 
         }
 
@@ -336,7 +338,7 @@ namespace UplanTest
         private async void AddGlutes2(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty2");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Tighten up workout "));
 
         }
 
@@ -349,7 +351,7 @@ namespace UplanTest
         private async void AddGlutes3(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty3");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Bodyweight Workout"));
 
 
         }
@@ -363,7 +365,7 @@ namespace UplanTest
         private async void AddGlutes4(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty4");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Targeted Glutes Workout"));
 
 
         }
@@ -377,7 +379,7 @@ namespace UplanTest
         private async void AddGlutes5(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty5");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Butt Lift Workout"));
 
 
         }
@@ -391,7 +393,7 @@ namespace UplanTest
         private async void AddGlutes6(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Booty6");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Toned Glutes Workout"));
 
 
 
@@ -406,7 +408,7 @@ namespace UplanTest
         private async void AddFullBody1(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body1");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Full Body Blast"));
 
 
         }
@@ -420,7 +422,7 @@ namespace UplanTest
         private async void AddFullBody2(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body2");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "High intensity"));
 
         }
 
@@ -432,7 +434,7 @@ namespace UplanTest
         private async void AddFullBody3(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body3");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Full Body Circuit"));
 
 
         }
@@ -445,7 +447,7 @@ namespace UplanTest
         private async void AddFullBody4(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body4");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Beginner HIIT"));
 
         }
 
@@ -457,7 +459,7 @@ namespace UplanTest
         private async void AddFullBody5(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body5");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "Strength workout"));
 
 
 
@@ -471,7 +473,7 @@ namespace UplanTest
         private async void AddFullBody6(object sender, EventArgs args)
         {
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll("Body6");
-            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10));
+            await Navigation.PushAsync(new SaveWorkoutLater(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, "No-equipment workout"));
 
         }
 
@@ -490,6 +492,8 @@ namespace UplanTest
 
             DisplayAlert("Workout description", show, "ok wow");
         }
+
+       
 
 
         public (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) GetAll(string type)
