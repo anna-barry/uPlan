@@ -15,21 +15,34 @@ namespace UplanTest
         public bool repeatonce = false;
         public bool repeatwice = false;
         public bool repeathrice = false;
-        ListEntry ex1;
-        ListEntry ex2;
-        ListEntry ex3;
-        ListEntry ex4;
-        ListEntry ex5;
-        ListEntry ex6;
-        ListEntry ex7;
-        ListEntry ex8;
-        ListEntry ex9;
-        ListEntry ex10;
+        ListEntry exo1;
+        ListEntry exo2;
+        ListEntry exo3;
+        ListEntry exo4;
+        ListEntry exo5;
+        ListEntry exo6;
+        ListEntry exo7;
+        ListEntry exo8;
+        ListEntry exo9;
+        ListEntry exo10;
+        String Type;
 
 
-        public SaveWorkoutLater(ListEntry ex1,ListEntry ex2,ListEntry ex3,ListEntry ex4, ListEntry ex5,ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9,ListEntry ex10)
+        public SaveWorkoutLater(ListEntry ex1,ListEntry ex2,ListEntry ex3,ListEntry ex4, ListEntry ex5,ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9,ListEntry ex10, string type)
         {
             InitializeComponent();
+            exo1 = ex1;
+            exo2 = ex2;
+            exo3 = ex3;
+            exo4 = ex4;
+            exo5 = ex5;
+            exo6 = ex6;
+            exo7 = ex7;
+            exo8 = ex8;
+            exo9 = ex9;
+            exo10 = ex10;
+            Type = type;
+
         }
 
         private async void OnCloseClicked2(object sender, EventArgs args)
@@ -47,24 +60,24 @@ namespace UplanTest
             if (selectedDate1.HasValue)
 
             {ForInsert = (DateTime)selectedDate1;}
-            Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert);
+            Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert,Type);
             if(repeatonce)
             {
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(7));
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(7),Type);
             }
 
 
             if (repeatwice)
             {
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(7));
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(14));
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(7),Type);
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(14),Type);
             }
 
             if (repeathrice)
             {
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(7));
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(14));
-                Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ForInsert.AddDays(21));
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(7),Type);
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(14),Type);
+                Workout.InsertWorkout(exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, ForInsert.AddDays(21),Type);
             }
             await Navigation.PopAsync();
 

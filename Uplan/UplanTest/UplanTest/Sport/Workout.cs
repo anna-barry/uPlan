@@ -12,6 +12,7 @@ namespace UplanTest
 
         public int Id { get; set; }
 
+        public string Type { get; set; }
         public ListEntry Exercice1 { get; set; }
         public ListEntry Exercice2 { get; set; }
         public ListEntry Exercice3 { get; set; }
@@ -45,27 +46,29 @@ namespace UplanTest
             col.EnsureIndex(x => x.Exercice9);
             col.EnsureIndex(x => x.Exercice10);
             col.EnsureIndex(x => x.DueDate);
-            
-            
+            col.EnsureIndex(x => x.Type);
+
+
             col.Insert(
                 new Workout
                 {
-                   
-                    Exercice1=ListEntry.getEntryfromTypeAndCode("Abs1", "JumpSquat"),
-                    Exercice2= ListEntry.getEntryfromTypeAndCode("Abs1", "PushUps"),
-                    Exercice3= ListEntry.getEntryfromTypeAndCode("Abs1", "JumpingLunges"),
-                    Exercice4= ListEntry.getEntryfromTypeAndCode("Abs1", "Punches"),
-                    Exercice5= ListEntry.getEntryfromTypeAndCode("Abs1", "Plank"),
-                    Exercice6= ListEntry.getEntryfromTypeAndCode("Abs1", "Lunge"),
-                    Exercice7= ListEntry.getEntryfromTypeAndCode("Abs1", "SideLunge"),
-                    Exercice8= ListEntry.getEntryfromTypeAndCode("Abs1", "Squat"),
-                    Exercice9= ListEntry.getEntryfromTypeAndCode("Abs1", "JumpSquat"),
-                    Exercice10= ListEntry.getEntryfromTypeAndCode("Abs1", "PushUps"),
+
+                    Exercice1 = ListEntry.getEntryfromTypeAndCode("Abs1", "JumpSquat"),
+                    Exercice2 = ListEntry.getEntryfromTypeAndCode("Abs1", "PushUps"),
+                    Exercice3 = ListEntry.getEntryfromTypeAndCode("Abs1", "JumpingLunges"),
+                    Exercice4 = ListEntry.getEntryfromTypeAndCode("Abs1", "Punches"),
+                    Exercice5 = ListEntry.getEntryfromTypeAndCode("Abs1", "Plank"),
+                    Exercice6 = ListEntry.getEntryfromTypeAndCode("Abs1", "Lunge"),
+                    Exercice7 = ListEntry.getEntryfromTypeAndCode("Abs1", "SideLunge"),
+                    Exercice8 = ListEntry.getEntryfromTypeAndCode("Abs1", "Squat"),
+                    Exercice9 = ListEntry.getEntryfromTypeAndCode("Abs1", "JumpSquat"),
+                    Exercice10 = ListEntry.getEntryfromTypeAndCode("Abs1", "PushUps"),
+                    Type = "Workout 1",
                     DueDate = DateTime.Now.AddDays(-1),
-                    
+
 
                 }
-             );
+             ); 
         }
 
 
@@ -89,7 +92,8 @@ namespace UplanTest
                     ListEntry ex8,
                     ListEntry ex9,
                     ListEntry ex10,
-                    DateTime DueDate)
+                    DateTime DueDate,
+                    String Type)
         {
             // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<Workout>("AllWorkouts");
@@ -106,6 +110,7 @@ namespace UplanTest
             col.EnsureIndex(x => x.Exercice9);
             col.EnsureIndex(x => x.Exercice10);
             col.EnsureIndex(x => x.DueDate);
+            col.EnsureIndex(x => x.Type);
 
             // Create initial data
             col.Insert(
@@ -121,7 +126,8 @@ namespace UplanTest
                      Exercice8=ex8,
                      Exercice9=ex9,
                      Exercice10=ex10,
-                     DueDate = DueDate
+                     DueDate = DueDate,
+                     Type=Type
                  }
                  );
 
