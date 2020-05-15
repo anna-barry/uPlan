@@ -196,7 +196,7 @@ namespace UplanTest
             var list = c.Find(Query.EQ("DueDate", date.Date));
             foreach(var workout in list)
             {
-                //toadd.Add(workout.Type);
+                toadd.Add(workout.Type);
             }
 
             return toadd;

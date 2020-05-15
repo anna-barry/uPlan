@@ -9,9 +9,9 @@
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
             <Grid.ColumnDefinitions>
                 
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="25"/>
                 
@@ -32,7 +32,7 @@
             <ImageButton x:Name="Oncee" Source="Assets/repeat once.png" WidthRequest="50" HeightRequest="50" Grid.Row="3" Grid.Column="0" Clicked="Once" />
             <ImageButton x:Name="Twicee" Source="Assets/noun_Repeat2.png" WidthRequest="80" HeightRequest="80" Grid.Row="3" Grid.Column="1" Clicked="Twice" />
             <ImageButton x:Name="Thricee" Source="Assets/noun_Repeat3.png" WidthRequest="100" HeightRequest="100" Grid.Row="3" Grid.Column="2" Clicked="Thrice" />
-
+            
             <ImageButton Source="Assets/save).png" Clicked="Save" Grid.Row="4" Grid.Column="4"  HeightRequest="20" WidthRequest="20" />
 
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" Scale="0.6" />
