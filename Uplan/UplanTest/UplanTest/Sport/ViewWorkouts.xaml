@@ -12,11 +12,35 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="8" HeightRequest="90" WidthRequest="60" />
+
+            <!--title-->
+            <Label Text="Workout plan for the week" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="7" Grid.RowSpan="2"/>
+
+            <!--DAYS-->
+            <Label Text="Monday" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Tuesday" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Wednesday" Grid.Row="2" Grid.Column="3" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Thursday" Grid.Row="2" Grid.Column="4" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Friday" Grid.Row="2" Grid.Column="5" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Saturday" Grid.Row="2" Grid.Column="6" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Sunday" Grid.Row="2" Grid.Column="7" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+
+            <ListView x:Name="monday" Grid.Row="3" Grid.Column="1" />
+            <ListView x:Name="tuesday" Grid.Row="3" Grid.Column="2"/>
+            <ListView x:Name="wednesday" Grid.Row="3" Grid.Column="3"/>
+            <ListView x:Name="thursday" Grid.Row="3" Grid.Column="4"/>
+            <ListView x:Name="friday" Grid.Row="3" Grid.Column="5"/>
+            <ListView x:Name="saturday" Grid.Row="3" Grid.Column="6"/>
+            <ListView x:Name="sunday" Grid.Row="3" Grid.Column="7"/>
+
+            <Button Text="Play Today's workout" Grid.Row="1" Grid.Column="7" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="playworkout"/>
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

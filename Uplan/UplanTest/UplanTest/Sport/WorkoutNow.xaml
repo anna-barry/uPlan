@@ -6,17 +6,19 @@
              mc:Ignorable="d"
              x:Class="UplanTest.WorkoutNow">
     <ContentPage.Content>
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
-        </Grid>
+        <ScrollView  Orientation="Both" >
+            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

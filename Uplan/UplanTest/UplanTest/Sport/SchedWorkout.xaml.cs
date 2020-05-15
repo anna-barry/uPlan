@@ -138,26 +138,20 @@ namespace UplanTest
         private async void GetInfoAbs5(object sender, EventArgs args)
         {
             ShowDescI("Abs5");
-
         }
 
         private async void AddAbs5(object sender, EventArgs args)
         {
-
             await Navigation.PushAsync(new SaveWorkoutLater());
-
         }
 
         private async void GetInfoAbs6(object sender, EventArgs args)
         {
-
             ShowDescI("Abs6");
         }
 
         private async void AddAbs6(object sender, EventArgs args)
         {
-
-
             await Navigation.PushAsync(new SaveWorkoutLater());
         }
 
@@ -486,6 +480,16 @@ namespace UplanTest
             }
 
             DisplayAlert("Workout description",show, "ok wow");
+        }
+
+        public void SaveExercice(string type)
+        {
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");
+            var exercices = col.Find(Query.EQ("Type", type));
+            foreach (var exe in exercices)
+            {
+                //Exercie= exe.Description;
+            }
         }
 
     }

@@ -46,22 +46,12 @@ namespace UplanTest
         IEnumerable<SchoolTask> tasksonSat = null;
         IEnumerable<SchoolTask> tasksonSun = null;
 
-
-        //Button mon1;
-
         public Calendar()
 
 
 
         {
 
-
-
-            //InitializeComponent();
-
-            //____________________________CREATION DU GRID_____________________________________
-
-            //InitializeComponent();
 
 
 
@@ -140,9 +130,6 @@ namespace UplanTest
             if (dayofweektoday == DayOfWeek.Monday)
 
             {
-
-               // Monday = localTime.Day;
-
                 Tuesday = localTime.AddDays(1);
 
                 Wednesday = localTime.AddDays(2);
@@ -160,9 +147,6 @@ namespace UplanTest
             if (dayofweektoday == DayOfWeek.Tuesday)
 
             {
-
-                //Tuesday = localTime.Day;
-
                 Monday = localTime.AddDays(-1);
 
                 Wednesday = localTime.AddDays(1);
@@ -180,9 +164,6 @@ namespace UplanTest
             if (dayofweektoday == DayOfWeek.Wednesday)
 
             {
-
-               // Wednesday = localTime;
-
                 Monday = localTime.AddDays(-2);
 
                 Tuesday = localTime.AddDays(-1);
@@ -200,9 +181,6 @@ namespace UplanTest
             if (dayofweektoday == DayOfWeek.Thursday)
 
             {
-
-               // Thursday = localTime;
-
                 Monday = localTime.AddDays(-3);
 
                 Tuesday = localTime.AddDays(-2);
@@ -220,9 +198,6 @@ namespace UplanTest
             if (dayofweektoday == DayOfWeek.Friday)
 
             {
-
-                //Friday = localTime.Day;
-
                 Monday = localTime.AddDays(-4);
 
                 Tuesday = localTime.AddDays(-2);
@@ -253,8 +228,6 @@ namespace UplanTest
 
                 Saturday = localTime.AddDays(-1);
 
-                //Sunday = localTime.Day;
-
             }
 
 
@@ -284,38 +257,17 @@ namespace UplanTest
             //RECUPERER PAR JOURS LES INFORMATIONS
 
             //enlever après
-
-            //Database.Initiate();
-
             var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
-
-            //Database.Initiate();
 
         
 
-              tasksonMon = col.Find(Query.EQ("DueDate", Monday.Date));
-            //var tasksonMon = col.Find(x => x.DueDate == Monday);
-
-            //var tasksonMon = col.FindAll().Where(x => x.DueDate==Monday);
+             tasksonMon = col.Find(Query.EQ("DueDate", Monday.Date));
              tasksonTue = col.Find(Query.EQ("DueDate", Tuesday.Date));
-            //var tasksonTue = col.Find(x => x.DueDate == Tuesday);
-
-            tasksonWed = col.Find(Query.EQ("DueDate", Wednesday.Date));
-           // var tasksonWed = col.Find(x => x.DueDate == Wednesday);
-
+             tasksonWed = col.Find(Query.EQ("DueDate", Wednesday.Date));
              tasksonThu = col.Find(Query.EQ("DueDate", Thursday.Date));
-           // var tasksonThu = col.Find(x => x.DueDate == Thursday);
-
              tasksonFri = col.Find(Query.EQ("DueDate", Friday.Date));
-            //var tasksonFri = col.FindAll().Where(x => x.DueDate == Friday);
-          //  var tasksonFri = col.Find(x => x.DueDate == Friday);
-
              tasksonSat = col.Find(Query.EQ("DueDate", Saturday.Date));
-           // var tasksonSat = col.Find(x => x.DueDate == Saturday);
-
              tasksonSun = col.Find(Query.EQ("DueDate", Sunday.Date));
-            // var tasksonSun = col.Find(x => x.DueDate == Monday);
-
 
 
             //TRIER LES INFORMATIONS
@@ -338,7 +290,6 @@ namespace UplanTest
                 OnColor = Color.BlueViolet
 
             };
-            //swiSchool.IsEnabled = true;
             swiSchool.Toggled += Switch_OnToggled;
 
             grid.Children.Add(swiSchool, 4, 0);
@@ -1979,14 +1930,6 @@ Grid.SetRowSpan(NotificationCenter, 3);
 
 Content = grid;
 
-
-
-
-
-
-
-
-
 }
 
 
@@ -2346,7 +2289,6 @@ return thismessage;
                     break;
 
             }
-
 
             return res;
         }

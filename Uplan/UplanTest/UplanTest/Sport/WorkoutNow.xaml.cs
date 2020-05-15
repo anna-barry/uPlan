@@ -16,7 +16,7 @@ namespace UplanTest
         {
             InitializeComponent();
         }
-
+        
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
 
@@ -24,5 +24,7 @@ namespace UplanTest
             await Navigation.PopAsync();
 
         }
+
+
     }
 }
