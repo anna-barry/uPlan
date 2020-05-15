@@ -229,21 +229,8 @@
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="11" Clicked="GetInfoFullBody6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="11" VerticalOptions="Start" Clicked="AddFullBody6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
-                <!-- End of Full Body workout -->
-                <Label Text="My Workout" Grid.Row="0" Grid.Column="12" VerticalTextAlignment="Center" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="22"/>
-                <!--ListView x:Name="ListViewFor" IsPullToRefreshEnabled="true" RefreshControlColor="CadetBlue" Grid.Row="1" Grid.Column="13" /-->
-                <ListView x:Name="ListViewFor" SeparatorColor="MediumVioletRed" Grid.Row="1" Grid.Column="12" Grid.RowSpan="10" Grid.ColumnSpan="2" />
-
-                <!--
-                <Label Text="Schedule this workout" TextColor="MediumVioletRed" Grid.Row="1" Grid.Column="14" FontSize="18" />
-                <DatePicker x:Name="DatePick" BackgroundColor="LightSkyBlue" Grid.Row="2" Grid.Column="14"/>
-                <Label Text="Schedule this workout weekly?" TextColor="MediumVioletRed" Grid.Row="3" Grid.Column="14" FontSize="14" />
-                <ImageButton Source="Assets/repeat once.png" WidthRequest="10" HeightRequest="10" Grid.Row="4" Grid.Column="14"  /> -->
-
-                <ImageButton Source="Assets/save).png" Clicked="GoToSave" Grid.Row="10" Grid.Column="16"  HeightRequest="20" WidthRequest="20" />
-
-
-                <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="14" HeightRequest="20" WidthRequest="20" Scale="0.6" />
+               
+                <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20" Scale="0.6" />
                 
             
         </Grid>

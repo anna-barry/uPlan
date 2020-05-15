@@ -27,6 +27,9 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Abs1", Code = "Lunge", Description = "Lunge"});
                 col.Insert(new ListEntry { Type = "Abs1", Code = "SideLunge", Description = "Side lunge"});
                 col.Insert(new ListEntry { Type = "Abs1", Code = "Squat", Description = "Squat"});
+                col.Insert(new ListEntry { Type = "Abs1", Code = "JumpSquat", Description = "Jump squat" });
+                col.Insert(new ListEntry { Type = "Abs1", Code = "PushUps", Description = "Pushups" });
+
 
                 col.Insert(new ListEntry { Type = "Abs2", Code = "CountHold", Description = "Count hold" });
                 col.Insert(new ListEntry { Type = "Abs2", Code = "Scissors", Description = "Scissors" });
@@ -35,6 +38,9 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Abs2", Code = "RaisedCircle", Description = "Raised circle" });
                 col.Insert(new ListEntry { Type = "Abs2", Code = "JackKnives", Description = "Jack knives" });
                 col.Insert(new ListEntry { Type = "Abs2", Code = "RaisedSwing", Description = "Raised swing" });
+                col.Insert(new ListEntry { Type = "Abs2", Code = "CountHold", Description = "Count hold" });
+                col.Insert(new ListEntry { Type = "Abs2", Code = "Scissors", Description = "Scissors" });
+                col.Insert(new ListEntry { Type = "Abs2", Code = "CountHold", Description = "Count hold" });
 
                 col.Insert(new ListEntry { Type = "Abs3", Code = "CycleAbs", Description = "Cycle abs" });
                 col.Insert(new ListEntry { Type = "Abs3", Code = "ObliqueCrunch", Description = "Oblique crunch" });
@@ -56,6 +62,9 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Abs4", Code = "ToeTouch", Description = "Toe touch" });
                 col.Insert(new ListEntry { Type = "Abs4", Code = "SideJack", Description = "Side jack" });
                 col.Insert(new ListEntry { Type = "Abs4", Code = "RussianTwist", Description = "Russian twist" });
+                col.Insert(new ListEntry { Type = "Abs4", Code = "BreakDancerReach", Description = "Break dancer reach" });
+                col.Insert(new ListEntry { Type = "Abs4", Code = "ElbowPlank", Description = "Elbow plank" });
+
 
                 col.Insert(new ListEntry { Type = "Abs5", Code = "BicyleCrunch", Description = "Bycicle crunch" });
                 col.Insert(new ListEntry { Type = "Abs5", Code = "Crunch", Description = "Crunch" });
@@ -147,7 +156,6 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Arms6", Code = "ArmsCircles", Description = "Arms circle" });
                 col.Insert(new ListEntry { Type = "Arms6", Code = "ExtendedClench", Description = "Extended clench" });
                 col.Insert(new ListEntry { Type = "Arms6", Code = "SideExtendedClench", Description = "Side extended clench" });
-                col.Insert(new ListEntry { Type = "Arms6", Code = "OverHeadClench", Description = "Overhead clench" });
 
                 //LEGS__________________________________________________________________________________________________
 
@@ -217,7 +225,6 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Legs6", Code = "ScapularRetraction", Description = "Scapular retraction" });
                 col.Insert(new ListEntry { Type = "Legs6", Code = "LegRaise", Description = "Leg raise" });
                 col.Insert(new ListEntry { Type = "Legs6", Code = "BabyJumps", Description = "Baby jumps" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "OpenPulse", Description = "Open pulse" });
 
                 //BOOTY___________________________________________________________________________________________________
                 col.Insert(new ListEntry { Type = "Booty1", Code = "PlieSquat", Description = "Plie squat" });
