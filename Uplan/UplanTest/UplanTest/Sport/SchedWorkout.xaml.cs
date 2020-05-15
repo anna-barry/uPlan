@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LiteDB;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -85,8 +87,7 @@ namespace UplanTest
         //_________________ ABS
         private async void GetInfoAbs1(object sender, EventArgs args)
         {
-
-            
+            ShowDescI("Abs1");
         }
 
         private async void AddAbs1(object sender, EventArgs args)
@@ -99,7 +100,7 @@ namespace UplanTest
 
         private async void GetInfoAbs2(object sender, EventArgs args)
         {
-
+            ShowDescI("Abs2");
 
         }
 
@@ -112,8 +113,7 @@ namespace UplanTest
 
         private async void GetInfoAbs3(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Abs3");
         }
 
         private async void AddAbs3(object sender, EventArgs args)
@@ -125,8 +125,7 @@ namespace UplanTest
 
         private async void GetInfoAbs4(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Abs4");
         }
 
         private async void AddAbs4(object sender, EventArgs args)
@@ -138,7 +137,7 @@ namespace UplanTest
 
         private async void GetInfoAbs5(object sender, EventArgs args)
         {
-
+            ShowDescI("Abs5");
 
         }
 
@@ -152,7 +151,7 @@ namespace UplanTest
         private async void GetInfoAbs6(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Abs6");
         }
 
         private async void AddAbs6(object sender, EventArgs args)
@@ -166,7 +165,7 @@ namespace UplanTest
         //__________ Arms
         private async void GetInfoArms1(object sender, EventArgs args)
         {
-
+            ShowDescI("Arms1");
 
         }
 
@@ -179,7 +178,7 @@ namespace UplanTest
 
         private async void GetInfoArms2(object sender, EventArgs args)
         {
-
+            ShowDescI("Arms2");
 
         }
 
@@ -193,7 +192,7 @@ namespace UplanTest
         private async void GetInfoArms3(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Arms3");
         }
 
         private async void AddArms3(object sender, EventArgs args)
@@ -206,7 +205,7 @@ namespace UplanTest
         private async void GetInfoArms4(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Arms4");
         }
 
         private async void AddArms4(object sender, EventArgs args)
@@ -219,7 +218,7 @@ namespace UplanTest
         private async void GetInfoArms5(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Arms");
         }
 
         private async void AddArms5(object sender, EventArgs args)
@@ -232,7 +231,7 @@ namespace UplanTest
         private async void GetInfoArms6(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Arms");
         }
 
         private async void AddArms6(object sender, EventArgs args)
@@ -246,7 +245,7 @@ namespace UplanTest
         private async void GetInfoLeg1(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Leg1");
         }
 
         private async void AddLeg1(object sender, EventArgs args)
@@ -259,7 +258,7 @@ namespace UplanTest
         private async void GetInfoLeg2(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Leg2");
         }
 
         private async void AddLeg2(object sender, EventArgs args)
@@ -271,7 +270,7 @@ namespace UplanTest
 
         private async void GetInfoLeg3(object sender, EventArgs args)
         {
-
+            ShowDescI("Leg3");
 
         }
 
@@ -285,7 +284,7 @@ namespace UplanTest
         private async void GetInfoLeg4(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Leg4");
         }
 
         private async void AddLeg4(object sender, EventArgs args)
@@ -297,7 +296,7 @@ namespace UplanTest
 
         private async void GetInfoLeg5(object sender, EventArgs args)
         {
-
+            ShowDescI("Leg5");
 
         }
 
@@ -310,7 +309,7 @@ namespace UplanTest
 
         private async void GetInfoLeg6(object sender, EventArgs args)
         {
-
+            ShowDescI("Leg6");
 
         }
 
@@ -324,8 +323,7 @@ namespace UplanTest
         //__________________ Booty 
         private async void GetInfoGlutes1(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Booty1");
         }
 
         private async void AddGlutes1(object sender, EventArgs args)
@@ -337,7 +335,7 @@ namespace UplanTest
 
         private async void GetInfoGlutes2(object sender, EventArgs args)
         {
-
+            ShowDescI("Booty2");
 
         }
 
@@ -350,7 +348,7 @@ namespace UplanTest
 
         private async void GetInfoGlutes3(object sender, EventArgs args)
         {
-
+            ShowDescI("Booty3");
 
         }
 
@@ -363,7 +361,7 @@ namespace UplanTest
 
         private async void GetInfoGlutes4(object sender, EventArgs args)
         {
-
+            ShowDescI("Booty4");
 
         }
 
@@ -376,7 +374,7 @@ namespace UplanTest
 
         private async void GetInfoGlutes5(object sender, EventArgs args)
         {
-
+            ShowDescI("Booty5");
 
         }
 
@@ -390,7 +388,7 @@ namespace UplanTest
         private async void GetInfoGlutes6(object sender, EventArgs args)
         {
 
-
+            ShowDescI("Booty6");
         }
 
         private async void AddGlutes6(object sender, EventArgs args)
@@ -403,8 +401,7 @@ namespace UplanTest
         //__________ Full Body
         private async void GetInfoFullBody1(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Body1");
         }
 
         private async void AddFullBody1(object sender, EventArgs args)
@@ -416,7 +413,7 @@ namespace UplanTest
 
         private async void GetInfoFullBody2(object sender, EventArgs args)
         {
-
+            ShowDescI("Body2");
 
         }
 
@@ -429,8 +426,7 @@ namespace UplanTest
 
         private async void GetInfoFullBody3(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Body3");
         }
 
         private async void AddFullBody3(object sender, EventArgs args)
@@ -442,8 +438,7 @@ namespace UplanTest
 
         private async void GetInfoFullBody4(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Body4");
         }
 
         private async void AddFullBody4 (object sender, EventArgs args)
@@ -455,8 +450,7 @@ namespace UplanTest
 
         private async void GetInfoFullBody5(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Body5");
         }
 
         private async void AddFullBody5(object sender, EventArgs args)
@@ -468,8 +462,7 @@ namespace UplanTest
 
         private async void GetInfoFullBody6(object sender, EventArgs args)
         {
-
-
+            ShowDescI("Body6");
         }
 
         private async void AddFullBody6(object sender, EventArgs args)
@@ -479,7 +472,21 @@ namespace UplanTest
 
         }
 
+        public void ShowDescI(string type)
+        {
+            //recupérer la list des etry coresponndant au type
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");
+            var exercices = col.Find(Query.EQ("Type", type));
 
+            string show = "";
+
+        foreach (var exe in exercices)
+            {
+                show += exe.Description +"\n";
+            }
+
+            DisplayAlert("Workout description",show, "ok wow");
+        }
 
     }
 }

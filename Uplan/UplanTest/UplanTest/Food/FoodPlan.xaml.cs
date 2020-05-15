@@ -16,25 +16,11 @@ namespace UplanTest
         public FoodPlan()
         {
             InitializeComponent();
-            //à faire et dcp revoir avec la question user etc... ou de la date? 
-            //monlun
-            //var food= Food.GetAllFood();
-            //string Monlun = food[0].FoodCategoryDescProt1 + "/n" + food[0].FoodCategoryDescCarb2 + "/n" + food[0].FoodCategoryDescVeggies3;
-
-            //Cette partie est ok : raisonnement 
-            //mais le getallfood ne fonctionne pas... comme si c'etait pas intégré dans la database...
-
-
-            //var col = Database.db.GetCollection<Food>("EntriesforFood");
-            // Use FindOne and not Find as we should have only one
-            //var col = Database.db.GetCollection<Food>("EntriesforFood");
-            // Use FindOne and not Find as we should have only one
-            //var wfood = col.FindOne(Query.All());
             
             var wfood = MyFoodWeek.thisweek;
 
 
-            //chaque dejeuner est consituté d'une source de prot, d'une source de carb et d'une source de veggies
+            //chaque dejeuner  et diner est consituté d'une source de prot, d'une source de carb et d'une source de veggies
             //ici on assigne les source préalablement choisies par l'utilisateur, pour chacun des jours
             //ListEntry.getDescfromEntry
 

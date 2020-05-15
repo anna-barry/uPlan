@@ -23,6 +23,7 @@ namespace UplanTest
                 User.Initiate();
                 SchoolTask.Initiate();
                 ListEntryForFood.Initiate();
+                ListEntrySport.Initiate();
                 ListEntryYOGA.Initiate();
 
                 MyUser.isDefault = true;
