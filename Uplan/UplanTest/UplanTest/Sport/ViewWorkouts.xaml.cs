@@ -210,7 +210,7 @@ namespace UplanTest
 
         private async void playworkout(object sender, EventArgs args)
         {
-            //await Navigation.Push(RunTodaysWorkout(datetime.now));
+            await Navigation.PushAsync(new RunWorkout());
         }
     }
 }

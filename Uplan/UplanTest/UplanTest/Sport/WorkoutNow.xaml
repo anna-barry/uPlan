@@ -11,29 +11,40 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
 
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
                 </Grid.RowDefinitions>
-                <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
-            </Grid>
+                
+               
             
             
-            &z&z
             
 
             <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
@@ -215,12 +226,16 @@
             <Frame x:Name="FullBody5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="8" Grid.RowSpan="2" />
             <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="9" Clicked="GetInfoFullBody5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
             <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="9" VerticalOptions="Start" Clicked="AddFullBody5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+                <Label Text="Your Workout" Grid.Row="0" Grid.Column="12" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+
+                <Frame x:Name="Framing" BorderColor="DarkMagenta" Grid.Column="12" Grid.Row="1" Grid.RowSpan="10" Grid.ColumnSpan="2"/>
 
 
-            <Label x:Name="ForFullBody6" Text="No-equipment workout" FontSize="16" TextColor="DarkMagenta" />
+                <Label x:Name="ForFullBody6" Text="No-equipment workout" FontSize="16" TextColor="DarkMagenta" />
             <Frame x:Name="FullBody6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="10" Grid.RowSpan="2" />
             <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="11" Clicked="GetInfoFullBody6" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
             <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="11" VerticalOptions="Start" Clicked="AddFullBody6" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
+
 
 
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20" Scale="0.6" />
