@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.EntryPage">
+
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+
+
+            <Image Source="Assets/default.png" HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
+
+
+            <Button x:Name="accountb" Text="Start" TextColor="White" Grid.Row="3" Grid.Column="2"  Clicked="StartCliked" BackgroundColor="BlueViolet" CornerRadius="4" ></Button>
+            <Button Text="New?" TextColor="White" Grid.Row="4" Grid.Column="2" Clicked="NewCliked" BackgroundColor="BlueViolet"  CornerRadius="4" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

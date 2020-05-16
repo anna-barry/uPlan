@@ -335,30 +335,30 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Body4", Code = "JumpingJacks", Description = "Jumping Jacks" });
                 col.Insert(new ListEntry { Type = "Body4", Code = "MountainClimbers", Description = "Mountain Climbers" });
                 col.Insert(new ListEntry { Type = "Body4", Code = "HighKnees", Description = "High knees" });
-                col.Insert(new ListEntry { Type = "Body4", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body4", Code = "", Description = "" });
+                col.Insert(new ListEntry { Type = "Body4", Code = "BicepExtensions", Description = "Bicep Extensions" });
+                col.Insert(new ListEntry { Type = "Body4", Code = "Squats", Description = "Squats" });
 
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body5", Code = "", Description = "" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "SingleLegSquatLeft", Description = "Single Leg Squat Left" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "SingleLegSquatRight", Description = "Single Leg Squat Right" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "CrossackSquatsRight", Description = "Crossack Squats Right" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "CrossackSquatsLeft", Description = "Crossack Squats Left" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "DeclinePushUps", Description = "Decline Push Ups" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "Punches", Description = "Punches" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "Up&DownPlanks", Description = "Up & down planks" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "ElbowPlank", Description = "Elbow plank side crunches" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "AbRows", Description = "Ab Rows" });
+                col.Insert(new ListEntry { Type = "Body5", Code = "SitUpsTwists", Description = "Sit Up Twists" });
 
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
-                col.Insert(new ListEntry { Type = "Body6", Code = "", Description = "" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "SingleLegSquatLeft", Description = "Single Leg Squat Left" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "SingleLegSquatRight", Description = "Single Leg Squat Right" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "HighKnees", Description = "High knees" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "MountainClimbers", Description = "Mountain Climbers" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "SitUpsTwists", Description = "Sit Up Twists" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "ElbowPlank", Description = "Elbow plank side crunches" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "Bicycles", Description = "Bicycles" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "In&Out", Description = "In&Outs" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "KneelingPushup", Description = "Kneeling Pushup" });
+                col.Insert(new ListEntry { Type = "Body6", Code = "BasicSquat", Description = "Basic Squat" });
             
         }
     }
