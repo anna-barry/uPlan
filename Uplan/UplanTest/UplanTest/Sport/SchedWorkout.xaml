@@ -111,7 +111,7 @@
 
                 <Label x:Name="ForArms5" Text="Big Arms Workout" FontSize="16" TextColor="DodgerBlue" />
                 <Frame x:Name="Arms5" BackgroundColor="LightBlue" Opacity="0.7" BorderColor="LightBlue" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="5" Grid.Column="8" Grid.RowSpan="2" />
-                <ImageButton Source="Assets/GetInfo.png" Grid.Row="4" Grid.Column="9" Clicked="GetInfoArms5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                <ImageButton Source="Assets/GetInfo.png" Grid.Row="6" Grid.Column="9" Clicked="GetInfoArms5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
                 <ImageButton Source="Assets/add_round.png" Grid.Row="5" Grid.Column="9" VerticalOptions="Start" Clicked="AddArms5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
 
 

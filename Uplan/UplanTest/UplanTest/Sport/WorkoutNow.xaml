@@ -41,8 +41,13 @@
                     <RowDefinition Height="35"/>
                     <RowDefinition Height="35"/>
                 </Grid.RowDefinitions>
+                
+               
+            
+            
+            
 
-                <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
 
             <!-- ABS -->
             <Label Text="Abs Workouts" TextColor="DarkMagenta" Grid.Row="1" Grid.Column="0" FontSize="20" Margin="10" />

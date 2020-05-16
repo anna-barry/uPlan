@@ -236,7 +236,7 @@ namespace UplanTest
         private async void GetInfoLeg1(object sender, EventArgs args)
         {
 
-            ShowDescI("Leg1");
+            ShowDescI("Legs1");
         }
 
         private async void AddLeg1(object sender, EventArgs args)
@@ -250,7 +250,7 @@ namespace UplanTest
         private async void GetInfoLeg2(object sender, EventArgs args)
         {
 
-            ShowDescI("Leg2");
+            ShowDescI("Legs2");
         }
 
         private async void AddLeg2(object sender, EventArgs args)
@@ -263,7 +263,7 @@ namespace UplanTest
 
         private async void GetInfoLeg3(object sender, EventArgs args)
         {
-            ShowDescI("Leg3");
+            ShowDescI("Legs3");
 
         }
 
@@ -278,7 +278,7 @@ namespace UplanTest
         private async void GetInfoLeg4(object sender, EventArgs args)
         {
 
-            ShowDescI("Leg4");
+            ShowDescI("Legs4");
         }
 
         private async void AddLeg4(object sender, EventArgs args)
@@ -290,7 +290,7 @@ namespace UplanTest
 
         private async void GetInfoLeg5(object sender, EventArgs args)
         {
-            ShowDescI("Leg5");
+            ShowDescI("Legs5");
 
         }
 
@@ -304,7 +304,7 @@ namespace UplanTest
 
         private async void GetInfoLeg6(object sender, EventArgs args)
         {
-            ShowDescI("Leg6");
+            ShowDescI("Legs6");
 
         }
 
