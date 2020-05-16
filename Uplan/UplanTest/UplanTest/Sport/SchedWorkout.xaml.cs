@@ -1,9 +1,6 @@
 ﻿using LiteDB;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -497,6 +494,7 @@ namespace UplanTest
             DisplayAlert("Workout description",show, "ok wow");
         }
 
+        
         
         public (ListEntry ex1,ListEntry ex2,ListEntry ex3,ListEntry ex4,ListEntry ex5,ListEntry ex6,ListEntry ex7, ListEntry ex8,ListEntry ex9,ListEntry ex10) GetAll(string type)
         {

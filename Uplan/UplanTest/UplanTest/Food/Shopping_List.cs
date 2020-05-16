@@ -317,14 +317,6 @@ namespace UplanTest
         {
             var col = Database.db.GetCollection<FoodItem>("FoodForShoppingList");
             col.DeleteAll();
-           /* grid.Children.Remove(gridforSL);
-            grid.Children.Remove(frame);
-            frame.BorderColor = Color.DarkSlateBlue;
-            frame.CornerRadius = 10;
-            frame.Content = null;
-            grid.Children.Add(frame, 1, 1);
-            Grid.SetColumnSpan(frame, 3);
-            Grid.SetRowSpan(frame, 15);*/
             RefreshView();
         }
 
@@ -384,6 +376,8 @@ namespace UplanTest
 
                         {
                             col.Delete(lilres.Id);
+                            checkBox.IsVisible = false;
+                            forCheck.IsVisible = false;
                         }
                     };
 

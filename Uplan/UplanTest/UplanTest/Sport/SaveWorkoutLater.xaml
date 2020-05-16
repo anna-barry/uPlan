@@ -13,25 +13,26 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25"/>
                 
 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Schedule this workout" TextColor="MediumVioletRed" Grid.Row="0" Grid.Column="0" FontSize="22" Grid.ColumnSpan="4"/>
+            <Label Text="Schedule this workout" TextColor="MediumVioletRed" Grid.Row="0" Grid.Column="0" FontSize="30" Grid.ColumnSpan="4"/>
             <DatePicker x:Name="DatePick" BackgroundColor="LightSkyBlue" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
             <Label Text="Schedule this workout weekly?" TextColor="MediumVioletRed" Grid.Row="2" Grid.Column="0" FontSize="20" Grid.ColumnSpan="4"/>
             <ImageButton x:Name="Oncee" Source="Assets/repeat once.png" WidthRequest="50" HeightRequest="50" Grid.Row="3" Grid.Column="0" Clicked="Once" />
-            <ImageButton x:Name="Twicee" Source="Assets/noun_Repeat2.png" WidthRequest="180" HeightRequest="180" Grid.Row="3" Grid.Column="1" Clicked="Twice" />
-            <ImageButton x:Name="Thricee" Source="Assets/noun_Repeat_219102 (1).png" WidthRequest="300" HeightRequest="300" Grid.Row="3" Grid.Column="2" Clicked="Thrice" />
-
+            <ImageButton x:Name="Twicee" Source="Assets/noun_Repeat2.png" WidthRequest="80" HeightRequest="80" Grid.Row="3" Grid.Column="1" Clicked="Twice" />
+            <ImageButton x:Name="Thricee" Source="Assets/noun_Repeat3.png" WidthRequest="100" HeightRequest="100" Grid.Row="3" Grid.Column="2" Clicked="Thrice" />
+            
             <ImageButton Source="Assets/save).png" Clicked="Save" Grid.Row="4" Grid.Column="4"  HeightRequest="20" WidthRequest="20" />
 
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" Scale="0.6" />

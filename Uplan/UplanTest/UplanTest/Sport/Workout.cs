@@ -63,8 +63,8 @@ namespace UplanTest
                     Exercice8 = ListEntry.getEntryfromTypeAndCode("Abs1", "Squat"),
                     Exercice9 = ListEntry.getEntryfromTypeAndCode("Abs1", "JumpSquat"),
                     Exercice10 = ListEntry.getEntryfromTypeAndCode("Abs1", "PushUps"),
-                    Type = "Workout 1",
                     DueDate = DateTime.Now.AddDays(-1),
+                    Type = "Workout 1",
 
 
                 }
