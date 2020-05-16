@@ -417,11 +417,14 @@ namespace UplanTest
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll(tocall);
             Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, DateTime.Today, type);
             Contents.Add(type + ": " + "\n" + ex1.Description+ "\n"+ ex2.Description + "\n" + ex3.Description + "\n" + ex4.Description + "\n" + ex5.Description + "\n" +
-                ex7.Description + "\n" + ex8.Description + "\n" + ex9.Description + "\n" + ex10.Description);
+                ex7.Description + "\n" + ex8.Description + "\n" + ex9.Description + "\n" + ex10.Description + "\n" + "\n");
+
             ListVieww2.ItemsSource = Contents;
+            
             ListVieww2.SelectedItem = SelectionMode.None;
             ListVieww2.SeparatorColor = Color.Lavender;
             ListVieww2.RefreshControlColor = Color.LightPink;
+            
             Framing.Content = ListVieww2;
 
         }

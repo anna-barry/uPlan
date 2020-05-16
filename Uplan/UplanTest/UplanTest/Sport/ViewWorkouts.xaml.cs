@@ -193,7 +193,7 @@ namespace UplanTest
         {
             
             var c = Database.db.GetCollection<Workout>("AllWorkouts");
-            int all = c.Count();
+            
             var list = c.Find(Query.EQ("DueDate", date.Date));
             foreach(var workout in list)
             {
@@ -211,7 +211,7 @@ namespace UplanTest
 
         private async void playworkout(object sender, EventArgs args)
         {
-            //await Navigation.Push(RunTodaysWorkout(datetime.now));
+            await Navigation.PushAsync( new StartWorkout(DateTime.Now));
         }
     }
 }

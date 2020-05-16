@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.StartWorkout"
+             >
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+
+            
+            <Label Text="Your Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label x:Name="Type"  Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="18" />
+            <Label x:Name="Exerice"  Grid.Row="2" Grid.Column="1" FontSize="20" />
+            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" CornerRadius="160"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
