@@ -10,8 +10,7 @@
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+
                 
 
             </Grid.ColumnDefinitions>
@@ -24,10 +23,11 @@
             </Grid.RowDefinitions>
 
             
-            <Label Text="Your Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
-            <Label x:Name="Type"  Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="18" />
-            <Label x:Name="Exerice"  Grid.Row="2" Grid.Column="1" FontSize="20" />
-            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" CornerRadius="160"/>
+            <Label Text="Your Workout" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label x:Name="Type"  Grid.Row="2" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" />
+            <Label x:Name="Exerice"  Grid.Row="3"  HorizontalTextAlignment="Center" FontSize="20" />
+            <Image x:Name="Picture"  HorizontalOptions="Center" Grid.Row="5"/>
+            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen"  HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" CornerRadius="360"/>
 
 
         </Grid>

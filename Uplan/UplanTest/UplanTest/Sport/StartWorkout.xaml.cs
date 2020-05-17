@@ -1,26 +1,26 @@
 ﻿using LiteDB;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml;
+//using Windows.UI.Xaml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Windows;
+using System.Timers;
 namespace UplanTest
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartWorkout : ContentPage
     {
+        private Label LilTime = new Label();
+        private Timer _timer;
+        private int _countSeconds;
         public StartWorkout(DateTime day)
         {
             InitializeComponent();
 
+            LilTime.FontSize = 23;
             var c = Database.db.GetCollection<Workout>("AllWorkouts");
             var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
-            //DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            //dispatcherTimer.Tick += dispatcherTimer_Tick;
 
             for (int i = 0; i < listOfWorkouts.Count(); i++)
             {
@@ -64,42 +64,51 @@ namespace UplanTest
                                 break;
                         }
 
-                        int seconds = 0;
+                        /*_timer = new Timer();
+                        //Trigger event every second
+                        _timer.Interval = 1000;
+                        /*_timer.Elapsed += OnTimedEvent;
+                        //count down 5 seconds
+                        _countSeconds = 30;
+                        _timer.Enabled = true;*/
 
-                        //Device.StartTimer(new TimeSpan(0, 0, 30), () =>
-                        Device.StartTimer(TimeSpan.FromSeconds(30), () =>
+                        
+                        int seconds = 0;
+                        Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
-                            // do something every 30 seconds
+                                                    // do something every 30 seconds
                             Device.BeginInvokeOnMainThread(() =>
                             {
-                                Label LilTime = new Label();
-                                LilTime.FontSize = 23;
-                                LilTime.Text = "                             "+(30 - seconds).ToString();
+                                                      
+                             LilTime.Text = "                             "+(30 - seconds).ToString();
 
-                                //____ Test -> ne rentre pas dedans _______ //
-                                //Type.Text= (30 - seconds).ToString();
-                                //_______________________________________ //
+                             //____ Test -> ne rentre pas dedans _______ //
+                             //Type.Text= (30 - seconds).ToString();
+                             //_______________________________________ //
 
-                                seconds += 1;
-                                InTheFrame.Content = LilTime;
-                                if (seconds >= 25)
-                                {
-                                    InTheFrame.BackgroundColor = Color.IndianRed;
-                                }
-                                else
-                                {
-                                    InTheFrame.BackgroundColor = Color.LightGreen;
-                                }
+                            seconds += 1;
+                            InTheFrame.Content = LilTime;
+                            if (seconds == 25)
+                            {
+                                InTheFrame.BackgroundColor = Color.IndianRed;
+                            }
+                            if (seconds==0)
+                            {
+                               InTheFrame.BackgroundColor = Color.LightGreen;
+                            }
 
                             });
-                            return false; // runs again, or false to stop
-                        });
+                            if (seconds==30)
+                            { 
+                                return false; 
+                            }
+                             return true; // runs again, or false to stop
+                            });
                     }
-
-
                 }
+
                 int seconds2 = 0;
-                Device.StartTimer(new TimeSpan(0, 0, 30), () =>
+                Device.StartTimer(new TimeSpan(0, 0, 5), () =>
                 {
                     // do something every 30 seconds
                     Device.BeginInvokeOnMainThread(() =>
@@ -114,10 +123,11 @@ namespace UplanTest
                         
 
                     });
-                    return false; // runs again, or false to stop
+                    if (seconds2 == 30)
+                    { 
+                        return false; }
+                    return true; // runs again, or false to stop
                 });
-
-
             }
 
             
@@ -128,6 +138,33 @@ namespace UplanTest
             timerr.Start();*/
 
         }
+
+
+        /*private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
+        {
+
+            _countSeconds--;
+            Label LilTime = new Label();
+            LilTime.FontSize = 23;
+            LilTime.HorizontalOptions = LayoutOptions.Center;
+            LilTime.Text = "                             " + (_countSeconds.ToString());
+            //Update visual representation here
+            //Remember to do it on UI thread
+            if (_countSeconds ==30)
+            {
+                InTheFrame.BackgroundColor = Color.LightGreen;
+            }
+
+            if (_countSeconds==5)
+            {
+                InTheFrame.BackgroundColor = Color.IndianRed;
+            }
+
+            if (_countSeconds == 0)
+            {
+                _timer.Stop();
+            }
+        }*/
 
         /*void timer_Tick(object sender, EventArgs e)
         {
