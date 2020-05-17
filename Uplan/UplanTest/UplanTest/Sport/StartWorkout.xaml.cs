@@ -18,157 +18,112 @@ namespace UplanTest
         {
             InitializeComponent();
 
-            LilTime.FontSize = 23;
-            var c = Database.db.GetCollection<Workout>("AllWorkouts");
-            var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
+                        LilTime.FontSize = 23;
+                        var c = Database.db.GetCollection<Workout>("AllWorkouts");
+                        var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
 
-            for (int i = 0; i < listOfWorkouts.Count(); i++)
-            {
-                Type.Text = listOfWorkouts.ElementAt(i).Type;
-                for (int k = 0; k < 2; k++)
-                {
-
-                    for (int j = 0; j < 10; j++)
-                    {
-                        switch (j)
-                        {
-                            case 0:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice1.Description;
-                                break;
-                            case 1:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice2.Description;
-                                break;
-                            case 2:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice3.Description;
-                                break;
-                            case 3:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice4.Description;
-                                break;
-                            case 4:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice5.Description;
-                                break;
-                            case 5:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice6.Description;
-                                break;
-                            case 6:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice7.Description;
-                                break;
-                            case 7:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice8.Description;
-                                break;
-                            case 8:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice9.Description;
-                                break;
-                            case 9:
-                                Exerice.Text = listOfWorkouts.ElementAt(i).Exercice10.Description;
-                                break;
-                        }
-
-                        /*_timer = new Timer();
-                        //Trigger event every second
-                        _timer.Interval = 1000;
-                        /*_timer.Elapsed += OnTimedEvent;
-                        //count down 5 seconds
-                        _countSeconds = 30;
-                        _timer.Enabled = true;*/
-
-                        
                         int seconds = 0;
+                        int kactual = 1;
+                        int nb_workouts = listOfWorkouts.Count();
+                        int ActExercice = 1;
+                        int round = 1;
+
                         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
-                                                    // do something every 30 seconds
+                            // do something every 30 seconds
                             Device.BeginInvokeOnMainThread(() =>
                             {
-                                                      
-                             LilTime.Text = "                             "+(30 - seconds).ToString();
+                                Type.Text = listOfWorkouts.ElementAt(kactual-1).Type;
+                                LilTime.Text = (30 - seconds).ToString();
+                                LilTime.HorizontalOptions = LayoutOptions.Center;
 
-                             //____ Test -> ne rentre pas dedans _______ //
-                             //Type.Text= (30 - seconds).ToString();
-                             //_______________________________________ //
+                                switch (ActExercice)
+                                {
+                                    case 1:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Description;
+                                        break;
+                                    case 2:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice2.Description;
+                                        break;
+                                    case 3:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice3.Description;
+                                        break;
+                                    case 4:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice4.Description;
+                                        break;
+                                    case 5:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice5.Description;
+                                        break;
+                                    case 6:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice6.Description;
+                                        break;
+                                    case 7:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice7.Description;
+                                        break;
+                                    case 8:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice8.Description;
+                                        break;
+                                    case 9:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice9.Description;
+                                        break;
+                                    case 10:
+                                        Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice10.Description;
+                                        break;
+                                }
 
-                            seconds += 1;
-                            InTheFrame.Content = LilTime;
-                            if (seconds == 25)
-                            {
-                                InTheFrame.BackgroundColor = Color.IndianRed;
-                            }
-                            if (seconds==0)
-                            {
-                               InTheFrame.BackgroundColor = Color.LightGreen;
-                            }
 
+                                InTheFrame.Content = LilTime;
+                                if (seconds >= 25)
+                                {InTheFrame.BackgroundColor = Color.IndianRed;}
+                                else
+                                {InTheFrame.BackgroundColor = Color.LightGreen;}
+
+                                if (seconds == 30 && ActExercice == 10 && round == 1)
+                                {
+                                    round = 2;
+                                    seconds = 0;
+                                    ActExercice = 1;
+                                }
+                                else
+                                {
+                                    if (!(seconds == 30 && kactual == nb_workouts && round == 2 && ActExercice == 10))
+                                    {
+                                        if (seconds == 30)
+                                        {
+                                            if (ActExercice==10 && round==2)
+                                            {
+                                                kactual += 1;
+                                                seconds = 0;
+                                                ActExercice = 1;
+                                            }
+                                            else
+                                            {
+                                                ActExercice += 1;
+                                                seconds = 0;
+                                            }
+                                         }
+                                    }
+
+                                }
+                                seconds += 1;
                             });
-                            if (seconds==30)
-                            { 
-                                return false; 
+
+                            if (seconds == 30 && kactual == nb_workouts && round == 2 && ActExercice == 10)
+                            {
+                                return false;
                             }
-                             return true; // runs again, or false to stop
-                            });
+                            return true; // runs again, or false to stop
+                        });
+
                     }
                 }
 
-                int seconds2 = 0;
-                Device.StartTimer(new TimeSpan(0, 0, 5), () =>
-                {
-                    // do something every 30 seconds
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        Label LilTime = new Label();
-                        LilTime.Text = (30 - seconds2).ToString();
-                        seconds2 += 1;
-                        InTheFrame.Content = LilTime;
-                        InTheFrame.BackgroundColor = Color.LavenderBlush;
-                        Type.Text = "";
-                        Exerice.Text = "Take a break between your workouts";
-                        
+                 
+    //______________ Pour Pause à faire _____________________________
+                        //InTheFrame.BackgroundColor = Color.LavenderBlush;
+                        //Type.Text = "";
+                        //Exerice.Text = "Take a break between your workouts";
+                    
+          
 
-                    });
-                    if (seconds2 == 30)
-                    { 
-                        return false; }
-                    return true; // runs again, or false to stop
-                });
-            }
-
-            
-            /*DispatcherTimer timerr = new DispatcherTimer();
-            timerr.Interval = TimeSpan.FromSeconds(1);
-            timerr.Tick += timer_Tick;
-         
-            timerr.Start();*/
-
-        }
-
-
-        /*private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
-        {
-
-            _countSeconds--;
-            Label LilTime = new Label();
-            LilTime.FontSize = 23;
-            LilTime.HorizontalOptions = LayoutOptions.Center;
-            LilTime.Text = "                             " + (_countSeconds.ToString());
-            //Update visual representation here
-            //Remember to do it on UI thread
-            if (_countSeconds ==30)
-            {
-                InTheFrame.BackgroundColor = Color.LightGreen;
-            }
-
-            if (_countSeconds==5)
-            {
-                InTheFrame.BackgroundColor = Color.IndianRed;
-            }
-
-            if (_countSeconds == 0)
-            {
-                _timer.Stop();
-            }
-        }*/
-
-        /*void timer_Tick(object sender, EventArgs e)
-        {
-            lblTime.Content = DateTime.Now.ToLongTimeString();
-        }*/
-    }
 }
