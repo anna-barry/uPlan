@@ -4,11 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImageSource="Assets/backSport.png"
              x:Class="UplanTest.StartWorkout"
+             
              >
-    <ContentPage.Content>
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+    <ContentPage.Content >
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50" >
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
 
                 
@@ -19,15 +23,21 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
                 
             </Grid.RowDefinitions>
 
             
-            <Label Text="Your Workout" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label x:Name="Type"  Grid.Row="2" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" />
-            <Label x:Name="Exerice"  Grid.Row="3"  HorizontalTextAlignment="Center" FontSize="20" />
+            <Label Text="Your Workout" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label x:Name="Type"  Grid.Row="2" Grid.Column="4"  HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="17" />
+           
+            <Label x:Name="Exerice"  Grid.Row="4" Grid.Column="3"  HorizontalTextAlignment="Center" FontSize="20" />
             <Image x:Name="Picture"  HorizontalOptions="Center" Grid.Row="5"/>
-            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen"  HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" CornerRadius="360"/>
+            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen"  HorizontalOptions="Center" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2" WidthRequest="150" HeightRequest="300"  CornerRadius="360"/>
+
+            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="3" HeightRequest="20" WidthRequest="20" Scale="0.6" />
 
 
         </Grid>

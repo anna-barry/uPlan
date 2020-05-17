@@ -27,15 +27,21 @@ namespace UplanTest
                         int nb_workouts = listOfWorkouts.Count();
                         int ActExercice = 1;
                         int round = 1;
+                        int inbetween = 30;
+                        bool pause = false;
 
                         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
                             // do something every 30 seconds
                             Device.BeginInvokeOnMainThread(() =>
                             {
-                                Type.Text = listOfWorkouts.ElementAt(kactual-1).Type;
+                                if (!pause)
+                                {
+                                    Type.Text = listOfWorkouts.ElementAt(kactual-1).Type;
                                 LilTime.Text = (30 - seconds).ToString();
                                 LilTime.HorizontalOptions = LayoutOptions.Center;
+                                LilTime.VerticalOptions = LayoutOptions.Center;
+                                LilTime.FontSize = 20;
 
                                 switch (ActExercice)
                                 {
@@ -95,6 +101,10 @@ namespace UplanTest
                                                 kactual += 1;
                                                 seconds = 0;
                                                 ActExercice = 1;
+                                                inbetween = 30;
+                                                pause = true;
+
+
                                             }
                                             else
                                             {
@@ -106,24 +116,52 @@ namespace UplanTest
 
                                 }
                                 seconds += 1;
+                                }
+                                else
+                                {
+                                    if (inbetween>0)
+                                    {
+                                        Type.Text = "";
+                                        Exerice.Text = "Take a quick break";
+                                        LilTime.Text = inbetween.ToString();
+                                        LilTime.HorizontalOptions = LayoutOptions.Center;
+                                        LilTime.VerticalOptions = LayoutOptions.Center;
+                                        LilTime.FontSize = 20;
+                                        InTheFrame.BackgroundColor = Color.LavenderBlush;
+                                        inbetween -= 1;
+                                    }
+                                    else
+                                    {
+                                        pause = false;
+                                    }
+
+                                }
                             });
 
                             if (seconds == 30 && kactual == nb_workouts && round == 2 && ActExercice == 10)
                             {
+                                Type.Text = "Well done";
+                                Exerice.Text = "You have finished your workout, you should be proud of yourself";
+                                InTheFrame.IsVisible = false;
+
                                 return false;
+
                             }
                             return true; // runs again, or false to stop
                         });
 
                     }
-                }
 
-                 
-    //______________ Pour Pause à faire _____________________________
-                        //InTheFrame.BackgroundColor = Color.LavenderBlush;
-                        //Type.Text = "";
-                        //Exerice.Text = "Take a break between your workouts";
-                    
+        private async void OnCloseClicked2(object sender, EventArgs args)
+        {
+
+            //await Navigation.PopAsync();
+            await Navigation.PushAsync(new MainMyWorkouts());
+
+        }
+    }
+
+        
           
 
 }

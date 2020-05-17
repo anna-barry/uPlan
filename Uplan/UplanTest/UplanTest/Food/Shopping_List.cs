@@ -116,28 +116,6 @@ namespace UplanTest
             frame.BorderColor = Color.DarkSlateBlue;
             frame.CornerRadius = 10;
 
-            /*_________________________ FOR STACKLAYOUT 
-            foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
-            {
-                checkk.Color = Color.BlueViolet;
-                
-
-                test.Children.Add(checkk);
-                test.Children.Add(labb);
-                test.HorizontalOptions = LayoutOptions.Start;
-            }
-
-
-
-
-            frame.BorderColor = Color.DarkSlateBlue;
-            frame.CornerRadius = 10;
-            frame.HasShadow = true;
-            ScaleX = 1;
-            ScaleY = 1;
-                //frame.Content = test
-                frame.Content = gridforSL
-            ;*/
 
 
             grid.Children.Add(frame, 1, 1);
@@ -296,7 +274,7 @@ namespace UplanTest
             Grid.SetColumnSpan(added, 3);
 
 
-            //______________ Affichage de ses placards___________________________
+            /*______________ Affichage de ses placards___________________________
             Label Fridge = new Label();
             Fridge.Text = "What is in my pantry?";
             Fridge.TextColor = Color.MediumVioletRed;
@@ -306,6 +284,7 @@ namespace UplanTest
             Grid.SetColumnSpan(Fridge, 3);
 
             //________________________________________________________
+            */
             ScrollContainer.Content = grid;
 
             Content = ScrollContainer;

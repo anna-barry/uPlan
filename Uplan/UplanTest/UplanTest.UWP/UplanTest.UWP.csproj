@@ -118,6 +118,7 @@
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\alert.mp3" />
     <Content Include="Assets\backf.png" />
+    <Content Include="Assets\backSport.png" />
     <Content Include="Assets\bleu.png" />
     <Content Include="Assets\bleuwall.jpg" />
     <Content Include="Assets\break.png" />
@@ -133,6 +134,7 @@
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
     <Content Include="Assets\GetInfo.png" />
+    <Content Include="Assets\GetPersonaPhoto.gif" />
     <Content Include="Assets\HydratingLOL.gif" />
     <Content Include="Assets\HydratingLOL2.gif" />
     <Content Include="Assets\IconMealPlanForSH.png" />

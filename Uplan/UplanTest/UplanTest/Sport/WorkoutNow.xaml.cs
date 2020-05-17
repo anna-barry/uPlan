@@ -449,6 +449,11 @@ namespace UplanTest
 
         }
 
+        private async void StartWorkout(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new StartWorkout(DateTime.Now));
+        }
+
 
     }
 }
