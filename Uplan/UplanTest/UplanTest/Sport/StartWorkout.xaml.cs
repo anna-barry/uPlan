@@ -47,33 +47,43 @@ namespace UplanTest
                                 {
                                     case 1:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Code;
                                         break;
                                     case 2:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice2.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice2.Code;
                                         break;
                                     case 3:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice3.Description;
-                                        break;
+                                            Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice3.Code;
+                                            break;
                                     case 4:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice4.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice4.Code;
                                         break;
                                     case 5:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice5.Description;
-                                        break;
+                                            Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice5.Code;
+                                            break;
                                     case 6:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice6.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice6.Code;
                                         break;
                                     case 7:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice7.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice7.Code;
                                         break;
                                     case 8:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice8.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice8.Code;
                                         break;
                                     case 9:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice9.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice9.Code;
                                         break;
                                     case 10:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice10.Description;
+                                        Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice10.Code;
                                         break;
                                 }
 
@@ -157,6 +167,7 @@ namespace UplanTest
 
             //await Navigation.PopAsync();
             await Navigation.PushAsync(new MainMyWorkouts());
+
 
         }
     }
