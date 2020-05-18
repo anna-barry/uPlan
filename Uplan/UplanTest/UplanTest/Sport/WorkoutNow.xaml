@@ -227,7 +227,7 @@
             <Label Text="Your Workout" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
 
              <Frame x:Name="Framing" BorderColor="DarkMagenta" Grid.Column="0" Grid.Row="2" Grid.RowSpan="10" Grid.ColumnSpan="2"/>
-                <Button Text="Start Workout" Clicked="StartWorkout" FontSize="18" FontAttributes="Bold" TextColor="White" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="30" BorderColor="RoyalBlue" BackgroundColor="PaleVioletRed" />
+                <Button Text="Start Workout" Clicked="StartWorkout" FontSize="18" FontAttributes="Bold" TextColor="White" Grid.Row="12" Grid.Column="0" CornerRadius="30" BorderColor="RoyalBlue" BackgroundColor="PaleVioletRed" />
 
                 <Label x:Name="ForFullBody6" Text="No-equipment workout" FontSize="16" TextColor="DarkMagenta" />
             <Frame x:Name="FullBody6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="13" Grid.RowSpan="2" />

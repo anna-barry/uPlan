@@ -10,34 +10,40 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-            <Label Text="Welcome to" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Font="Bold,20"/>
+            <Label TextColor="BlueViolet" Text="Welcome to Uplan" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Font="Bold,20"/>
 
-            <Label Text="Name" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
-            <Entry x:Name="User_Name" WidthRequest="200" Placeholder="User_Name" Grid.Row="2" Grid.Column="1" />
+            <Label Text="Name" TextColor="BlueViolet" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="User_Name" TextColor="RoyalBlue" WidthRequest="200" Placeholder="User_Name" Grid.Row="2" Grid.Column="1" />
 
-            <Label Text="Email" Grid.Row="3" Grid.Column="0" VerticalTextAlignment = "Center"/>
-            <Entry x:Name="Email" WidthRequest="200" Placeholder="Email" Grid.Row="3" Grid.Column="1" />
+            <Label Text="Email" TextColor="BlueViolet" Grid.Row="3" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Entry x:Name="Email" WidthRequest="200" TextColor="RoyalBlue" Placeholder="Email" Grid.Row="3" Grid.Column="1" />
 
-            <Label Text="Accomodation type" Grid.Row="4" Grid.Column="0" VerticalTextAlignment = "Center"/>
-            <Picker x:Name="Accomodation_type" WidthRequest="200" Grid.Row="4" Grid.Column="1" />
+            <Label Text="Accomodation type" TextColor="BlueViolet" Grid.Row="4" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Picker x:Name="Accomodation_type" TextColor="RoyalBlue" WidthRequest="200" Grid.Row="4" Grid.Column="1" />
 
-            <Label Text="Shopping Day" Grid.Row="5" Grid.Column="0" VerticalTextAlignment = "Center"/>
-            <Picker x:Name="Shopping_Day" WidthRequest="200" Grid.Row="5" Grid.Column="1" />
+            <Label Text="Shopping Day" TextColor="BlueViolet" Grid.Row="5" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Picker x:Name="Shopping_Day" WidthRequest="200" TextColor="RoyalBlue" Grid.Row="5" Grid.Column="1" />
 
-            <Label Text="Cleaning Day" Grid.Row="6" Grid.Column="0" VerticalTextAlignment = "Center"/>
-            <Picker x:Name="Cleaning_Day" WidthRequest="200" Grid.Row="6" Grid.Column="1" />
+            <Label Text="Cleaning Day" TextColor="BlueViolet" Grid.Row="6" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Picker x:Name="Cleaning_Day" WidthRequest="200" TextColor="RoyalBlue" Grid.Row="6" Grid.Column="1" />
 
-            <Label Text="Rest Day" Grid.Row="7" Grid.Column="0" VerticalTextAlignment = "Center"/>
-            <Picker x:Name="Rest_Day" WidthRequest="200" Grid.Row="7" Grid.Column="1" />
+            <Label Text="Rest Day" TextColor="BlueViolet" Grid.Row="7" Grid.Column="0" VerticalTextAlignment = "Center"/>
+            <Picker x:Name="Rest_Day" WidthRequest="200" TextColor="RoyalBlue" Grid.Row="7" Grid.Column="1" />
 
-            <Button x:Name="save" Text="Save" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
+            <ImageButton x:Name="save" Source="Assets/save).png" Grid.Row="8" Grid.Column="1" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
 
-            <Editor x:Name="editor" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="" HeightRequest="100"/>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

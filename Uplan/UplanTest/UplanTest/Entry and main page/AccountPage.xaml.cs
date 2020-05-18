@@ -24,7 +24,7 @@ namespace UplanTest
         {
             InitializeComponent();
            
-            editor.Text = User.GetLoginMessage();
+            //editor.Text = User.GetLoginMessage();
             User_Name.Text = MyUser.me.Name;
             Email.Text = MyUser.me.EmailAddress;
 
@@ -55,7 +55,7 @@ namespace UplanTest
                 rest_day.CodeList[Rest_Day.SelectedIndex]
                 );
 
-            editor.Text = User.GetLoginMessage();
+            //editor.Text = User.GetLoginMessage();
 
 
            await Navigation.PushAsync(new MainPage());

@@ -18,18 +18,22 @@ namespace UplanTest
         {
             InitializeComponent();
 
-                        LilTime.FontSize = 23;
-                        var c = Database.db.GetCollection<Workout>("AllWorkouts");
-                        var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
+            LilTime.FontSize = 23;
+            var c = Database.db.GetCollection<Workout>("AllWorkouts");
+            var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
 
-                        int seconds = 0;
-                        int kactual = 1;
-                        int nb_workouts = listOfWorkouts.Count();
-                        int ActExercice = 1;
-                        int round = 1;
-                        int inbetween = 30;
-                        bool pause = false;
+            int seconds = 0;
+            int kactual = 1;
+            int nb_workouts = listOfWorkouts.Count();
+            int ActExercice = 1;
+            int round = 1;
+            int inbetween = 30;
+            bool pause = false;
 
+            if (nb_workouts>0)
+            {
+
+            
                         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
                             // do something every 30 seconds
@@ -159,8 +163,8 @@ namespace UplanTest
                             }
                             return true; // runs again, or false to stop
                         });
-
-                    }
+            }
+        }
 
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
