@@ -458,5 +458,12 @@ namespace UplanTest
             // Keep MyUser static variables up to date after this database update
             Initiate();
         } */
+
+        private async void OnCloseClicked2(object sender, EventArgs args)
+        {
+
+            await Navigation.PopAsync();
+
+        }
     }
 }

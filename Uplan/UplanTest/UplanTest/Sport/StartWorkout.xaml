@@ -8,7 +8,7 @@
              
              >
     <ContentPage.Content >
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50" >
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 
@@ -17,7 +17,7 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="200"/>
-                <RowDefinition Height="250"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="30"/>
 
             </Grid.RowDefinitions>

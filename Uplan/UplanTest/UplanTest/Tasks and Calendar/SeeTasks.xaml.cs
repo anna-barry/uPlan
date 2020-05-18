@@ -86,5 +86,12 @@ namespace UplanTest
             }
 
         }
+
+        private async void OnCloseClicked2(object sender, EventArgs args)
+        {
+
+            await Navigation.PopAsync();
+
+        }
     }
 }

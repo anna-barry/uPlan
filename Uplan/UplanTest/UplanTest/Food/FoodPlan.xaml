@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="UplanTest.FoodPlan">
     <ContentPage.Content>
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -16,7 +16,6 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -24,10 +23,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-               
-
-
             </Grid.RowDefinitions>
+            
             <!--title-->
             <Label Text="Food Plan for the week" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="7" Grid.RowSpan="2"/>
             
@@ -61,7 +58,9 @@
             <Label x:Name="dinfri" Grid.Row="5" Grid.Column="5" FontSize="15"/>
             <Label x:Name="dinsat" Grid.Row="5" Grid.Column="6" FontSize="15"/>
             <Label x:Name="dinsun" Grid.Row="5" Grid.Column="7" FontSize="15"/>
-            
+
+            <ImageButton Source="Assets/refresh_Icon.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="7" HeightRequest="40" WidthRequest="40" />
+
 
         </Grid>
     </ContentPage.Content>
