@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImageSource="Assets/backSport.png"
              x:Class="UplanTest.StartWorkout"
              
              >
@@ -12,32 +11,25 @@
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-
                 
-
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="30"/>
+
             </Grid.RowDefinitions>
+            <Label BackgroundColor="BlueViolet" Grid.Row="0" Grid.RowSpan="2"/>
+            <Label Text="Your Workout" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="BlueViolet" TextColor="White" FontSize="30"/>
+            <Label x:Name="Type" Grid.Row="1" TextColor="White" BackgroundColor="BlueViolet" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" />
+            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen" Grid.Row="2" CornerRadius="360" Margin="150,0"/>
+            <Image x:Name="Picture" Grid.Row="4"/>
+            <Label x:Name="Exerice" Grid.Row="5" FontSize="20" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" TextColor="White"/>
 
-            
-            <Label Text="Your Workout" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label x:Name="Type"  Grid.Row="2" Grid.Column="4"  HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="17" />
-           
-            <Label x:Name="Exerice"  Grid.Row="4" Grid.Column="3"  HorizontalTextAlignment="Center" FontSize="20" />
-            <Image x:Name="Picture"  HorizontalOptions="Center" Grid.Row="5"/>
-            <Frame x:Name="InTheFrame" BackgroundColor="LightGreen"  HorizontalOptions="Center" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2" WidthRequest="150" HeightRequest="300"  CornerRadius="360"/>
 
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="3" HeightRequest="20" WidthRequest="20" Scale="0.6" />
+            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" HorizontalOptions="End" Scale="0.6" />
 
 
         </Grid>
