@@ -131,6 +131,9 @@ namespace UplanTest
                  }
                  );
 
+            SchoolTask.InsertSchoolTask(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", "PERSONAL"), ListEntry.getEntryfromTypeAndCode("COLOURS", "WHITE"),
+                ListEntry.getEntryfromTypeAndCode("TASK_COMPLEXITIES", "MEDIUM"), ListEntry.getEntryfromTypeAndCode("TASK_SUBTYPE_PERS", "SPORT"), "My workout", "Your very own workout session is waiting for you, go to My workouts", false, DueDate);
+
         }
 
         public Workout()
