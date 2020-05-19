@@ -157,6 +157,7 @@
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\LegRaise.png" />
+    <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
     <Content Include="Assets\MontainClimbers.png" />
@@ -165,6 +166,8 @@
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
     <Content Include="Assets\ObliqueCrunch.png" />
+    <Content Include="Assets\ObliqueTwists.png" />
+    <Content Include="Assets\OneArmToe.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\Plank.png" />
     <Content Include="Assets\PlankTwist.png" />
@@ -185,6 +188,9 @@
     <Content Include="Assets\rock2.mp3" />
     <Content Include="Assets\rock3.mp3" />
     <Content Include="Assets\rock4.mp3" />
+    <Content Include="Assets\RondVert.png" />
+    <Content Include="Assets\RoundPause.png" />
+    <Content Include="Assets\RoundRouge.png" />
     <Content Include="Assets\RussianTwist.png" />
     <Content Include="Assets\save%29.png" />
     <Content Include="Assets\Scissors.png" />

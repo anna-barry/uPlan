@@ -122,7 +122,7 @@ namespace UplanTest
 
             return "Name: " + result.Name + "\n" + "Shopping day: " + result.ShoppingDayDesc + "\n" +
               "Cleaning Day: " + result.CleaningDayDesc + "\n" + "Rest Day: " + result.RestDayDesc + "\n" 
-              + "Accomodation type: " + result.AccomodationTypeDesc+ result.RestDay; ;
+              + "Accomodation type: " + result.AccomodationTypeDesc; 
              
 
         }

@@ -75,11 +75,11 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Abs5", Code = "Assets/KneeCrunch.png", Description = "Knee crunch" });//
                 col.Insert(new ListEntry { Type = "Abs5", Code = "Assets/LongArmCrunches.png", Description = "Long arm crunch" });//
                 col.Insert(new ListEntry { Type = "Abs5", Code = "Assets/CrossLeg.png", Description = "Cross leg" });//
-                col.Insert(new ListEntry { Type = "Abs5", Code = "Assets/OneArmToe.png", Description = "One arm toe" });
+                col.Insert(new ListEntry { Type = "Abs5", Code = "Assets/OneArmToe.png", Description = "One arm toe" });//
 
                 col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/Crunch.png", Description = "Crunch" });//
                 col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/CrossCrunch.png", Description = "Cross crunch" });//
-                col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/LegUp.png", Description = "Leg up" });
+                col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/LegUp.png", Description = "Leg up" });//
                 col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/ToeTouch.png", Description = "Toe touch" });
                 col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/Burpees.png", Description = "Burpees" });//
                 col.Insert(new ListEntry { Type = "Abs6", Code = "Assets/MontainClimbers.png", Description = "Moutain climbers" });//

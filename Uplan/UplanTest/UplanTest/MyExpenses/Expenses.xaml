@@ -30,7 +30,7 @@
             <ListView x:Name="expenses" Grid.Row="1" Grid.Column="1"/>
             <ListView x:Name="limit" Grid.Row="1" Grid.Column="2"/>
 
-            <Button Text="Add and expense" Grid.Row="0" Grid.Column="2" VerticalOptions="End" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="playworkout"/>
+            <Button Text="Add and expense" Grid.Row="0" Grid.Column="2" VerticalOptions="End" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="AddExpenses"/>
 
         </Grid>
     </ContentView.Content>

@@ -80,7 +80,7 @@ namespace UplanTest
             toggled = !toggled;
         }
 
-        public void OnButtonClicked(object sender, EventArgs args)
+        public async void OnButtonClicked(object sender, EventArgs args)
 
         {
 
@@ -124,7 +124,8 @@ namespace UplanTest
 
 
                 GetShoppinForWeek();
-               
+                await Navigation.PopAsync();
+
             }
 
         }
