@@ -8,7 +8,7 @@ namespace UplanTest
 {
     public class InfoResponseApi
     {
-        public static async Task<FoodModel> LoadInfo(string codeBarre)
+        public static async Task<InProducts> LoadInfo(string codeBarre)
         {
 
             string url = $"https://world.openfoodfacts.org/api/v0/product/{ codeBarre }.json";
@@ -16,7 +16,7 @@ namespace UplanTest
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    FoodResultModel food = await response.Content.ReadAsAsync<FoodResultModel>();
+                    Products food = await response.Content.ReadAsAsync<Products>();
 
                     return food.Product;
                 }

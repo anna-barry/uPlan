@@ -398,9 +398,9 @@ namespace UplanTest
                 else
                 {
                     string nutri = nutriInfo.Nutrition_grades;
-                    string nova = nutriInfo.Nova_groups;
+                    
                     SortieApi.TextColor = Color.White;
-                    SortieApi.Text = $"The nutritional score of the product is { nutri.ToUpper()}\n The nova score of the product is {nova.ToUpper()}";
+                  //  SortieApi.Text = $"The nutritional score of the product is { nutri.ToUpper()}\n The nova score of the product is {nova.ToUpper()}";
                     switch (nutri)
                     {
                         case ("a"):

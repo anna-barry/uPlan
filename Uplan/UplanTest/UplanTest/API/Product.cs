@@ -4,8 +4,9 @@ using System.Text;
 
 namespace UplanTest
 {
-   public  class FoodResultModel
+    public class Products
     {
-        public FoodModel Product { get; set; }
+        public InProducts Product { get; set; }
     }
 }
+
