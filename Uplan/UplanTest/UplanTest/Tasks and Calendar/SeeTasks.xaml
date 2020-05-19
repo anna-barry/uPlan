@@ -8,15 +8,39 @@
     <ContentPage.Content>
 
         <ScrollView>
-            <StackLayout Orientation="Vertical" Spacing="0.0" Padding="0,10">
+            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+
+                </Grid.RowDefinitions>
                 <!--<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
                 <Entry /> -->
-                <Label Text="Chose a date to see all the tasks due that date"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" FontSize="25" Padding="30"/>
+                <Label Text="Chose a date to see all the tasks due that date" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" FontSize="25" />
+                <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="2" HeightRequest="10" WidthRequest="10" Scale="0.3" />
 
-                <Label Text="Select a date: " VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="16"  Padding="30" />
-                <DatePicker x:Name="dpp" DateSelected="DatePicker_DateSelected"/>
-                <Label x:Name="editorr"   Padding="50" />
-            </StackLayout>
+
+                <Label Text="Select a date: " HorizontalTextAlignment="End" TextColor="BlueViolet" FontSize="16" Grid.Row="1" Grid.Column="0"  />
+                <DatePicker x:Name="dpp" DateSelected="DatePicker_DateSelected" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+                <Label x:Name="editorr" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="10"/>
+
+                
+            </Grid>
         </ScrollView>
         
     </ContentPage.Content>

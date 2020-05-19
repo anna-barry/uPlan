@@ -59,7 +59,7 @@ namespace UplanTest
 
             var grid = new Grid();
 
-            for (int i = 0; i < 14; i++)
+            for (int i = 0; i < 15; i++)
 
             {
 
@@ -300,7 +300,19 @@ namespace UplanTest
 
             grid.Children.Add(Work, 4, 0);
 
+            //_____________________ Bouton Add
+            ImageButton addEvent = new ImageButton();
+            addEvent.Source = "Assets/add_round.png";
+            addEvent.Clicked += (sender, e) => GotoNewEvent();
+            grid.Children.Add(addEvent, 5, 14);
 
+            //______________________ Bouton View
+            ImageButton ViewsEvents = new ImageButton();
+            ViewsEvents.Source = "Assets/eye2.png";
+            ViewsEvents.WidthRequest = 40;
+            ViewsEvents.HeightRequest = 40;
+            ViewsEvents.Clicked += (sender, e) => GotoViewEvents();
+            grid.Children.Add(ViewsEvents,6, 14);
 
 
 
@@ -1932,9 +1944,17 @@ Content = grid;
 
 }
 
+        async private void GotoViewEvents()
+        {
+            await Navigation.PushAsync(new SeeTasks());
+        }
 
+        async private void GotoNewEvent()
+        {
+            await Navigation.PushAsync(new AddEvent());
+        }
 
-private Task Alert_Clicked(string message)
+        private Task Alert_Clicked(string message)
 
 {
 
@@ -1953,9 +1973,19 @@ private void Switch_OnToggled(object sender, ToggledEventArgs e)
 
 }
 
+        async private void GotoNewEvent(object sender, ToggledEventArgs e)
+        {
+            await Navigation.PushAsync(new AddEvent());
+        }
+
+        async private void GotoViewEvents(object sender, ToggledEventArgs e)
+        {
+            await Navigation.PushAsync(new SeeTasks());
+        }
 
 
-private void Switch2_OnToggled(object sender, ToggledEventArgs e)
+
+        private void Switch2_OnToggled(object sender, ToggledEventArgs e)
 
 {
 
