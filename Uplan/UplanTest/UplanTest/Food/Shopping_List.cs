@@ -59,7 +59,7 @@ namespace UplanTest
             tt.FontAttributes = FontAttributes.Bold;
             grid.Children.Add(tt, 1, 0);
             Grid.SetColumnSpan(tt, 12);
-            //Add(nom,col,row)
+            
 
             //______________ Titre de la liste___________________________
             Label LShopList = new Label();
@@ -69,7 +69,7 @@ namespace UplanTest
             LShopList.FontAttributes = FontAttributes.Bold;
             grid.Children.Add(LShopList, 1, 0);
             Grid.SetColumnSpan(LShopList, 3);
-            //Add(nom,col,row)
+           
 
             //____________________________________________________________
             //__________________ Frame = Liste de Courses_________________
@@ -98,16 +98,18 @@ namespace UplanTest
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
             {
                 checkk.Color = Color.BlueViolet;
-                
-                
-                gridforSL.Children.Add(checkk, 0,roww);
                 checkk.FlowDirection = FlowDirection.LeftToRight;
+                checkk.HorizontalOptions = LayoutOptions.End;
+
+                gridforSL.Children.Add(checkk, 0,roww);
+
                 labb.FontSize = 18;
-                labb.VerticalTextAlignment = TextAlignment.Center;
-                gridforSL.Children.Add(labb,0,roww);
-                Grid.SetColumnSpan(labb, 2);
-                checkk.AnchorY=(-1.2);
-                //Grid.SetColumnSpan(gridforSL, 3);
+                labb.HorizontalTextAlignment = TextAlignment.Start;
+                labb.VerticalOptions = LayoutOptions.Center;
+                gridforSL.Children.Add(labb,1,roww);
+                //Grid.SetColumnSpan(labb, 1);
+                
+                
                 roww += 1;
 
             }
@@ -312,16 +314,17 @@ namespace UplanTest
             foreach ((Label labb, CheckBox checkk) in AllOfLabAndCheck) //(Label labb, CheckBox checkk)
             {
                 checkk.Color = Color.BlueViolet;
-
+                checkk.FlowDirection = FlowDirection.LeftToRight;
+                checkk.HorizontalOptions = LayoutOptions.End;
 
                 gridforSL.Children.Add(checkk, 0, roww);
-                checkk.FlowDirection = FlowDirection.LeftToRight;
+
                 labb.FontSize = 18;
-                labb.VerticalTextAlignment = TextAlignment.Center;
-                gridforSL.Children.Add(labb, 0, roww);
-                Grid.SetColumnSpan(labb, 2);
-                checkk.AnchorY = (-1.2);
-                //Grid.SetColumnSpan(gridforSL, 3);
+                labb.HorizontalTextAlignment = TextAlignment.Start;
+                labb.VerticalOptions = LayoutOptions.Center;
+                gridforSL.Children.Add(labb, 1, roww);
+
+
                 roww += 1;
 
             }
