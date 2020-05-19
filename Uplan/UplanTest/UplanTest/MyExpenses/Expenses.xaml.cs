@@ -20,53 +20,60 @@ namespace UplanTest.MyExpenses
         {
             InitializeComponent();
 
+            var col = Database.db.GetCollection<Money>("Money");
+            var result = col.FindAll();
 
-            List<string> Kind = DisplayKind(0, ToCallKind);
+            List<string> Kind = DisplayKind(0);
             kind.ItemsSource = Kind;
-            List<string> Expenses = DisplayExpenses(1, ToCallExpense);
+            List<int> Expenses = DisplayExpenses(1);
             expenses.ItemsSource = Expenses;
-            List<string> Max = DisplayLimit(2, ToCallMax);
+            List<int> Max = DisplayLimit(2);
             limit.ItemsSource = Max;
         }
 
-        public static List<string> DisplayKind(int col, List<string> toadd)
+        public static List<string> DisplayKind(int col)
+        {
+            List<string> toadd = new List<string> { };
+
+            var co= Database.db.GetCollection<Money>("Money");
+            var result = co.FindAll();
+
+            foreach (var kind in result)
+            {
+                toadd.Add(kind.Type);
+            }
+
+            return toadd;
+        }
+        public static List<int> DisplayExpenses(int col)
         {
 
-            var c = Database.db.GetCollection<MyExpenses>("Money");
-            
-            //foreach (var kind in c)
+            List<int> toadd = new List<int> { };
+
+            var co = Database.db.GetCollection<Money>("Money");
+            var result = co.FindAll();
+
+            foreach (var kind in result)
             {
-                //toadd.Add(workout.Type);
+                toadd.Add(kind.Amount);
             }
 
             return toadd;
 
         }
-        public static List<string> DisplayExpenses(int col, List<string> toadd)
+        public static List<int> DisplayLimit(int col)
         {
+            List<int> toadd = new List<int> { };
 
-            var c = Database.db.GetCollection<MyExpenses>("Money");
-            //var list = c.FindOne(Query.EQ("Type",));
-            //foreach (var workout in list)
+            var co = Database.db.GetCollection<Money>("Money");
+            var result = co.FindAll();
+
+            foreach (var kind in result)
             {
-                //toadd.Add(workout.Type);
+                toadd.Add(kind.Max);
             }
 
             return toadd;
-
-        }
-        public static List<string> DisplayLimit(int col, List<string> toadd)
-        {
-
-            var c = Database.db.GetCollection<MyExpenses>("Money");
-            //var list = c.FindOne(Query.EQ("Type",));
-            //foreach (var workout in list)
-            {
-             //   toadd.Add(workout.Type);
-            }
-
-            return toadd;
-
         }
 
         private async void OnCloseClicked2(object sender, EventArgs args)
@@ -78,5 +85,7 @@ namespace UplanTest.MyExpenses
         {
             //Navigation.PushAsync(new AddExpenses());
         }
+
+        //private void RefreshType()
     }
 }

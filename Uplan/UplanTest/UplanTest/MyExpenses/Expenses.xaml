@@ -15,8 +15,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="2" HeightRequest="90" WidthRequest="60" />
+            <!--<ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="2" HeightRequest="90" WidthRequest="60" />-->
 
             <Label Text="My Expenses" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="3"/>
 

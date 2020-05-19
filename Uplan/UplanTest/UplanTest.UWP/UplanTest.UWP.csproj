@@ -117,6 +117,9 @@
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\alert.mp3" />
+    <Content Include="Assets\ArmCircle.png" />
+    <Content Include="Assets\ArmPlunge.png" />
+    <Content Include="Assets\ArmSwing.png" />
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
     <Content Include="Assets\bleu.png" />
@@ -146,6 +149,7 @@
     <Content Include="Assets\GetInfo.png" />
     <Content Include="Assets\GetPersonaPhoto.gif" />
     <Content Include="Assets\GlutBridge.png" />
+    <Content Include="Assets\HammerCurl.png" />
     <Content Include="Assets\HydratingLOL.gif" />
     <Content Include="Assets\HydratingLOL2.gif" />
     <Content Include="Assets\IconMealPlanForSH.png" />
@@ -154,10 +158,12 @@
     <Content Include="Assets\JumpingLunge.png" />
     <Content Include="Assets\JumpSquat.png" />
     <Content Include="Assets\KneeCrunch.png" />
+    <Content Include="Assets\KneePushUps.png" />
     <Content Include="Assets\KneesToChest.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\LeftCrunchs.png" />
     <Content Include="Assets\LegRaise.png" />
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
@@ -171,8 +177,10 @@
     <Content Include="Assets\ObliqueCrunch.png" />
     <Content Include="Assets\ObliqueTwists.png" />
     <Content Include="Assets\OneArmToe.png" />
+    <Content Include="Assets\OverHeadPull.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\Plank.png" />
+    <Content Include="Assets\PlankTaps.png" />
     <Content Include="Assets\PlankTwist.png" />
     <Content Include="Assets\play.png" />
     <Content Include="Assets\playfi.png" />
@@ -187,6 +195,8 @@
     <Content Include="Assets\relax4.mp3" />
     <Content Include="Assets\repeat once.png" />
     <Content Include="Assets\Reverse.png" />
+    <Content Include="Assets\ReverseFly.png" />
+    <Content Include="Assets\RightCrunchs.png" />
     <Content Include="Assets\rock1.mp3" />
     <Content Include="Assets\rock2.mp3" />
     <Content Include="Assets\rock3.mp3" />
@@ -199,6 +209,7 @@
     <Content Include="Assets\Scissors.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
+    <Content Include="Assets\ShoulderPress.png" />
     <Content Include="Assets\SideCrunchTick.png" />
     <Content Include="Assets\SideJack.png" />
     <Content Include="Assets\SideLunge.png" />
@@ -243,6 +254,7 @@
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
+    <Content Include="Assets\TricepsDips.png" />
     <Content Include="Assets\UpDownPlank.png" />
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
