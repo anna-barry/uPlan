@@ -141,6 +141,7 @@
     <Content Include="Assets\FoodC2.png" />
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
+    <Content Include="Assets\Fridge.png" />
     <Content Include="Assets\GetInfo.png" />
     <Content Include="Assets\GetPersonaPhoto.gif" />
     <Content Include="Assets\GlutBridge.png" />
@@ -161,6 +162,7 @@
     <Content Include="Assets\Lunge.png" />
     <Content Include="Assets\MontainClimbers.png" />
     <Content Include="Assets\musicplay.png" />
+    <Content Include="Assets\MyFood.png" />
     <Content Include="Assets\NewFood.png" />
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
