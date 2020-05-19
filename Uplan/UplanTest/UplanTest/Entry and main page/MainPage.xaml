@@ -64,7 +64,7 @@
                     <Button Text="About Us" Grid.Row="6" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
                     
                     <ImageButton Source="Assets/Fridge.png" Clicked="Button_Clicked11" HeightRequest="45" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="10"></ImageButton>
-                    <Button Text="Fridge" Grid.Row="10" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
+                    <Button Text="Fridge" Grid.Row="7" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
 
 
 

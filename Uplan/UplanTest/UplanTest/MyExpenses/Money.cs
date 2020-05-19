@@ -26,7 +26,7 @@ namespace UplanTest.MyExpenses
             col.Insert(
                 new MyExpenses
                 {
-                    Type = "Workout 1",
+                    Type = "",
                     Amount=0,
                 }
              ); 
@@ -58,9 +58,8 @@ namespace UplanTest.MyExpenses
                     int Amount,
                     String Type)
         {
-            // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<MyExpenses>("Money");
-            
+            col.DeleteAll();
         }
 
 
