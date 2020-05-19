@@ -136,9 +136,10 @@ namespace UplanTest
 
 
             ImageButton Close = new ImageButton();
+            Close.Scale = 0.9;
             Close.Source = "Assets/croix.png";
             Close.Clicked += (sender, e) => OnCloseClicked2();
-            grid.Children.Add(Close, 0, 2);
+            grid.Children.Add(Close, 3, 0);
 
 
 

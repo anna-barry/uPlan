@@ -40,28 +40,27 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                   
-                    <ImageButton Source="Assets/Calendar.png" HeightRequest="60" BorderWidth="4" Grid.Row="0" Grid.Column="0" BackgroundColor="{StaticResource txtBgColor}"  Clicked="Button_Clicked1"  CornerRadius="5"></ImageButton>
-                    <Button Text="Calendar" TextColor="White" Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked1" Grid.ColumnSpan="2" />
-
-                   
-                    <ImageButton Source="Assets/FoodC2.png" Grid.Row="1" HeightRequest="60"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked4"></ImageButton>
-                    <Button Text="Food Plan" TextColor="White" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked4"  Grid.ColumnSpan="2"  />
+                    <ImageButton Source="Assets/Calendar.png" HeightRequest="90" BorderWidth="4" Grid.Row="0" Grid.Column="0" BackgroundColor="{StaticResource txtBgColor}"  Clicked="Button_Clicked1"  CornerRadius="10"></ImageButton>
+                    <Button Text="Calendar" TextColor="White" Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked1" Grid.ColumnSpan="2" />
 
 
-                    <ImageButton Source="Assets/MyFood.png"  Grid.Row="2" HeightRequest="60" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked6"></ImageButton>
-                    <Button Text="My Food" Grid.Row="2" TextColor="White" BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked6"  Grid.ColumnSpan="2"  />
+                    <ImageButton Source="Assets/FoodC2.png" Grid.Row="1" HeightRequest="90"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked4" CornerRadius="10" ></ImageButton>
+                    <Button Text="Food Plan" TextColor="White" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked4" Grid.ColumnSpan="2"  />
 
-                    <ImageButton Source="Assets/yoga.png" Grid.Row="3" HeightRequest="60"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked7"></ImageButton>
-                    <Button Text="My Well Being" Grid.Row="3" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked7"  Grid.ColumnSpan="2" />
+                    <ImageButton Source="Assets/MyFood.png"  Grid.Row="2" HeightRequest="70" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked6"  CornerRadius="10" ></ImageButton>
+                    <Button Text="My Food" Grid.Row="2" TextColor="White" BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked6"  Grid.ColumnSpan="2"  />
 
-                    <ImageButton Source="Assets/SportIcon.png" Grid.Row="4" HeightRequest="60"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked10"></ImageButton>
-                    <Button Text="My Workouts" Grid.Row="4" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked10"   Grid.ColumnSpan="2" />
+                    <ImageButton Source="Assets/yoga.png" Grid.Row="3" HeightRequest="90"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked7" CornerRadius="10" ></ImageButton>
+                    <Button Text="My Well Being" Grid.Row="3" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked7"  Grid.ColumnSpan="2" />
 
-                    <ImageButton Source="Assets/settings.png"  HeightRequest="60" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="5"></ImageButton>
-                    <Button Text="About Me" Grid.Row="5" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked8"  Grid.ColumnSpan="2"  />
+                    <ImageButton Source="Assets/SportIcon.png" Grid.Row="4" HeightRequest="90"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked10"  CornerRadius="10" ></ImageButton>
+                    <Button Text="My Workouts" Grid.Row="4" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked10"   Grid.ColumnSpan="2" />
 
-                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="60" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="6"></ImageButton>
-                    <Button Text="About Us" Grid.Row="6" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="18" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
+                    <ImageButton Source="Assets/settings.png"  HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="5" CornerRadius="10" ></ImageButton>
+                    <Button Text="About Me" Grid.Row="5" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked8"  Grid.ColumnSpan="2"  />
+
+                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="6" CornerRadius="10" ></ImageButton>
+                    <Button Text="About Us" Grid.Row="6" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
                     
                     
 

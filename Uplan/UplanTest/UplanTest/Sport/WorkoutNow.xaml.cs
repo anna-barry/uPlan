@@ -1,6 +1,7 @@
 ﻿using LiteDB;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,11 +62,37 @@ namespace UplanTest
                 item.Exercice7.Description + "\n" + item.Exercice8.Description + "\n" + item.Exercice9.Description + "\n" + item.Exercice10.Description + "\n" + "\n");
             }
 
+            var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+            deleteAction.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
+            deleteAction.Clicked += (sender, e) =>
+            {
+                var mi = ((MenuItem)sender);
+                
+                Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+            };
 
-
-
+            
             ListVieww.ItemsSource = Contents;
-            ListVieww.SelectedItem = SelectionMode.None;
+
+            ListVieww.SelectedItem = SelectionMode.Single;
+            ListVieww.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (answer)
+                {
+                    string res = "";
+                    string thisItem = ListVieww.SelectedItem.ToString();
+                    int i = 0;
+                    while (thisItem[i] != ':')
+                    {
+                        res += thisItem[i];
+                    }
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    c.Delete(resultforItem.Id);
+                }
+
+
+            };
             ListVieww.SeparatorColor = Color.Lavender;
             ListVieww.RefreshControlColor = Color.LightPink;
             Framing.Content = ListVieww;
