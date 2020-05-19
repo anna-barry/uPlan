@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
              BackgroundColor="AliceBlue"
              x:Class="UplanTest.AboutMe">
@@ -79,8 +80,12 @@
 
             <Button Text="Save" Clicked="OnButtonClicked" BackgroundColor="AliceBlue" BorderColor="DarkMagenta" TextColor="IndianRed" Grid.Row="23" Grid.RowSpan="2" Grid.Column="1" /> 
             <!--<ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="100" Grid.Row="20" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"  ></ImageButton> -->
-            
-        </Grid>
+
+
+                <forms:ChartView x:Name="Chart1" HeightRequest="150" />
+
+
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

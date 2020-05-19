@@ -104,8 +104,7 @@ namespace UplanTest
 
 
             };
-            //ListVieww.ItemsSource = null;
-            //ListVieww.ItemsSource = Contents;
+            
             ListVieww.SeparatorColor = Color.Lavender;
             ListVieww.RefreshControlColor = Color.LightPink;
             Framing.Content = ListVieww;

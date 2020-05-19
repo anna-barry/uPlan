@@ -107,7 +107,7 @@ namespace UplanTest
                 labb.HorizontalTextAlignment = TextAlignment.Start;
                 labb.VerticalOptions = LayoutOptions.Center;
                 gridforSL.Children.Add(labb,1,roww);
-                //Grid.SetColumnSpan(labb, 1);
+                Grid.SetColumnSpan(labb, 2);
                 
                 
                 roww += 1;
@@ -334,7 +334,7 @@ namespace UplanTest
                 labb.HorizontalTextAlignment = TextAlignment.Start;
                 labb.VerticalOptions = LayoutOptions.Center;
                 gridforSL.Children.Add(labb, 1, roww);
-
+                Grid.SetColumnSpan(labb, 2);
 
                 roww += 1;
 

@@ -139,6 +139,7 @@
     <Content Include="Assets\eye2.png" />
     <Content Include="Assets\food.png" />
     <Content Include="Assets\FoodC2.png" />
+    <Content Include="Assets\FoodCh.png" />
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
     <Content Include="Assets\Fridge.png" />
@@ -268,6 +269,12 @@
     </PackageReference>
     <PackageReference Include="LiteDB">
       <Version>5.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts">
+      <Version>0.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.7.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client">
       <Version>5.2.7</Version>
