@@ -70,6 +70,12 @@ namespace UplanTest
             Detail = new NavigationPage(new MainMyWorkouts());
 
         }
+        private void Button_Clicked11(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new FridgePage());
+
+        }
+
 
     }
 }
