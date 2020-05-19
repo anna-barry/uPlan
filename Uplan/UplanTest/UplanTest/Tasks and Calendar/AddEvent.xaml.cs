@@ -85,7 +85,7 @@ namespace UplanTest
         async void OnButtonClicked(object sender, EventArgs args)
 
         {
-            //ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", "PERSONAL"),
+            
             string subtyype = "TASK_SUBTYPE_PERS";
             string tyype = "PERSONAL";
             if (school)
@@ -94,8 +94,6 @@ namespace UplanTest
                 tyype = "SCHOOL";
             }
 
-            //eventype.ListEntryList[Task_type.SelectedIndex]
-            //TaskSubType = ListEntry.getEntryfromTypeAndCode("TASK_SUBTYPE_SC", "BY_HEART");
             SchoolTask.InsertSchoolTask(MyUser.me, ListEntry.getEntryfromTypeAndCode("TASK_CATEGORIES", tyype),
 
                 coloursforevent.ListEntryList[Task_colour.SelectedIndex], timeconsuminglevel.ListEntryList[Task_consuming.SelectedIndex],
@@ -111,7 +109,8 @@ namespace UplanTest
                     ListEntry.getEntryfromTypeAndCode(subtyype, subtype), Desc.Text, SubDesc.Text, false, test.Date);
             }
 
-            //await Navigation.PushAsync(new Calendar()); on le met? c'est plus visuel?
+            
+            await Navigation.PushAsync(new Calendar());
 
 
 
@@ -246,8 +245,9 @@ namespace UplanTest
 
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
-
+            
             await Navigation.PopAsync();
+            
 
         }
 
