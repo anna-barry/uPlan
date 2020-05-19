@@ -71,16 +71,12 @@ namespace UplanTest.MyExpenses
 
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
-
             await Navigation.PopAsync();
-
         }
 
-        private async void playworkout(object sender, EventArgs args)
+        private async void AddExpenses(object sender, EventArgs args)
         {
-
-            await Navigation.PopAsync();
-
+            //Navigation.PushAsync(new AddExpenses());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using LiteDB;
+using Syncfusion.Licensing;
 using Xamarin.Forms;
 
 namespace UplanTest
@@ -151,6 +152,7 @@ namespace UplanTest
             ListEntry tcol = new ListEntry(); //couleur plus clair que l'autre
             ListEntry tomp = new ListEntry(); //pas sur qu'il faille modifier ( reprendre celle de base surement)
             ListEntry tsub = new ListEntry(); // la pareil pas de modif en fait
+
            
             string taskcomplex = TaskComplexity.Code;
             TimeSpan daysleft = (DueDate.Date - DateTime.Now.Date);
@@ -336,7 +338,6 @@ namespace UplanTest
             // RAPPEL UN DIMANCHE SUR DEUX SI PEU COMPLIQUE
 
             string restday = MyUser.me.RestDay;
-            var ecartrest = (date.DayOfWeek);
             daysleft = (DueDate.Date - date.Date);
             if (TaskCategory.Code == "SCHOOL" && TaskSubType.Code == "PROJECT")
             {
@@ -346,17 +347,19 @@ namespace UplanTest
                     for (int i = 1; i < p; i += 1)
                     {
                         DateTime thisday = date.Date.AddDays(i);
-                        if(thisday.DayOfWeek== DayOfWeek.Saturday || thisday.DayOfWeek == DayOfWeek.Sunday)
+                        if( IsDay(thisday.DayOfWeek)|| thisday.DayOfWeek == DayOfWeek.Wednesday)
                         {
                             InsertSchoolTask(TaskUser, TaskCategory,
                         IntelligentColor(TaskCategoryColour),
                         TaskComplexity,
                         TaskSubType,
                         Description,
-                        "RestDay means more time to work on this projet: " + '\n' + SubDesc,
+                        "Don't forget to work on this projet: " + '\n' + SubDesc,
                         IsComplete,
                         date.AddDays(i));
+                            i += 3;
                         }
+                      
                     }
                 }
 
@@ -366,7 +369,7 @@ namespace UplanTest
                     for (int i = 1; i < p; i += 1)
                     {
                         DateTime thisday = DateTime.Now.Date.AddDays(i);
-                        if (thisday.DayOfWeek == DayOfWeek.Sunday)
+                        if (IsDay(thisday.DayOfWeek))
                         {
                             InsertSchoolTask(TaskUser, TaskCategory,
                         IntelligentColor(TaskCategoryColour),
@@ -376,6 +379,7 @@ namespace UplanTest
                         "Weekend means more time to work on this projet: " + '\n' + SubDesc,
                         IsComplete,
                         date.AddDays(i));
+                            i += 6;
                         }
                     }
                 }
@@ -386,7 +390,7 @@ namespace UplanTest
                     for (int i = 1; i < p; i += 1)
                     {
                         DateTime thisday = DateTime.Now.Date.AddDays(i);
-                        if (thisday.DayOfWeek == DayOfWeek.Sunday)
+                        if (IsDay(thisday.DayOfWeek))
                         {
                             if (lastweek==0)
                             {
@@ -405,6 +409,7 @@ namespace UplanTest
                             {
                                 lastweek = 0;
                             }
+                            i += 13;
                         }
                     }
                 }
@@ -466,6 +471,23 @@ namespace UplanTest
 
 
             return newColor;
+        }
+        public static bool IsDay(DayOfWeek dayofweektoday)
+        {
+            return (MyUser.me.RestDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+
+    MyUser.me.RestDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+
+    MyUser.me.RestDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+
+    MyUser.me.RestDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
+
+    MyUser.me.RestDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
+
+    MyUser.me.RestDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
+
+    MyUser.me.RestDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday);
+
         }
         public SchoolTask()
         {
