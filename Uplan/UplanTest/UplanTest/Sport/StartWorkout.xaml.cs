@@ -6,6 +6,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Windows;
 using System.Timers;
+using MediaManager.Forms;
+
 namespace UplanTest
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -102,9 +104,10 @@ namespace UplanTest
 
                                 InTheFrame.Content = LilTime;
                                 if (seconds == 25)
-                                {InTheFrame.BackgroundColor = Color.IndianRed;}
-                                if (seconds%30==1)
-                                {InTheFrame.BackgroundColor = Color.LightGreen;}
+                                { InThePicture.Source = "Assets/RoundRouge.png"; }
+
+                                if (seconds%30==0)
+                                {InThePicture.Source= "Assets/RondVert.png";}
 
                                 if ( seconds==30 && ActExercice == 10 && round == 1)
                                 {
@@ -149,7 +152,7 @@ namespace UplanTest
                                         LilTime.HorizontalOptions = LayoutOptions.Center;
                                         LilTime.VerticalOptions = LayoutOptions.Center;
                                         LilTime.FontSize = 20;
-                                        InTheFrame.BackgroundColor = Color.LavenderBlush;
+                                        InThePicture.Source = "Assets/RoundPause.png";
                                         inbetween -= 1;
                                     }
                                     else
