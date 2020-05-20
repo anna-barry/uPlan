@@ -134,7 +134,6 @@
     <Content Include="Assets\croix.png" />
     <Content Include="Assets\CrossCrunch.png" />
     <Content Include="Assets\CrossLeg.png" />
-    <Content Include="Assets\culinary-recipe.gif" />
     <Content Include="Assets\CycleAbs.png" />
     <Content Include="Assets\default.png" />
     <Content Include="Assets\DonkeyKicks.png" />
@@ -147,11 +146,8 @@
     <Content Include="Assets\foodplan.png" />
     <Content Include="Assets\Fridge.png" />
     <Content Include="Assets\GetInfo.png" />
-    <Content Include="Assets\GetPersonaPhoto.gif" />
     <Content Include="Assets\GlutBridge.png" />
     <Content Include="Assets\HammerCurl.png" />
-    <Content Include="Assets\HydratingLOL.gif" />
-    <Content Include="Assets\HydratingLOL2.gif" />
     <Content Include="Assets\IconMealPlanForSH.png" />
     <Content Include="Assets\JackKnives.png" />
     <Content Include="Assets\JumpingJacks.png" />
