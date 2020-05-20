@@ -6,6 +6,14 @@
              mc:Ignorable="d"
              x:Class="UplanTest.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Georgia" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Georgia" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
+    
 </Application>

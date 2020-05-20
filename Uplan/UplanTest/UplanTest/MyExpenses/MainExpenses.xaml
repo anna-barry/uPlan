@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.MainExpenses">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Label Text="My Expenses" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="40" Grid.ColumnSpan="3"/>
+
+            <!--EXPENSES-->
+            <Label Text="Kind" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Expenses" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+            <Label Text="Limit" Grid.Row="2" Grid.Column="3" VerticalTextAlignment="Center" TextColor="BlueViolet" FontSize="20"/>
+
+
+            <ListView x:Name="kind" Grid.Row="1" Grid.Column="0" />
+            <ListView x:Name="expenses" Grid.Row="1" Grid.Column="1"/>
+            <ListView x:Name="limit" Grid.Row="1" Grid.Column="2"/>
+
+            <Button Text="Add and expense" Grid.Row="0" Grid.Column="2" VerticalOptions="End" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="AddExpenses"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

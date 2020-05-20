@@ -76,6 +76,12 @@ namespace UplanTest
 
         }
 
+        private void ClickForMoney(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new MainExpenses());
+
+        }
+
 
     }
 }

@@ -56,13 +56,15 @@
                     <ImageButton Source="Assets/SportIcon.png" Grid.Row="4" HeightRequest="90"  BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked10"  CornerRadius="10" ></ImageButton>
                     <Button Text="My Workouts" Grid.Row="4" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked10"   Grid.ColumnSpan="2" />
 
-                    <ImageButton Source="Assets/settings.png"  HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="5" CornerRadius="10" ></ImageButton>
-                    <Button Text="About Me" Grid.Row="5" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked8"  Grid.ColumnSpan="2"  />
+                    <ImageButton Source="Assets/settings.png"  HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Clicked="Button_Clicked8"  Grid.Row="6" CornerRadius="10" ></ImageButton>
+                    <Button Text="About Me" Grid.Row="6" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked8"  Grid.ColumnSpan="2"  />
 
-                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="6" CornerRadius="10" ></ImageButton>
-                    <Button Text="About Us" Grid.Row="6" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
-                    
-                    
+                    <ImageButton Source="Assets/Team2.png" Clicked="Button_Clicked9" HeightRequest="90" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="7" CornerRadius="10" ></ImageButton>
+                    <Button Text="About Us" Grid.Row="7" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="Button_Clicked9"  Grid.ColumnSpan="2"  />
+
+
+                    <ImageButton Source="Assets/Money.png" Clicked="ClickForMoney" BackgroundColor="{StaticResource txtBgColor}" Grid.Row="5" CornerRadius="10" />
+                    <Button Text="My money" Grid.Row="5" TextColor="White" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" FontSize="22" Clicked="ClickForMoney"  Grid.ColumnSpan="2"  />
 
 
 
