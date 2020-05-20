@@ -42,7 +42,7 @@ namespace UplanTest
             int l = amount.Length-1;
             while (l>=0 && amount[l]!=',' && amount[l]!='.' )
             { 
-                ret += (amount[l]%48) * 10^l;
+                ret += (amount[l]%48) * (10^l);
                 l--;
             }
             if (l<0)
@@ -50,7 +50,7 @@ namespace UplanTest
             int t = -l;
             while (t < 0)
             { 
-              ret += amount[l] * 10^t;
+              ret += (amount[l]%48) * (10^t);
                 t++;
             }
             return ret;

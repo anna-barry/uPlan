@@ -24,8 +24,8 @@ namespace UplanTest
             this.type = type;
             typee.Text = "See Expenses for" + type;
             switch (type)
-            { 
-            case "Food":
+            {
+                case "Food":
                     max.Placeholder = ThisMaxMoney.CurrentMax.MaxForFood.ToString();
                     break;
                 case "Going Out":
@@ -43,30 +43,51 @@ namespace UplanTest
                 case "Other":
                     max.Placeholder = ThisMaxMoney.CurrentMax.MaxForOthers.ToString();
                     break;
-            default:
+                default:
                     break;
             }
 
-            (expenses,amounts) =DisplayExepenses(type);
-            money.ItemsSource = expenses;
-            desc.ItemsSource = amounts;
+            List<string> list = DisplayExepenses(type);
+            desc.ItemsSource = list;
+
+            desc.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete expens", "Do you really want to delete this expense", "No", "Yes");
+                if (!answer)
+                {
+                    string res = "";
+                    string thisItem = desc.SelectedItem.ToString();
+                    int i = 0;
+                    while (thisItem[i] != ' ')
+                    {
+                        res += thisItem[i];
+                        i += 1;
+                    }
+                    var col = Database.db.GetCollection<Money>("Money");
+                    var resultforItem = col.FindOne(Query.EQ("Description", res));
+                    col.Delete(resultforItem.Id);
+
+                    desc.ItemsSource = null;
+                }
 
 
+            };
         }
+            
 
-        public static (List<string>,List<float>) DisplayExepenses(string type)
+
+        public static List<string> DisplayExepenses(string type)
         {
-            List<float> am = new List<float> {};
-            List<string> desc = new List<string> {};
+            List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
             foreach (var expense in list)
             {
-                am.Add(expense.Amount);
-                desc.Add(expense.Description);
+                
+                desc.Add(expense.Description+ "               "+ expense.Amount);
             }
 
-            return (desc, am);
+            return desc;
         }
 
         async void OnMaxClicked(object sender, EventArgs args)
@@ -103,7 +124,7 @@ namespace UplanTest
             int l = amount.Length-1;
             while (l > 0 && amount[l] != ',' && amount[l] != '.')
             {
-                ret += (amount[l]%48) * 10 ^ l;
+                ret += (amount[l]%48) * (10 ^ l);
                 l--;
             }
             if (l == 0)
@@ -112,7 +133,7 @@ namespace UplanTest
             int t = -l;
             while (t < 0)
             {
-                ret += amount[l] * 10 ^ t;
+                ret += (amount[l]%48) * (10 ^ t);
                 t++;
             }
             return ret;
