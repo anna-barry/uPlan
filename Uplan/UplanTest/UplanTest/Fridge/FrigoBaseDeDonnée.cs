@@ -59,7 +59,7 @@ namespace UplanTest
 
         }
 
-        public static void InsertProduct(string url, string name, float sucre, float sel, float matieregrasses, string gommetessel, string gommetesucre, string gommetemg, float proteine, string ingredients, DateTime peremption)
+        public static void InsertProduct(string url, string name, float sucre, float sel, float matieregrasses,string gommetessel, string gommetesucre, string gommetemg, float proteine, string ingredients, DateTime peremption)
         {
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
             col.EnsureIndex(x => x.Url);
@@ -72,7 +72,6 @@ namespace UplanTest
             col.EnsureIndex(x => x.GommetesMG);
             col.EnsureIndex(x => x.Proteine);
             col.EnsureIndex(x => x.Ingrédients);
-
             col.EnsureIndex(x => x.Peremption);
 
             col.Insert(
@@ -88,7 +87,6 @@ namespace UplanTest
                     GommetesMG = gommetemg,
                     Proteine = proteine,
                     Ingrédients = ingredients,
-
                     Peremption = peremption,
 
 

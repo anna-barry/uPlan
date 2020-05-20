@@ -13,18 +13,25 @@ namespace UplanTest
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FridgePage : ContentPage
     {
+        Label Notif_Bas = new Label(); 
         Entry EntréeCodeBarre = new Entry();
         Label SortieApi = new Label();
         Button valider = new Button();
         DatePicker peremption = new DatePicker();
+        Entry SiPasCodeBarre = new Entry();
+        Entry Description = new Entry();
+        Label addperemp = new Label();
+        Grid grid = new Grid();
+
         public FridgePage()
         {
+      
 
             ApiHelper.InitializeClient();
-            
+             
 
 
-            var grid = new Grid();
+           
             ScrollView scrollView = new ScrollView { Orientation = ScrollOrientation.Vertical };
             scrollView.Content = grid;
             Content = scrollView;
@@ -39,7 +46,7 @@ namespace UplanTest
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(10) });
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(70) });
 
-            for (int i = 1; i < longu + 8; i++)
+            for (int i = 1; i < longu + 12; i++)
 
             {
 
@@ -49,7 +56,7 @@ namespace UplanTest
 
 
 
-            for (int j = 1; j < 4; j++)
+            for (int j = 1; j < 3; j++)
 
             {
 
@@ -57,47 +64,76 @@ namespace UplanTest
 
             }
 
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(10) });
 
-            var TextFridge = new Label { Text = "My Fridge", FontSize = 30, FontAttributes = FontAttributes.Bold, TextColor = Color.BlueViolet };
+            var TextFridge = new Label { Text = "My Fridge", FontSize = 30, FontAttributes = FontAttributes.Bold, TextColor = Color.White };
 
 
 
-            grid.Children.Add(TextFridge, 1, 0);
+            
             TextFridge.HorizontalTextAlignment = TextAlignment.Center;
-            var Fridge = new Frame { BorderColor = Color.Black };
+            var Fridge = new Frame { BorderColor = Color.White };
             grid.Children.Add(Fridge, 1, 1);
 
             Grid.SetRowSpan(Fridge, longu + 3);
 
-            var AddProduct = new Label { Text = "Add a product", TextColor = Color.Black, HorizontalTextAlignment = TextAlignment.Center };
+            var AddProduct = new Label { Text = "Add a product", TextColor = Color.White,  HorizontalTextAlignment = TextAlignment.Center,FontAttributes =  FontAttributes.Bold, FontSize = 30};
             grid.Children.Add(AddProduct, 2, 0);
 
 
+           
+            addperemp.Text = "Peremption date:";
+            addperemp.TextColor = Color.White;
+            addperemp.VerticalTextAlignment = TextAlignment.End;
+            addperemp.HorizontalTextAlignment = TextAlignment.Center; 
 
-
-
-
-
-
-
+            EntréeCodeBarre.TextColor = Color.White; 
+            EntréeCodeBarre.BackgroundColor = Color.FromHex("685C69");
+            EntréeCodeBarre.Placeholder = "Enter a barrcode";
+            EntréeCodeBarre.HorizontalTextAlignment = TextAlignment.Center; 
 
             valider.Clicked += new EventHandler(this.Sauvegarder_Clicked);
             valider.Text = "Save";
+            valider.TextColor = Color.White;
+            valider.BackgroundColor = Color.FromHex("685C69");
+            valider.FontSize = 24;
 
+            SiPasCodeBarre.Placeholder = "Description of the product (if it doesn't have a barcode)";
+            SiPasCodeBarre.BackgroundColor = Color.FromHex("685C69");
+            SiPasCodeBarre.TextColor = Color.White;
+            SiPasCodeBarre.HorizontalTextAlignment = TextAlignment.Center;
 
+            Notif_Bas.TextColor = Color.White;
 
-
+            SortieApi.TextColor = Color.White;
+            SortieApi.FontSize = 15;
+            SortieApi.HorizontalTextAlignment = TextAlignment.Center; 
 
             int k = 1;
             foreach (var item in col.FindAll())
             {
-                if (DateTime.Now <= item.Peremption)
+                if(DateTime.Now.Date <= item.Peremption.Date)
                 {
+                    if(DateTime.Now.Date == item.Peremption.Date)
+                    {
+                        Notif_Bas.Text += $"Attention le produit {item.Name} se périme aujourd'hui \n";
+                    }
+                    if(DateTime.Now.Date.AddDays(+2) == item.Peremption.Date)
+                    {
+                        Notif_Bas.Text += $"Attention le produit {item.Name} se périme dans deux jours \n";
+                    }
+                  
+                  
                     Button btn = new Button();
                     grid.Children.Add(btn, 1, k);
                     btn.Text = item.Name;
                     btn.Clicked += new EventHandler(this.button_click);
+                    btn.BackgroundColor = Color.FromHex("685C69");
+                    btn.BorderColor = Color.White;
+                    btn.TextColor = Color.White; 
+                    
                 }
+                
                 else
                 {
                     col.Delete(item.Id);
@@ -107,32 +143,30 @@ namespace UplanTest
                 k++;
             }
 
-            Label addperemp = new Label();
-            addperemp.Text = "Peremption date:";
-            addperemp.TextColor = Color.MediumVioletRed;
-
-            addperemp.VerticalTextAlignment = TextAlignment.End;
+            
 
 
 
 
             DateTime date = peremption.Date;
-            grid.Children.Add(peremption, 6, 10);
-            Grid.SetColumnSpan(peremption, 3);
 
 
 
-
+            grid.Children.Add(TextFridge, 1, 0);
             grid.Children.Add(EntréeCodeBarre, 2, 1);
-            grid.Children.Add(addperemp, 2, 3);
-            grid.Children.Add(peremption, 2, 4);
-            grid.Children.Add(valider, 2, 6);
-
-            grid.Children.Add(SortieApi, 2, 8);
+            grid.Children.Add(SiPasCodeBarre, 2, 3);
+            grid.Children.Add(addperemp, 2, 5);
+            grid.Children.Add(peremption, 2, 6);
+            grid.Children.Add(valider, 2, 8);
+            grid.Children.Add(SortieApi, 2, 10);
+            grid.Children.Add(Notif_Bas, 1, longu + 12);
+           
 
             Grid.SetRowSpan(EntréeCodeBarre, 2);
             Grid.SetRowSpan(peremption, 2);
             Grid.SetRowSpan(valider, 2);
+            Grid.SetColumnSpan(Notif_Bas, 2);
+            Grid.SetRowSpan(SiPasCodeBarre, 2); 
 
 
             ImageButton Close = new ImageButton();
@@ -140,11 +174,15 @@ namespace UplanTest
             Close.Clicked += (sender, e) => OnCloseClicked2();
             grid.Children.Add(Close, 0, 2);
 
+            
 
 
+            grid.BackgroundColor = Color.FromHex("180719");
 
+            
 
         }
+       
 
 
 
@@ -167,25 +205,57 @@ namespace UplanTest
             if (nutriInfo == null)
             {
                 SortieApi.Text = "Barcode Invalid";
-                SortieApi.TextColor = Color.Red;
-                SortieApi.BackgroundColor = Color.White;
             }
             else
             {
+                var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
                 if (nutriInfo.Ingredients_text != null)
                 {
-                    FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g, nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text, peremption.Date);
+                    FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g ,nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text,peremption.Date);
                     SortieApi.Text = "The pruduct has been aded with succes in your pantry";
+                    int k = 1;
+                    /*foreach (var item in col.FindAll())
+                    {
+                        if (DateTime.Now.Date <= item.Peremption.Date)
+                        {
+                            if (DateTime.Now.Date == item.Peremption.Date)
+                            {
+                                Notif_Bas.Text += $"Attention le produit {item.Name} se périme aujourd'hui \n";
+                            }
+                            if (DateTime.Now.Date.AddDays(+2) == item.Peremption.Date)
+                            {
+                                Notif_Bas.Text += $"Attention le produit {item.Name} se périme dans deux jours \n";
+                            }
+
+
+                            Button btn = new Button();
+                            grid.Children.Add(btn, 1, k);
+                            btn.Text = item.Name;
+                            btn.Clicked += new EventHandler(this.button_click);
+                            btn.BackgroundColor = Color.FromHex("685C69");
+                            btn.BorderColor = Color.White;
+                            btn.TextColor = Color.White;
+
+                        }
+
+                        else
+                        {
+                            col.Delete(item.Id);
+                        }
+
+
+                        k++;
+                    }*/
+
+
                 }
 
                 else
-                    SortieApi.Text = "Erreur dans le code barre";
-
-
-
-                Navigation.PushAsync(new FridgePage());
+                    SortieApi.Text = "Barcode Invalid";
+                
 
             }
+           
 
         }
 

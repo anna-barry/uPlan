@@ -14,15 +14,17 @@ namespace UplanTest
     {
         public PageProduct(FrigoBaseDeDonnée produit)
         {
-            
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label { Text = "Hello ContentPage" },
-                    new Label { Text = produit.Name},
-                }
+            Grid grid = new Grid();
 
-            };
+            Content = grid;
+
+            StackLayout Entête = new StackLayout
+            {
+                Children =
+                {
+                    new Label ()
+                }
+            }; 
         }
 
 
