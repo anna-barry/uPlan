@@ -12,8 +12,8 @@ namespace UplanTest
         public int Id { get; set; }
 
         public string Type { get; set; }
-        public int Amount { get; set; }
-        public int Max { get; set; }
+        public float Amount { get; set; }
+        public string Description { get; set; }
 
         public static void Initiate()
         {
@@ -23,7 +23,7 @@ namespace UplanTest
             // Index document using these properties
             col.EnsureIndex(x => x.Type);
             col.EnsureIndex(x => x.Amount);
-            col.EnsureIndex(x => x.Max);
+            col.EnsureIndex(x => x.Description);
 
 
             col.Insert(
@@ -31,7 +31,7 @@ namespace UplanTest
                 {
                     Type = "Food",
                     Amount=0,
-                    Max=0,
+                    Description="",
                 }
              );
 
@@ -40,7 +40,7 @@ namespace UplanTest
                 {
                     Type = "Going Out",
                     Amount = 0,
-                    Max = 0,
+                    Description = "",
                 }
              );
             col.Insert(
@@ -48,7 +48,7 @@ namespace UplanTest
                 {
                     Type = "Clothes and accessories",
                     Amount = 0,
-                    Max = 0,
+                    Description = "",
                 }
              );
 
@@ -57,7 +57,7 @@ namespace UplanTest
                 {
                     Type = "Health",
                     Amount = 0,
-                    Max = 0,
+                    Description = "",
                 }
              );
             col.Insert(
@@ -65,7 +65,7 @@ namespace UplanTest
                 {
                     Type = "Hobbies",
                     Amount = 0,
-                    Max = 0,
+                    Description = "",
                 }
              );
             col.Insert(
@@ -73,21 +73,21 @@ namespace UplanTest
                 {
                     Type = "Other",
                     Amount = 0,
-                    Max = 0,
+                    Description = "",
                 }
              );
         }
 
         public static void AddMoney(
-                    int Amount,
-                    int Max,
+                    float Amount,
+                    string Description,
                     String Type)
         {
             // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<Money>("Money");
             var res = col.FindOne(Query.EQ("Type", Type));
-            res.Amount += Amount;
-            res.Max = Max;
+            res.Amount = Amount;
+            res.Description= Description;
         }
 
         public static void ResestMoney()

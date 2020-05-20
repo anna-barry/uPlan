@@ -7,10 +7,33 @@
              mc:Ignorable="d"
              x:Class="UplanTest.ViewAnExpense">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+            </Grid.RowDefinitions>
+            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+
+            <ListView x:Name="money" Grid.Row="2" Grid.Column="1" />
+            <ListView x:Name="desc" Grid.Row="2" Grid.Column="2" />
+
+            <Label Text="Maximum expens" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" TextColor="Violet" />
+            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Placeholder="Amount" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="4" VerticalOptions="Start" Grid.Column="0" HeightRequest="90" WidthRequest="60"/>
+
+            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+            <ImageButton Source="Assets/add_round.png" Clicked="OnAddClicked" Grid.Row="0" Grid.Column="3"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

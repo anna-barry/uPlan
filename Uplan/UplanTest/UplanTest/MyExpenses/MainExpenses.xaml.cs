@@ -73,9 +73,7 @@ namespace UplanTest
             {
                 Color = SKColor.Parse("#00BFFF"),
                 Label = "Max Money to go out and have fun",
-                ValueLabel = MaxGoingOut.ToString()
-
-            });
+                ValueLabel = MaxGoingOut.ToString()    });
             ChartGoingOut.Chart = new Microcharts.BarChart() { Entries = ForGoingOut };
             //______________________________________________________________________________
             //________________________ Clothes _____________________________________________
