@@ -12,104 +12,32 @@ namespace UplanTest
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainExpenses : ContentPage
     {
-        List<Entry2> ForFood = new List<Entry2>();
-        List<Entry2> ForGoingOut = new List<Entry2>();
-        List<Entry2> Clothes = new List<Entry2>();
-        List<Entry2> Health = new List<Entry2>();
+        
         public MainExpenses()
         {
             InitializeComponent();
-            var col = Database.db.GetCollection<Money>("Money");
-
-            //____________________ Food______________________
-
-            var resultForFood = col.Find(Query.EQ("Type", "Food"));
-            float MaxFood = ThisMaxMoney.CurrentMax.MaxForFood;
-            float CurrentMoneySpent = 0;
-            foreach (var LilFood in resultForFood)
-            {
-                CurrentMoneySpent += LilFood.Amount;
-            }
-
-            ForFood.Add(
-                new Entry2(CurrentMoneySpent)
-            {
-                Color = SKColor.Parse("#FF1493"),
-                Label = "Current Money Spend on Food",
-                ValueLabel = CurrentMoneySpent.ToString(),
-
-            });
-
-            ForFood.Add(
-            new Entry2(MaxFood)
-            {
-                Color = SKColor.Parse("#00BFFF"),
-                Label = "Max Money On Food",
-                ValueLabel = MaxFood.ToString()
-
-            });
-            ChartFood.Chart = new Microcharts.BarChart() { Entries = ForFood };
-            //______________________________________________________________
-            //______________________ Going Out _____________________________
-            var resultForGoingOut = col.Find(Query.EQ("Type", "Going Out"));
-            float MaxGoingOut = ThisMaxMoney.CurrentMax.MaxForGoingOut;
-            float CurrentMoneySpentGO = 0;
-            foreach (var lilres in resultForGoingOut)
-            {
-                CurrentMoneySpentGO += lilres.Amount;
-            }
-
-            ForGoingOut.Add(
-                new Entry2(CurrentMoneySpent)
-                {
-                    Color = SKColor.Parse("#FF1493"),
-                    Label = "Current Money Spend on Going Out",
-                    ValueLabel = CurrentMoneySpent.ToString(),
-
-                });
-
-            ForGoingOut.Add(
-            new Entry2(MaxGoingOut)
-            {
-                Color = SKColor.Parse("#00BFFF"),
-                Label = "Max Money to go out and have fun",
-                ValueLabel = MaxGoingOut.ToString()    });
-            ChartGoingOut.Chart = new Microcharts.BarChart() { Entries = ForGoingOut };
-            //______________________________________________________________________________
-            //________________________ Clothes _____________________________________________
-            var resultForClothes = col.Find(Query.EQ("Type", "Clothes and accessories"));
-            float MaxClothes = ThisMaxMoney.CurrentMax.MaxForClothes;
-            float CurrentMoneySpentClothes = 0;
-            foreach (var res in resultForClothes)
-            {
-                CurrentMoneySpentClothes += res.Amount;
-            }
-
-            Clothes.Add(
-                new Entry2(CurrentMoneySpentClothes)
-                {
-                    Color = SKColor.Parse("#FF1493"),
-                    Label = "Current Money Spend on Clothes",
-                    ValueLabel = CurrentMoneySpent.ToString(),
-
-                });
-
-            Clothes.Add(
-            new Entry2(MaxClothes)
-            {
-                Color = SKColor.Parse("#00BFFF"),
-                Label = "Max Money that should be spent",
-                ValueLabel = MaxClothes.ToString()
-
-            });
-            ChartClothes.Chart = new Microcharts.BarChart() { Entries = Clothes };
-            //___________________________________________ Health
-
-        }
-        private async void GoToFood(object sender, EventArgs args)
-        {
             
+            //____________________ Food__________________________________________________________________________________________________________________
+
+            ChartFood.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Food", ThisMaxMoney.CurrentMax.MaxForFood) };
+            ChartFood.Chart.BackgroundColor = SKColors.Transparent;
+            //______________________ Going Out ____________________________________________________________________________________________________________
+            ChartGoingOut.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Going Out", ThisMaxMoney.CurrentMax.MaxForGoingOut) };
+            ChartGoingOut.Chart.BackgroundColor = SKColors.Transparent;
+            //________________________ Clothes ____________________________________________________________________________________________________________
+            ChartClothes.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Clothes and accessories", ThisMaxMoney.CurrentMax.MaxForClothes) };
+            ChartClothes.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Health____________________________________________________________________________________________
+            ChartHealth.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Health", ThisMaxMoney.CurrentMax.MaxForHealth) };
+            ChartHealth.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Hobbies ____________________________________________________________________________________________
+            ChartHobbies.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Hobbies", ThisMaxMoney.CurrentMax.MaxForHobbies) };
+            ChartHobbies.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Other ____________________________________________________________________________________________
+            ChartOther.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Other", ThisMaxMoney.CurrentMax.MaxForOthers) };
+            ChartOther.Chart.BackgroundColor = SKColors.Transparent;
         }
+       
 
         public List<Entry2> InitiateChart(string Type, float Max)
         {
@@ -123,24 +51,78 @@ namespace UplanTest
                 Currents += lilres.Amount;
             }
 
-            Clothes.Add(
+            res.Add(
                 new Entry2(Currents)
                 {
-                    Color = SKColor.Parse("#FF1493"),
-                    Label = "Current Money Spend on Clothes",
+                    Color = SKColor.Parse("#8043b4"),
+                    Label = "Current Money Spend on "+Type,
                     ValueLabel = Currents.ToString(),
 
                 });
 
-            Clothes.Add(
+            res.Add(
             new Entry2(Max)
             {
-                Color = SKColor.Parse("#00BFFF"),
+                Color = SKColor.Parse("#4a5394"),
                 Label = "Max Money that should be spent",
                 ValueLabel = Max.ToString()
 
             });
             return res;
         }
+
+        private async void GoToFood(object sender, EventArgs args)
+        {
+
+        }
+        private async void GoToGoOut(object sender, EventArgs args)
+        {
+
+        }
+        private async void GoToClothes(object sender, EventArgs args)
+        {
+
+        }
+        private async void GoToHealth(object sender, EventArgs args)
+        {
+
+        }
+        private async void GoToHobbies(object sender, EventArgs args)
+        {
+
+        }
+        private async void GoToOther(object sender, EventArgs args)
+        {
+
+        }
+
+        public void RefreshMoney(object sender, EventArgs args)
+        {
+            var col = Database.db.GetCollection<Money>("Money");
+            col.DeleteAll();
+            RefreshAllView();
+        }
+
+        public void RefreshAllView()
+        {
+            ChartFood.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Food", ThisMaxMoney.CurrentMax.MaxForFood) };
+            ChartFood.Chart.BackgroundColor = SKColors.Transparent;
+            //______________________ Going Out ____________________________________________________________________________________________________________
+            ChartGoingOut.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Going Out", ThisMaxMoney.CurrentMax.MaxForGoingOut) };
+            ChartGoingOut.Chart.BackgroundColor = SKColors.Transparent;
+            //________________________ Clothes ____________________________________________________________________________________________________________
+            ChartClothes.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Clothes and accessories", ThisMaxMoney.CurrentMax.MaxForClothes) };
+            ChartClothes.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Health____________________________________________________________________________________________
+            ChartHealth.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Health", ThisMaxMoney.CurrentMax.MaxForHealth) };
+            ChartHealth.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Hobbies ____________________________________________________________________________________________
+            ChartHobbies.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Hobbies", ThisMaxMoney.CurrentMax.MaxForHobbies) };
+            ChartHobbies.Chart.BackgroundColor = SKColors.Transparent;
+            //___________________________________________ Other ____________________________________________________________________________________________
+            ChartOther.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Other", ThisMaxMoney.CurrentMax.MaxForOthers) };
+            ChartOther.Chart.BackgroundColor = SKColors.Transparent;
+        }
+
     }
 }
