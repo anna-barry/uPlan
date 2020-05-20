@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LiteDB;
+using SkiaSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,83 +8,81 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Entry2 = Microcharts.Entry;
 
 namespace UplanTest
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainExpenses : ContentPage
     {
-        public List<string> ToCallKind = new List<string>();
-        public List<string> ToCallExpense = new List<string>();
-        public List<string> ToCallMax = new List<string>();
+        List<Entry2> ForFood = new List<Entry2>();
+        List<Entry2> ForGoingOut = new List<Entry2>();
         public MainExpenses()
         {
             InitializeComponent();
             var col = Database.db.GetCollection<Money>("Money");
-            var result = col.FindAll();
 
-            List<string> Kind = DisplayKind(0);
-            kind.ItemsSource = Kind;
-            List<int> Expenses = DisplayExpenses(1);
-            expenses.ItemsSource = Expenses;
-            List<int> Max = DisplayLimit(2);
-            limit.ItemsSource = Max;
-        }
-        public static List<string> DisplayKind(int col)
-        {
-            List<string> toadd = new List<string> { };
+            //____________________ Food______________________
 
-            var co = Database.db.GetCollection<Money>("Money");
-            var result = co.FindAll();
-
-            foreach (var kind in result)
+            var resultForFood = col.Find(Query.EQ("Type", "Food"));
+            float MaxFood = ThisMaxMoney.CurrentMax.MaxForFood;
+            float CurrentMoneySpent = 0;
+            foreach (var LilFood in resultForFood)
             {
-                toadd.Add(kind.Type);
+                CurrentMoneySpent += LilFood.Amount;
             }
 
-            return toadd;
-        }
-        public static List<int> DisplayExpenses(int col)
-        {
-
-            List<int> toadd = new List<int> { };
-
-            var co = Database.db.GetCollection<Money>("Money");
-            var result = co.FindAll();
-
-            foreach (var kind in result)
+            ForFood.Add(
+                new Entry2(CurrentMoneySpent)
             {
-                toadd.Add(kind.Amount);
+                Color = SKColor.Parse("#FF1493"),
+                Label = "Current Money Spend on Food",
+                ValueLabel = CurrentMoneySpent.ToString(),
+
+            });
+
+            ForFood.Add(
+            new Entry2(MaxFood)
+            {
+                Color = SKColor.Parse("#00BFFF"),
+                Label = "Max Money On Food",
+                ValueLabel = MaxFood.ToString()
+
+            });
+            ChartFood.Chart = new Microcharts.BarChart() { Entries = ForFood };
+            //______________________________________________________________
+            //______________________ Going Out _____________________________
+            var resultForGoingOut = col.Find(Query.EQ("Type", "Going Out"));
+            float MaxGoingOut = ThisMaxMoney.CurrentMax.MaxForGoingOut;
+            float CurrentMoneySpentGO = 0;
+            foreach (var lilres in resultForGoingOut)
+            {
+                CurrentMoneySpentGO += lilres.Amount;
             }
 
-            return toadd;
+            ForGoingOut.Add(
+                new Entry2(CurrentMoneySpent)
+                {
+                    Color = SKColor.Parse("#FF1493"),
+                    Label = "Current Money Spend on Going Out",
+                    ValueLabel = CurrentMoneySpent.ToString(),
 
-        }
-        public static List<int> DisplayLimit(int col)
-        {
-            List<int> toadd = new List<int> { };
+                });
 
-            var co = Database.db.GetCollection<Money>("Money");
-            var result = co.FindAll();
-
-            foreach (var kind in result)
+            ForGoingOut.Add(
+            new Entry2(MaxFood)
             {
-               // toadd.Add(kind.Max);
-            }
+                Color = SKColor.Parse("#00BFFF"),
+                Label = "Max Money to go out and have fun",
+                ValueLabel = MaxGoingOut.ToString()    });
+            ChartGoingOut.Chart = new Microcharts.BarChart() { Entries = ForGoingOut };
 
-            return toadd;
         }
-
-        private async void OnCloseClicked2(object sender, EventArgs args)
+        private async void GoToFood(object sender, EventArgs args)
         {
-            await Navigation.PopAsync();
+            
         }
 
-        private async void AddExpenses(object sender, EventArgs args)
-        {
-            //Navigation.PushAsync(new AddExpenses());
-        }
 
-        //private void RefreshType()
     }
 }

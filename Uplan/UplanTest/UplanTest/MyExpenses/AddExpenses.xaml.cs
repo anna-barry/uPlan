@@ -14,19 +14,21 @@ namespace UplanTest
         public partial class AddExpenses: ContentPage
     {
         string description;
-        string trans;
+        string type;
         float amount;
+
 
         public AddExpenses(string type)
         {
             InitializeComponent();
+            this.type = type;
             typee.Text = "Add a new expens in" + type;
 
      
         }
 
 
-        async void OnSaveClicked(object sender, EventArgs args,string type)
+        async void OnSaveClicked(object sender, EventArgs args)
         {
             description = desc.Text;
             amount = Convert(amountt.Text);

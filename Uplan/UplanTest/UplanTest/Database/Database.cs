@@ -25,6 +25,8 @@ namespace UplanTest
                 ListEntryForFood.Initiate();
                 ListEntrySport.Initiate();
                 ListEntryYOGA.Initiate();
+                FoodItem.Initiate();
+                CollectionForMax.Initiate();
 
                 MyUser.isDefault = true;
             }
@@ -48,7 +50,8 @@ namespace UplanTest
 
             MyUser.Initiate();
             MyFoodWeek.Initiate();
-            FoodItem.Initiate();
+            //FoodItem.Initiate();
+            ThisMaxMoney.Initiate();
         }
     }
 }

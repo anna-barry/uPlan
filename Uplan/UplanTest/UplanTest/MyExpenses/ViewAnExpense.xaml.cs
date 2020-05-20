@@ -16,10 +16,12 @@ namespace UplanTest
     {
         List<string> expenses;
         List<float> amounts;
+        string type;
 
         public ViewAnExpense(string type)
         {
             InitializeComponent();
+            this.type = type;
             typee.Text = "See Expenses for" + type;
             (expenses,amounts) =DisplayExepenses(type);
             money.ItemsSource = expenses;
@@ -42,7 +44,7 @@ namespace UplanTest
 
         }
 
-        async void OnMaxClicked(object sender, EventArgs args, string type)
+        async void OnMaxClicked(object sender, EventArgs args)
         {
             float maxi = Convert(max.Text);
             switch (type)
@@ -90,7 +92,7 @@ namespace UplanTest
             }
             return ret;
         }
-        async void OnAddClicked(object sender, EventArgs args, string type)
+        async void OnAddClicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new AddExpenses(type));
         }
