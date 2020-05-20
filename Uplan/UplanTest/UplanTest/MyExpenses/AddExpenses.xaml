@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="UplanTest.MyExpenses.AddExpenses">
-  <ContentView.Content>
+             x:Class="UplanTest.AddExpenses">
+    <ContentPage.Content>
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -22,29 +22,21 @@
 
             </Grid.RowDefinitions>
 
-            <Label Text="Add a new " Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label Text="Type of Food" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Button x:Name="food" Text="Food" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnFoodClicked"  BorderColor="SkyBlue" />
-            <Button x:Name="GoOut" Text="Going Out" Grid.Row="2" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnGoOutClicked"  BorderColor="SkyBlue"/>
-            <Button x:Name="Clothing" Text="Clothes and accessories" Grid.Row="2" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnClothingClicked" BorderColor="SkyBlue" />
-            <Button x:Name="Health" Text="Health" Grid.Row="2" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnHealthClicked" BorderColor="SkyBlue" />
-            <Button x:Name="Hobbies" Text="Hobbies" Grid.Row="2" Grid.Column="6" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnHobbiesClicked" BorderColor="SkyBlue" />
-            <Button x:Name="Other" Text="Other" Grid.Row="2" Grid.Column="7" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnOtherClicked" BorderColor="SkyBlue" />
-
-            <Label Text="Update Maximum" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="maximum" WidthRequest="200" Placeholder="Maximum" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            
+            <Label Text="Description" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
+            <Entry x:Name="desc" WidthRequest="200" Placeholder="Maximum" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
 
 
             <Label Text="Amount" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="amount" WidthRequest="200" Placeholder="Amount" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
-
+            <Entry x:Name="amountt" Keyboard="Numeric" WidthRequest="200" Placeholder="Amount" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+    
+            
+            
             <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
-
             <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="9" Grid.Column="3"/>
-            <!-- Grid.RowSpan="2" Grid.ColumnSpan="2"-->
-
 
 
         </Grid>
-    </ContentView.Content>
-</ContentView>
+    </ContentPage.Content>
+</ContentPage>

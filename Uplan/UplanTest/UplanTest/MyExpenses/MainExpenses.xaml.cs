@@ -67,7 +67,7 @@ namespace UplanTest
 
             foreach (var kind in result)
             {
-                toadd.Add(kind.Max);
+               // toadd.Add(kind.Max);
             }
 
             return toadd;

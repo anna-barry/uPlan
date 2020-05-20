@@ -8,122 +8,56 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UplanTest.MyExpenses
+namespace UplanTest
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddExpenses : ContentView
+        public partial class AddExpenses: ContentPage
     {
-        string type = "Food";
-        string am;
-        string max;
+        string description;
+        string trans;
+        float amount;
 
-        public AddExpenses()
+        public AddExpenses(string type)
         {
             InitializeComponent();
-            food.BackgroundColor = Color.PaleVioletRed;
-        }            
-         async void OnFoodClicked(object sender, EventArgs args)
+            typee.Text = "Add a new expens in" + type;
 
+     
+        }
+
+
+        async void OnSaveClicked(object sender, EventArgs args,string type)
         {
-            type= "Food";
-            food.BackgroundColor= Color.PaleVioletRed;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.AliceBlue;
-            Health.BackgroundColor = Color.AliceBlue;
-            Hobbies.BackgroundColor = Color.AliceBlue;
-            Other.BackgroundColor = Color.AliceBlue;
-
-
-        }
-
-            async void OnCarbClicked(object sender, EventArgs args)
-
-            {
-                type = "Going Out";
-                food.BackgroundColor = Color.AliceBlue;
-                GoOut.BackgroundColor = Color.PaleVioletRed;
-                Clothing.BackgroundColor = Color.AliceBlue;
-                Health.BackgroundColor = Color.AliceBlue;
-                Hobbies.BackgroundColor = Color.AliceBlue;
-                Other.BackgroundColor = Color.AliceBlue;
-        }
-
-       async void OnGoOutClicked(object sender, EventArgs args)
-
-       {
-            type = "Clothes and accesories";
-            food.BackgroundColor = Color.AliceBlue;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.PaleVioletRed;
-            Health.BackgroundColor = Color.AliceBlue;
-            Hobbies.BackgroundColor = Color.AliceBlue;
-            Other.BackgroundColor = Color.AliceBlue;
-        }
-        async void OnClothingClicked(object sender, EventArgs args)
-
-        {
-            type = "Clothes and accesories";
-            food.BackgroundColor = Color.AliceBlue;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.PaleVioletRed;
-            Health.BackgroundColor = Color.AliceBlue;
-            Hobbies.BackgroundColor = Color.AliceBlue;
-            Other.BackgroundColor = Color.AliceBlue;
-        }
-
-        async void OnHealthClicked(object sender, EventArgs args)
-
-        {
-            type = "Health";
-            food.BackgroundColor = Color.AliceBlue;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.AliceBlue;
-            Health.BackgroundColor = Color.PaleVioletRed;
-            Hobbies.BackgroundColor = Color.AliceBlue;
-            Other.BackgroundColor = Color.AliceBlue;
-        }
-
-        async void OnHobbiesClicked(object sender, EventArgs args)
-
-        {
-            type = "Health";
-            food.BackgroundColor = Color.AliceBlue;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.AliceBlue;
-            Health.BackgroundColor = Color.AliceBlue;
-            Hobbies.BackgroundColor = Color.PaleVioletRed;
-            Other.BackgroundColor = Color.AliceBlue;
-        }
-
-        async void OnOtherClicked(object sender, EventArgs args)
-
-        {
-            type = "Other";
-            food.BackgroundColor = Color.AliceBlue;
-            GoOut.BackgroundColor = Color.AliceBlue;
-            Clothing.BackgroundColor = Color.AliceBlue;
-            Health.BackgroundColor = Color.AliceBlue;
-            Hobbies.BackgroundColor = Color.PaleVioletRed;
-            Other.BackgroundColor = Color.PaleVioletRed;
-        }
-
-
-        async void OnSaveClicked(object sender, EventArgs args)
-            {
-            max = amount.Text;
-            if (max=="")
-            {
-                //max = Money
-            }
-            am= amount.Text;
-            //Money.AddMoney(am, max, type);
+            description = desc.Text;
+            amount = Convert(amountt.Text);
+            Money.AddMoney(amount, description,type);
             await Navigation.PopAsync();
         }
 
-            async void OnCloseClicked(object sender, EventArgs args)
-            {
-                await Navigation.PopAsync();
+        public static float Convert(string amount)
+        {
+            float ret = 0;
+            int l = amount.Length;
+            while (l>0 && amount[l]!=',' && amount[l]!='.' )
+            { 
+                ret += amount[l] * 10^l;
+                l++;
             }
+            if (l==0)
+            { return ret; }
+            l--;
+            int t = -l;
+            while (t < 0)
+            { 
+              ret += amount[l] * 10^t;
+                t++;
+            }
+            return ret;
+        }
+        async void OnCloseClicked(object sender, EventArgs args)
+        {
+            await Navigation.PopAsync();
         }
     }
+}
 
