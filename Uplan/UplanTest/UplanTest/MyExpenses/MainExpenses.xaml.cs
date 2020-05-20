@@ -16,6 +16,7 @@ namespace UplanTest
         public MainExpenses()
         {
             InitializeComponent();
+
             
             //____________________ Food__________________________________________________________________________________________________________________
 
@@ -36,6 +37,9 @@ namespace UplanTest
             //___________________________________________ Other ____________________________________________________________________________________________
             ChartOther.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Other", ThisMaxMoney.CurrentMax.MaxForOthers) };
             ChartOther.Chart.BackgroundColor = SKColors.Transparent;
+
+            
+
         }
        
 
@@ -73,7 +77,7 @@ namespace UplanTest
 
         private async void GoToFood(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Food"));
         }
         private async void GoToGoOut(object sender, EventArgs args)
         {

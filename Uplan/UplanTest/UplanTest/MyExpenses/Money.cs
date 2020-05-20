@@ -84,10 +84,14 @@ namespace UplanTest
                     String Type)
         {
             // Get a collection (or create, if doesn't exist)
-            var col = Database.db.GetCollection<Money>("Money");
-            var res = col.FindOne(Query.EQ("Type", Type));
-            res.Amount = Amount;
-            res.Description= Description;
+            var col = Database.db.GetCollection<Money>("Money"); col.Insert(
+                 new Money
+                 {
+                     Type = Type,
+                     Amount = Amount,
+                     Description = Description,
+                 }
+              );
         }
 
         public static void ResestMoney()
