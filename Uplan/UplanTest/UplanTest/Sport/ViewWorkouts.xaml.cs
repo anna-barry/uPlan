@@ -171,7 +171,7 @@ namespace UplanTest
                 Sunday = localTime.AddDays(1);
 
             }
-
+            var c = Database.db.GetCollection<Workout>("AllWorkouts");
             List<string> mon=DisplayWorkout(Monday,0,ToCallMon);
             monday.ItemsSource = mon;
             List<string> tue=DisplayWorkout(Tuesday, 1, ToCallTue);
@@ -187,6 +187,138 @@ namespace UplanTest
             List<string> sun=DisplayWorkout(Sunday, 6, ToCallSun);
             sunday.ItemsSource = sun;
 
+            monday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = monday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    mon.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    monday.ItemsSource = null;
+                    monday.ItemsSource = mon;
+                }
+            };
+
+            tuesday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = tuesday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    tue.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    tuesday.ItemsSource = null;
+                    tuesday.ItemsSource = tue;
+                }
+            };
+
+            wednesday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = wednesday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    wed.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    wednesday.ItemsSource = null;
+                    wednesday.ItemsSource = wed;
+                }
+            };
+
+            thursday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = thursday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    thu.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    thursday.ItemsSource = null;
+                    thursday.ItemsSource = thu;
+                }
+            };
+
+            friday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = friday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    fri.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    friday.ItemsSource = null;
+                    friday.ItemsSource = fri;
+                }
+            };
+
+            saturday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = saturday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    sat.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    saturday.ItemsSource = null;
+                    saturday.ItemsSource = sat;
+                }
+            };
+
+            sunday.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = wednesday.SelectedItem.ToString();
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    sun.Remove(res);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+
+                    var resultInST = col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    sunday.ItemsSource = null;
+                    sunday.ItemsSource = sun;
+                }
+            };
         }   
 
         public static List<string> DisplayWorkout(DateTime date, int col, List<string> toadd)

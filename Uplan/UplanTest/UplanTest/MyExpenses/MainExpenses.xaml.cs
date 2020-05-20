@@ -13,6 +13,7 @@ namespace UplanTest
     public partial class MainExpenses : ContentPage
     {
         
+        
         public MainExpenses()
         {
             InitializeComponent();
@@ -61,6 +62,7 @@ namespace UplanTest
                     Color = SKColor.Parse("#8043b4"),
                     Label = "Current Money Spend on "+Type,
                     ValueLabel = Currents.ToString(),
+                    
 
                 });
 

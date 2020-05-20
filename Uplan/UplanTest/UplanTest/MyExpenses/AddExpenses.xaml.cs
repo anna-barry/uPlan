@@ -57,6 +57,7 @@ namespace UplanTest
         }
         async void OnCloseClicked(object sender, EventArgs args)
         {
+            
             await Navigation.PopAsync();
         }
     }

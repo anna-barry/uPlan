@@ -22,7 +22,7 @@ namespace UplanTest
         {
             InitializeComponent();
             this.type = type;
-            typee.Text = "See Expenses for" + type;
+            typee.Text = "See Expenses for " + type;
             switch (type)
             {
                 case "Food":
