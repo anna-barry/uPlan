@@ -108,7 +108,7 @@ namespace UplanTest
         }
         private async void GoToFood(object sender, EventArgs args)
         {
-            
+            await Navigation.PushAsync(new ViewAnExpense("Food"));
         }
 
         public List<Entry2> InitiateChart(string Type, float Max)

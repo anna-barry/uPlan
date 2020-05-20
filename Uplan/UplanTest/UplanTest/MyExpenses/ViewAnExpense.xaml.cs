@@ -23,9 +23,35 @@ namespace UplanTest
             InitializeComponent();
             this.type = type;
             typee.Text = "See Expenses for" + type;
+            switch (type)
+            { 
+            case "Food":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForFood.ToString();
+                    break;
+                case "Going Out":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForGoingOut.ToString();
+                    break;
+                case "Clothes and accessories":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForClothes.ToString();
+                    break;
+                case "Health":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForHealth.ToString();
+                    break;
+                case "Hobbies":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForHobbies.ToString();
+                    break;
+                case "Other":
+                    max.Placeholder = ThisMaxMoney.CurrentMax.MaxForOthers.ToString();
+                    break;
+            default:
+                    break;
+            }
+
             (expenses,amounts) =DisplayExepenses(type);
             money.ItemsSource = expenses;
             desc.ItemsSource = amounts;
+
+
         }
 
         public static (List<string>,List<float>) DisplayExepenses(string type)
@@ -41,7 +67,6 @@ namespace UplanTest
             }
 
             return (desc, am);
-
         }
 
         async void OnMaxClicked(object sender, EventArgs args)
@@ -50,22 +75,22 @@ namespace UplanTest
             switch (type)
             {
                 case "Food":
-                    //
+                    ThisMaxMoney.UpdateForFood(maxi);
                     break;
                 case "Going Out":
-                    //
+                    ThisMaxMoney.UpdateForGoingOut(maxi);
                     break;
                 case "Clothes and accessories":
-                    //
+                    ThisMaxMoney.UpdateForClothes(maxi);
                     break;
                 case "Health":
-                    //
+                    ThisMaxMoney.UpdateForHealth(maxi);
                     break;
                 case "Hobbies":
-                    //
+                    ThisMaxMoney.UpdateForHobbies(maxi);
                     break;
                 case "Other":
-                    //
+                    ThisMaxMoney.UpdateForOthers(maxi);
                     break;
                 default:
                     break;
@@ -75,11 +100,11 @@ namespace UplanTest
         public static float Convert(string amount)
         {
             float ret = 0;
-            int l = amount.Length;
+            int l = amount.Length-1;
             while (l > 0 && amount[l] != ',' && amount[l] != '.')
             {
                 ret += amount[l] * 10 ^ l;
-                l++;
+                l--;
             }
             if (l == 0)
             { return ret; }

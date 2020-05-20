@@ -39,15 +39,14 @@ namespace UplanTest
         public static float Convert(string amount)
         {
             float ret = 0;
-            int l = amount.Length;
-            while (l>0 && amount[l]!=',' && amount[l]!='.' )
+            int l = amount.Length-1;
+            while (l>=0 && amount[l]!=',' && amount[l]!='.' )
             { 
                 ret += amount[l] * 10^l;
-                l++;
+                l--;
             }
-            if (l==0)
+            if (l<0)
             { return ret; }
-            l--;
             int t = -l;
             while (t < 0)
             { 

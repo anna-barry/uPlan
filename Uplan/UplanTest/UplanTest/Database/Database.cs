@@ -26,6 +26,7 @@ namespace UplanTest
                 ListEntrySport.Initiate();
                 ListEntryYOGA.Initiate();
                 FoodItem.Initiate();
+                Money.Initiate();
                 CollectionForMax.Initiate();
 
                 MyUser.isDefault = true;

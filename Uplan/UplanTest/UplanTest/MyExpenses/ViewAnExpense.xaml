@@ -29,7 +29,7 @@
             <ListView x:Name="desc" Grid.Row="2" Grid.Column="2" />
 
             <Label Text="Maximum expens" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" TextColor="Violet" />
-            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Placeholder="Amount" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
             <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="4" VerticalOptions="Start" Grid.Column="0" HeightRequest="90" WidthRequest="60"/>
 
             <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
