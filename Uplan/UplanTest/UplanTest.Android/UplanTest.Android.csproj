@@ -148,6 +148,15 @@
     <AndroidAsset Include="Assets\alert.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\ArmCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ArmPlunge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ArmSwing.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\backf.png" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +172,13 @@
     <AndroidAsset Include="Assets\break.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\BreakDancerReach.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\breakf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Burpees.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Calendar.png" />
@@ -181,7 +196,19 @@
     <AndroidAsset Include="Assets\croix.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\CrossCrunch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\CrossLeg.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\CycleAbs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\DonkeyKicks.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\eye.png" />
@@ -196,10 +223,16 @@
     <AndroidAsset Include="Assets\FoodC2.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\FoodCh.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\FoodFish.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\foodplan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fridge.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\GetInfo.png" />
@@ -208,16 +241,31 @@
     <AndroidAsset Include="Assets\GlutBridge.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\HammerCurl.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\IconMealPlanForSH.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\JackKnives.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\JumpingJacks.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\JumpingLunge.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\JumpSquat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\KneeCrunch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\KneePushUps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\KneesToChest.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LargeTile.scale-100.png" />
@@ -229,13 +277,31 @@
     <AndroidAsset Include="Assets\LargeTile.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\LeftCrunchs.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\LegRaise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LegUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LongArmCrunches.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Lunge.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MontainClimbers.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\musicplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyFood.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\NewFood.png" />
@@ -250,10 +316,25 @@
     <AndroidAsset Include="Assets\ObliqueCrunch.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\ObliqueTwists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\OneArmToe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\OverHeadPull.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\pause.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Plank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\PlankTaps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\PlankTwist.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\play.png" />
@@ -292,6 +373,15 @@
     <AndroidAsset Include="Assets\repeat once.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ReverseFly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\RightCrunchs.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\rock1.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +392,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\rock4.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\RondVert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\RoundPause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\RoundRouge.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\RussianTwist.png" />
@@ -317,6 +416,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ShoulderPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\SideCrunchTick.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\SideJack.png" />
@@ -451,6 +556,12 @@
     <AndroidAsset Include="Assets\Team2.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\TricepsDips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\UpDownPlank.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\uplanteam.png" />
   </ItemGroup>
   <ItemGroup>
@@ -470,9 +581,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\yoga.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
