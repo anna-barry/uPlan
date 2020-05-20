@@ -214,7 +214,7 @@ namespace UplanTest
                     FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g ,nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text,peremption.Date);
                     SortieApi.Text = "The pruduct has been aded with succes in your pantry";
                     int k = 1;
-                    /*foreach (var item in col.FindAll())
+                    foreach (var item in col.FindAll())
                     {
                         if (DateTime.Now.Date <= item.Peremption.Date)
                         {
@@ -245,7 +245,7 @@ namespace UplanTest
 
 
                         k++;
-                    }*/
+                    }
 
 
                 }
