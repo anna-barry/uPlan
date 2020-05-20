@@ -81,23 +81,23 @@ namespace UplanTest
         }
         private async void GoToGoOut(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Going Out"));
         }
         private async void GoToClothes(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Clothes and accessories"));
         }
         private async void GoToHealth(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Health"));
         }
         private async void GoToHobbies(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Hobbies"));
         }
         private async void GoToOther(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync(new ViewAnExpense("Other"));
         }
 
         public void RefreshMoney(object sender, EventArgs args)
