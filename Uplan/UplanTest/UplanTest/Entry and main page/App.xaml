@@ -8,10 +8,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
-                <Setter Property="FontFamily" Value="Verdena Bold" />
+                <Setter Property="FontFamily" Value="Hervetica" />
             </Style>
             <Style TargetType="Button">
-                <Setter Property="FontFamily" Value="Impact" />
+                <Setter Property="FontFamily" Value="Hervetica" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
