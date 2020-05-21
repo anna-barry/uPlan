@@ -16,23 +16,22 @@
 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
 
 
 
             </Grid.RowDefinitions>
-            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label x:Name="typee" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label Text="My Expenses" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="Large" VerticalOptions="End"/>
+            <ListView x:Name="desc" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"  />
 
-            <ListView x:Name="money" Grid.Row="2" Grid.Column="1" />
-            <ListView x:Name="desc" Grid.Row="2" Grid.Column="2" />
+            <Label Text="Maximum expens" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" TextColor="Violet" VerticalOptions="End" />
+            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderColor="SkyBlue" />
+            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="4" VerticalOptions="Start" Grid.Column="0" HeightRequest="90" WidthRequest="60" BackgroundColor="MediumVioletRed"/>
 
-            <Label Text="Maximum expens" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" TextColor="Violet" />
-            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
-            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="4" VerticalOptions="Start" Grid.Column="0" HeightRequest="90" WidthRequest="60"/>
-
-            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" />
             <ImageButton Source="Assets/add_round.png" Clicked="OnAddClicked" Grid.Row="0" Grid.Column="3"/>
         </Grid>
     </ContentPage.Content>

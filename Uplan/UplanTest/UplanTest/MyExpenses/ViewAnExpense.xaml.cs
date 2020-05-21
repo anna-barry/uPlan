@@ -68,6 +68,7 @@ namespace UplanTest
                     col.Delete(resultforItem.Id);
 
                     desc.ItemsSource = null;
+                    desc.ItemsSource = list;
                 }
 
 
@@ -83,13 +84,23 @@ namespace UplanTest
             var list = c.Find(Query.EQ("Type",type ));
             foreach (var expense in list)
             {
-                
-                desc.Add(expense.Description+ "               "+ expense.Amount);
+
+                desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
             }
 
             return desc;
         }
 
+        public static string AddSpaces(int desc)
+        {
+            int spaces = 70 - desc;
+            string ret = "";
+            for (int i = 0; i < spaces; i++)
+            {
+                ret += " ";
+            }
+            return ret;
+        }
         async void OnMaxClicked(object sender, EventArgs args)
         {
             float maxi = Convert(max.Text);
@@ -121,27 +132,59 @@ namespace UplanTest
         public static float Convert(string amount)
         {
             float ret = 0;
-            int l = amount.Length;
+            string dec = "";
+            string virg = "";
+            bool decdid = false;
             int i = 0;
-            while (i < l && amount[i] != ',' && amount[i] != '.')
+            int l = amount.Length;
+            while (i < l)
             {
-                ret += (amount[i] % 48) * (10 ^ (l -i));
-                
+                if (amount[i] == '.' | amount[i] == ',')
+                {
+                    decdid = true;
+                }
+                else
+                {
+                    if (decdid)
+                    {
+                        virg += amount[i];
+                    }
+                    else
+                    {
+                        dec += amount[i];
+                    }
+                }
                 i++;
+
             }
 
-            if (i == l)
-            { return ret; }
-
-            int t = -(l-i);
+            int ld = dec.Length - 1;
             i = 0;
-            while (i<l & t < 0)
+            while (i <= ld)
             {
-                ret += (amount[l-i] % 48) * (10 ^t);
+                ret += (dec[i] % 48) * SquareF(ld - i, 10);
                 i++;
-                t++;
+
+            }
+            ld = virg.Length;
+            i = 0;
+            while (i < ld)
+            {
+                ret += (virg[i] % 48) * SquareF(i + 1, (float)0.1);
+                i++;
             }
             return ret;
+        }
+
+        public static float SquareF(int rep, float i)
+        {
+            float y = 1;
+            while (rep > 0)
+            {
+                y = y * i;
+                rep--;
+            }
+            return y;
         }
         async void OnAddClicked(object sender, EventArgs args)
         {

@@ -39,11 +39,111 @@ namespace UplanTest
             ChartOther.Chart = new Microcharts.BarChart() { Entries = InitiateChart("Other", ThisMaxMoney.CurrentMax.MaxForOthers) };
             ChartOther.Chart.BackgroundColor = SKColors.Transparent;
 
-            
+
+            //_________________________________________GlobalChart_________________________________________________________________________________________
+            Global.Chart = new Microcharts.DonutChart() { Entries = MakeCurrentChart()};
+            Global.Chart.BackgroundColor = SKColors.Transparent;
+
+            //_________________________________________ShowMaxChart________________________________________________________________________________________
+            Max.Chart = new Microcharts.DonutChart() { Entries = MakeMaxChart() };
+            Max.Chart.BackgroundColor= SKColors.Transparent;
 
         }
-       
+        public List<Entry2> MakeMaxChart()
+        {
+            float[] type = new float[] { ThisMaxMoney.CurrentMax.MaxForFood, ThisMaxMoney.CurrentMax.MaxForGoingOut, ThisMaxMoney.CurrentMax.MaxForClothes, ThisMaxMoney.CurrentMax.MaxForHealth, ThisMaxMoney.CurrentMax.MaxForHobbies, ThisMaxMoney.CurrentMax.MaxForOthers };
+            List<Entry2> ret = new List<Entry2>();
+            int i = 0;
+            string color = "";
+            foreach (var tyype in type)
+            {
+                switch (i)
+                {
+                    case 0:
+                        color = "#FF1943";
+                        break;
+                    case 1:
+                        color = "#00ccff";
+                        break;
+                    case 2:
+                        color = "#77d065";
+                        break;
+                    case 3:
+                        color = "#b455b6";
+                        break;
+                    case 4:
+                        color = "#00CED1";
+                        break;
+                    case 5:
+                        color = "#9966ff";
+                        break;
+                    default:
+                        break;
+                }
+                i++;
+                ret.Add(
+            new Entry2(tyype)
+            {
+                Color = SKColor.Parse(color),
+                Label = "Max Money that should be spent",
+                ValueLabel = tyype.ToString()
 
+            });
+            }
+            return ret;
+        }
+        public List<Entry2> MakeCurrentChart()
+        {
+            string[] type = new string[] { "Food", "Going out", "Clothes and accessories", "Health", "Hobbies", "Other" };
+            var col = Database.db.GetCollection<Money>("Money");
+            List<Entry2> ret = new List<Entry2>();
+            int i = 0;
+            foreach (var tyype in type)
+            {
+                var result = col.Find(Query.EQ("Type", tyype));
+                float cur = 0;
+                string color= "#8043b4";
+                foreach (var lilres in result)
+                {
+                    cur += lilres.Amount;
+                }
+
+                switch(i)
+                {
+                    case 0:
+                        color = "#FF1943";
+                        break;
+                    case 1:
+                        color = "#00ccff";
+                        break;
+                    case 2:
+                        color = "#77d065";
+                        break;
+                    case 3:
+                        color = "#b455b6";
+                        break;
+                    case 4:
+                        color = "#00CED1";
+                        break;
+                    case 5:
+                        color = "#9966ff";
+                        break;
+                    default:
+                        break;
+                }
+                ret.Add(
+                new Entry2(cur)
+                {
+                    Color = SKColor.Parse(color),
+                    Label = "Current Money Spend on " + tyype,
+                    ValueLabel = cur.ToString(),
+
+
+                });
+                i++;
+            }
+            return ret;
+        }
         public List<Entry2> InitiateChart(string Type, float Max)
         {
             var col = Database.db.GetCollection<Money>("Money");
