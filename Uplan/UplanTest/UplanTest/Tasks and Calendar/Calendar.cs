@@ -68,7 +68,7 @@ namespace UplanTest
 
             }
 
-            grid.BackgroundColor = Color.AliceBlue;
+            //grid.BackgroundColor = Color.AliceBlue;
 
 
 
