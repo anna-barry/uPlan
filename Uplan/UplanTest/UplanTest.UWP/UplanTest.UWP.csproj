@@ -114,6 +114,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AbRows.png" />
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\alert.mp3" />
@@ -122,6 +123,7 @@
     <Content Include="Assets\ArmSwing.png" />
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
+    <Content Include="Assets\BicepExtensions.png" />
     <Content Include="Assets\bleu.png" />
     <Content Include="Assets\bleuwall.jpg" />
     <Content Include="Assets\break.png" />
@@ -132,11 +134,16 @@
     <Content Include="Assets\ClutterBridge.png" />
     <Content Include="Assets\CountHold.png" />
     <Content Include="Assets\croix.png" />
+    <Content Include="Assets\CrossackSquatLeft.png" />
+    <Content Include="Assets\CrossackSquatRight.png" />
     <Content Include="Assets\CrossCrunch.png" />
     <Content Include="Assets\CrossLeg.png" />
     <Content Include="Assets\CycleAbs.png" />
+    <Content Include="Assets\DeclinePushUps.png" />
     <Content Include="Assets\default.png" />
+    <Content Include="Assets\DiagonalLunge.png" />
     <Content Include="Assets\DonkeyKicks.png" />
+    <Content Include="Assets\ElbowPlank.png" />
     <Content Include="Assets\ExCalendrier.PNG" />
     <Content Include="Assets\eye.png" />
     <Content Include="Assets\eye2.png" />
@@ -149,7 +156,9 @@
     <Content Include="Assets\GetInfo.png" />
     <Content Include="Assets\GlutBridge.png" />
     <Content Include="Assets\HammerCurl.png" />
+    <Content Include="Assets\HighKnees.png" />
     <Content Include="Assets\IconMealPlanForSH.png" />
+    <Content Include="Assets\In&amp;Out.png" />
     <Content Include="Assets\JackKnives.png" />
     <Content Include="Assets\JumpingJacks.png" />
     <Content Include="Assets\JumpingLunge.png" />
@@ -165,10 +174,12 @@
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
+    <Content Include="Assets\MarchSteps.png" />
     <Content Include="Assets\Money.png" />
     <Content Include="Assets\MontainClimbers.png" />
     <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\MyFood.png" />
+    <Content Include="Assets\NarrowRows.png" />
     <Content Include="Assets\NewFood.png" />
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
@@ -184,9 +195,11 @@
     <Content Include="Assets\playfi.png" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\Punches.png" />
+    <Content Include="Assets\PushUpRotations.png" />
     <Content Include="Assets\PushUps.png" />
     <Content Include="Assets\RaisedCircle.png" />
     <Content Include="Assets\RaisedSwing.png" />
+    <Content Include="Assets\ReachingPushup.png" />
     <Content Include="Assets\refresh_Icon.png" />
     <Content Include="Assets\relax2.mp3" />
     <Content Include="Assets\relax3.mp3" />
@@ -194,6 +207,7 @@
     <Content Include="Assets\repeat once.png" />
     <Content Include="Assets\Reverse.png" />
     <Content Include="Assets\ReverseFly.png" />
+    <Content Include="Assets\ReverseLunge.png" />
     <Content Include="Assets\RightCrunchs.png" />
     <Content Include="Assets\rock1.mp3" />
     <Content Include="Assets\rock2.mp3" />
@@ -212,10 +226,14 @@
     <Content Include="Assets\SideJack.png" />
     <Content Include="Assets\SideLunge.png" />
     <Content Include="Assets\SidePlank.png" />
+    <Content Include="Assets\SingleLegSquatLeft.png" />
+    <Content Include="Assets\SingleLegSquatRight.png" />
+    <Content Include="Assets\SitUpsTwists.png" />
     <Content Include="Assets\SKDlogo.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SpiderPushup.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
@@ -244,6 +262,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
     <Content Include="Assets\Squat.png" />
+    <Content Include="Assets\StandingRaise.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-125.png" />
     <Content Include="Assets\StoreLogo.scale-150.png" />
@@ -256,9 +275,11 @@
     <Content Include="Assets\UpDownPlank.png" />
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
+    <Content Include="Assets\WallSit.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\WideRows.png" />
     <Content Include="Assets\WorkoutNow.png" />
     <Content Include="Assets\yoga.png" />
     <Content Include="Properties\Default.rd.xml" />
