@@ -58,7 +58,8 @@ namespace UplanTest
             //editor.Text = User.GetLoginMessage();
 
 
-           await Navigation.PushAsync(new MainPage());
+            //await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new MainTuto());
         }
        }
     }
