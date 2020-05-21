@@ -151,11 +151,13 @@
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\LegRaise.png" />
     <Content Include="Assets\Lunge.png" />
+    <Content Include="Assets\moral.png" />
     <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\NewFood.png" />
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
     <Content Include="Assets\ObliqueCrunch.png" />
+    <Content Include="Assets\other.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\Plank.png" />
     <Content Include="Assets\play.png" />
@@ -222,6 +224,7 @@
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
+    <Content Include="Assets\timeW.png" />
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />

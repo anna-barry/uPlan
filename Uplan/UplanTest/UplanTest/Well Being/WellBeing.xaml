@@ -7,40 +7,9 @@
              mc:Ignorable="d"
              x:Class="UplanTest.WellBeing">
     <ContentPage.Content>
-        <Grid>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-
-            <Label Text="Welcome to WellBeing Page! " Grid.Row="1" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Violet"/>
-
-            <Label Text="Select the end of your break :" TextColor="Violet" Grid.Row="2" HorizontalTextAlignment="End" FontSize="Large"/>
-
-            <TimePicker x:Name="Chrono"
-                    Time="11:00:00"
-                    Format="T"
-                     TextColor="Violet"
-                     PropertyChanged="Event" 
-                        Grid.Row="2"
-                        Grid.Column="1"
-                   />
-            <Switch x:Name="_switch" Toggled="Pass"
-                    OnColor="Violet" Grid.Row="2" Grid.Column="2" HorizontalOptions="StartAndExpand" HeightRequest="70"  IsVisible="False"/>
-
-
-            <Image Source="Assets/breakf.png" Grid.Row="3" Grid.Column="1" HeightRequest="50" />
+        <Grid BackgroundColor="#E4C0ED">
+            <Button BackgroundColor="Accent"
+/>
 
 
 
