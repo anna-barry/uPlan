@@ -22,10 +22,10 @@ namespace UplanTest
         {
             InitializeComponent();
             this.type = type;
-            typee.Text = "See Expenses for" + type;
+            typee.Text = "See Expenses for " + type;
             switch (type)
-            { 
-            case "Food":
+            {
+                case "Food":
                     max.Placeholder = ThisMaxMoney.CurrentMax.MaxForFood.ToString();
                     break;
                 case "Going Out":
@@ -43,32 +43,64 @@ namespace UplanTest
                 case "Other":
                     max.Placeholder = ThisMaxMoney.CurrentMax.MaxForOthers.ToString();
                     break;
-            default:
+                default:
                     break;
             }
 
-            (expenses,amounts) =DisplayExepenses(type);
-            money.ItemsSource = expenses;
-            desc.ItemsSource = amounts;
+            List<string> list = DisplayExepenses(type);
+            desc.ItemsSource = list;
+
+            desc.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete expens", "Do you really want to delete this expense", "No", "Yes");
+                if (!answer)
+                {
+                    string res = "";
+                    string thisItem = desc.SelectedItem.ToString();
+                    int i = 0;
+                    while (thisItem[i] != ' ')
+                    {
+                        res += thisItem[i];
+                        i += 1;
+                    }
+                    var col = Database.db.GetCollection<Money>("Money");
+                    var resultforItem = col.FindOne(Query.EQ("Description", res));
+                    col.Delete(resultforItem.Id);
+
+                    desc.ItemsSource = null;
+                    desc.ItemsSource = list;
+                }
 
 
+            };
         }
+            
 
-        public static (List<string>,List<float>) DisplayExepenses(string type)
+
+        public static List<string> DisplayExepenses(string type)
         {
-            List<float> am = new List<float> {};
-            List<string> desc = new List<string> {};
+            List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
             foreach (var expense in list)
             {
-                am.Add(expense.Amount);
-                desc.Add(expense.Description);
+
+                desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
             }
 
-            return (desc, am);
+            return desc;
         }
 
+        public static string AddSpaces(int desc)
+        {
+            int spaces = 70 - desc;
+            string ret = "";
+            for (int i = 0; i < spaces; i++)
+            {
+                ret += " ";
+            }
+            return ret;
+        }
         async void OnMaxClicked(object sender, EventArgs args)
         {
             float maxi = Convert(max.Text);
@@ -100,22 +132,59 @@ namespace UplanTest
         public static float Convert(string amount)
         {
             float ret = 0;
-            int l = amount.Length-1;
-            while (l > 0 && amount[l] != ',' && amount[l] != '.')
+            string dec = "";
+            string virg = "";
+            bool decdid = false;
+            int i = 0;
+            int l = amount.Length;
+            while (i < l)
             {
-                ret += (amount[l]%48) * 10 ^ l;
-                l--;
+                if (amount[i] == '.' | amount[i] == ',')
+                {
+                    decdid = true;
+                }
+                else
+                {
+                    if (decdid)
+                    {
+                        virg += amount[i];
+                    }
+                    else
+                    {
+                        dec += amount[i];
+                    }
+                }
+                i++;
+
             }
-            if (l == 0)
-            { return ret; }
-            l--;
-            int t = -l;
-            while (t < 0)
+
+            int ld = dec.Length - 1;
+            i = 0;
+            while (i <= ld)
             {
-                ret += amount[l] * 10 ^ t;
-                t++;
+                ret += (dec[i] % 48) * SquareF(ld - i, 10);
+                i++;
+
+            }
+            ld = virg.Length;
+            i = 0;
+            while (i < ld)
+            {
+                ret += (virg[i] % 48) * SquareF(i + 1, (float)0.1);
+                i++;
             }
             return ret;
+        }
+
+        public static float SquareF(int rep, float i)
+        {
+            float y = 1;
+            while (rep > 0)
+            {
+                y = y * i;
+                rep--;
+            }
+            return y;
         }
         async void OnAddClicked(object sender, EventArgs args)
         {

@@ -28,36 +28,38 @@
                 <ImageButton Source="Assets/refresh_Icon.png" Grid.Row="0" Grid.Column="2" Clicked="RefreshMoney" WidthRequest="30" HeightRequest="30" />
 
 
-                <Frame BackgroundColor="LightSkyBlue" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
+                <Frame BackgroundColor="#FF1943" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
                 <Label Text="Food" Grid.Row="2" Grid.Column="0" FontSize="25" />
                 <forms:ChartView x:Name="ChartFood" HeightRequest="100" WidthRequest="60" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="2" Grid.Column="1" BackgroundColor="Transparent" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="4" Grid.Column="0" Clicked="GoToFood" Grid.ColumnSpan="2" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
-                <Frame BackgroundColor="LightPink" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
+                <Frame BackgroundColor="#00ccff" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
                 <Label Text="Going Out" Grid.Row="5" Grid.Column="0" FontSize="25" />
                 <forms:ChartView x:Name="ChartGoingOut" HeightRequest="100" WidthRequest="60" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="1" BackgroundColor="Transparent" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Clicked="GoToGoOut" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
-                <Frame BackgroundColor="LightSkyBlue" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
+                <Frame BackgroundColor="#77d065"  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
                 <Label Text="Clothes and accessories" Grid.Row="8" Grid.Column="0"  FontSize="25" />
                 <forms:ChartView x:Name="ChartClothes" HeightRequest="100" WidthRequest="60" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="8" Grid.Column="1" BackgroundColor="Transparent" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="10" Grid.Column="0" Clicked="GoToClothes" Grid.ColumnSpan="2" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
-                <Frame BackgroundColor="LightPink" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"  Opacity="0.5"/>
+                <Frame BackgroundColor="#b455b6" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"  Opacity="0.5"/>
                 <Label Text="Health" Grid.Row="11" Grid.Column="0" FontSize="25" />
                 <forms:ChartView x:Name="ChartHealth" HeightRequest="100" WidthRequest="60" Grid.Row="11" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="1"   />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" Clicked="GoToHealth" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
-                <Frame BackgroundColor="LightSkyBlue" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
+                <Frame BackgroundColor="#00CED1" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="0.5"/>
                 <Label Text="Hobbies" Grid.Row="14" Grid.Column="0"  FontSize="25" />
                 <forms:ChartView x:Name="ChartHobbies" HeightRequest="100" WidthRequest="60" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="14" Grid.Column="1" BackgroundColor="Transparent" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="16" Grid.Column="0" Clicked="GoToHobbies" Grid.ColumnSpan="2" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
-                <Frame BackgroundColor="LightPink" Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"  Opacity="0.5"/>
+                <Frame BackgroundColor="#9966ff" Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"  Opacity="0.5"/>
                 <Label Text="Other" Grid.Row="17" Grid.Column="0" FontSize="25" />
                 <forms:ChartView x:Name="ChartOther" HeightRequest="100" WidthRequest="60" Grid.Row="17"  Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="1" BackgroundColor="Transparent" />
                 <ImageButton Source="Assets/GetInfo.png" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Clicked="GoToOther" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start"/>
 
+                <forms:ChartView x:Name="Global"  Grid.Row="20"  Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="0" BackgroundColor="Transparent" />
+                <forms:ChartView x:Name="Max" Grid.Row="25"  Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="0" BackgroundColor="Transparent" />
 
             </Grid>
         </ScrollView>

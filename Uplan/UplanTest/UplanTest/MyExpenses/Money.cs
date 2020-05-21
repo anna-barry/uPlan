@@ -84,7 +84,8 @@ namespace UplanTest
                     String Type)
         {
             // Get a collection (or create, if doesn't exist)
-            var col = Database.db.GetCollection<Money>("Money"); col.Insert(
+            var col = Database.db.GetCollection<Money>("Money");
+            col.Insert(
                  new Money
                  {
                      Type = Type,
