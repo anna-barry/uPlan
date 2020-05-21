@@ -36,7 +36,7 @@ namespace UplanTest
             
                         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
-                            // do something every 30 seconds
+                       
                             Device.BeginInvokeOnMainThread(() =>
                             {
                                 if (!pause)
