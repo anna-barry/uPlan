@@ -43,10 +43,12 @@ namespace UplanTest
             //_________________________________________GlobalChart_________________________________________________________________________________________
             Global.Chart = new Microcharts.DonutChart() { Entries = MakeCurrentChart()};
             Global.Chart.BackgroundColor = SKColors.Transparent;
+            Global.Chart.LabelTextSize = 0;
 
             //_________________________________________ShowMaxChart________________________________________________________________________________________
             Max.Chart = new Microcharts.DonutChart() { Entries = MakeMaxChart() };
             Max.Chart.BackgroundColor= SKColors.Transparent;
+            Max.Chart.LabelTextSize = 0;
 
         }
         public List<Entry2> MakeMaxChart()
