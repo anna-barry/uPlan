@@ -77,7 +77,7 @@
         <ContentPage Padding="10" >
             <ContentPage.Content>
 
-                <Grid BackgroundColor="AliceBlue">
+                <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>

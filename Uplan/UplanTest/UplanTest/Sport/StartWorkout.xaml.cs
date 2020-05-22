@@ -4,10 +4,13 @@ using System.Linq;
 //using Windows.UI.Xaml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+<<<<<<< HEAD
 //<<<<<<< HEAD
 using System.Windows;
 using System.Timers;
 
+=======
+>>>>>>> ee53cdbfeb734db2ceb21df35cbd4aeee21b5884
 using System.Windows;
 using System.Timers;
 using MediaManager.Forms;
@@ -16,7 +19,10 @@ namespace UplanTest
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartWorkout : ContentPage
+<<<<<<< HEAD
 //>>>>>>> ca255062db41191f7d0f5a18cbaf5a664bfd5ad1
+=======
+>>>>>>> ee53cdbfeb734db2ceb21df35cbd4aeee21b5884
     {
         private Label LilTime = new Label();
         public StartWorkout(DateTime day)
@@ -41,7 +47,11 @@ namespace UplanTest
             
                         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                         {
+<<<<<<< HEAD
                            // Fais ca toutes les secondes
+=======
+                       
+>>>>>>> ee53cdbfeb734db2ceb21df35cbd4aeee21b5884
                             Device.BeginInvokeOnMainThread(() =>
                             {
                                 if (!pause)

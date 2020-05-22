@@ -16,5 +16,17 @@ namespace UplanTest
         {
             InitializeComponent();
         }
+
+        async void GoToApp(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
+        async void SkipToTheGoodBit(object sender, EventArgs args)
+        {
+            CarPage.SelectedItem = DatLastOne;
+            //CarPage.Navigation.PushAsync(new DatLastOne());
+            
+        }
     }
 }

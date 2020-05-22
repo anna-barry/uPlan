@@ -122,8 +122,8 @@ namespace UplanTest
         {
             pers = true;
             school = false;
-            Pers.BackgroundColor = Color.LightBlue;
-            Sch.BackgroundColor = Color.AliceBlue;
+            Pers.BackgroundColor = Color.BlueViolet;
+            Sch.BackgroundColor = Color.White;
             Sch.Text = "For School";
             st1.Text = "Health appointment";
             st2.Text = "Sport";
@@ -136,8 +136,8 @@ namespace UplanTest
         {
             pers = false;
             school = true;
-            Sch.BackgroundColor = Color.LightBlue;
-            Pers.BackgroundColor = Color.AliceBlue;
+            Sch.BackgroundColor = Color.BlueViolet;
+            Pers.BackgroundColor = Color.White;
             Pers.Text = "Personal";
             st1.Text = "By heart";
             st2.Text = "Small exercise";
@@ -149,10 +149,10 @@ namespace UplanTest
         async void Onsub1Clicked(object sender, EventArgs args)
 
         {
-            st1.BackgroundColor = Color.LightBlue;
-            st2.BackgroundColor = Color.AliceBlue;
-            st3.BackgroundColor = Color.AliceBlue;
-            st4.BackgroundColor = Color.AliceBlue;
+            st1.BackgroundColor = Color.BlueViolet;
+            st2.BackgroundColor = Color.White;
+            st3.BackgroundColor = Color.White;
+            st4.BackgroundColor = Color.White;
             if (school)
             {
                 subtype = "BY_HEART";
@@ -166,10 +166,10 @@ namespace UplanTest
         async void Onsub2Clicked(object sender, EventArgs args)
 
         {
-            st1.BackgroundColor = Color.AliceBlue;
-            st2.BackgroundColor = Color.LightBlue;
-            st3.BackgroundColor = Color.AliceBlue;
-            st4.BackgroundColor = Color.AliceBlue;
+            st1.BackgroundColor = Color.White;
+            st2.BackgroundColor = Color.BlueViolet;
+            st3.BackgroundColor = Color.White;
+            st4.BackgroundColor = Color.White;
             if (school)
             {
                 subtype = "EXERCICE";
@@ -184,11 +184,10 @@ namespace UplanTest
         async void Onsub3Clicked(object sender, EventArgs args)
 
         {
-            st1.BackgroundColor = Color.AliceBlue;
-            st3.BackgroundColor = Color.LightBlue;
-            st2.BackgroundColor = Color.AliceBlue;
-            st4.BackgroundColor = Color.AliceBlue;
-
+            st1.BackgroundColor = Color.White;
+            st3.BackgroundColor = Color.BlueViolet;
+            st2.BackgroundColor = Color.White;
+            st4.BackgroundColor = Color.White;
             if (school)
             {
                 subtype = "PROJECT";
@@ -203,10 +202,10 @@ namespace UplanTest
         async void Onsub4Clicked(object sender, EventArgs args)
 
         {
-            st1.BackgroundColor = Color.AliceBlue;
-            st4.BackgroundColor = Color.LightBlue;
-            st2.BackgroundColor = Color.AliceBlue;
-            st3.BackgroundColor = Color.AliceBlue;
+            st1.BackgroundColor = Color.White;
+            st4.BackgroundColor = Color.BlueViolet;
+            st2.BackgroundColor = Color.White;
+            st3.BackgroundColor = Color.White;
             if (school)
             {
                 subtype = "OTHER";
