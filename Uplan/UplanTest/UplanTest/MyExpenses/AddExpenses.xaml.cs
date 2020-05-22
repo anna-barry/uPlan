@@ -33,7 +33,7 @@ namespace UplanTest
             description = desc.Text;
             amount = Convert(amountt.Text);
             Money.AddMoney(amount, description,type);
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new ViewAnExpense(type));
         }
 
         public static float Convert(string amount)
@@ -95,8 +95,8 @@ namespace UplanTest
         }
         async void OnCloseClicked(object sender, EventArgs args)
         {
+            await Navigation.PushAsync(new ViewAnExpense(type));
             
-            await Navigation.PopAsync();
         }
     }
 }

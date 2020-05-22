@@ -43,7 +43,7 @@
             <Label Text="RelaxSongs" FontSize="Large" TextColor="BlueViolet" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" />
             <Label Text="RockSongs" FontSize="Large" TextColor="BlueViolet" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" />
 
-            <StackLayout Grid.Row="2" Grid.Column="1"  BackgroundColor="#7D057D" Padding="20"  >
+            <StackLayout x:Name ="LeStack"   BackgroundColor="#7D057D" Padding="20"  >
                 <Label Text="Relax1"  HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay1" HeightRequest="30" />
@@ -55,7 +55,7 @@
             </StackLayout>
 
 
-            <StackLayout Grid.Row="3" Grid.Column="1"  BackgroundColor="#890489" Padding="20">
+            <StackLayout x:Name="Stack2" BackgroundColor="#890489" Padding="20">
                 <Label Text="Relax2" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay2" HeightRequest="30" />
@@ -65,7 +65,7 @@
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout Grid.Row="4" Grid.Column="1"  BackgroundColor="#B907B9" Padding="20">
+            <StackLayout  x:Name="Stack3"  Grid.Row="4" Grid.Column="1"  BackgroundColor="#B907B9" Padding="20">
                 <Label Text="Relax3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay3" HeightRequest="30" />
@@ -75,7 +75,7 @@
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout Grid.Row="5" Grid.Column="1" BackgroundColor="#E10CE1" Padding="20">
+            <StackLayout  x:Name="Stack4" Grid.Row="5" Grid.Column="1" BackgroundColor="#E10CE1" Padding="20">
                 <Label Text="Relax4" HeightRequest="30" HorizontalTextAlignment="Center"  VerticalTextAlignment="End"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay4" HeightRequest="30" />
@@ -88,13 +88,12 @@
             <Image Source="Assets/default.png" Grid.Row="3" HeightRequest="50" Grid.Column="2"/>
 
 
-            <StackLayout Grid.Row="2" Grid.Column="3" BackgroundColor="#056899" Padding="20">
+            <StackLayout  BackgroundColor="#056899" Padding="20">
                 <Label Text="Rock1" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
                     <ImageButton Source="Assets/playfi.png" Clicked="ToPlay5" HeightRequest="30" />
                     <ImageButton Source="Assets/pause.png" Clicked="ToPause5" HeightRequest="30" />
-                    <ProgressBar x:Name="P4" ProgressColor="#089D9D" WidthRequest="150" HeightRequest="5" Progress=".0" IsVisible="True"/>
-
+                    
                 </StackLayout>
             </StackLayout>
 

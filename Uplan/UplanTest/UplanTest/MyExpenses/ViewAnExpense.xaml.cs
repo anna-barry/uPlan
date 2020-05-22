@@ -58,6 +58,7 @@ namespace UplanTest
                     string res = "";
                     string thisItem = desc.SelectedItem.ToString();
                     int i = 0;
+                    list.Remove(desc.SelectedItem.ToString());
                     while (thisItem[i] != ' ')
                     {
                         res += thisItem[i];
@@ -192,7 +193,7 @@ namespace UplanTest
         }
         async void OnCloseClicked(object sender, EventArgs args)
         {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new MainExpenses());
         }
     }
 }

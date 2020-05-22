@@ -39,14 +39,14 @@ namespace UplanTest
         {
             Navigation.PushAsync(new WellBeing());
         }
-        public ISimpleAudioPlayer p1 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p2 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p3 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p4 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p5 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p6 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p7 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        public ISimpleAudioPlayer p8 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p1 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p2 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p3 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p4 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p5 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p6 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p7 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+        public static ISimpleAudioPlayer p8 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
         bool play1 = false;
         bool play2 = false;
         bool play3 = false;
@@ -57,7 +57,7 @@ namespace UplanTest
         bool play8 = false;
 
 
-        private async void ToPlay1(object sender, EventArgs e)
+        public async void ToPlay1(object sender, EventArgs e)
         {
            
             if (!play1)
@@ -71,13 +71,13 @@ namespace UplanTest
             await P0.ProgressTo(1, 200000, Easing.Linear);
         }
 
-        private void ToPause1(object sender, EventArgs e)
+        public void ToPause1(object sender, EventArgs e)
         {
             p1.Pause();
             P0.IsVisible = false;
         }
 
-        private async void ToPlay2(object sender, EventArgs e)
+        public async void ToPlay2(object sender, EventArgs e)
         {
             if (!play2)
             {
@@ -93,7 +93,7 @@ namespace UplanTest
 
 
         }
-        private void ToPause2(object sender, EventArgs e)
+        public void ToPause2(object sender, EventArgs e)
         {
             p2.Pause();
             P1.IsVisible = false;
@@ -161,17 +161,13 @@ namespace UplanTest
             }
 
             p5.Play();
-            P4.IsVisible = true;
-            await P4.ProgressTo(1, 138000, Easing.Linear);
-
-
+          
 
         }
         private void ToPause5(object sender, EventArgs e)
         {
             p5.Pause();
-            P4.IsVisible = false;
-
+        
 
 
 

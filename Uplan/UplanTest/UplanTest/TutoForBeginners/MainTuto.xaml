@@ -12,8 +12,8 @@
     </local:Page1>
 -->
    
-        <!--  Calendrier    -->
-        <ContentPage BackgroundColor="White">
+        <!--  Main    -->
+    <ContentPage  BackgroundImageSource="Assets/MainForTuto.PNG">
 
         <ContentPage.Content>
 
@@ -36,8 +36,8 @@
 
     </ContentPage>
 
-    <!-- Ajouter une tâche -->
-    <ContentPage BackgroundColor="White">
+    <!-- Calendrier -->
+    <ContentPage BackgroundImageSource="Assets/CalendrierTuto.PNG">
 
         <ContentPage.Content>
 
@@ -59,8 +59,8 @@
 
     </ContentPage>
 
-    <!-- See Tasks  -->
-    <ContentPage BackgroundColor="White">
+    <!-- Ajouter une tâche  -->
+    <ContentPage BackgroundImageSource="Assets/Add_task_Tuto.PNG" >
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -84,8 +84,7 @@
     </ContentPage>
 
     <!-- Food Plan  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
+    <ContentPage BackgroundImageSource="Assets/FoodPlan_Tuto.PNG">
 
         <ContentPage.Content>
 
@@ -107,8 +106,8 @@
     </ContentPage>
 
     <!-- Refrsh Food This week  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
+    <ContentPage BackgroundImageSource="Assets/FoodChoices_Tuto.PNG">
+        <!-- BackgroundImageSource="Assets/FoodChoices_Tuto.PNG"-->
 
         <ContentPage.Content>
 
@@ -130,56 +129,9 @@
         </ContentPage.Content>
     </ContentPage>
 
-    <!-- Refrsh Food This week  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
-
-        <ContentPage.Content>
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-
-                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
-
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
-
-    <!-- My food general  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
-
-        <ContentPage.Content>
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-
-                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
-
-            </Grid>
-
-        </ContentPage.Content>
-    </ContentPage>
-    
     <!-- Shopping List  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
+    <ContentPage BackgroundImageSource="Assets/ShoppingList_Tuto.PNG" >
+       
 
         <ContentPage.Content>
 
@@ -197,10 +149,8 @@
                 <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
 
             </Grid>
-
         </ContentPage.Content>
     </ContentPage>
-
 
     <!-- My fridge  -->
     <ContentPage BackgroundColor="White">
@@ -228,6 +178,11 @@
     </ContentPage>
 
 
+    
+   
+
+    
+
     <!-- My well being  -->
     <ContentPage BackgroundColor="White">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
@@ -251,9 +206,9 @@
         </ContentPage.Content>
     </ContentPage>
 
-    <!-- My workouts  -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
+    <!-- My workouts general  -->
+    <ContentPage BackgroundImageSource="Assets/MyWorkoutsMainTuto.PNG">
+
 
         <ContentPage.Content>
 
@@ -271,58 +226,58 @@
                 <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
 
             </Grid>
+
         </ContentPage.Content>
     </ContentPage>
-
-    <!-- My workouts: schedule workouts -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
-
-        <ContentPage.Content>
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-
-                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
-
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
-
-    <!-- My workouts: view workouts -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
-
-        <ContentPage.Content>
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-
-                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
-
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
-
 
     <!-- My workouts: workout now -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/SchWorkout_Tuto.PNG">
+
+        <ContentPage.Content>
+
+            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
+
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <!-- My workouts: workout sch -->
+    <ContentPage BackgroundImageSource="Assets/SchWorkouts_Tuto.PNG">
+        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
+
+        <ContentPage.Content>
+
+            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
+
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+    <!-- My workouts: view workouts -->
+    <ContentPage >
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>

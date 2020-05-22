@@ -10,9 +10,8 @@
 
         <Grid VerticalOptions="Center" HorizontalOptions ="Center" Margin="50">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
-                <ColumnDefinition Width="500"/>
-                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -31,45 +30,45 @@
             </Grid.RowDefinitions>
 
 
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20" Scale="0.6" />
+            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="3" HeightRequest="20" WidthRequest="20" Scale="0.6" />
 
-            <Label Text="Food choices for the week" Grid.Row="0"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed"  FontSize="25"/>
+            <Label Text="Food choices for the week" Grid.Row="0"  VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="2" FontSize="25"/>
 
-            
-            <Label Text="Protein choice n°1" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="10" />
-            <Label Text="Protein choice n°2"  Grid.Row="3" Grid.Column="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16"/>
 
-            <Label Text="Protein choice n°3" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="4" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16"/>
+            <Label Text="Protein choice n°1" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Prot_1" Grid.Row="2" Grid.Column="2" VerticalOptions="Start" TextColor="Black" FontSize="16" />
+            <Label Text="Protein choice n°2"  Grid.Row="3" Grid.Column="1"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Prot_2" WidthRequest="100" Grid.Row="3" Grid.Column="2"  FontSize="16"/>
 
-            <Label Text="Carbohydrate choice n°1" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Carb_1" WidthRequest="200"  Grid.Row="5" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Protein choice n°3" Grid.Row="4" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Prot_3" WidthRequest="200"  Grid.Row="4" Grid.Column="2" FontSize="16"/>
 
-            <Label Text="Carbohydrate choice n°2"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Carb_2" WidthRequest="200" Grid.Row="6" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Carbohydrate choice n°1" Grid.Row="5" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Carb_1" WidthRequest="200"  Grid.Row="5" Grid.Column="2"  FontSize="16" />
 
-            <Label Text="Carbohydrate choice n°3"  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="7" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Carbohydrate choice n°2"  Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Carb_2" WidthRequest="200" Grid.Row="6" Grid.Column="2"  FontSize="16" />
 
-            <Label Text="Vegetable choice n°1" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="8" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Carbohydrate choice n°3"  Grid.Row="7" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Carb_3" WidthRequest="200" Grid.Row="7" Grid.Column="2" FontSize="16" />
 
-            <Label Text="Vegetable choice n°2"  Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="9" Grid.Column="1"  BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Vegetable choice n°1" Grid.Row="8" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Veggies_1" WidthRequest="200"  Grid.Row="8" Grid.Column="2" FontSize="16" />
 
-            <Label Text="Vegetable choice n°3"  Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Violet" FontSize="18"/>
-            <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="10" Grid.Column="1" BackgroundColor="AliceBlue" FontSize="16" />
+            <Label Text="Vegetable choice n°2"  Grid.Row="9" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Veggies_2" WidthRequest="200" Grid.Row="9" Grid.Column="2" FontSize="16" />
+
+            <Label Text="Vegetable choice n°3"  Grid.Row="10" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="BlueViolet" FontSize="18"/>
+            <Picker x:Name="Veggies_3" WidthRequest="200" Grid.Row="10" Grid.Column="2" FontSize="16" />
 
 <!--bouton save a redimensionner bien-->
-            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" Grid.Row="12" Grid.Column="1" HeightRequest="90" WidthRequest="60"></ImageButton>
+            <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" Grid.Row="12" Grid.Column="3" HeightRequest="90" WidthRequest="60"></ImageButton>
 <!--bouton add-->
-            <Label Text="Add a new  food to the list" Grid.Row="12"  VerticalTextAlignment="Center" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="15"/>
-            <ImageButton Source="Asset/plus.png" Grid.Row="12" Clicked="Add"></ImageButton>
+            <Button Text="Add a new  food to the list" Grid.Row="12"  TextColor="BlueViolet" Grid.Column="0"  Clicked="Add" FontSize="15"/>
+            <ImageButton Source="Assets/plus.png" Grid.Row="12" Grid.Column="1" HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Scale="0.6" Clicked="Add"></ImageButton>
             
-            <Label Text="Add to Shopping List:" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start"  TextColor="MediumVioletRed" FontSize="15"/>
-            <Switch  x:Name="switch" Grid.Row="1" Grid.Column="1" OnColor="PaleVioletRed"  HorizontalOptions="Center" Toggled="OnToggled" IsToggled="true"/>
+            <Label Text="Add to Shopping List:" Grid.Row="1" Grid.Column="2" HorizontalOptions="End" HorizontalTextAlignment="Start"  TextColor="BlueViolet" FontSize="15"/>
+            <Switch  x:Name="switch" Grid.Row="1" Grid.Column="3" OnColor="BlueViolet"  HorizontalOptions="Start" Toggled="OnToggled" IsToggled="true"/>
 
 
         </Grid>

@@ -77,7 +77,7 @@ namespace UplanTest
 
         void OnToggled(object sender, ToggledEventArgs e)
         {
-            toggled = !toggled;
+            toggled =!toggled;
         }
 
         public async void OnButtonClicked(object sender, EventArgs args)

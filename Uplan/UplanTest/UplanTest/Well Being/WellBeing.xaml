@@ -9,47 +9,95 @@
     <ContentPage.Content>
         <Grid>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <StackLayout x:Name ="Stack1"   BackgroundColor="#7D057D" Padding="20"  >
+            <Label Text="Relax1"  HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay1"/>
+                <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked ="ToPause1" />
+                
+                
 
 
-            <Label Text="Welcome to WellBeing Page! " Grid.Row="1" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Violet"/>
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout x:Name="Stack2" BackgroundColor="#890489" Padding="20">
+            <Label Text="Relax2" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay2"/>
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked ="ToPause2"/>
+            
+            </StackLayout>
+            
+        </StackLayout>
+            <StackLayout  x:Name="Stack3"  Grid.Row="4" Grid.Column="1"  BackgroundColor="#B907B9" Padding="20">
+                <Label Text="Relax3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+                  
 
-            <Label Text="Select the end of your break :" TextColor="Violet" Grid.Row="2" HorizontalTextAlignment="End" FontSize="Large"/>
+                </StackLayout>
+            </StackLayout>
 
-            <TimePicker x:Name="Chrono"
-                    Time="11:00:00"
-                    Format="T"
-                     TextColor="Violet"
-                     PropertyChanged="Event" 
-                        Grid.Row="2"
-                        Grid.Column="1"
-                   />
-            <Switch x:Name="_switch" Toggled="Pass"
-                    OnColor="Violet" Grid.Row="2" Grid.Column="2" HorizontalOptions="StartAndExpand" HeightRequest="70"  IsVisible="False"/>
+            <StackLayout  x:Name="Stack4" Grid.Row="5" Grid.Column="1" BackgroundColor="#E10CE1" Padding="20">
+                <Label Text="Relax4" HeightRequest="30" HorizontalTextAlignment="Center"  VerticalTextAlignment="End"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+               
+
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="Stack5" BackgroundColor="#056899" Padding="20">
+                <Label Text="Rock1" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout x:Name="Stack6" Grid.Row="3" Grid.Column="3"  BackgroundColor="#089D9D" Padding="20">
+                <Label Text="Rock2" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay6" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause6" HeightRequest="30" />
+                
+
+                </StackLayout>
+            </StackLayout>
 
 
-            <Image Source="Assets/breakf.png" Grid.Row="3" Grid.Column="1" HeightRequest="50" />
+            <StackLayout x:Name="Stack7" Grid.Row="4" Grid.Column="3"  BackgroundColor="#08ACAC" Padding="20">
+                <Label Text="Rock3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay7" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause7" HeightRequest="30" />
+                 
+
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout x:Name="Stack8"  BackgroundColor="#07DEDE" Padding="20">
+                <Label Text="Rock4" HeightRequest="30" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay8" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause8" HeightRequest="30" />
+                  
+
+                </StackLayout>
+            </StackLayout>
+
+
+
 
 
 
 
         </Grid>
-
-
-
-
 
 
 
