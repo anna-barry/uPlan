@@ -178,12 +178,9 @@
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
-<<<<<<< HEAD
     <Content Include="Assets\moral.png" />
-=======
     <Content Include="Assets\MainForTuto.PNG" />
     <Content Include="Assets\MarchSteps.png" />
->>>>>>> ee53cdbfeb734db2ceb21df35cbd4aeee21b5884
     <Content Include="Assets\Money.png" />
     <Content Include="Assets\MontainClimbers.png" />
     <Content Include="Assets\musicplay.png" />

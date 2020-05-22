@@ -32,7 +32,7 @@ namespace UplanTest
         
         
         
-        Label Tittle = new Label { Text = "My Well Being", TextColor = Color.Violet, FontSize = 40};
+        Label Tittle = new Label { Text = "My Well Being", TextColor = Color.BlueViolet, FontSize = 40};
 
         Label QUOTESs = new Label {   VerticalTextAlignment = TextAlignment.Center, FontAttributes = FontAttributes.Italic, FontSize = 40};
 
@@ -112,12 +112,6 @@ namespace UplanTest
             var truc = col.FindOne(Query.And(Query.EQ("Type", "QUOTES"), Query.EQ("Code", Convert.ToString(rando))));
            
           
-
-
-
-            
-            grid.BackgroundColor = Color.AliceBlue;
-            
 
             ScrollView scroll = new ScrollView { Orientation = ScrollOrientation.Both };
             scroll.Content = grid;
