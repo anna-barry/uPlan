@@ -51,52 +51,52 @@ namespace UplanTest
                                 {
                                     case 1:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Description;
-                                            if (seconds == 1)
+                                            if (seconds == 0)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Code; }
                                         break;
                                     case 2:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice2.Description;
-                                            if (seconds== 1)
+                                            if (seconds<= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice2.Code; }
                                         break;
                                     case 3:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice3.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice3.Code; }
                                             break;
                                     case 4:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice4.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice4.Code; }
                                         break;
                                     case 5:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice5.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice5.Code; }
                                             break;
                                     case 6:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice6.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice6.Code; }
                                         break;
                                     case 7:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice7.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice7.Code; }
                                         break;
                                     case 8:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice8.Description;
-                                            if (seconds== 1)
+                                            if (seconds<= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice8.Code; }
                                         break;
                                     case 9:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice9.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source =listOfWorkouts.ElementAt(kactual - 1).Exercice9.Code; }
                                         break;
                                     case 10:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice10.Description;
-                                            if (seconds == 1)
+                                            if (seconds <= 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice10.Code; }
                                         break;
                                 }
@@ -106,7 +106,7 @@ namespace UplanTest
                                 if (seconds == 25)
                                 { InThePicture.Source = "Assets/RoundRouge.png"; }
 
-                                if (seconds%30==0)
+                                if (seconds==1)
                                 {InThePicture.Source= "Assets/RondVert.png";}
 
                                 if ( seconds==30 && ActExercice == 10 && round == 1)
@@ -166,9 +166,13 @@ namespace UplanTest
                             if (seconds >= 30 && kactual == nb_workouts && round == 2 && ActExercice == 10)
                             {
                                 Type.Text = "Well done";
+                                Type.FontSize = 40;
                                 Exerice.Text = "You have finished your workout, you should be proud of yourself";
+                                Exerice.FontSize = 30;
+                                BackgroundColor = Color.PeachPuff;
                                 InTheFrame.IsVisible = false;
-
+                                Picture.IsVisible = false;
+                                InThePicture.IsVisible = false;
                                 return false;
 
                             }
