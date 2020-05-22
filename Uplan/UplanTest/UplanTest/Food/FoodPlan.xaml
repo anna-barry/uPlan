@@ -59,7 +59,7 @@
             <Label x:Name="dinsat" Grid.Row="5" Grid.Column="6" FontSize="15"/>
             <Label x:Name="dinsun" Grid.Row="5" Grid.Column="7" FontSize="15"/>
 
-            <ImageButton Source="Assets/refresh_Icon.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="7" HeightRequest="40" WidthRequest="40" />
+            <ImageButton Source="Assets/FoodCh.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="7" HeightRequest="40" WidthRequest="40" />
 
 
         </Grid>

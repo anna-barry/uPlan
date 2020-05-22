@@ -135,7 +135,11 @@ namespace UplanTest
             Grid.SetRowSpan(valider, 2);
 
 
-
+            ImageButton Close = new ImageButton();
+            Close.Scale = 0.9;
+            Close.Source = "Assets/croix.png";
+            Close.Clicked += (sender, e) => OnCloseClicked2();
+            grid.Children.Add(Close, 3, 0);
 
 
 
@@ -183,6 +187,13 @@ namespace UplanTest
                 Navigation.PushAsync(new FridgePage());
 
             }
+
+        }
+
+        private async void OnCloseClicked2()
+        {
+
+            await Navigation.PopAsync();
 
         }
     }

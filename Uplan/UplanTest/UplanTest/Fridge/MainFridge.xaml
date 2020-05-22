@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UplanTest.MainFridge">
+    <ContentPage.Content>
+        <Grid Margin="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                
+                
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+
+            <Label Text="My food" Grid.Row="0" Grid.Column="0"  FontAttributes="Bold" TextColor="MediumVioletRed" FontSize="30"/>
+
+            <ImageButton Source="Assets/shopping.png" Grid.Row="3" Grid.Column="0" Clicked="ShoppingLink" CornerRadius="50"/>
+            <Label Text="My Shopping List" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" FontSize="26" Grid.RowSpan="2" />
+
+            <ImageButton Source="Assets/Fridge.png" Grid.Row="3" Grid.Column="1" Clicked="FridgeLink" CornerRadius="50"/>
+            <Label Text="My Fridge" HorizontalOptions="Center" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" FontSize="26"  />
+
+            
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

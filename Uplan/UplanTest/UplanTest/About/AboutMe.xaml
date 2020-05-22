@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
              BackgroundColor="AliceBlue"
              x:Class="UplanTest.AboutMe">
@@ -66,7 +67,7 @@
             <Entry x:Name="Coral" WidthRequest="175" FontSize="12" Placeholder="Coral" Grid.Row="15" Grid.Column="1"  />
                 <Label Text="Dark blue:  " Grid.Row="16" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="DarkBlue" FontSize="16" />
             <Entry x:Name="Dark_blue" WidthRequest="175" FontSize="12" Placeholder="Dark blue" Grid.Row="16" Grid.Column="1"  />
-                <Label Text="Dark Magenta: " Grid.Row="17" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="DarkMagenta" FontSize="16" />
+                <Label Text="Dark Magenta: "  Grid.Row="17" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="DarkMagenta" FontSize="16" />
             <Entry x:Name="Dark_Magenta" WidthRequest="175" FontSize="12" Placeholder="Dark Magenta" Grid.Row="17" Grid.Column="1"  />
                 <Label Text="Forest Green: " Grid.Row="18" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="ForestGreen" FontSize="16" />
             <Entry x:Name="Forest_Green" WidthRequest="175" FontSize="12" Placeholder="Forest Green" Grid.Row="18" Grid.Column="1"  />
@@ -79,8 +80,12 @@
 
             <Button Text="Save" Clicked="OnButtonClicked" BackgroundColor="AliceBlue" BorderColor="DarkMagenta" TextColor="IndianRed" Grid.Row="23" Grid.RowSpan="2" Grid.Column="1" /> 
             <!--<ImageButton Source="Assets/save).png" Clicked="OnButtonClicked" HeightRequest="100" Grid.Row="20" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"  ></ImageButton> -->
-            
-        </Grid>
+
+
+                <!--<forms:ChartView x:Name="Chart1" HeightRequest="150" /-->
+
+
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

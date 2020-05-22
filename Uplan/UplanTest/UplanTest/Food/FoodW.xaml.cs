@@ -80,7 +80,7 @@ namespace UplanTest
             toggled =!toggled;
         }
 
-        public void OnButtonClicked(object sender, EventArgs args)
+        public async void OnButtonClicked(object sender, EventArgs args)
 
         {
 
@@ -124,7 +124,8 @@ namespace UplanTest
 
 
                 GetShoppinForWeek();
-               
+                await Navigation.PopAsync();
+
             }
 
         }
@@ -448,21 +449,13 @@ namespace UplanTest
             return res;
         }
 
-        /*public static void Update(
-           string uName, string uEmailAddress, ListEntry uAccomodationType,
-           string uShoppingDay, string uCleaningDay)
-
-        {
-            me.UpdateUser(uName, uEmailAddress, uAccomodationType, uShoppingDay, uCleaningDay);
-
-            // Keep MyUser static variables up to date after this database update
-            Initiate();
-        } */
+        
 
         private async void OnCloseClicked2(object sender, EventArgs args)
         {
-
-            await Navigation.PopAsync();
+            
+            
+            await Navigation.PushAsync(new FoodPlan());
 
         }
     }

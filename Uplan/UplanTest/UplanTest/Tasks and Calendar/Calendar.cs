@@ -1,17 +1,8 @@
-﻿using System;
-
+﻿using LiteDB;
+using System;
 using System.Collections.Generic;
-
 using System.Linq;
-
-using System.Text;
-
 using System.Threading.Tasks;
-
-
-
-using LiteDB;
-
 using Xamarin.Forms;
 
 
@@ -53,7 +44,7 @@ namespace UplanTest
         {
 
 
-
+            
 
             //____________________________CREATION DU GRID_____________________________________
 
@@ -304,15 +295,15 @@ namespace UplanTest
             ImageButton addEvent = new ImageButton();
             addEvent.Source = "Assets/add_round.png";
             addEvent.Clicked += (sender, e) => GotoNewEvent();
-            grid.Children.Add(addEvent, 5, 14);
-
+            grid.Children.Add(addEvent, 0, 12);
+            
             //______________________ Bouton View
             ImageButton ViewsEvents = new ImageButton();
             ViewsEvents.Source = "Assets/eye2.png";
             ViewsEvents.WidthRequest = 40;
             ViewsEvents.HeightRequest = 40;
             ViewsEvents.Clicked += (sender, e) => GotoViewEvents();
-            grid.Children.Add(ViewsEvents,6, 14);
+            grid.Children.Add(ViewsEvents,0, 13);
 
 
 
@@ -427,7 +418,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 0, ref mon1, continuee);
-                mon1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 0));
+                (string resmsg1, SchoolTask restask1) = InitiateButtonGetMsg(tasksonMon, 0);
+                mon1.Clicked += async (sender, e) => await Alert_Clicked(resmsg1,restask1);
                 grid.Children.Add(mon1, 0, 2);
                 buttonsonMon.Add(mon1);
 
@@ -449,7 +441,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 1, ref mon2, continueem);
-                mon2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 1));
+                (string resmsg2, SchoolTask restask2) = InitiateButtonGetMsg(tasksonMon, 1);
+                mon2.Clicked += async (sender, e) => await Alert_Clicked(resmsg2, restask2);
                 grid.Children.Add(mon2, 0, 3);
                  buttonsonMon.Add(mon2);
 
@@ -469,7 +462,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 2, ref mon3, continuee3);
-                mon3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 2));
+                (string resmsg3, SchoolTask restask3) = InitiateButtonGetMsg(tasksonMon, 2);
+                mon3.Clicked += async (sender, e) => await Alert_Clicked(resmsg3, restask3);
                 grid.Children.Add(mon3, 0, 4);
                 buttonsonMon.Add(mon3);
 
@@ -489,7 +483,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 3, ref mon4, continuee);
-                mon4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 3));
+                (string resmsg4, SchoolTask restask4) = InitiateButtonGetMsg(tasksonMon, 3);
+                mon4.Clicked += async (sender, e) => await Alert_Clicked(resmsg4, restask4);
+                //mon4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 3));
                 grid.Children.Add(mon4, 0, 5);
                 buttonsonMon.Add(mon4);
 
@@ -509,7 +505,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 4, ref mon5, continuee5);
-                mon5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 4));
+                (string resmsg5, SchoolTask restask5) = InitiateButtonGetMsg(tasksonMon, 4);
+                mon5.Clicked += async (sender, e) => await Alert_Clicked(resmsg5, restask5);
+                
                 grid.Children.Add(mon5, 0, 6);
                 buttonsonMon.Add(mon5);
 
@@ -529,7 +527,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 5, ref mon6, m6);
-                mon6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 5));
+                (string resmsg6, SchoolTask restask6) = InitiateButtonGetMsg(tasksonMon, 5);
+                mon6.Clicked += async (sender, e) => await Alert_Clicked(resmsg3, restask3);
+                //mon6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 5));
                 grid.Children.Add(mon6, 0, 7);
                 buttonsonMon.Add(mon6);
 
@@ -550,7 +550,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 6, ref mon7, m7);
-                mon7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 6));
+                (string resmsg7, SchoolTask restask7) = InitiateButtonGetMsg(tasksonMon, 6);
+                mon7.Clicked += async (sender, e) => await Alert_Clicked(resmsg7, restask7);
                 grid.Children.Add(mon7, 0, 8);
                 buttonsonMon.Add(mon7);
 
@@ -570,7 +571,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 7, ref mon8, m8);
-                mon8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 7));
+                (string resmsg8, SchoolTask restask8) = InitiateButtonGetMsg(tasksonMon, 7);
+                mon8.Clicked += async (sender, e) => await Alert_Clicked(resmsg8, restask8);
                 grid.Children.Add(mon8, 0, 2 + 7);
                 buttonsonMon.Add(mon8);
 
@@ -590,7 +592,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 8, ref mon9, m9);
-                mon9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 8));
+                (string resmsg9, SchoolTask restask9) = InitiateButtonGetMsg(tasksonMon, 8);
+                mon9.Clicked += async (sender, e) => await Alert_Clicked(resmsg9, restask9);
                 grid.Children.Add(mon9, 0, 2 + 8);
                 buttonsonMon.Add(mon9);
 
@@ -610,7 +613,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonMon, 9, ref mon10, m610);
-                mon10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonMon, 9));
+                (string resmsg10, SchoolTask restask10) = InitiateButtonGetMsg(tasksonMon, 9);
+                mon10.Clicked += async (sender, e) => await Alert_Clicked(resmsg10, restask10);
                 grid.Children.Add(mon10, 0, 2 + 9);
                 buttonsonMon.Add(mon10);
 
@@ -632,7 +636,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 0, ref tue1, btue1);
-                tue1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 0));
+                (string resmsgM1, SchoolTask restaskM1) = InitiateButtonGetMsg(tasksonTue, 0);
+                tue1.Clicked += async (sender, e) => await Alert_Clicked(resmsgM1, restaskM1);
                 grid.Children.Add(tue1, 1, 2);
                 buttonsonTue.Add(tue1);
 
@@ -655,7 +660,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 1, ref tue2, btue2);
-                tue2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 1));
+                (string resmsgM2, SchoolTask restaskM2) = InitiateButtonGetMsg(tasksonTue, 1);
+                tue2.Clicked += async (sender, e) => await Alert_Clicked(resmsgM2, restaskM2);
                 grid.Children.Add(tue2, 1, 3);
                 buttonsonTue.Add(tue2);
 
@@ -675,7 +681,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 2, ref tue3, btue3);
-                tue3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 2));
+                (string resmsgM3, SchoolTask restaskM3) = InitiateButtonGetMsg(tasksonTue, 2);
+                tue3.Clicked += async (sender, e) => await Alert_Clicked(resmsgM3, restaskM3);
                 grid.Children.Add(tue3, 1, 4);
                 buttonsonTue.Add(tue3);
 
@@ -695,7 +702,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 3, ref tue4, btue4);
-                tue4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 3));
+                (string resmsgM4, SchoolTask restaskM4) = InitiateButtonGetMsg(tasksonTue, 3);
+                tue4.Clicked += async (sender, e) => await Alert_Clicked(resmsgM4, restaskM4);
                 grid.Children.Add(tue4, 1, 5);
                 buttonsonTue.Add(tue4);
 
@@ -715,7 +723,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 4, ref tue5, btue5);
-                tue5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 4));
+                (string resmsgM5, SchoolTask restaskM5) = InitiateButtonGetMsg(tasksonTue, 4);
+                tue5.Clicked += async (sender, e) => await Alert_Clicked(resmsgM5, restaskM5);
                 grid.Children.Add(tue5, 1, 6);
                 buttonsonTue.Add(tue5);
 
@@ -735,7 +744,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 5, ref tue6, btue6);
-                tue6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 5));
+                (string resmsgM6, SchoolTask restaskM6) = InitiateButtonGetMsg(tasksonTue, 5);
+                tue6.Clicked += async (sender, e) => await Alert_Clicked(resmsgM1, restaskM1);
                 grid.Children.Add(tue6, 1, 7);
                 buttonsonTue.Add(tue6);
 
@@ -756,7 +766,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 6, ref tue7, btue7);
-                tue7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 6));
+                (string resmsgM7, SchoolTask restaskM7) = InitiateButtonGetMsg(tasksonTue, 6);
+                tue7.Clicked += async (sender, e) => await Alert_Clicked(resmsgM7, restaskM7);
                 grid.Children.Add(tue7, 1, 8);
                 buttonsonTue.Add(tue7);
 
@@ -776,7 +787,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 7, ref tue8, btue8);
-                tue8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 7));
+                (string resmsgM8, SchoolTask restaskM8) = InitiateButtonGetMsg(tasksonTue, 7);
+                tue8.Clicked += async (sender, e) => await Alert_Clicked(resmsgM8, restaskM8);
                 grid.Children.Add(tue8, 1, 2 + 7);
                 buttonsonTue.Add(tue8);
 
@@ -796,7 +808,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 8, ref tue9, btue9);
-                tue9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 8));
+                (string resmsgM9, SchoolTask restaskM9) = InitiateButtonGetMsg(tasksonTue, 8);
+                tue9.Clicked += async (sender, e) => await Alert_Clicked(resmsgM9, restaskM9);
                 grid.Children.Add(tue9, 1, 2 + 8);
                 buttonsonTue.Add(tue9);
                  //_____________________________________________________________________
@@ -815,7 +828,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonTue, 9, ref tue10, btue10);
-                tue10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonTue, 9));
+                (string resmsgM10, SchoolTask restaskM10) = InitiateButtonGetMsg(tasksonTue, 0);
+                tue10.Clicked += async (sender, e) => await Alert_Clicked(resmsgM10, restaskM10);
                 grid.Children.Add(tue10, 1, 2 + 9);
                 buttonsonTue.Add(tue10);
 
@@ -836,7 +850,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 0, ref wed1, bwed1);
-                wed1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 0));
+                (string resmsgME1, SchoolTask restaskME1) = InitiateButtonGetMsg(tasksonWed, 0);
+                wed1.Clicked += async (sender, e) => await Alert_Clicked(resmsgME1, restaskME1);
                 grid.Children.Add(wed1, 2, 2);
                 buttonsonWed.Add(wed1);
 
@@ -858,7 +873,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 1, ref wed2, bwed2);
-                wed2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 1));
+                (string resmsgME2, SchoolTask restaskME2) = InitiateButtonGetMsg(tasksonWed, 1);
+                wed2.Clicked += async (sender, e) => await Alert_Clicked(resmsgME2, restaskME2);
                 grid.Children.Add(wed2, 2, 3);
                 buttonsonWed.Add(wed2);
                  //_____________________________________________________________________
@@ -877,7 +893,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 2, ref wed3, bwed3);
-                wed3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 2));
+                (string resmsgME3, SchoolTask restaskME3) = InitiateButtonGetMsg(tasksonWed, 2);
+                wed3.Clicked += async (sender, e) => await Alert_Clicked(resmsgME3, restaskME3);
+
                 grid.Children.Add(wed3, 2, 4);
                 buttonsonWed.Add(wed3);
 
@@ -897,7 +915,10 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 3, ref wed4, bwed4);
-                wed4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 3));
+                (string resmsgME4, SchoolTask restaskME4) = InitiateButtonGetMsg(tasksonWed, 3);
+                wed4.Clicked += async (sender, e) => await Alert_Clicked(resmsgME4, restaskME4);
+
+            
                 grid.Children.Add(wed4, 2, 5);
                 buttonsonWed.Add(wed4);
 
@@ -917,7 +938,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 4, ref wed5, bwed5);
-                wed5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 4));
+                (string resmsgME5, SchoolTask restaskME5) = InitiateButtonGetMsg(tasksonWed, 4);
+                wed5.Clicked += async (sender, e) => await Alert_Clicked(resmsgME5, restaskME5);
+
                 grid.Children.Add(wed5, 2, 6);
                 buttonsonWed.Add(wed5);
 
@@ -937,7 +960,10 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 5, ref wed6, bwed6);
-                wed6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 5));
+                (string resmsgME6, SchoolTask restaskME6) = InitiateButtonGetMsg(tasksonWed, 5);
+                wed6.Clicked += async (sender, e) => await Alert_Clicked(resmsgME6, restaskME6);
+
+           
                 grid.Children.Add(wed6, 2, 7);
                 buttonsonWed.Add(wed6);
 
@@ -958,7 +984,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 6, ref wed7, bwed7);
-                wed7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 6));
+                (string resmsgME7, SchoolTask restaskME7) = InitiateButtonGetMsg(tasksonWed, 6);
+                wed7.Clicked += async (sender, e) => await Alert_Clicked(resmsgME7, restaskME7);
+
                 grid.Children.Add(wed7, 2, 8);
                 buttonsonWed.Add(wed7);
                  //_____________________________________________________________________
@@ -977,7 +1005,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 7, ref wed8, bwed8);
-                wed8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 7));
+                (string resmsgME8, SchoolTask restaskME8) = InitiateButtonGetMsg(tasksonWed, 7);
+                wed8.Clicked += async (sender, e) => await Alert_Clicked(resmsgME8, restaskME8);
                 grid.Children.Add(wed8, 2, 2 + 7);
                 buttonsonWed.Add(wed8);
 
@@ -997,7 +1026,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 8, ref wed9, bwed9);
-                wed9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 8));
+                (string resmsgME9, SchoolTask restaskME9) = InitiateButtonGetMsg(tasksonWed, 8);
+                wed9.Clicked += async (sender, e) => await Alert_Clicked(resmsgME9, restaskME9);
+           
                 grid.Children.Add(wed9, 2, 2 + 8);
                 buttonsonWed.Add(wed9);
 
@@ -1017,7 +1048,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonWed, 9, ref wed10, bwed10);
-                wed10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonWed, 9));
+                (string resmsgME10, SchoolTask restaskME10) = InitiateButtonGetMsg(tasksonWed, 9);
+                wed10.Clicked += async (sender, e) => await Alert_Clicked(resmsgME10, restaskME10);
                 grid.Children.Add(wed10, 2, 2 + 9);
                 buttonsonWed.Add(wed10);
 
@@ -1039,7 +1071,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 0, ref thu1, bthu1);
-                thu1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 0));
+                (string resmsgJ1, SchoolTask restaskJ1) = InitiateButtonGetMsg(tasksonThu, 0);
+                thu1.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ1, restaskJ1);
+            
                 grid.Children.Add(thu1, 3, 2);
 
 
@@ -1061,7 +1095,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 1, ref thu2, bthu2);
-                thu2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 1));
+                (string resmsgJ2, SchoolTask restaskJ2) = InitiateButtonGetMsg(tasksonThu, 1);
+                 thu2.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ2, restaskJ2);
                 grid.Children.Add(thu2, 3, 3);
 
                 //_____________________________________________________________________
@@ -1080,7 +1115,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 2, ref thu3, bthu3);
-                thu3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 2));
+                (string resmsgJ3, SchoolTask restaskJ3) = InitiateButtonGetMsg(tasksonThu, 2);
+                thu3.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ3, restaskJ3);
                 grid.Children.Add(thu3, 3, 4);
 
                 //_____________________________________________________________________
@@ -1099,7 +1135,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 3, ref thu4, bthu4);
-                thu4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 3));
+                (string resmsgJ4, SchoolTask restaskJ4) = InitiateButtonGetMsg(tasksonThu, 3);
+                thu4.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ4, restaskJ4);
+            
                 grid.Children.Add(thu4, 3, 5);
 
                 //_____________________________________________________________________
@@ -1118,7 +1156,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 4, ref thu5, bthu5);
-                thu5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 4));
+                (string resmsgJ5, SchoolTask restaskJ5) = InitiateButtonGetMsg(tasksonThu, 4);
+                thu5.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ5, restaskJ5);
                 grid.Children.Add(thu5, 3, 6);
 
                 //_____________________________________________________________________
@@ -1137,7 +1176,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 5, ref thu6, bthu6);
-                thu6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 5));
+                (string resmsgJ6, SchoolTask restaskJ6) = InitiateButtonGetMsg(tasksonThu, 5);
+                thu6.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ6, restaskJ6);
                 grid.Children.Add(thu6, 3, 7);
 
 
@@ -1157,7 +1197,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 6, ref thu7, bthu7);
-                thu7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 6));
+                (string resmsgJ7, SchoolTask restaskJ7) = InitiateButtonGetMsg(tasksonThu, 6);
+                thu7.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ7, restaskJ7);
                 grid.Children.Add(thu7, 3, 8);
 
                 //_____________________________________________________________________
@@ -1176,7 +1217,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 7, ref thu8, bthu8);
-                thu8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 7));
+                (string resmsgJ8, SchoolTask restaskJ8) = InitiateButtonGetMsg(tasksonThu, 7);
+                thu8.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ8, restaskJ8);
                 grid.Children.Add(thu8, 3, 2 + 7);
 
                 //_____________________________________________________________________
@@ -1195,7 +1237,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 8, ref thu9, bthu9);
-                thu9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 8));
+                (string resmsgJ9, SchoolTask restaskJ9) = InitiateButtonGetMsg(tasksonThu, 8);
+                thu9.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ9, restaskJ9);
+            
                 grid.Children.Add(thu9, 3, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1214,7 +1258,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonThu, 9, ref thu10, bthu10);
-                thu10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonThu, 9));
+                (string resmsgJ10, SchoolTask restaskJ10) = InitiateButtonGetMsg(tasksonThu, 9);
+                thu10.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ10, restaskJ10);
+            
                 grid.Children.Add(thu10, 3, 2 + 9);
 
                 //__________________Add All Thursday buttons__________________________
@@ -1246,7 +1292,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 0, ref fri1, bfri1);
-                fri1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 0));
+                (string resmsgF1, SchoolTask restaskF1) = InitiateButtonGetMsg(tasksonFri, 0);
+                fri1.Clicked += async (sender, e) => await Alert_Clicked(resmsgF1, restaskF1);
                 grid.Children.Add(fri1, 4, 2);
 
 
@@ -1268,7 +1315,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 1, ref fri2, bfri2);
-                fri2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 1));
+                (string resmsgF2, SchoolTask restaskF2) = InitiateButtonGetMsg(tasksonFri, 1);
+                fri2.Clicked += async (sender, e) => await Alert_Clicked(resmsgF2, restaskF2);
                 grid.Children.Add(fri2, 4, 3);
 
                 //_____________________________________________________________________
@@ -1287,7 +1335,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 2, ref fri3, bfri3);
-                fri3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 2));
+                (string resmsgF3, SchoolTask restaskF3) = InitiateButtonGetMsg(tasksonFri, 2);
+                fri3.Clicked += async (sender, e) => await Alert_Clicked(resmsgF3, restaskF3);
+            
                 grid.Children.Add(fri3, 4, 4);
 
                 //_____________________________________________________________________
@@ -1306,7 +1356,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 3, ref fri4, bfri4);
-                fri4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 3));
+                (string resmsgF4, SchoolTask restaskF4) = InitiateButtonGetMsg(tasksonFri, 3);
+                fri4.Clicked += async (sender, e) => await Alert_Clicked(resmsgF4, restaskF4);
                 grid.Children.Add(fri4, 4, 5);
 
                 //_____________________________________________________________________
@@ -1325,7 +1376,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 4, ref fri5, bfri5);
-                fri5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 4));
+                (string resmsgF5, SchoolTask restaskF5) = InitiateButtonGetMsg(tasksonFri, 4);
+                fri5.Clicked += async (sender, e) => await Alert_Clicked(resmsgF5, restaskF5);
                 grid.Children.Add(fri5, 4, 6);
 
                 //_____________________________________________________________________
@@ -1344,7 +1396,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 5, ref fri6, bfri6);
-                fri6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 5));
+                (string resmsgF6, SchoolTask restaskF6) = InitiateButtonGetMsg(tasksonFri, 5);
+                fri6.Clicked += async (sender, e) => await Alert_Clicked(resmsgF6, restaskF6);
                 grid.Children.Add(fri6, 4, 7);
 
 
@@ -1364,7 +1417,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 6, ref fri7, bfri7);
-                fri7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 6));
+                (string resmsgF7, SchoolTask restaskF7) = InitiateButtonGetMsg(tasksonFri, 6);
+                fri7.Clicked += async (sender, e) => await Alert_Clicked(resmsgF7, restaskF7);
                 grid.Children.Add(fri7, 4, 8);
 
                 //_____________________________________________________________________
@@ -1383,7 +1437,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 7, ref fri8, bfri8);
-                fri8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 7));
+                (string resmsgF8, SchoolTask restaskF8) = InitiateButtonGetMsg(tasksonFri, 7);
+                fri8.Clicked += async (sender, e) => await Alert_Clicked(resmsgF8, restaskF8);
                 grid.Children.Add(fri8, 4, 2 + 7);
 
                 //_____________________________________________________________________
@@ -1402,7 +1457,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 8, ref fri9, bfri9);
-                fri9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 8));
+                (string resmsgF9, SchoolTask restaskF9) = InitiateButtonGetMsg(tasksonFri, 8);
+                fri9.Clicked += async (sender, e) => await Alert_Clicked(resmsgF9, restaskF9);
+            
                 grid.Children.Add(fri9, 4, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1421,7 +1478,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonFri, 9, ref fri10, bfri10);
-                fri10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonFri, 9));
+                (string resmsgF10, SchoolTask restaskF10) = InitiateButtonGetMsg(tasksonFri, 9);
+                fri10.Clicked += async (sender, e) => await Alert_Clicked(resmsgF10, restaskF10);
                 grid.Children.Add(fri10, 4, 2 + 9);
 
                 //__________________Add All Friday buttons__________________________
@@ -1453,7 +1511,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 0, ref sat1, bsat1);
-                sat1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 0));
+                (string resmsgSA1, SchoolTask restaskSA1) = InitiateButtonGetMsg(tasksonSat, 0);
+                sat1.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA1, restaskSA1);
                 grid.Children.Add(sat1, 5, 2);
 
 
@@ -1475,7 +1534,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 1, ref sat2, bsat2);
-                sat2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 1));
+                (string resmsgSA2, SchoolTask restaskSA2) = InitiateButtonGetMsg(tasksonSat, 1);
+                sat2.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA2, restaskSA2);
+            
                 grid.Children.Add(sat2, 5, 3);
 
                 //_____________________________________________________________________
@@ -1494,7 +1555,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 2, ref sat3, bsat3);
-                sat3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 2));
+                (string resmsgSA3, SchoolTask restaskSA3) = InitiateButtonGetMsg(tasksonSat, 2);
+                sat3.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA3, restaskSA3);
                 grid.Children.Add(sat3, 5, 4);
 
                 //_____________________________________________________________________
@@ -1513,7 +1575,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 3, ref sat4, bsat4);
-                sat4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 3));
+                (string resmsgSA4, SchoolTask restaskSA4) = InitiateButtonGetMsg(tasksonSat, 3);
+                sat4.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA4, restaskSA4);
+            
                 grid.Children.Add(sat4, 5, 5);
 
                 //_____________________________________________________________________
@@ -1532,7 +1596,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 4, ref sat5, bsat5);
-                sat5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 4));
+                (string resmsgSA5, SchoolTask restaskSA5) = InitiateButtonGetMsg(tasksonSat, 4);
+                sat5.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA5, restaskSA5);
+            
                 grid.Children.Add(sat5, 5, 6);
 
                 //_____________________________________________________________________
@@ -1551,7 +1617,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 5, ref sat6, bsat6);
-                sat6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 5));
+                (string resmsgSA6, SchoolTask restaskSA6) = InitiateButtonGetMsg(tasksonSat, 5);
+                sat6.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA6, restaskSA6);
+           
                 grid.Children.Add(sat6, 5, 7);
 
 
@@ -1571,7 +1639,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 6, ref sat7, bsat7);
-                sat7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 6));
+                (string resmsgSA7, SchoolTask restaskSA7) = InitiateButtonGetMsg(tasksonSat, 6);
+                sat7.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA7, restaskSA7);
                 grid.Children.Add(sat7, 5, 8);
 
                 //_____________________________________________________________________
@@ -1590,7 +1659,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 7, ref sat8, bsat8);
-                sat8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 7));
+                (string resmsgSA8, SchoolTask restaskSA8) = InitiateButtonGetMsg(tasksonSat, 7);
+                sat8.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA8, restaskSA8);
                 grid.Children.Add(sat8, 5, 2 + 7);
 
                 //_____________________________________________________________________
@@ -1609,7 +1679,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 8, ref sat9, bsat9);
-                sat9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 8));
+                (string resmsgSA9, SchoolTask restaskSA9) = InitiateButtonGetMsg(tasksonSat, 8);
+                sat9.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA9, restaskSA9);
+            
                 grid.Children.Add(sat9, 5, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1628,7 +1700,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSat, 9, ref sat10, bsat10);
-                sat10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSat, 9));
+                (string resmsgSA10, SchoolTask restaskSA10) = InitiateButtonGetMsg(tasksonSat, 9);
+                sat10.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA10, restaskSA10);
                 grid.Children.Add(sat10, 5, 2 + 9);
 
               //__________________Add All Saturday buttons__________________________
@@ -1661,7 +1734,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 0, ref sun1, bsun1);
-                sun1.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 0));
+                (string resmsgSU1, SchoolTask restaskSU1) = InitiateButtonGetMsg(tasksonSun, 0);
+                sun1.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU1, restaskSU1);
+            
                 grid.Children.Add(sun1, 6, 2);
 
 
@@ -1683,7 +1758,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 1, ref sun2, bsun2);
-                sun2.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 1));
+                (string resmsgSU2, SchoolTask restaskSU2) = InitiateButtonGetMsg(tasksonSun, 1);
+                sun2.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU2, restaskSU2);
                 grid.Children.Add(sun2, 6, 3);
 
                 //_____________________________________________________________________
@@ -1702,7 +1778,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 2, ref sun3, bsun3);
-                sun3.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 2));
+                (string resmsgSU3, SchoolTask restaskSU3) = InitiateButtonGetMsg(tasksonSun, 2);
+                sun3.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU3, restaskSU3);
+           
                 grid.Children.Add(sun3, 6, 4);
 
                 //_____________________________________________________________________
@@ -1721,7 +1799,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 3, ref sun4, bsun4);
-                sun4.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 3));
+                (string resmsgSU4, SchoolTask restaskSU4) = InitiateButtonGetMsg(tasksonSun, 3);
+                sun4.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU4, restaskSU4);
                 grid.Children.Add(sun4, 6, 5);
 
                 //_____________________________________________________________________
@@ -1740,7 +1819,9 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 4, ref sun5, bsun5);
-                sun5.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 4));
+                (string resmsgSU5, SchoolTask restaskSU5) = InitiateButtonGetMsg(tasksonSun, 4);
+                sun5.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU5, restaskSU5);
+            
                 grid.Children.Add(sun5, 6, 6);
 
                 //_____________________________________________________________________
@@ -1759,7 +1840,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 5, ref sun6, bsun6);
-                sun6.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 5));
+                (string resmsgSU6, SchoolTask restaskSU6) = InitiateButtonGetMsg(tasksonSun, 5);
+                sun6.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU6, restaskSU6);
                 grid.Children.Add(sun6, 6, 7);
 
 
@@ -1779,7 +1861,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 6, ref sun7, bsun7);
-                sun7.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 6));
+                (string resmsgSU7, SchoolTask restaskSU7) = InitiateButtonGetMsg(tasksonSun, 6);
+                sun7.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU7, restaskSU7);
                 grid.Children.Add(sun7, 6, 8);
 
                 //_____________________________________________________________________
@@ -1798,7 +1881,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 7, ref sun8, bsun8);
-                sun8.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 7));
+                (string resmsgSU8, SchoolTask restaskSU8) = InitiateButtonGetMsg(tasksonSun, 7);
+                sun8.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU8, restaskSU8);
                 grid.Children.Add(sun8, 6, 2 + 7);
 
                 //_____________________________________________________________________
@@ -1817,7 +1901,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 8, ref sun9, bsun9);
-                sun9.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 8));
+                (string resmsgSU9, SchoolTask restaskSU9) = InitiateButtonGetMsg(tasksonSun, 8);
+                sun9.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU9, restaskSU9);
                 grid.Children.Add(sun9, 6, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1836,7 +1921,8 @@ namespace UplanTest
 
 
                 SetButton(tasksonSun, 9, ref sun10, bsun10);
-                sun10.Clicked += (sender, e) => Alert_Clicked(InitiateButtonGetMsg(tasksonSun, 9));
+                (string resmsgSU10, SchoolTask restaskSU10) = InitiateButtonGetMsg(tasksonSun, 9);
+                sun10.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU10, restaskSU10);
                 grid.Children.Add(sun10, 6, 2 + 9);
 
              //__________________Add All Sunday buttons__________________________
@@ -1857,80 +1943,45 @@ namespace UplanTest
 
 
 
-if (dayofweektoday == DayOfWeek.Sunday)
+            if (dayofweektoday == DayOfWeek.Sunday)
+            {
+                 res_for_notification = res_for_notification + "\n" + "- Go to page Food choices this week to get a brand new meal plan for the week to come!"; }
 
-{
+            if (MyUser.me.CleaningDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
 
-    res_for_notification = res_for_notification + "\n" + "- Go to page Food choices this week to get a brand new meal plan for the week to come!";
+                MyUser.me.CleaningDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
 
-}
+                MyUser.me.CleaningDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
 
-if (MyUser.me.CleaningDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+                MyUser.me.CleaningDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
 
-    MyUser.me.CleaningDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+                MyUser.me.CleaningDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
 
-    MyUser.me.CleaningDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+                MyUser.me.CleaningDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
 
-    MyUser.me.CleaningDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
+                MyUser.me.CleaningDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday)
+                { res_for_notification = res_for_notification + "\n" + "- Today is Cleaning Day, put your favorite playlist on and get ready to tidy your home!";}
 
-    MyUser.me.CleaningDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
-
-    MyUser.me.CleaningDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
-
-    MyUser.me.CleaningDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday
-
-    )
-
-{
-
-    res_for_notification = res_for_notification + "\n" + "- Today is Cleaning Day, put your favorite playlist on and get ready to tidy your home!";
-
-}
+            if (MyUser.me.ShoppingDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+                MyUser.me.ShoppingDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+                MyUser.me.ShoppingDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+                MyUser.me.ShoppingDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
+                MyUser.me.ShoppingDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
+                MyUser.me.ShoppingDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
+                MyUser.me.ShoppingDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday){
+                res_for_notification = res_for_notification + "\n" + "- Today is Shopping Day, don't forget your shopping bags and have a look at the Shopping List page if you want to follow your meal plan!"; }
 
 
+            var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date));
+            var nbtask = tasktoday.Count();
 
-if (MyUser.me.ShoppingDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+            var NotificationCenter = new Label { Text = res_for_notification + "\n" + "You have " + nbtask + " task(s) today", FontSize = 16, TextColor = Color.BlueViolet };
 
-    MyUser.me.ShoppingDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+            grid.Children.Add(NotificationCenter, 1, 12);
 
-    MyUser.me.ShoppingDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+            Grid.SetColumnSpan(NotificationCenter, 6);
 
-    MyUser.me.ShoppingDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
-
-    MyUser.me.ShoppingDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
-
-    MyUser.me.ShoppingDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
-
-    MyUser.me.ShoppingDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday
-
-    )
-
-{
-
-    res_for_notification = res_for_notification + "\n" + "- Today is Shopping Day, don't forget your shopping bags and have a look at the Shopping List page if you want to follow your meal plan!";
-
-}
-
-
-
-
-
-
-
-var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date
-    ));
-
-var nbtask = tasktoday.Count();
-
-
-
-var NotificationCenter = new Label { Text = res_for_notification + "\n" + "You have " + nbtask + " task(s) today", FontSize = 16, TextColor = Color.BlueViolet };
-
-grid.Children.Add(NotificationCenter, 0, 12);
-
-Grid.SetColumnSpan(NotificationCenter, 7);
-
-Grid.SetRowSpan(NotificationCenter, 3);
+            Grid.SetRowSpan(NotificationCenter, 3);
 
 
 
@@ -1954,13 +2005,20 @@ Content = grid;
             await Navigation.PushAsync(new AddEvent());
         }
 
-        private Task Alert_Clicked(string message)
+        async private Task Alert_Clicked(string message, SchoolTask liltask)
 
-{
+        {
 
-return DisplayAlert("Description", message, "ok");
+            //return DisplayAlert("Description", message, "ok");
 
-}
+            bool answer = await DisplayAlert("Description", message, "ok", "Delete task");
+            if (!answer && liltask!=null)
+            {
+                var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+                col.Delete(liltask.Id);
+                RefreshAll();
+            }
+        }
 
 
 
@@ -2020,19 +2078,21 @@ private void SetButton(IEnumerable<SchoolTask> tasks, int rang, ref Button tasks
             }
         }
        
-private string InitiateButtonGetMsg(IEnumerable<SchoolTask> tasks, int rang)
-{ //string message = "pas de task";
-string thismessage = message;
-if (tasks.Count<SchoolTask>() >= rang + 1)
-{
-    if (tasks.ElementAt<SchoolTask>(rang) != null)
-    {
-        thismessage = tasks.ElementAt<SchoolTask>(rang).SubDesc;
-    }
-}
-return thismessage;
-}
-        private void RefreshAll()
+        private (string, SchoolTask) InitiateButtonGetMsg(IEnumerable<SchoolTask> tasks, int rang)
+      { //string message = "pas de task";
+            string thismessage = message;
+            SchoolTask thistask = null;
+            if (tasks.Count<SchoolTask>() >= rang + 1)
+                {
+                    if (tasks.ElementAt<SchoolTask>(rang) != null)
+                        {
+                             thismessage = tasks.ElementAt<SchoolTask>(rang).SubDesc;
+                             thistask = tasks.ElementAt<SchoolTask>(rang);
+                         }
+                 }
+            return (thismessage,thistask);
+      }
+        public void RefreshAll()
         {
             bool continuee1 = true;
             bool continuee2 = true;
@@ -2137,6 +2197,7 @@ return thismessage;
             }
         }
 
+        
 
         public static Color getColor(string col)
         {

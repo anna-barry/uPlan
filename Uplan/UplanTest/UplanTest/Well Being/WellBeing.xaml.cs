@@ -29,12 +29,10 @@ namespace UplanTest
 
     {
 
+        
+        
+        
         Label Tittle = new Label { Text = "My Well Being", TextColor = Color.Violet, FontSize = 40};
-
-
-
-
-
 
         Label QUOTESs = new Label {   VerticalTextAlignment = TextAlignment.Center, FontAttributes = FontAttributes.Italic, FontSize = 40};
 
@@ -133,11 +131,12 @@ namespace UplanTest
 
             }
 
-            for (int k = 0; k < 8; k++)
+            for (int k = 0; k < 10; k++)
             {
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(150) });
 
             }
+            
 
             //_______Affichage des quotes_________________
 
@@ -181,6 +180,44 @@ namespace UplanTest
                 }
             };
 
+            Frame MusicW = new Frame
+            {
+                BorderColor = Color.Gray,
+                //  BackgroundColor = Color.FromHex("#FFE4C0ED"),
+                HasShadow = false,
+                CornerRadius = 5,
+                Padding = 15,
+                Content = new StackLayout
+
+                {
+                    Children =
+                    {
+                      new Label
+                      {
+                           Text = "Listen Some Music",
+                          
+                          // TextColor = Color.White,
+                           HorizontalTextAlignment = TextAlignment.Center,
+                           FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                           FontAttributes = FontAttributes.Bold
+                      },
+                       new BoxView
+                      {
+                           Color = Color.BlueViolet,
+                            HeightRequest = 2,
+                            HorizontalOptions = LayoutOptions.Fill
+                      },
+                       //QUOTESs
+                       
+                      
+                       
+                    }
+
+
+                }
+
+            };
+
             //_______ Frame pour les Timers___________
          
 
@@ -206,6 +243,22 @@ namespace UplanTest
             grid.Children.Add(Tittle, 5, 1);
             grid.Children.Add(back, 0, 0);
             grid.Children.Add(Tpass, 9, 1);
+
+            //les musiques
+
+            grid.Children.Add(MusicW, 7, 2);
+            grid.Children.Add(Stack1, 7, 3);
+            grid.Children.Add(Stack2, 7, 4);
+            grid.Children.Add(Stack3, 7, 5);
+            grid.Children.Add(Stack4, 7, 6);
+            grid.Children.Add(Stack5, 8, 3);
+            grid.Children.Add(Stack6, 8, 4);
+            grid.Children.Add(Stack7, 8, 5);
+            grid.Children.Add(Stack8, 8, 6);
+
+            Grid.SetColumnSpan(MusicW, 2);
+            Grid.SetRowSpan(MusicW, 4);
+
 
             grid.Children.Add(c1, 1, 7);
             grid.Children.Add(c2, 2, 7);
@@ -269,10 +322,10 @@ namespace UplanTest
             grid.Children.Add(c1, 9, 1);
             c1.HeightRequest = 80;
             back.IsVisible = true;
-            CView.IsVisible = false;
-            c2.IsVisible = false;
-            c3.IsVisible = false;
-            c4.IsVisible = false;
+          
+            c2.IsEnabled = false;
+            c3.IsEnabled = false;
+            c4.IsEnabled = false;
 
             int second = 59;
             int minutes = 9;
@@ -322,18 +375,20 @@ namespace UplanTest
         void fivet(System.Object sender, System.EventArgs e)
 
         {
-            CView.IsVisible = false;
+          
             
             Tpass.IsVisible = true;
             grid.Children.Add(c2, 9, 1);
+
+            c1.IsEnabled = false;
+            c3.IsEnabled = false;
+            c4.IsEnabled = false;
 
 
 
        
             back.IsVisible = true;
-            c1.IsVisible = false;
-            c3.IsVisible = false;
-            c4.IsVisible = false;
+           
             int second = 59;
             int minutes = 14;
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
@@ -370,16 +425,18 @@ namespace UplanTest
         void twenty(System.Object sender, System.EventArgs e)
 
         {
-            CView.IsVisible = false;
+            c1.IsEnabled = false;
+            c2.IsEnabled = false;
+            c4.IsEnabled = false;
+
+            
           
            
             Tpass.IsVisible = true;
             grid.Children.Add(c3, 9, 1);
 
             back.IsVisible = true;
-            c1.IsVisible = false;
-            c2.IsVisible = false;
-            c4.IsVisible = false;
+            
             int minutes = 19;
             int second = 59;
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
@@ -419,13 +476,13 @@ namespace UplanTest
         {
             Tpass.IsVisible = true;
             grid.Children.Add(c4, 9, 1);
-            CView.IsVisible = false;
-           
-          
             back.IsVisible = true;
-            c1.IsVisible = false;
-            c2.IsVisible = false;
-            c3.IsVisible = false;
+
+            c1.IsEnabled = false;
+            c2.IsEnabled = false;
+            c3.IsEnabled = false;
+
+          
 
             int minutes = 29;
             int second = 59;
@@ -465,13 +522,95 @@ namespace UplanTest
         {
 
             Navigation.PushAsync(new WellBeing());
-            
+         }
 
+        //___________Fontions musiques____________________
 
-
+        void ToPlay1(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p1.Load("relax2.mp3");
+            musik.p1.Play();
+        }
+        void ToPause1(System.Object sender, System.EventArgs e)
+        {
+            musik.p1.Pause();
         }
 
+        void ToPlay2(System.Object sender, System.EventArgs e)
+        {
+            musik.p1.Pause();
+            musik.p3.Pause(); //Coupe les autres
+            musik.p4.Pause();
 
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause2(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay3(System.Object sender, System.EventArgs e)
+        {
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+
+
+            musik.p3.Load("relax4.mp3");
+       
+        }
+        void ToPause3(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay4(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause4(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay5(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause5(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay6(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause6(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay7(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause7(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay8(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause8(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
 
 
 

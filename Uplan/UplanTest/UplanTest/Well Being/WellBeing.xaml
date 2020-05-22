@@ -7,18 +7,97 @@
              mc:Ignorable="d"
              x:Class="UplanTest.WellBeing">
     <ContentPage.Content>
-        <Grid BackgroundColor="#E4C0ED">
-            <Button BackgroundColor="Accent"
-/>
+        <Grid>
+
+        <StackLayout x:Name ="Stack1"   BackgroundColor="#7D057D" Padding="20"  >
+            <Label Text="Relax1"  HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay1"/>
+                <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked ="ToPause1" />
+                
+                
+
+
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout x:Name="Stack2" BackgroundColor="#890489" Padding="20">
+            <Label Text="Relax2" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay2"/>
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked ="ToPause2"/>
+            
+            </StackLayout>
+            
+        </StackLayout>
+            <StackLayout  x:Name="Stack3"  Grid.Row="4" Grid.Column="1"  BackgroundColor="#B907B9" Padding="20">
+                <Label Text="Relax3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+                  
+
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout  x:Name="Stack4" Grid.Row="5" Grid.Column="1" BackgroundColor="#E10CE1" Padding="20">
+                <Label Text="Relax4" HeightRequest="30" HorizontalTextAlignment="Center"  VerticalTextAlignment="End"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+               
+
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="Stack5" BackgroundColor="#056899" Padding="20">
+                <Label Text="Rock1" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout x:Name="Stack6" Grid.Row="3" Grid.Column="3"  BackgroundColor="#089D9D" Padding="20">
+                <Label Text="Rock2" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay6" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause6" HeightRequest="30" />
+                
+
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout x:Name="Stack7" Grid.Row="4" Grid.Column="3"  BackgroundColor="#08ACAC" Padding="20">
+                <Label Text="Rock3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay7" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause7" HeightRequest="30" />
+                 
+
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout x:Name="Stack8"  BackgroundColor="#07DEDE" Padding="20">
+                <Label Text="Rock4" HeightRequest="30" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                    <ImageButton Source="Assets/playfi.png" Clicked="ToPlay8" HeightRequest="30" />
+                    <ImageButton Source="Assets/pause.png" Clicked="ToPause8" HeightRequest="30" />
+                  
+
+                </StackLayout>
+            </StackLayout>
+
+
+
 
 
 
 
         </Grid>
-
-
-
-
 
 
 

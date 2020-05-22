@@ -1,6 +1,7 @@
 ﻿using LiteDB;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,11 +62,49 @@ namespace UplanTest
                 item.Exercice7.Description + "\n" + item.Exercice8.Description + "\n" + item.Exercice9.Description + "\n" + item.Exercice10.Description + "\n" + "\n");
             }
 
+            var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+            deleteAction.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
+            deleteAction.Clicked += (sender, e) =>
+            {
+                var mi = ((MenuItem)sender);
+                
+                Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+            };
 
-
-
+            
             ListVieww.ItemsSource = Contents;
-            ListVieww.SelectedItem = SelectionMode.None;
+
+            //ListVieww.SelectedItem = SelectionMode.Single;
+           
+            ListVieww.ItemSelected += async (sender, e) =>
+            {
+                bool answer = await DisplayAlert("Delete workout", "Do you really want to delete this workout?", "No", "yes");
+                if (!answer)
+                {
+                    string res = "";
+                    string thisItem = ListVieww.SelectedItem.ToString();
+                    int i = 0;
+                    while (thisItem[i] != ':')
+                    {
+                        res += thisItem[i];
+                        i += 1;
+                    }
+                    var resultforItem = c.FindOne(Query.EQ("Type", res));
+                    DateTime thisDate = resultforItem.DueDate;
+                    c.Delete(resultforItem.Id);
+                    Contents.Remove(thisItem);
+                    var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+                    
+                    var resultInST=col.FindOne(Query.And(Query.EQ("Description", "My workout"), Query.EQ("DueDate", thisDate)));
+                    col.Delete(resultInST.Id);
+                    ListVieww.ItemsSource = null;
+                    ListVieww.ItemsSource = Contents;
+
+                }
+
+
+            };
+            
             ListVieww.SeparatorColor = Color.Lavender;
             ListVieww.RefreshControlColor = Color.LightPink;
             Framing.Content = ListVieww;
@@ -86,7 +125,7 @@ namespace UplanTest
 
         private async void AddAbs1(object sender, EventArgs args)
         {
-            NewAdd("Strength", "Abs1");
+            NewAddAsync("Strength", "Abs1");
 
         }
 
@@ -98,7 +137,7 @@ namespace UplanTest
 
         private async void AddAbs2(object sender, EventArgs args)
         {
-            NewAdd("IronClad", "Abs2");
+            NewAddAsync("IronClad", "Abs2");
         }
 
         private async void GetInfoAbs3(object sender, EventArgs args)
@@ -108,7 +147,7 @@ namespace UplanTest
 
         private async void AddAbs3(object sender, EventArgs args)
         {
-            NewAdd("Obliques", "Abs3");
+            NewAddAsync("Obliques", "Abs3");
         }
 
         private async void GetInfoAbs4(object sender, EventArgs args)
@@ -118,7 +157,7 @@ namespace UplanTest
 
         private async void AddAbs4(object sender, EventArgs args)
         {
-            NewAdd("WOCrunches", "Abs4");
+            NewAddAsync("WOCrunches", "Abs4");
         }
 
         private async void GetInfoAbs5(object sender, EventArgs args)
@@ -129,7 +168,7 @@ namespace UplanTest
 
         private async void AddAbs5(object sender, EventArgs args)
         {
-            NewAdd("SumAb1", "Abs5");
+            NewAddAsync("SumAb1", "Abs5");
         }
 
         private async void GetInfoAbs6(object sender, EventArgs args)
@@ -140,7 +179,7 @@ namespace UplanTest
 
         private async void AddAbs6(object sender, EventArgs args)
         {
-            NewAdd("SumAb2", "Abs6");
+            NewAddAsync("SumAb2", "Abs6");
         }
 
 
@@ -153,7 +192,7 @@ namespace UplanTest
 
         private async void AddArms1(object sender, EventArgs args)
         {
-            NewAdd("Beginner Arm Workout", "Arms1");
+            NewAddAsync("Beginner Arm Workout", "Arms1");
         }
 
         private async void GetInfoArms2(object sender, EventArgs args)
@@ -164,7 +203,7 @@ namespace UplanTest
 
         private async void AddArms2(object sender, EventArgs args)
         {
-            NewAdd("Arm Workout challenge ", "Arms2");
+            NewAddAsync("Arm Workout challenge ", "Arms2");
         }
 
         private async void GetInfoArms3(object sender, EventArgs args)
@@ -175,7 +214,7 @@ namespace UplanTest
 
         private async void AddArms3(object sender, EventArgs args)
         {
-            NewAdd("Burn Arm Fat Workout", "Arms3");
+            NewAddAsync("Burn Arm Fat Workout", "Arms3");
         }
 
         private async void GetInfoArms4(object sender, EventArgs args)
@@ -186,7 +225,7 @@ namespace UplanTest
 
         private async void AddArms4(object sender, EventArgs args)
         {
-            NewAdd("Toned Arms Workout", "Arms4");
+            NewAddAsync("Toned Arms Workout", "Arms4");
         }
 
         private async void GetInfoArms5(object sender, EventArgs args)
@@ -197,7 +236,7 @@ namespace UplanTest
 
         private async void AddArms5(object sender, EventArgs args)
         {
-            NewAdd("Big Arms Workout", "Arms5");
+            NewAddAsync("Big Arms Workout", "Arms5");
         }
 
         private async void GetInfoArms6(object sender, EventArgs args)
@@ -208,7 +247,7 @@ namespace UplanTest
 
         private async void AddArms6(object sender, EventArgs args)
         {
-            NewAdd("Triceps Workout", "Arms6");
+            NewAddAsync("Triceps Workout", "Arms6");
         }
 
         //_________________ Leg
@@ -220,7 +259,7 @@ namespace UplanTest
 
         private async void AddLeg1(object sender, EventArgs args)
         {
-            NewAdd("Core strengthening Workout", "Legs1");
+            NewAddAsync("Core strengthening Workout", "Legs1");
         }
 
         private async void GetInfoLeg2(object sender, EventArgs args)
@@ -231,7 +270,7 @@ namespace UplanTest
 
         private async void AddLeg2(object sender, EventArgs args)
         {
-            NewAdd("Thigh workout ", "Legs2");
+            NewAddAsync("Thigh workout ", "Legs2");
         }
 
         private async void GetInfoLeg3(object sender, EventArgs args)
@@ -242,7 +281,7 @@ namespace UplanTest
 
         private async void AddLeg3(object sender, EventArgs args)
         {
-            NewAdd("Toned Legs", "Legs3");
+            NewAddAsync("Toned Legs", "Legs3");
         }
 
         private async void GetInfoLeg4(object sender, EventArgs args)
@@ -253,7 +292,7 @@ namespace UplanTest
 
         private async void AddLeg4(object sender, EventArgs args)
         {
-            NewAdd("Burn Leg Fat", "Legs4");
+            NewAddAsync("Burn Leg Fat", "Legs4");
         }
 
         private async void GetInfoLeg5(object sender, EventArgs args)
@@ -264,7 +303,7 @@ namespace UplanTest
 
         private async void AddLeg5(object sender, EventArgs args)
         {
-            NewAdd("Dumbbell workout", "Legs5");
+            NewAddAsync("Dumbbell workout", "Legs5");
         }
 
         private async void GetInfoLeg6(object sender, EventArgs args)
@@ -275,7 +314,7 @@ namespace UplanTest
 
         private async void AddLeg6(object sender, EventArgs args)
         {
-            NewAdd("Resistant band workout", "Legs6");
+            NewAddAsync("Resistant band workout", "Legs6");
         }
 
         //__________________ Booty 
@@ -286,7 +325,7 @@ namespace UplanTest
 
         private async void AddGlutes1(object sender, EventArgs args)
         {
-            NewAdd("Bubble But Workout", "Booty1");
+            NewAddAsync("Bubble But Workout", "Booty1");
         }
 
         private async void GetInfoGlutes2(object sender, EventArgs args)
@@ -297,7 +336,7 @@ namespace UplanTest
 
         private async void AddGlutes2(object sender, EventArgs args)
         {
-            NewAdd("Tighten up workout ", "Booty2");
+            NewAddAsync("Tighten up workout ", "Booty2");
         }
 
         private async void GetInfoGlutes3(object sender, EventArgs args)
@@ -308,7 +347,7 @@ namespace UplanTest
 
         private async void AddGlutes3(object sender, EventArgs args)
         {
-            NewAdd("Bodyweight Workout", "Booty3");
+            NewAddAsync("Bodyweight Workout", "Booty3");
         }
 
         private async void GetInfoGlutes4(object sender, EventArgs args)
@@ -319,7 +358,7 @@ namespace UplanTest
 
         private async void AddGlutes4(object sender, EventArgs args)
         {
-            NewAdd("Targeted Glutes Workout", "Booty4");
+            NewAddAsync("Targeted Glutes Workout", "Booty4");
         }
 
         private async void GetInfoGlutes5(object sender, EventArgs args)
@@ -330,7 +369,7 @@ namespace UplanTest
 
         private async void AddGlutes5(object sender, EventArgs args)
         {
-            NewAdd("Butt Lift Workout", "Booty5");
+            NewAddAsync("Butt Lift Workout", "Booty5");
         }
 
         private async void GetInfoGlutes6(object sender, EventArgs args)
@@ -341,7 +380,7 @@ namespace UplanTest
 
         private async void AddGlutes6(object sender, EventArgs args)
         {
-            NewAdd("Toned Glutes Workout", "Booty6");
+            NewAddAsync("Toned Glutes Workout", "Booty6");
         }
 
         //__________ Full Body
@@ -352,7 +391,7 @@ namespace UplanTest
 
         private async void AddFullBody1(object sender, EventArgs args)
         {
-            NewAdd("Full Body Blast", "Body1");
+            NewAddAsync("Full Body Blast", "Body1");
         }
 
         private async void GetInfoFullBody2(object sender, EventArgs args)
@@ -363,7 +402,7 @@ namespace UplanTest
 
         private async void AddFullBody2(object sender, EventArgs args)
         {
-            NewAdd("High intensity", "Body2");
+            NewAddAsync("High intensity", "Body2");
         }
 
         private async void GetInfoFullBody3(object sender, EventArgs args)
@@ -373,7 +412,7 @@ namespace UplanTest
 
         private async void AddFullBody3(object sender, EventArgs args)
         {
-            NewAdd("Full Body Circuit", "Body3");
+            NewAddAsync("Full Body Circuit", "Body3");
         }
 
         private async void GetInfoFullBody4(object sender, EventArgs args)
@@ -383,7 +422,7 @@ namespace UplanTest
 
         private async void AddFullBody4(object sender, EventArgs args)
         {
-            NewAdd("Beginner HIIT", "Body4");
+            NewAddAsync("Beginner HIIT", "Body4");
         }
 
         private async void GetInfoFullBody5(object sender, EventArgs args)
@@ -393,7 +432,7 @@ namespace UplanTest
 
         private async void AddFullBody5(object sender, EventArgs args)
         {
-            NewAdd("Strength workout", "Body5");
+            NewAddAsync("Strength workout", "Body5");
         }
 
         private async void GetInfoFullBody6(object sender, EventArgs args)
@@ -403,7 +442,7 @@ namespace UplanTest
 
         private async void AddFullBody6(object sender, EventArgs args)
         {
-            NewAdd("No-equipment workout", "Body6");
+            NewAddAsync("No-equipment workout", "Body6");
         }
 
         public void ShowDescI(string type)
@@ -423,23 +462,16 @@ namespace UplanTest
         }
 
        
-        public void NewAdd(string type, string tocall)
+        public async Task NewAddAsync(string type, string tocall)
         {
-            ListView ListVieww2 = new ListView();
-
             (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) = GetAll(tocall);
             Workout.InsertWorkout(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, DateTime.Today, type);
             Contents.Add(type + ": " + "\n" + ex1.Description+ "\n"+ ex2.Description + "\n" + ex3.Description + "\n" + ex4.Description + "\n" + ex5.Description + "\n" + ex6.Description + "\n" +
                 ex7.Description + "\n" + ex8.Description + "\n" + ex9.Description + "\n" + ex10.Description + "\n" + "\n");
 
-            ListVieww2.ItemsSource = Contents;
-            
-            ListVieww2.SelectedItem = SelectionMode.None;
-            ListVieww2.SeparatorColor = Color.Lavender;
-            ListVieww2.RefreshControlColor = Color.LightPink;
-            
-            Framing.Content = ListVieww2;
-
+            ListVieww.ItemsSource = null;
+            ListVieww.ItemsSource = Contents;
+            Framing.Content = ListVieww;
         }
         public (ListEntry ex1, ListEntry ex2, ListEntry ex3, ListEntry ex4, ListEntry ex5, ListEntry ex6, ListEntry ex7, ListEntry ex8, ListEntry ex9, ListEntry ex10) GetAll(string type)
         {
