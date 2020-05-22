@@ -14,15 +14,16 @@ namespace UplanTest
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewAnExpense : ContentPage
     {
-        List<string> expenses;
-        List<float> amounts;
         string type;
+        string description;
+        float amount;
 
         public ViewAnExpense(string type)
         {
             InitializeComponent();
             this.type = type;
             typee.Text = "See Expenses for " + type;
+            tyype.Text = "Add a new expense in " + type;
             switch (type)
             {
                 case "Food":
@@ -90,6 +91,13 @@ namespace UplanTest
             }
 
             return desc;
+        }
+        async void OnSaveClicked(object sender, EventArgs args)
+        {
+            description = descc.Text;
+            amount = Convert(amountt.Text);
+            Money.AddMoney(amount, description, type);
+            await Navigation.PushAsync(new ViewAnExpense(type));
         }
 
         public static string AddSpaces(int desc)
@@ -186,10 +194,6 @@ namespace UplanTest
                 rep--;
             }
             return y;
-        }
-        async void OnAddClicked(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new AddExpenses(type));
         }
         async void OnCloseClicked(object sender, EventArgs args)
         {

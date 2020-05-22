@@ -19,20 +19,31 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
 
 
 
             </Grid.RowDefinitions>
-            <Label x:Name="typee" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label Text="My Expenses" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="Large" VerticalOptions="End"/>
-            <ListView x:Name="desc" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"  />
+            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label Text="My Expenses" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="Large" TextColor="BlueViolet"/>
+            <ListView x:Name="desc" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"  Grid.RowSpan="4" SeparatorColor="BlueViolet"/>
 
-            <Label Text="Maximum expens" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Start" TextColor="Violet" VerticalOptions="End" />
-            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderColor="SkyBlue" />
-            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="4" VerticalOptions="Start" Grid.Column="0" HeightRequest="90" WidthRequest="60" BackgroundColor="MediumVioletRed"/>
+            <Label Text="Maximum expense" Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="BlueViolet"/>
+            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End"  HorizontalOptions="End"  Grid.Row="6" Grid.Column="0" PlaceholderColor="BlueViolet" />
+            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="6" Grid.Column="1" HeightRequest="90" WidthRequest="60" BackgroundColor="BlueViolet"/>
 
+            <Label x:Name="tyype" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="BlueViolet" Grid.ColumnSpan="2" FontSize="25"/>
+
+            <Label Text="Description" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
+            <Entry x:Name="descc" WidthRequest="200" Placeholder="Description" Grid.Row="3" Grid.Column="1" PlaceholderColor="BlueViolet" />
+
+
+            <Label Text="Amount" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="BlueViolet" />
+            <Entry x:Name="amountt" Keyboard="Numeric" Placeholder="Amount" Grid.Row="2" Grid.Column="1" PlaceholderColor="BlueViolet" />
+
+            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
             <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" />
-            <ImageButton Source="Assets/add_round.png" Clicked="OnAddClicked" Grid.Row="0" Grid.Column="3"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

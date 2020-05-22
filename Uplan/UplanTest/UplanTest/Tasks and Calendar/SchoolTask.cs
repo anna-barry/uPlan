@@ -357,7 +357,7 @@ namespace UplanTest
                         "Don't forget to work on this projet: " + '\n' + SubDesc,
                         IsComplete,
                         date.AddDays(i));
-                            i += 3;
+                            i += 1;
                         }
                       
                     }
