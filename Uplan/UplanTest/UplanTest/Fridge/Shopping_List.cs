@@ -53,7 +53,7 @@ namespace UplanTest
             //______________ Titre de la page___________________________
             Label tt = new Label();
             tt.Text = "MY KITCHEN";
-            tt.TextColor = Color.MediumVioletRed;
+            tt.TextColor = Color.BlueViolet;
             tt.FontSize = 30;
             tt.HorizontalTextAlignment = TextAlignment.Center;
             tt.FontAttributes = FontAttributes.Bold;
@@ -64,7 +64,7 @@ namespace UplanTest
             //______________ Titre de la liste___________________________
             Label LShopList = new Label();
             LShopList.Text = "Shopping List";
-            LShopList.TextColor = Color.MediumVioletRed;
+            LShopList.TextColor = Color.BlueViolet;
             LShopList.FontSize = 26;
             LShopList.FontAttributes = FontAttributes.Bold;
             grid.Children.Add(LShopList, 1, 0);
@@ -157,7 +157,7 @@ namespace UplanTest
             //______________ Ajout de chose dans ses placards___________________________
             Label ADD = new Label();
             ADD.Text = "Add in my pantry";
-            ADD.TextColor = Color.MediumVioletRed;
+            ADD.TextColor = Color.BlueViolet;
             ADD.FontSize = 26;
             ADD.FontAttributes = FontAttributes.Bold;
             grid.Children.Add(ADD, 6, 1);
@@ -172,7 +172,7 @@ namespace UplanTest
             //______________Bouton pour utiliser l'api?_________________________________
             Label simpleADD = new Label();
             simpleADD.Text = "Scan or enter the code of your product";
-            simpleADD.TextColor = Color.MediumVioletRed;
+            simpleADD.TextColor = Color.BlueViolet;
             simpleADD.HorizontalTextAlignment = TextAlignment.Center;
             simpleADD.VerticalTextAlignment = TextAlignment.Center;
             simpleADD.FontAttributes = FontAttributes.Bold;
@@ -207,7 +207,7 @@ namespace UplanTest
             //titre
             Label manuADD = new Label();
             manuADD.Text = "Add by yourslef";
-            manuADD.TextColor = Color.MediumVioletRed;
+            manuADD.TextColor = Color.BlueViolet;
             manuADD.FontSize = 15;
             manuADD.HorizontalTextAlignment = TextAlignment.Center;
             manuADD.VerticalTextAlignment = TextAlignment.Center;
@@ -242,7 +242,7 @@ namespace UplanTest
             //entrée desrciption
             Label adddesc = new Label();
             adddesc.Text = "Nutriscore of the product:";
-            adddesc.TextColor = Color.MediumVioletRed;
+            adddesc.TextColor = Color.BlueViolet;
             adddesc.FontSize = 15;
             adddesc.VerticalTextAlignment = TextAlignment.End;
             grid.Children.Add(adddesc, 6, 7);
@@ -250,7 +250,7 @@ namespace UplanTest
 
             Label novads = new Label();
             novads.Text = "NovaScore of the product:";
-            novads.TextColor = Color.MediumVioletRed;
+            novads.TextColor = Color.BlueViolet;
             novads.FontSize = 15;
             novads.VerticalTextAlignment = TextAlignment.End;
             grid.Children.Add(adddesc, 7, 7);
@@ -267,7 +267,7 @@ namespace UplanTest
             //date de peremtpion
             Label addperemp = new Label();
             addperemp.Text = "Peremption date:";
-            addperemp.TextColor = Color.MediumVioletRed;
+            addperemp.TextColor = Color.BlueViolet;
             manuADD.FontSize = 15;
             addperemp.VerticalTextAlignment = TextAlignment.End;
             grid.Children.Add(addperemp, 6, 9);

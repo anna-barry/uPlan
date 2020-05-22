@@ -47,7 +47,7 @@
             
             
 
-            <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="25"/>
 
             <!-- ABS -->
             <Label Text="Abs Workouts" TextColor="DarkMagenta" Grid.Row="1" Grid.Column="3" FontSize="20" Margin="10" />
@@ -224,10 +224,10 @@
             <Frame x:Name="FullBody5" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="11" Grid.RowSpan="2" />
             <ImageButton Source="Assets/GetInfo.png" Grid.Row="14" Grid.Column="12" Clicked="GetInfoFullBody5" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
             <ImageButton Source="Assets/add_round.png" Grid.Row="15" Grid.Column="12" VerticalOptions="Start" Clicked="AddFullBody5" HeightRequest="20" HorizontalOptions="Start" WidthRequest="20" />
-            <Label Text="Your Workout" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Your Workout" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="25"/>
 
              <Frame x:Name="Framing" BorderColor="DarkMagenta" Grid.Column="0" Grid.Row="2" Grid.RowSpan="10" Grid.ColumnSpan="2"/>
-                <Button Text="Start Workout" Clicked="StartWorkout" FontSize="18" FontAttributes="Bold" TextColor="White" Grid.Row="12" Grid.Column="0" CornerRadius="30" BorderColor="RoyalBlue" BackgroundColor="PaleVioletRed" />
+                <Button Text="Start Workout" Clicked="StartWorkout" FontSize="18" FontAttributes="Bold" TextColor="White" Grid.Row="12" Grid.Column="0" CornerRadius="30" BorderColor="RoyalBlue" BackgroundColor="BlueViolet" Opacity="0.6" />
 
                 <Label x:Name="ForFullBody6" Text="No-equipment workout" FontSize="16" TextColor="DarkMagenta" />
             <Frame x:Name="FullBody6" BackgroundColor="LavenderBlush" Opacity="0.7" BorderColor="LavenderBlush" CornerRadius="15" WidthRequest="20" HeightRequest="0.3"  Grid.Row="14" Grid.Column="13" Grid.RowSpan="2" />

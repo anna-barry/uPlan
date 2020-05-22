@@ -8,8 +8,14 @@
     <ContentPage.Content>
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>

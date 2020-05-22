@@ -30,7 +30,7 @@
 
             </Grid.RowDefinitions>
 
-            <Label Text="My food" Grid.Row="0" Grid.Column="0"  FontAttributes="Bold" TextColor="MediumVioletRed" FontSize="30"/>
+            <Label Text="My food" Grid.Row="0" Grid.Column="0"  FontAttributes="Bold" TextColor="BlueViolet" FontSize="30"/>
 
             <ImageButton Source="Assets/shopping.png" Grid.Row="3" Grid.Column="0" Clicked="ShoppingLink" CornerRadius="50"/>
             <Label Text="My Shopping List" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" FontSize="26" Grid.RowSpan="2" />
