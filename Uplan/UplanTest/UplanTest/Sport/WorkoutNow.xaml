@@ -47,7 +47,7 @@
             
             
 
-            <Label Text="Schedule Workout" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Workout Now" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="25"/>
 
             <!-- ABS -->
             <Label Text="Abs Workouts" TextColor="DarkMagenta" Grid.Row="1" Grid.Column="3" FontSize="20" Margin="10" />
