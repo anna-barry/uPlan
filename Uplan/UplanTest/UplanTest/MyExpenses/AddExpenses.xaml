@@ -22,14 +22,14 @@
 
             </Grid.RowDefinitions>
 
-            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
+            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="30"/>
             
-            <Label Text="Description" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
+            <Label Text="Description" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
             <Entry x:Name="desc" WidthRequest="200" Placeholder="Description" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
 
 
-            <Label Text="Amount" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="amountt" Keyboard="Numeric" WidthRequest="200" Placeholder="Amount" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Label Text="Amount" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
+            <Entry x:Name="amountt" Keyboard="Numeric" WidthRequest="200" Placeholder="Amount" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="BlueViolet" />
     
             
             
