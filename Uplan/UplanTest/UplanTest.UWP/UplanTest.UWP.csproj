@@ -114,9 +114,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\A.png" />
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\alert.mp3" />
+    <Content Include="Assets\B.png" />
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
     <Content Include="Assets\bleu.png" />
@@ -125,6 +127,7 @@
     <Content Include="Assets\BreakDancerReach.png" />
     <Content Include="Assets\breakf.png" />
     <Content Include="Assets\Burpees.png" />
+    <Content Include="Assets\C.png" />
     <Content Include="Assets\Calendar.png" />
     <Content Include="Assets\ClutterBridge.png" />
     <Content Include="Assets\CountHold.png" />
@@ -133,8 +136,10 @@
     <Content Include="Assets\CrossLeg.png" />
     <Content Include="Assets\culinary-recipe.gif" />
     <Content Include="Assets\CycleAbs.png" />
+    <Content Include="Assets\D.png" />
     <Content Include="Assets\default.png" />
     <Content Include="Assets\DonkeyKicks.png" />
+    <Content Include="Assets\E.png" />
     <Content Include="Assets\eye.png" />
     <Content Include="Assets\eye2.png" />
     <Content Include="Assets\food.png" />
@@ -148,6 +153,7 @@
     <Content Include="Assets\HydratingLOL.gif" />
     <Content Include="Assets\HydratingLOL2.gif" />
     <Content Include="Assets\IconMealPlanForSH.png" />
+    <Content Include="Assets\interrogation.png" />
     <Content Include="Assets\JackKnives.png" />
     <Content Include="Assets\JumpingJacks.png" />
     <Content Include="Assets\JumpingLunge.png" />
@@ -191,6 +197,8 @@
     <Content Include="Assets\rock3.mp3" />
     <Content Include="Assets\rock4.mp3" />
     <Content Include="Assets\RondVert.png" />
+    <Content Include="Assets\RondOrange.png" />
+    <Content Include="Assets\Rond_orange.png" />
     <Content Include="Assets\RoundPause.png" />
     <Content Include="Assets\RoundRouge.png" />
     <Content Include="Assets\RussianTwist.png" />
@@ -242,6 +250,7 @@
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
+    <Content Include="Assets\trash.png" />
     <Content Include="Assets\UpDownPlank.png" />
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
