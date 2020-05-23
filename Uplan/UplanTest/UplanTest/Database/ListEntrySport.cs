@@ -117,22 +117,22 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndStrech.png", Description = "Push and strech" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/Scissors.png", Description = "Scissors" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/ArmRotating.png", Description = "Arm rotating" });//
-                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/NamasteEx.png", Description = "Namaste exercice" });
-                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndPull.png", Description = "Push and pull" });
+                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/NamasteEx.png", Description = "Namaste exercice" });//
+                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndPull.png", Description = "Push and pull" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushUps.png", Description = "Push ups" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/SidePlank.png", Description = "Side plank" });//
-                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/BicepsCurls.png", Description = "Biceps curls" });
+                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/BicepsCurls.png", Description = "Biceps curls" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/ArmCircle.png", Description = "Arm circle" });//
 
 
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ChairPushUps.png", Description = "Chair push ups" });
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ChairPushUps.png", Description = "Chair push ups" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/PushUps.png", Description = "Push ups" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ClapHands.png", Description = "Hand clap" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Reverse fly" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/TricepsDips.png", Description = "Triceps dips" });//
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/DumbelSideRaise.png", Description = "Dumbel side raise" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/SidePlank.png", Description = "Side plank" });
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/DumbelSideRaise.png", Description = "Dumbel side raise" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/SidePlank.png", Description = "Side plank" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Revers fly" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//
 
@@ -144,7 +144,7 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/SkullCrusher.png", Description = "Skull crusher" });
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/CrushDown.png", Description = "Crush down" });
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/PushUps.png", Description = "Push ups" });//
-                col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/PushUpsClap.png", Description = "Clap push ups" });
+                col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/PushUpsClap.png", Description = "Clap push ups" });//
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/PushDowns.png", Description = "Push down" });
 
                 col.Insert(new ListEntry { Type = "Arms6", Code = "Assets/Dips.png", Description = "Dips" });
@@ -189,17 +189,17 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/SumoSquat.png", Description = "Sumo squat" });
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/OneLeggedRow.png", Description = "One legged row" });
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/PlieSquat.png", Description = "Plie squat" });
-                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/BentGlut.png", Description = "Bent glut" });
+                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/BentGlut.png", Description = "Bent glut" });//
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/WallSit.png", Description = "Wall squat" });//
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/SideLunge.png", Description = "Latteral lunge" });//
 
 
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/LungeKick.png", Description = "Lunge kick" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ClutterBridge.png", Description = "CLutter bridge" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/CycleAbs.png", Description = "Criss cross" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/BootyPush.png", Description = "Booty push" });
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ClutterBridge.png", Description = "CLutter bridge" });//
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/CycleAbs.png", Description = "Criss cross" });//
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/BootyPush.png", Description = "Booty push" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/Burpees.png", Description = "Burpees" });//
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/GobletSquat.png", Description = "Goblet squat" });
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/GobletSquat.png", Description = "Goblet squat" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/Squat.png", Description = "Squat" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/JumpSquat.png", Description = "Jump squat" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/SideLunge.png", Description = "Side lunge" });//
@@ -208,16 +208,16 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Squat.png", Description = "Squat" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Lunge.png", Description = "Lunge" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/SideLunge.png", Description = "Side lunge" });//
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/CalfRaise.png", Description = "Calf raise" });
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/LegStraight.png", Description = "Leg straight raise" });
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/PullOver.png", Description = "Pull over" });
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/BigCurl.png", Description = "Big curl" });
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/CalfRaise.png", Description = "Calf raise" });//
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/LegStraight.png", Description = "Leg straight raise" });//
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/PullOver.png", Description = "Pull over" });//
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/BigCurl.png", Description = "Big curl" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/JumpSquat.png", Description = "Squat jumps" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Swing.png", Description = "Swing" });//
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/SplitLunges.png", Description = "Split lunges" });
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/SplitLunges.png", Description = "Split lunges" });//
 
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingLegAbduction.png", Description = "Standing leg abduction" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingHipExtension.png", Description = "Standing hip extension" });
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingLegAbduction.png", Description = "Standing leg abduction" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingHipExtension.png", Description = "Standing hip extension" });//
                 col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/Lunge.png", Description = "Lunge" });//
                 col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingCurls.png", Description = "Standing curls" });//
                 col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/OverheadPush.png", Description = "Overhead push" });//
