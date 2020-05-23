@@ -114,9 +114,9 @@ namespace UplanTest
 
 
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/ArmPlunge.png", Description = "Arm plunge" });//
-                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndStrech.png", Description = "Push and strech" });
+                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndStrech.png", Description = "Push and strech" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/Scissors.png", Description = "Scissors" });//
-                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/ArmRotating.png", Description = "Arm rotating" });
+                col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/ArmRotating.png", Description = "Arm rotating" });//
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/NamasteEx.png", Description = "Namaste exercice" });
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushAndPull.png", Description = "Push and pull" });
                 col.Insert(new ListEntry { Type = "Arms3", Code = "Assets/PushUps.png", Description = "Push ups" });//
@@ -127,14 +127,14 @@ namespace UplanTest
 
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ChairPushUps.png", Description = "Chair push ups" });
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/PushUps.png", Description = "Push ups" });//
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ClapHands.png", Description = "Hand clap" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Reverse fly" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/TricepsDips.png", Description = "Triceps dips" });
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ClapHands.png", Description = "Hand clap" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Reverse fly" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/TricepsDips.png", Description = "Triceps dips" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/DumbelSideRaise.png", Description = "Dumbel side raise" });
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/SidePlank.png", Description = "Side plank" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Revers fly" });
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Revers fly" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//
 
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/BarbelCurl.png", Description = "Barbel curl" });
                 col.Insert(new ListEntry { Type = "Arms5", Code = "Assets/ConcentrationCurl.png", Description = "Concentration curl" });
@@ -190,108 +190,107 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/OneLeggedRow.png", Description = "One legged row" });
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/PlieSquat.png", Description = "Plie squat" });
                 col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/BentGlut.png", Description = "Bent glut" });
-                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/WallSquat.png", Description = "Wall squat" });
-                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/LatteralLunge.png", Description = "Latteral lunge" });
+                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/WallSit.png", Description = "Wall squat" });//
+                col.Insert(new ListEntry { Type = "Legs3", Code = "Assets/SideLunge.png", Description = "Latteral lunge" });//
 
 
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/LungeKick.png", Description = "Lunge kick" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ButtLift.png", Description = "Butt lift" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/CrissCross.png", Description = "Criss cross" });
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ClutterBridge.png", Description = "CLutter bridge" });
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/CycleAbs.png", Description = "Criss cross" });
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/BootyPush.png", Description = "Booty push" });
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/Burpees.png", Description = "Burpees" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/GobletSquat.png", Description = "Goblet squat" });
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/Squat.png", Description = "Squat" });//
                 col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/JumpSquat.png", Description = "Jump squat" });//
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/SideLunge.png", Description = "Side lunge" });
-                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ButBridge.png", Description = "But bridge" });
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/SideLunge.png", Description = "Side lunge" });//
+                col.Insert(new ListEntry { Type = "Legs4", Code = "Assets/ClutterBridge.png", Description = "Clutter bridge" });//
 
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Squat.png", Description = "Squat" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Lunge.png", Description = "Lunge" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/SideLunge.png", Description = "Side lunge" });//
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/CalfRaise.png", Description = "Claf raise" });
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/CalfRaise.png", Description = "Calf raise" });
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/LegStraight.png", Description = "Leg straight raise" });
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/PullOver.png", Description = "Pull over" });
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/BigCurl.png", Description = "Big curl" });
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/JumpSquat.png", Description = "Squat jumps" });//
-                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Swing.png", Description = "Swing" });
+                col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/Swing.png", Description = "Swing" });//
                 col.Insert(new ListEntry { Type = "Legs5", Code = "Assets/SplitLunges.png", Description = "Split lunges" });
 
                 col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingLegAbduction.png", Description = "Standing leg abduction" });
                 col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingHipExtension.png", Description = "Standing hip extension" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/SeatingBicepCurls.png", Description = "Seating bicep curls" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingCurls.png", Description = "Standing curls" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/OverheadPush.png", Description = "Overhead push" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LyingLegAbduction.png", Description = "Lying leg abduction" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LegCurlProne.png", Description = "Leg curl prone" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/ScapularRetraction.png", Description = "Scapular retraction" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LegRaise.png", Description = "Leg raise" });
-                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/BabyJumps.png", Description = "Baby jumps" });
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/Lunge.png", Description = "Lunge" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/StandingCurls.png", Description = "Standing curls" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/OverheadPush.png", Description = "Overhead push" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LyingLegAbduction.png", Description = "Lying leg abduction" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LegCurlProne.png", Description = "Leg curl prone" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/Swing.png", Description = "Swing" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/LegRaise.png", Description = "Leg raise" });//
+                col.Insert(new ListEntry { Type = "Legs6", Code = "Assets/BabyJumps.png", Description = "Baby jumps" });//
 
                 //BOOTY___________________________________________________________________________________________________
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/PlieSquat.png", Description = "Plie squat" });
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/DonkeyKick.png", Description = "Donckey kick" });
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/PlieSquat.png", Description = "Plie squat" });//
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/DonkeyKick.png", Description = "Donckey kick" });//
                 col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/GluteBridge.png", Description = "Glute bridge" });//
                 col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/JumpSquat.png", Description = "Jump squat" });//
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/SingleLegLift.png", Description = "Single leg lift" });
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/DeadLift.png", Description = "Dead lift" });
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/HipThrusts.png", Description = "Hip thrust" });
-                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/Swimmers.png", Description = "Swimmers" });
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/SingleLegGlut.png", Description = "Single leg lift" });//
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/DeadLift.png", Description = "Dead lift" });//
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/ClutterBridge.png", Description = "Clutter bridge" });//
+                col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/Swimmers.png", Description = "Swimmers" });//
                 col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/SecondLunge.png", Description = "Second lunge" });
                 col.Insert(new ListEntry { Type = "Booty1", Code = "Assets/JumpSquat.png", Description = "Jumps squat" });//
 
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/KneeDrop.png", Description = "Knee drop" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/PlankDip.png", Description = "Plank dip" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/RussianTwist.png", Description = "Russian twist" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/ObliqueCrunch.png", Description = "Oblique crunch" });
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/KneeDrop.png", Description = "Knee drop" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/PlankDip.png", Description = "Plank dip" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/RussianTwist.png", Description = "Russian twist" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/ObliqueCrunch.png", Description = "Oblique crunch" });//
                 col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/JumpSquat.png", Description = "Jump squat" });//
                 col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/GluteBridge.png", Description = "Glute bridge" });//
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/ScissorJump.png", Description = "Scissors jump" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/FlutterKick.png", Description = "Flutter kick" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/InnerThightLifts.png", Description = "Inner thight lifts" });
-                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/ThightKillers.png", Description = "Thight killers" });
-
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/SingleLegGlut.png", Description = "Single leg glut" });
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/ScissorJump.png", Description = "Scissors jump" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/FlutterKick.png", Description = "Flutter kick" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/InnerThightLifts.png", Description = "Inner thight lifts" });//
+                col.Insert(new ListEntry { Type = "Booty2", Code = "Assets/CrossOverPulse.png", Description = "Cross over pulse" });//
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/SingleLegGlut.png", Description = "Single leg glut" });//
                 col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/Squat.png", Description = "Squat" });//
                 col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/DonkeyKick.png", Description = "Donckey kick" });//
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/DiamondLegLift.png", Description = "Diamond leg lift" });
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/LegPulse.png", Description = "Leg pulse" });
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/CrossOverPulse.png", Description = "Cross over pulse" });
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/FireHydrate.png", Description = "Fire hydrate" });
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/DiamondLegLift.png", Description = "Diamond leg lift" });//
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/LegPulse.png", Description = "Leg pulse" });//
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/CrossOverPulse.png", Description = "Cross over pulse" });//
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/FireHydrate.png", Description = "Fire hydrate" });//
                 col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/JumpSquat.png", Description = "Jump squat" });//
-                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/FrogJump.png", Description = "Frog jump" });
+                col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/FrogJump.png", Description = "Frog jump" });//
                 col.Insert(new ListEntry { Type = "Booty3", Code = "Assets/MontainClimbers.png", Description = "Montain climbers" });//
 
                 col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/DonkeyKick.png", Description = "Donckey kick" });//
                 col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatCoreTwist.png", Description = "Squat core twist" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/JumpSquatPulse.png", Description = "Jumps squat pulse" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatWalk.png", Description = "Squat walk" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatHold.png", Description = "Squat hold" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/StraightKick.png", Description = "Straight kick" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/LegHoldLeft.png", Description = "Leg hold left" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/LegHoldRight.png", Description = "Leg hold right" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/WideSideSquats.png", Description = "Wide side squats" });
-                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatHold.png", Description = "Squat hold" });
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/JumpSquat.png", Description = "Jumps squat pulse" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatWalk.png", Description = "Squat walk" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatHold.png", Description = "Squat hold" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/StraightKick.png", Description = "Straight kick" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/StraightLeftHold.png", Description = "Leg hold left" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/StraightRigthHold.png", Description = "Leg hold right" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/WideSideSquats.png", Description = "Wide side squats" });//
+                col.Insert(new ListEntry { Type = "Booty4", Code = "Assets/SquatHold.png", Description = "Squat hold" });//
 
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/KickBackRight.png", Description = "Kick back right" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/KickBackLeft.png", Description = "Kick back left" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightSideLeft.png", Description = "Straight side left" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightSideRight.png", Description = "Straight side right" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/SideLeftPulse.png", Description = "Side left pulse" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/SideRightPulse.png", Description = "Side right pulse" });
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/DonkeyKick.png", Description = "Kick back right" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/DonkeyKick.png", Description = "Kick back left" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightSideLeft.png", Description = "Straight side left" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightSideRight.png", Description = "Straight side right" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/SideLeftPulse.png", Description = "Side left pulse lunges" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/SideRightPulse.png", Description = "Side right pulse lunges" });//
                 col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/DonkeyKicks.png", Description = "Donkey kicks" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightLegPulse.png", Description = "Straight leg pulse" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightLeftHold.png", Description = "Straight left hold" });//
+                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightRigthHold.png", Description = "Straight right hold" });//
 
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightLegPulse.png", Description = "Straight leg pulse" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightLeftHold.png", Description = "Straight left hold" });
-                col.Insert(new ListEntry { Type = "Booty5", Code = "Assets/StraightRigthHold.png", Description = "Straight right hold" });
 
                 col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/Burpees.png", Description = "Burpees" });//
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/StanceSquats.png", Description = "Stance squats" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/DiagonalLeftRaise.png", Description = "Diagonal left raise" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/DiagonalRightRaise.png", Description = "Diagonal right raise" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/LateralLungeLegRaise.png", Description = "Lateral lunge leg raise" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/CrustyLungePulse.png", Description = "Crusty lunge pulse" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/SquatSideLeftRaise.png", Description = "Squats side left raise" });
-                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/SquatSideRightRaise.png", Description = "Squats side right raise" });
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/Squats.png", Description = "Squats" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/DiagonalLeftRaise.png", Description = "Diagonal left raise" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/DiagonalRightRaise.png", Description = "Diagonal right raise" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/LateralLungeLegRaise.png", Description = "Lateral lunge leg raise" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/CrustyLungePulse.png", Description = "Crusty lunge pulse" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/SquatSideLeftRaise.png", Description = "Squats side left raise" });//
+                col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/SquatSideRightRaise.png", Description = "Squats side right raise" });//
                 col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/StandingRaise.png", Description = "Standing raise" });//
                 col.Insert(new ListEntry { Type = "Booty6", Code = "Assets/DonkeyKicks.png", Description = "Donkey kick" });//
 
