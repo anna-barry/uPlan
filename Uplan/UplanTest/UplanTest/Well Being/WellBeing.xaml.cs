@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Syncfusion.Buttons;
 using Xamarin.Forms;
-
+using LiteDB;
 using MediaManager;
 using MediaManager.Forms;
 
@@ -29,106 +29,584 @@ namespace UplanTest
 
     {
 
-        DateTime tps;
+        
+        
+        
+        Label Tittle = new Label { Text = "My Well Being", TextColor = Color.BlueViolet, FontSize = 40};
+
+        Label QUOTESs = new Label {   VerticalTextAlignment = TextAlignment.Center, FontAttributes = FontAttributes.Italic, FontSize = 40};
+
+        ImageButton others = new ImageButton { Source = "Assets/plus.png", HeightRequest = 30};
+
+        Button chrono1 = new Button { WidthRequest = 60,  HeightRequest = 60, CornerRadius = 50, BorderColor = Color.White, BackgroundColor = Color.FromHex("#2A6A74"), Text = "10m",  TextColor = Color.White, FontAttributes = FontAttributes.Bold };
+
+        Button chrono2 = new Button { WidthRequest = 60, HeightRequest = 60, CornerRadius = 50, BorderColor = Color.White, BackgroundColor = Color.FromHex("#FF1B91A3"), Text = "15m", TextColor = Color.White, FontAttributes = FontAttributes.Bold };
+
+        Button chrono3 = new Button { WidthRequest = 60, HeightRequest = 60, CornerRadius = 50, BorderColor = Color.White, BackgroundColor = Color.FromHex("#FF12BBD5"), Text = "20m", TextColor = Color.White, FontAttributes = FontAttributes.Bold };
+
+        Button chrono4 = new Button { WidthRequest = 40, HeightRequest = 40, CornerRadius = 50, BorderColor = Color.White, BackgroundColor = Color.FromHex("#FF03DCFD"), Text = "30m", TextColor = Color.White, FontAttributes = FontAttributes.Bold };
+        ImageButton back = new ImageButton { HeightRequest = 10, Source = "Assets/backf.png" };
+
+        Frame c1 = new Frame { BackgroundColor = Color.Violet, Margin = 5, BorderColor = Color.Black, CornerRadius = 50, HeightRequest = 60, WidthRequest = 60, IsClippedToBounds = true, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
+        Frame c2 = new Frame { BackgroundColor = Color.Violet, Margin = 5, BorderColor = Color.Black, CornerRadius = 50, HeightRequest = 60, WidthRequest = 60, IsClippedToBounds = true, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
+        Frame c3 = new Frame { BackgroundColor = Color.Violet, Margin = 5, BorderColor = Color.Black, CornerRadius = 50, HeightRequest = 60, WidthRequest = 60, IsClippedToBounds = true, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center};
+        Frame c4 = new Frame { BackgroundColor = Color.Violet, Margin = 5, BorderColor = Color.Black, CornerRadius = 50, HeightRequest = 60, WidthRequest = 60, IsClippedToBounds = true, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
+
+        Grid grid = new Grid();
+
+        Frame CView = new Frame
+        {
+           // BackgroundColor = Color.FromHex("#FFE6ACF3"),
+            BorderColor = Color.Gray,
+            HasShadow = false,
+            CornerRadius = 5,
+            Padding = 15,
+            Content = new StackLayout
+
+            {
+                Children =
+                    {
+                      new Label
+                      {
+                           Text = "Select your Rest Time",
+                           
+                           HorizontalTextAlignment = TextAlignment.Center,
+                           FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                           FontAttributes = FontAttributes.Bold
+                      },
+                       new BoxView
+                      {
+                           Color = Color.BlueViolet,
+                            HeightRequest = 2,
+                            HorizontalOptions = LayoutOptions.Fill
+                      },
+                       //QUOTESs
+                       
+                      
+                       
+                    }
 
 
-
+            }
+        };
+        Frame Tpass = new Frame { IsVisible = false, BorderColor = Color.Gray, HasShadow = false, CornerRadius = 5, Padding = 15 };
+       
         public WellBeing()
         {
+
+            c1.Content = chrono1;
+            c2.Content = chrono2;
+            c3.Content = chrono3;
+            c4.Content = chrono4;
+
+            
             InitializeComponent();
 
-            //la faire un random pour trouver la quote du jour et la mettre a quote !;text breffff
-            //var col= Database.db.GetCollection<ListEntry>("ListEntries");
-            //var quotes = col.FindAll(Query.EQ("DueDate", Monday.Date));
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");  
 
-            //  Device.StartTimer(TimeSpan.FromSeconds(1),)//
+            Random rand = new Random();
 
-            Device.StartTimer(TimeSpan.FromSeconds(1), OnTimerTick);
+            int rando = rand.Next(0, 40);
 
 
+            var truc = col.FindOne(Query.And(Query.EQ("Type", "QUOTES"), Query.EQ("Code", Convert.ToString(rando))));
+           
+          
 
+            ScrollView scroll = new ScrollView { Orientation = ScrollOrientation.Both };
+            scroll.Content = grid;
+            Content = scroll;
 
-
-
-
-        }
-        DateTime actu = DateTime.Now;
-
-
-
-
-
-
-        bool OnTimerTick()
-        {
-            if (_switch.IsToggled && DateTime.Now >= tps)
+            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(50) });
+            for (int i = 1; i < 8; i++)
             {
-                _switch.IsToggled = false;
-                DisplayAlert("Timer Alert", "The '" + "'break'" + "' timer has elapsed", "OK");
-                var alert = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-
-                alert.Load("alert.mp3");
-                alert.Play();
-
+                grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(100) });
 
             }
-            return true;
-        }
-        void Event(object sender, PropertyChangedEventArgs args)
-        {
-            if (args.PropertyName == "Time")
+
+            for (int k = 0; k < 10; k++)
             {
-                SetTriggerTime();
-                _switch.IsVisible = true;
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(150) });
+
             }
-        }
+            
 
-        void Pass(object sender, ToggledEventArgs args)
-        {
-            SetTriggerTime();
-            Navigation.PushAsync(new musik());
-        }
+            //_______Affichage des quotes_________________
 
-        void SetTriggerTime()
-        {
-            if (_switch.IsToggled)
+            Image moral = new Image { Source = "Assets/moral.png" };
+
+            //____________FRAME POUR QUOTES__________________________
+            Frame QuoteView = new Frame
             {
-                tps = DateTime.Today + Chrono.Time;
-                if (tps < DateTime.Now)
+                BorderColor = Color.Gray,
+              //  BackgroundColor = Color.FromHex("#FFE4C0ED"),
+                HasShadow = false,
+                CornerRadius = 5,
+                Padding = 15,
+                Content = new StackLayout
+                
                 {
-                    tps += TimeSpan.FromDays(1);
+                    Children =
+                    {
+                      new Label
+                      {
+                           Text = "Quote of the day",
+                          
+                          // TextColor = Color.White,
+                           HorizontalTextAlignment = TextAlignment.Center,
+                           FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                           FontAttributes = FontAttributes.Bold
+                      },
+                       new BoxView
+                      { 
+                           Color = Color.BlueViolet,
+                            HeightRequest = 2,
+                            HorizontalOptions = LayoutOptions.Fill
+                      },
+                       //QUOTESs
+                       
+                      
+                       
+                    }
+                    
+                    
                 }
-            }
+            };
+
+            Frame MusicW = new Frame
+            {
+                BorderColor = Color.Gray,
+                //  BackgroundColor = Color.FromHex("#FFE4C0ED"),
+                HasShadow = false,
+                CornerRadius = 5,
+                Padding = 15,
+                Content = new StackLayout
+
+                {
+                    Children =
+                    {
+                      new Label
+                      {
+                           Text = "Listen Some Music",
+                          
+                          // TextColor = Color.White,
+                           HorizontalTextAlignment = TextAlignment.Center,
+                           FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                           FontAttributes = FontAttributes.Bold
+                      },
+                       new BoxView
+                      {
+                           Color = Color.BlueViolet,
+                            HeightRequest = 2,
+                            HorizontalOptions = LayoutOptions.Fill
+                      },
+                       //QUOTESs
+                       
+                      
+                       
+                    }
+
+
+                }
+
+            };
+
+            //_______ Frame pour les Timers___________
+         
+
+
+
+            //______________Affichage des chronos______________
+
+
+
+            QUOTESs.Text = truc.Description;
+
+
+
+         
+         
+            grid.Children.Add(QuoteView, 1, 2);
+           
+            grid.Children.Add(QUOTESs, 1, 2);
+
+            grid.Children.Add(CView, 1, 6);
+            // grid.Children.Add(others, 2, 3);
+
+            grid.Children.Add(Tittle, 5, 1);
+            grid.Children.Add(back, 0, 0);
+            grid.Children.Add(Tpass, 9, 1);
+
+            //les musiques
+
+            grid.Children.Add(MusicW, 7, 2);
+            grid.Children.Add(Stack1, 7, 3);
+            grid.Children.Add(Stack2, 7, 4);
+            grid.Children.Add(Stack3, 7, 5);
+            grid.Children.Add(Stack4, 7, 6);
+            grid.Children.Add(Stack5, 8, 3);
+            grid.Children.Add(Stack6, 8, 4);
+            grid.Children.Add(Stack7, 8, 5);
+            grid.Children.Add(Stack8, 8, 6);
+
+            Grid.SetColumnSpan(MusicW, 2);
+            Grid.SetRowSpan(MusicW, 4);
+
+
+            grid.Children.Add(c1, 1, 7);
+            grid.Children.Add(c2, 2, 7);
+            grid.Children.Add(c3, 3, 7);
+            grid.Children.Add(c4, 4, 7);
+
+            Grid.SetColumnSpan(Tittle, 2);
+          
+            Grid.SetColumnSpan(QuoteView, 4);
+            Grid.SetColumnSpan(QUOTESs, 3);
+            Grid.SetRowSpan(QuoteView, 3);
+            Grid.SetRowSpan(QUOTESs, 3);
+            Grid.SetColumnSpan(CView, 4);
+            Grid.SetRowSpan(CView, 2);
+
+            back.IsVisible = false;
+
+            back.Clicked += new EventHandler(this.Back);
+
+            //_____LEs timers___________
+
+            chrono1.Clicked += new EventHandler(this.ten);
+            chrono2.Clicked += new EventHandler(this.fivet);
+            chrono3.Clicked += new EventHandler(this.twenty);
+            chrono4.Clicked += new EventHandler(this.thirty);
+
+
+
+            others.HorizontalOptions = LayoutOptions.End;
+
+           // others.Clicked += new EventHandler(this.SeeOther);
+
+            
         }
 
+       /* void SeeOther (System.Object sender, System.EventArgs e)
+        {
+            
+
+            var col = Database.db.GetCollection<ListEntry>("ListEntries");  // Les QUotes
+
+            Random rand = new Random();
+
+            int rando = rand.Next(0, 40);
+
+
+            var truc = col.FindOne(Query.And(Query.EQ("Type", "QUOTES"), Query.EQ("Code", Convert.ToString(rando))));
+
+            QUOTESs.Animate("animation", new Animation(v => QUOTESs.Scale = v, 1, 1, Easing.CubicInOut));
+            QUOTESs.Text = truc.Description;
+            QUOTESs.FontAttributes = FontAttributes.Italic;
+
+           
+        } */
+
+        void ten(System.Object sender, System.EventArgs e)
+
+        {
+            
+            Tpass.IsVisible = true;
+            grid.Children.Add(c1, 9, 1);
+            c1.HeightRequest = 80;
+            back.IsVisible = true;
+          
+            c2.IsEnabled = false;
+            c3.IsEnabled = false;
+            c4.IsEnabled = false;
+
+            int second = 59;
+            int minutes = 9;
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+             {
+                //action toutes les secondes
+                Device.BeginInvokeOnMainThread(() =>
+                 {
+                     chrono1.Animate("animation", new Animation(v => QUOTESs.Scale = v, 1, 1, Easing.CubicInOut));
+                     
+                     chrono1.Text =Convert.ToString(minutes) +":" + Convert.ToString(second);
+                     second--;
+
+
+                 });
+               
+
+                 if ((second == 0) && (minutes != 0))
+                 {
+                     second = 59;
+                     minutes--;
+                 }
+                 if ((second == 0) && (minutes == 0))
+                 {
+                     DisplayAlert("Alert", "Your break time has finished", "cancel");
+                     return false;
+                 }
+                 return true;
+             });
+
+
+            
+
+           
+            
+        }
+            
+
+            
+            
+            
+
+
+
+
+        
+        void fivet(System.Object sender, System.EventArgs e)
+
+        {
+          
+            
+            Tpass.IsVisible = true;
+            grid.Children.Add(c2, 9, 1);
+
+            c1.IsEnabled = false;
+            c3.IsEnabled = false;
+            c4.IsEnabled = false;
+
+
+
+       
+            back.IsVisible = true;
+           
+            int second = 59;
+            int minutes = 14;
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            {
+                //action toutes les secondes
+                Device.BeginInvokeOnMainThread(() =>
+                {
+
+                    chrono2.Text = Convert.ToString(minutes) + ":" + Convert.ToString(second);
+                    second--;
+
+
+                });
+
+
+                if ((second == 0) && (minutes != 0))
+                {
+                    second = 59;
+                    minutes--;
+                }
+                if ((second == 0) && (minutes == 0))
+                {
+                    DisplayAlert("Alert", "Your break time has finished", "cancel");
+                    return false;
+                }
+                return true;
+            });
 
 
 
 
 
+        }
+        void twenty(System.Object sender, System.EventArgs e)
+
+        {
+            c1.IsEnabled = false;
+            c2.IsEnabled = false;
+            c4.IsEnabled = false;
+
+            
+          
+           
+            Tpass.IsVisible = true;
+            grid.Children.Add(c3, 9, 1);
+
+            back.IsVisible = true;
+            
+            int minutes = 19;
+            int second = 59;
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            {
+                //action toutes les secondes
+                Device.BeginInvokeOnMainThread(() =>
+                {
+
+                    chrono3.Text = Convert.ToString(minutes) + ":" + Convert.ToString(second);
+                    second--;
 
 
-        public static void ToPause1(object sender, EventArgs e)
+                });
+
+
+
+
+                if ((second == 0) && (minutes != 0))
+                {
+                    second = 59;
+                    minutes--;
+                }
+                if ((second == 0) && (minutes == 0))
+                {
+                    DisplayAlert("Alert", "Your break time has finished", "cancel");
+                    return false;
+                }
+                return true;
+            });
+
+
+
+
+        }
+        void thirty(System.Object sender, System.EventArgs e)
+
+        {
+            Tpass.IsVisible = true;
+            grid.Children.Add(c4, 9, 1);
+            back.IsVisible = true;
+
+            c1.IsEnabled = false;
+            c2.IsEnabled = false;
+            c3.IsEnabled = false;
+
+          
+
+            int minutes = 29;
+            int second = 59;
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            {
+                //action toutes les secondes
+                Device.BeginInvokeOnMainThread(() =>
+                {
+
+                    chrono4.Text = Convert.ToString(minutes) + ":" + Convert.ToString(second);
+                    second--;
+
+
+                });
+
+
+
+                if ((second == 0) && (minutes != 0))
+                {
+                    second = 59;
+                    minutes--;
+                }
+                if ((second == 0) && (minutes == 0))
+                {
+                    DisplayAlert("Alert", "Your break time has finished", "cancel");
+                    return false;
+                }
+                return true;
+            });
+
+
+
+
+        }
+        void Back(System.Object sender, System.EventArgs e)
+
         {
 
+            Navigation.PushAsync(new WellBeing());
+         }
 
+        //___________Fontions musiques____________________
 
-
-
-        }
-        private void ToPlay2(object sender, EventArgs e)
+        void ToPlay1(System.Object sender, System.EventArgs e)
         {
-
-
-
-
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p1.Load("relax2.mp3");
+            musik.p1.Play();
         }
-        private void ToPause2(object sender, EventArgs e)
+        void ToPause1(System.Object sender, System.EventArgs e)
         {
-
-
-
+            musik.p1.Pause();
         }
+
+        void ToPlay2(System.Object sender, System.EventArgs e)
+        {
+            musik.p1.Pause();
+            musik.p3.Pause(); //Coupe les autres
+            musik.p4.Pause();
+
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause2(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay3(System.Object sender, System.EventArgs e)
+        {
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+
+
+            musik.p3.Load("relax4.mp3");
+       
+        }
+        void ToPause3(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay4(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause4(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay5(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause5(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay6(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause6(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay7(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause7(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+        void ToPlay8(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Load("relax3.mp3");
+            musik.p2.Play();
+        }
+        void ToPause8(System.Object sender, System.EventArgs e)
+        {
+            musik.p2.Pause();
+        }
+
+
 
 
     }

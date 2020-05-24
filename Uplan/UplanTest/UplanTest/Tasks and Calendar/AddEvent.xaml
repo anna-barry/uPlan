@@ -6,7 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:globalization="clr-namespace:System.Globalization;assembly=netstandard"
              mc:Ignorable="d"
-             BackgroundColor="AliceBlue"
+             
              Title="Add Task"
              x:Class="UplanTest.AddEvent">
     <ContentPage.Content>
@@ -34,31 +34,31 @@
             <ListView />
 
 
-             <Label Text="Add Task" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="25"/>
-            <Label Text="Type of task" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Button x:Name="Pers" Text="Personal" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnPersonClicked"  BorderColor="SkyBlue" Grid.ColumnSpan="2"/>
-            <Button x:Name="Sch" Text="For School" Grid.Row="2" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnWordClicked" BorderColor="SkyBlue" Grid.ColumnSpan="2"/>
-            <Label Text="Subtype of task"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" TextColor="Violet"/>
+             <Label Text="Add Task" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="25"/>
+            <Label Text="Type of task" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" />
+            <Button x:Name="Pers" Text="Personal" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnPersonClicked"  BorderColor="BlueViolet" Grid.ColumnSpan="2"/>
+            <Button x:Name="Sch" Text="For School" Grid.Row="2" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnWordClicked" BorderColor="BlueViolet" Grid.ColumnSpan="2"/>
+            <Label Text="Subtype of task"  Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" />
 
-            <Button x:Name="st1" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub1Clicked" BorderColor="SkyBlue" FontSize="8"/>
-            <Button x:Name="st2" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub2Clicked" BorderColor="SkyBlue" FontSize="8"/>
-            <Button x:Name="st3" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub3Clicked" BorderColor="SkyBlue" FontSize="8"/>
-            <Button x:Name="st4" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub4Clicked" BorderColor="SkyBlue" FontSize="8" />
+            <Button x:Name="st1" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub1Clicked" BorderColor="BlueViolet" FontSize="8"/>
+            <Button x:Name="st2" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub2Clicked" BorderColor="BlueViolet" FontSize="8"/>
+            <Button x:Name="st3" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub3Clicked" BorderColor="BlueViolet" FontSize="8"/>
+            <Button x:Name="st4" Text="Click on a type to see its subtypes" Grid.Row="3" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Onsub4Clicked" BorderColor="BlueViolet" FontSize="8" />
 
-            <Label Text="Task Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="Desc" WidthRequest="200" Placeholder="Task_Name" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Label Text="Task Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2"  />
+            <Entry x:Name="Desc" WidthRequest="200" Placeholder="Task_Name" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="BlueViolet" />
 
-            <Label Text="Task Description" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="SubDesc" WidthRequest="400" Placeholder="Task_Description" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue"/>
+            <Label Text="Task Description" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" />
+            <Entry x:Name="SubDesc" WidthRequest="400" Placeholder="Task_Description" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="BlueViolet"/>
 
-            <Label Text="Colour tag for task"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet"/>
+            <Label Text="Colour tag for task"  Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" />
             <Picker x:Name="Task_colour" Grid.Row="6" Grid.Column="2" FontSize="10" Grid.ColumnSpan="4" />
 
-            <Label Text="How time consuming is this task?"  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="3" TextColor="Violet" />
+            <Label Text="How time consuming is this task?"  Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="3" />
             <Picker x:Name="Task_consuming" Grid.Row="7" Grid.Column="2" FontSize="10" Grid.ColumnSpan="3" />
 
-            <Label Text="When is this event due?" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <DatePicker x:Name="dp" Grid.Row="8" Grid.Column="2" DateSelected="DatePicker_DateSelected"  Grid.ColumnSpan="3" BackgroundColor="SkyBlue" />
+            <Label Text="When is this event due?" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2"  />
+            <DatePicker x:Name="dp" Grid.Row="8" Grid.Column="2" DateSelected="DatePicker_DateSelected"  Grid.ColumnSpan="3" BackgroundColor="BlueViolet" />
 
 
             <ImageButton Source="Assets/save).png" Clicked="OnButtonClicked"  Grid.Row="9" Grid.Column="4" HeightRequest="90" WidthRequest="60"  ></ImageButton>

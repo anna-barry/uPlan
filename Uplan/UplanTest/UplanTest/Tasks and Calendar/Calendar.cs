@@ -68,7 +68,7 @@ namespace UplanTest
 
             }
 
-            grid.BackgroundColor = Color.AliceBlue;
+            //grid.BackgroundColor = Color.AliceBlue;
 
 
 
@@ -295,15 +295,15 @@ namespace UplanTest
             ImageButton addEvent = new ImageButton();
             addEvent.Source = "Assets/add_round.png";
             addEvent.Clicked += (sender, e) => GotoNewEvent();
-            grid.Children.Add(addEvent, 5, 14);
-
+            grid.Children.Add(addEvent, 0, 12);
+            
             //______________________ Bouton View
             ImageButton ViewsEvents = new ImageButton();
             ViewsEvents.Source = "Assets/eye2.png";
             ViewsEvents.WidthRequest = 40;
             ViewsEvents.HeightRequest = 40;
             ViewsEvents.Clicked += (sender, e) => GotoViewEvents();
-            grid.Children.Add(ViewsEvents,6, 14);
+            grid.Children.Add(ViewsEvents,0, 13);
 
 
 
@@ -1943,80 +1943,45 @@ namespace UplanTest
 
 
 
-if (dayofweektoday == DayOfWeek.Sunday)
+            if (dayofweektoday == DayOfWeek.Sunday)
+            {
+                 res_for_notification = res_for_notification + "\n" + "- Go to page Food choices this week to get a brand new meal plan for the week to come!"; }
 
-{
+            if (MyUser.me.CleaningDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
 
-    res_for_notification = res_for_notification + "\n" + "- Go to page Food choices this week to get a brand new meal plan for the week to come!";
+                MyUser.me.CleaningDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
 
-}
+                MyUser.me.CleaningDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
 
-if (MyUser.me.CleaningDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+                MyUser.me.CleaningDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
 
-    MyUser.me.CleaningDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+                MyUser.me.CleaningDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
 
-    MyUser.me.CleaningDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+                MyUser.me.CleaningDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
 
-    MyUser.me.CleaningDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
+                MyUser.me.CleaningDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday)
+                { res_for_notification = res_for_notification + "\n" + "- Today is Cleaning Day, put your favorite playlist on and get ready to tidy your home!";}
 
-    MyUser.me.CleaningDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
-
-    MyUser.me.CleaningDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
-
-    MyUser.me.CleaningDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday
-
-    )
-
-{
-
-    res_for_notification = res_for_notification + "\n" + "- Today is Cleaning Day, put your favorite playlist on and get ready to tidy your home!";
-
-}
+            if (MyUser.me.ShoppingDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+                MyUser.me.ShoppingDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+                MyUser.me.ShoppingDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+                MyUser.me.ShoppingDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
+                MyUser.me.ShoppingDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
+                MyUser.me.ShoppingDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
+                MyUser.me.ShoppingDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday){
+                res_for_notification = res_for_notification + "\n" + "- Today is Shopping Day, don't forget your shopping bags and have a look at the Shopping List page if you want to follow your meal plan!"; }
 
 
+            var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date));
+            var nbtask = tasktoday.Count();
 
-if (MyUser.me.ShoppingDayDesc == "Monday" && dayofweektoday == DayOfWeek.Monday ||
+            var NotificationCenter = new Label { Text = res_for_notification + "\n" + "You have " + nbtask + " task(s) today", FontSize = 16, TextColor = Color.BlueViolet };
 
-    MyUser.me.ShoppingDayDesc == "Tuesday" && dayofweektoday == DayOfWeek.Tuesday ||
+            grid.Children.Add(NotificationCenter, 1, 12);
 
-    MyUser.me.ShoppingDayDesc == "Wednesday" && dayofweektoday == DayOfWeek.Wednesday ||
+            Grid.SetColumnSpan(NotificationCenter, 6);
 
-    MyUser.me.ShoppingDayDesc == "Thursday" && dayofweektoday == DayOfWeek.Thursday ||
-
-    MyUser.me.ShoppingDayDesc == "Friday" && dayofweektoday == DayOfWeek.Friday ||
-
-    MyUser.me.ShoppingDayDesc == "Saturday" && dayofweektoday == DayOfWeek.Saturday ||
-
-    MyUser.me.ShoppingDayDesc == "Sunday" && dayofweektoday == DayOfWeek.Sunday
-
-    )
-
-{
-
-    res_for_notification = res_for_notification + "\n" + "- Today is Shopping Day, don't forget your shopping bags and have a look at the Shopping List page if you want to follow your meal plan!";
-
-}
-
-
-
-
-
-
-
-var tasktoday = col.Find(Query.EQ("DueDate", localTime.Date
-    ));
-
-var nbtask = tasktoday.Count();
-
-
-
-var NotificationCenter = new Label { Text = res_for_notification + "\n" + "You have " + nbtask + " task(s) today", FontSize = 16, TextColor = Color.BlueViolet };
-
-grid.Children.Add(NotificationCenter, 0, 12);
-
-Grid.SetColumnSpan(NotificationCenter, 7);
-
-Grid.SetRowSpan(NotificationCenter, 3);
+            Grid.SetRowSpan(NotificationCenter, 3);
 
 
 

@@ -114,13 +114,25 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Assets\A.png" />
+=======
+    <Content Include="Assets\AbRows.png" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
+    <Content Include="Assets\Add_task_Tuto.PNG" />
     <Content Include="Assets\alert.mp3" />
+<<<<<<< HEAD
     <Content Include="Assets\B.png" />
+=======
+    <Content Include="Assets\ArmCircle.png" />
+    <Content Include="Assets\ArmPlunge.png" />
+    <Content Include="Assets\ArmSwing.png" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
+    <Content Include="Assets\BicepExtensions.png" />
     <Content Include="Assets\bleu.png" />
     <Content Include="Assets\bleuwall.jpg" />
     <Content Include="Assets\break.png" />
@@ -129,69 +141,103 @@
     <Content Include="Assets\Burpees.png" />
     <Content Include="Assets\C.png" />
     <Content Include="Assets\Calendar.png" />
+    <Content Include="Assets\CalendrierTuto.PNG" />
     <Content Include="Assets\ClutterBridge.png" />
     <Content Include="Assets\CountHold.png" />
     <Content Include="Assets\croix.png" />
+    <Content Include="Assets\CrossackSquatLeft.png" />
+    <Content Include="Assets\CrossackSquatRight.png" />
     <Content Include="Assets\CrossCrunch.png" />
     <Content Include="Assets\CrossLeg.png" />
-    <Content Include="Assets\culinary-recipe.gif" />
     <Content Include="Assets\CycleAbs.png" />
+<<<<<<< HEAD
     <Content Include="Assets\D.png" />
+=======
+    <Content Include="Assets\DeclinePushUps.png" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\default.png" />
+    <Content Include="Assets\DiagonalLunge.png" />
     <Content Include="Assets\DonkeyKicks.png" />
+<<<<<<< HEAD
     <Content Include="Assets\E.png" />
+=======
+    <Content Include="Assets\ElbowPlank.png" />
+    <Content Include="Assets\ExCalendrier.PNG" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\eye.png" />
     <Content Include="Assets\eye2.png" />
     <Content Include="Assets\food.png" />
     <Content Include="Assets\FoodC2.png" />
+    <Content Include="Assets\FoodCh.png" />
+    <Content Include="Assets\FoodChoices_Tuto.PNG" />
     <Content Include="Assets\FoodFish.png" />
     <Content Include="Assets\foodplan.png" />
+    <Content Include="Assets\FoodPlan_Tuto.PNG" />
     <Content Include="Assets\Fridge.png" />
     <Content Include="Assets\GetInfo.png" />
-    <Content Include="Assets\GetPersonaPhoto.gif" />
     <Content Include="Assets\GlutBridge.png" />
-    <Content Include="Assets\HydratingLOL.gif" />
-    <Content Include="Assets\HydratingLOL2.gif" />
+    <Content Include="Assets\HammerCurl.png" />
+    <Content Include="Assets\HighKnees.png" />
     <Content Include="Assets\IconMealPlanForSH.png" />
+<<<<<<< HEAD
     <Content Include="Assets\interrogation.png" />
+=======
+    <Content Include="Assets\In&amp;Out.png" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\JackKnives.png" />
     <Content Include="Assets\JumpingJacks.png" />
     <Content Include="Assets\JumpingLunge.png" />
     <Content Include="Assets\JumpSquat.png" />
     <Content Include="Assets\KneeCrunch.png" />
+    <Content Include="Assets\KneePushUps.png" />
     <Content Include="Assets\KneesToChest.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\LeftCrunchs.png" />
     <Content Include="Assets\LegRaise.png" />
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
+    <Content Include="Assets\moral.png" />
+    <Content Include="Assets\MainForTuto.PNG" />
+    <Content Include="Assets\MarchSteps.png" />
+    <Content Include="Assets\Money.png" />
     <Content Include="Assets\MontainClimbers.png" />
     <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\MyFood.png" />
+    <Content Include="Assets\MyWorkoutsMainTuto.PNG" />
+    <Content Include="Assets\NarrowRows.png" />
     <Content Include="Assets\NewFood.png" />
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
     <Content Include="Assets\ObliqueCrunch.png" />
+    <Content Include="Assets\other.png" />
     <Content Include="Assets\ObliqueTwists.png" />
     <Content Include="Assets\OneArmToe.png" />
+    <Content Include="Assets\OverHeadPull.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\Plank.png" />
+    <Content Include="Assets\PlankTaps.png" />
     <Content Include="Assets\PlankTwist.png" />
     <Content Include="Assets\play.png" />
     <Content Include="Assets\playfi.png" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\Punches.png" />
+    <Content Include="Assets\PushUpRotations.png" />
     <Content Include="Assets\PushUps.png" />
     <Content Include="Assets\RaisedCircle.png" />
     <Content Include="Assets\RaisedSwing.png" />
+    <Content Include="Assets\ReachingPushup.png" />
     <Content Include="Assets\refresh_Icon.png" />
     <Content Include="Assets\relax2.mp3" />
     <Content Include="Assets\relax3.mp3" />
     <Content Include="Assets\relax4.mp3" />
     <Content Include="Assets\repeat once.png" />
     <Content Include="Assets\Reverse.png" />
+    <Content Include="Assets\ReverseFly.png" />
+    <Content Include="Assets\ReverseLunge.png" />
+    <Content Include="Assets\RightCrunchs.png" />
     <Content Include="Assets\rock1.mp3" />
     <Content Include="Assets\rock2.mp3" />
     <Content Include="Assets\rock3.mp3" />
@@ -203,17 +249,25 @@
     <Content Include="Assets\RoundRouge.png" />
     <Content Include="Assets\RussianTwist.png" />
     <Content Include="Assets\save%29.png" />
+    <Content Include="Assets\SchWorkouts_Tuto.PNG" />
+    <Content Include="Assets\SchWorkout_Tuto.PNG" />
     <Content Include="Assets\Scissors.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
+    <Content Include="Assets\ShoppingList_Tuto.PNG" />
+    <Content Include="Assets\ShoulderPress.png" />
     <Content Include="Assets\SideCrunchTick.png" />
     <Content Include="Assets\SideJack.png" />
     <Content Include="Assets\SideLunge.png" />
     <Content Include="Assets\SidePlank.png" />
+    <Content Include="Assets\SingleLegSquatLeft.png" />
+    <Content Include="Assets\SingleLegSquatRight.png" />
+    <Content Include="Assets\SitUpsTwists.png" />
     <Content Include="Assets\SKDlogo.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SpiderPushup.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
@@ -242,6 +296,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
     <Content Include="Assets\Squat.png" />
+    <Content Include="Assets\StandingRaise.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-125.png" />
     <Content Include="Assets\StoreLogo.scale-150.png" />
@@ -250,13 +305,23 @@
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
+<<<<<<< HEAD
     <Content Include="Assets\trash.png" />
+=======
+
+    <Content Include="Assets\timeW.png" />
+
+    <Content Include="Assets\TricepsDips.png" />
+>>>>>>> ddf4868a16cf9c0ae6b624c66b71d731d4e03672
     <Content Include="Assets\UpDownPlank.png" />
+
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
+    <Content Include="Assets\WallSit.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\WideRows.png" />
     <Content Include="Assets\WorkoutNow.png" />
     <Content Include="Assets\yoga.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -277,6 +342,12 @@
     </PackageReference>
     <PackageReference Include="LiteDB">
       <Version>5.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts">
+      <Version>0.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.7.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client">
       <Version>5.2.7</Version>

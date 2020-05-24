@@ -8,8 +8,14 @@
     <ContentPage.Content>
         <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -39,7 +45,7 @@
             <ListView x:Name="saturday" Grid.Row="3" Grid.Column="6"/>
             <ListView x:Name="sunday" Grid.Row="3" Grid.Column="7"/>
 
-            <Button Text="Play Today's workout" Grid.Row="1" Grid.Column="7" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="playworkout"/>
+            <Button Text="Play Today's workout" Grid.Row="1" Grid.Column="7" TextColor="White" BackgroundColor="BlueViolet" CornerRadius="15" Grid.ColumnSpan="2" Clicked="playworkout"/>
 
         </Grid>
     </ContentPage.Content>
