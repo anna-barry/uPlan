@@ -25,6 +25,9 @@ namespace UplanTest
         public string Ingrédients { get; set; }
 
         public DateTime Peremption { get; set; }
+        public string Nutriscore { get; set; }
+
+        public string Quantity { get; set;  }
 
 
         public static void Initiate()
@@ -41,8 +44,9 @@ namespace UplanTest
             col.EnsureIndex(x => x.GommetesMG);
             col.EnsureIndex(x => x.Proteine);
             col.EnsureIndex(x => x.Ingrédients);
-
             col.EnsureIndex(x => x.Peremption);
+            col.EnsureIndex(x => x.Nutriscore);
+            col.EnsureIndex(x => x.Quantity); 
 
             /* col.Insert(
                  new FrigoBaseDeDonnée
@@ -59,7 +63,7 @@ namespace UplanTest
 
         }
 
-        public static void InsertProduct(string url, string name, float sucre, float sel, float matieregrasses, string gommetessel, string gommetesucre, string gommetemg, float proteine, string ingredients, DateTime peremption)
+        public static void InsertProduct(string url, string name, float sucre, float sel, float matieregrasses,string gommetessel, string gommetesucre, string gommetemg, float proteine, string ingredients, DateTime peremption, string nutricsore, string quantity)
         {
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
             col.EnsureIndex(x => x.Url);
@@ -72,8 +76,9 @@ namespace UplanTest
             col.EnsureIndex(x => x.GommetesMG);
             col.EnsureIndex(x => x.Proteine);
             col.EnsureIndex(x => x.Ingrédients);
-
             col.EnsureIndex(x => x.Peremption);
+            col.EnsureIndex(x => x.Nutriscore);
+            col.EnsureIndex(x => x.Quantity);
 
             col.Insert(
                 new FrigoBaseDeDonnée
@@ -88,12 +93,13 @@ namespace UplanTest
                     GommetesMG = gommetemg,
                     Proteine = proteine,
                     Ingrédients = ingredients,
-
                     Peremption = peremption,
+                    Nutriscore = nutricsore,
+                    Quantity = quantity
+                    
 
 
-
-                });
+                }) ;
             ;
 
 
@@ -105,12 +111,12 @@ namespace UplanTest
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
             var result = col.FindOne(Query.EQ("Url", url));
             return result;
-
-
         }
 
 
-
+        //codes barres qui fonctionnent
+        //3266140061524
+        //3451790256745
 
     }
 }
