@@ -60,7 +60,7 @@
 
                 <Label Text="See Expenses" Grid.Row="2" Grid.Column="3" FontSize="30" TextColor="BlueViolet" />
                 <forms:ChartView x:Name="Global"  Grid.Row="3"  Grid.ColumnSpan="1" Grid.RowSpan="5" Grid.Column="3" Opacity="0.5"/>
-                <Label Text="Maximum Expenses" Grid.Row="8" Grid.Column="3" FontSize="30" TextColor="MediumVioletRed" TextColor="BlueViolet" />
+                <Label Text="Maximum Expenses" Grid.Row="8" Grid.Column="3" FontSize="30" TextColor="BlueViolet" />
                 <forms:ChartView x:Name="Max" Grid.Row="9"  Grid.ColumnSpan="1" Grid.RowSpan="5" Grid.Column="3" Opacity="0.5"/>
 
             </Grid>
