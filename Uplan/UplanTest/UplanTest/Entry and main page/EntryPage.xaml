@@ -17,10 +17,6 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-
-
-
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" ></ColumnDefinition>
@@ -28,13 +24,14 @@
                 <ColumnDefinition Width="*" ></ColumnDefinition>
                 <ColumnDefinition Width="*" ></ColumnDefinition>
                 <ColumnDefinition Width="*" ></ColumnDefinition>
-
             </Grid.ColumnDefinitions>
 
 
 
-            <Image x:Name="Default"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
+            <!--
+            <Image Source="{local:ImageResource UplanTest.default.png}"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/> -->
 
+            <Image Source="default_logo.png"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
 
             <Button x:Name="accountb" Text="Start" TextColor="White" Grid.Row="3" Grid.Column="2"  Clicked="StartCliked" BackgroundColor="BlueViolet" CornerRadius="4" ></Button>
             <Button Text="New?" TextColor="White" Grid.Row="4" Grid.Column="2" Clicked="NewCliked" BackgroundColor="BlueViolet"  CornerRadius="4" />

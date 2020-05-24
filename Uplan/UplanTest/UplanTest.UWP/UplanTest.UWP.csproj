@@ -135,7 +135,6 @@
     <Content Include="Assets\bleu.png" />
     <Content Include="Assets\bleuwall.jpg" />
     <Content Include="Assets\BootyPush.png" />
-    <Content Include="Assets\break.png" />
     <Content Include="Assets\BreakDancerReach.png" />
     <Content Include="Assets\breakf.png" />
     <Content Include="Assets\Burpees.png" />
@@ -156,7 +155,7 @@
     <Content Include="Assets\CycleAbs.png" />
     <Content Include="Assets\DeadLift.png" />
     <Content Include="Assets\DeclinePushUps.png" />
-    <Content Include="Assets\default.png" />
+    <Content Include="Assets\default_logo.png" />
     <Content Include="Assets\DiagonalLeftRaise.png" />
     <Content Include="Assets\DiagonalLunge.png" />
     <Content Include="Assets\DiagonalRightRaise.png" />

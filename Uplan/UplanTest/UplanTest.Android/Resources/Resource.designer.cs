@@ -10412,217 +10412,829 @@ namespace UplanTest.Droid
 			public const int abc_vector_test = 2131165273;
 			
 			// aapt resource value: 0x7F07005A
-			public const int Avatar1 = 2131165274;
+			public const int aboutmetuto = 2131165274;
 			
 			// aapt resource value: 0x7F07005B
-			public const int Avatar10 = 2131165275;
+			public const int aboutusTuto = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int Avatar11 = 2131165276;
-			
-			// aapt resource value: 0x7F07005D
-			public const int Avatar12 = 2131165277;
-			
-			// aapt resource value: 0x7F07005E
-			public const int Avatar13 = 2131165278;
-			
-			// aapt resource value: 0x7F07005F
-			public const int Avatar14 = 2131165279;
+			public const int AbRows = 2131165276;
 			
 			// aapt resource value: 0x7F070060
-			public const int Avatar15 = 2131165280;
+			public const int addmoneytuto = 2131165280;
+			
+			// aapt resource value: 0x7F07005D
+			public const int Add_Food = 2131165277;
+			
+			// aapt resource value: 0x7F07005E
+			public const int add_round = 2131165278;
+			
+			// aapt resource value: 0x7F07005F
+			public const int Add_task_Tuto = 2131165279;
 			
 			// aapt resource value: 0x7F070061
-			public const int Avatar16 = 2131165281;
+			public const int alert = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int Avatar17 = 2131165282;
+			public const int ArmCircle = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int Avatar18 = 2131165283;
+			public const int ArmPlunge = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int Avatar19 = 2131165284;
+			public const int ArmRotating = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int Avatar2 = 2131165285;
+			public const int ArmSwing = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int Avatar20 = 2131165286;
+			public const int Avatar1 = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int Avatar21 = 2131165287;
+			public const int Avatar10 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int Avatar22 = 2131165288;
+			public const int Avatar11 = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Avatar23 = 2131165289;
+			public const int Avatar12 = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Avatar24 = 2131165290;
+			public const int Avatar13 = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int Avatar25 = 2131165291;
+			public const int Avatar14 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int Avatar26 = 2131165292;
+			public const int Avatar15 = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int Avatar27 = 2131165293;
+			public const int Avatar16 = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int Avatar28 = 2131165294;
+			public const int Avatar17 = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int Avatar29 = 2131165295;
+			public const int Avatar18 = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int Avatar3 = 2131165296;
+			public const int Avatar19 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int Avatar30 = 2131165297;
+			public const int Avatar2 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int Avatar4 = 2131165298;
+			public const int Avatar20 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int Avatar5 = 2131165299;
+			public const int Avatar21 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int Avatar6 = 2131165300;
+			public const int Avatar22 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int Avatar7 = 2131165301;
+			public const int Avatar23 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int Avatar8 = 2131165302;
+			public const int Avatar24 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int Avatar9 = 2131165303;
+			public const int Avatar25 = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int avd_hide_password = 2131165304;
+			public const int Avatar26 = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int avd_show_password = 2131165305;
+			public const int Avatar27 = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int btn_checkbox = 2131165306;
+			public const int Avatar28 = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int btn_checkbox_checked = 2131165307;
+			public const int Avatar29 = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165308;
+			public const int Avatar3 = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int btn_checkbox_checked_to_unchecked_animation = 2131165309;
+			public const int Avatar30 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int btn_checkbox_indeterminate = 2131165310;
+			public const int Avatar4 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165311;
+			public const int Avatar5 = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165312;
+			public const int Avatar6 = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int btn_checkbox_unchecked = 2131165313;
+			public const int Avatar7 = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int btn_checkbox_unchecked_to_checked_animation = 2131165314;
+			public const int Avatar8 = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165315;
+			public const int Avatar9 = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int design_bottom_navigation_item_background = 2131165316;
+			public const int avd_hide_password = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int design_fab_background = 2131165317;
+			public const int avd_show_password = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int design_ic_visibility = 2131165318;
+			public const int BabyJumps = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int design_ic_visibility_off = 2131165319;
+			public const int backf = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int design_password_eye = 2131165320;
+			public const int backSport = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int design_snackbar_background = 2131165321;
+			public const int BicepExtensions = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int ic_mtrl_chip_checked_black = 2131165322;
+			public const int BicepsCurls = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int ic_mtrl_chip_checked_circle = 2131165323;
+			public const int BigCurl = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int ic_mtrl_chip_close_circle = 2131165324;
-			
-			// aapt resource value: 0x7F07008E
-			public const int inputlayout_togglecollapseicon = 2131165326;
-			
-			// aapt resource value: 0x7F07008F
-			public const int inputlayout_togglevisibleicon = 2131165327;
+			public const int bleu = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int input_layout_drop_down_icon = 2131165325;
+			public const int bleuwall = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int BootyPush = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int BreakDancerReach = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int mtrl_snackbar_background = 2131165328;
+			public const int breakf = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int mtrl_tabs_default_indicator = 2131165329;
+			public const int btn_checkbox = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int navigation_empty_icon = 2131165330;
+			public const int btn_checkbox_checked = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_action_background = 2131165331;
+			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_bg = 2131165332;
+			public const int btn_checkbox_checked_to_unchecked_animation = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg_low = 2131165333;
+			public const int btn_checkbox_indeterminate = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_low_normal = 2131165334;
+			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_bg_low_pressed = 2131165335;
+			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_bg_normal = 2131165336;
+			public const int btn_checkbox_unchecked = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_bg_normal_pressed = 2131165337;
+			public const int btn_checkbox_unchecked_to_checked_animation = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_icon_background = 2131165338;
+			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_template_icon_bg = 2131165339;
+			public const int Burpees = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notification_template_icon_low_bg = 2131165340;
+			public const int Calendar = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_tile_bg = 2131165341;
+			public const int CalendrierTuto = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int notify_panel_notification_icon_bg = 2131165342;
+			public const int CalfRaise = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int tooltip_frame_dark = 2131165343;
+			public const int ChairPushUps = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_light = 2131165344;
+			public const int ChairStepUps = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int ClapHands = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int close = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int ClutterBridge = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int CountHold = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int croix = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int CrossackSquatLeft = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int CrossackSquatRight = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int CrossCrunch = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int CrossLeg = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int CrossOverPulse = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int CrustyLungePulse = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int CycleAbs = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int DeadLift = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int DeclinePushUps = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int default_logo = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int design_bottom_navigation_item_background = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int design_fab_background = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int design_ic_visibility = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int design_ic_visibility_off = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int design_password_eye = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int design_snackbar_background = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int DiagonalLeftRaise = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int DiagonalLunge = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int DiagonalRightRaise = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int DiamondLegLift = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int DonkeyKicks = 2131165370;
+			
+			// aapt resource value: 0x7F0700BB
+			public const int DumbleSideRaise = 2131165371;
+			
+			// aapt resource value: 0x7F0700BC
+			public const int ElbowPlank = 2131165372;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int ExCalendrier = 2131165373;
+			
+			// aapt resource value: 0x7F0700BE
+			public const int eye = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int eye2 = 2131165375;
+			
+			// aapt resource value: 0x7F0700C0
+			public const int FireHydrate = 2131165376;
+			
+			// aapt resource value: 0x7F0700C1
+			public const int FlutterKick = 2131165377;
+			
+			// aapt resource value: 0x7F0700C2
+			public const int food = 2131165378;
+			
+			// aapt resource value: 0x7F0700C3
+			public const int FoodC2 = 2131165379;
+			
+			// aapt resource value: 0x7F0700C4
+			public const int FoodCh = 2131165380;
+			
+			// aapt resource value: 0x7F0700C5
+			public const int FoodChoices_Tuto = 2131165381;
+			
+			// aapt resource value: 0x7F0700C6
+			public const int FoodFish = 2131165382;
+			
+			// aapt resource value: 0x7F0700C7
+			public const int foodplan = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int FoodPlan_Tuto = 2131165384;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int Fridge = 2131165385;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int FrogJump = 2131165386;
+			
+			// aapt resource value: 0x7F0700CB
+			public const int GetInfo = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int GetPersonaPhoto = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int GlutBridge = 2131165389;
+			
+			// aapt resource value: 0x7F0700CE
+			public const int GobeletSquat = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int HammerCurl = 2131165391;
+			
+			// aapt resource value: 0x7F0700D0
+			public const int HighKnees = 2131165392;
+			
+			// aapt resource value: 0x7F0700D4
+			public const int IconMealPlanForSH = 2131165396;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int ic_mtrl_chip_checked_black = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int ic_mtrl_chip_checked_circle = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int ic_mtrl_chip_close_circle = 2131165395;
+			
+			// aapt resource value: 0x7F0700D5
+			public const int InAndOut = 2131165397;
+			
+			// aapt resource value: 0x7F0700D6
+			public const int InnerThightLifts = 2131165398;
+			
+			// aapt resource value: 0x7F0700D8
+			public const int inputlayout_togglecollapseicon = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int inputlayout_togglevisibleicon = 2131165401;
+			
+			// aapt resource value: 0x7F0700D7
+			public const int input_layout_drop_down_icon = 2131165399;
+			
+			// aapt resource value: 0x7F0700DA
+			public const int JackKnives = 2131165402;
+			
+			// aapt resource value: 0x7F0700DB
+			public const int JumpingJacks = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int JumpingLunge = 2131165404;
+			
+			// aapt resource value: 0x7F0700DD
+			public const int JumpingRope = 2131165405;
+			
+			// aapt resource value: 0x7F0700DE
+			public const int JumpSquat = 2131165406;
+			
+			// aapt resource value: 0x7F0700DF
+			public const int KneeCrunch = 2131165407;
+			
+			// aapt resource value: 0x7F0700E0
+			public const int KneeDrop = 2131165408;
+			
+			// aapt resource value: 0x7F0700E1
+			public const int KneePushUps = 2131165409;
+			
+			// aapt resource value: 0x7F0700E2
+			public const int KneesToChest = 2131165410;
+			
+			// aapt resource value: 0x7F0700E3
+			public const int LateralLungeLegRaise = 2131165411;
+			
+			// aapt resource value: 0x7F0700E4
+			public const int LeftCrunchs = 2131165412;
+			
+			// aapt resource value: 0x7F0700E5
+			public const int LegCurlProne = 2131165413;
+			
+			// aapt resource value: 0x7F0700E6
+			public const int LegPulse = 2131165414;
+			
+			// aapt resource value: 0x7F0700E7
+			public const int LegRaise = 2131165415;
+			
+			// aapt resource value: 0x7F0700E8
+			public const int LegStraight = 2131165416;
+			
+			// aapt resource value: 0x7F0700E9
+			public const int LegUp = 2131165417;
+			
+			// aapt resource value: 0x7F0700EA
+			public const int LongArmCrunches = 2131165418;
+			
+			// aapt resource value: 0x7F0700EB
+			public const int Lunge = 2131165419;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int LyingLegAbduction = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int MainForTuto = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int mainmoneytuto = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int MarchSteps = 2131165423;
+			
+			// aapt resource value: 0x7F0700F0
+			public const int Money = 2131165424;
+			
+			// aapt resource value: 0x7F0700F1
+			public const int MontainClimbers = 2131165425;
+			
+			// aapt resource value: 0x7F0700F2
+			public const int moral = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int mtrl_snackbar_background = 2131165427;
+			
+			// aapt resource value: 0x7F0700F4
+			public const int mtrl_tabs_default_indicator = 2131165428;
+			
+			// aapt resource value: 0x7F0700F5
+			public const int musicplay = 2131165429;
+			
+			// aapt resource value: 0x7F0700F6
+			public const int MyFood = 2131165430;
+			
+			// aapt resource value: 0x7F0700F7
+			public const int MyWellTuto = 2131165431;
+			
+			// aapt resource value: 0x7F0700F8
+			public const int MyWorkoutsMainTuto = 2131165432;
+			
+			// aapt resource value: 0x7F0700F9
+			public const int Namaste = 2131165433;
+			
+			// aapt resource value: 0x7F0700FA
+			public const int NarrowRows = 2131165434;
+			
+			// aapt resource value: 0x7F0700FB
+			public const int navigation_empty_icon = 2131165435;
+			
+			// aapt resource value: 0x7F0700FC
+			public const int NewFood = 2131165436;
+			
+			// aapt resource value: 0x7F0700FD
+			public const int notification_action_background = 2131165437;
+			
+			// aapt resource value: 0x7F0700FE
+			public const int notification_bg = 2131165438;
+			
+			// aapt resource value: 0x7F0700FF
+			public const int notification_bg_low = 2131165439;
+			
+			// aapt resource value: 0x7F070100
+			public const int notification_bg_low_normal = 2131165440;
+			
+			// aapt resource value: 0x7F070101
+			public const int notification_bg_low_pressed = 2131165441;
+			
+			// aapt resource value: 0x7F070102
+			public const int notification_bg_normal = 2131165442;
+			
+			// aapt resource value: 0x7F070103
+			public const int notification_bg_normal_pressed = 2131165443;
+			
+			// aapt resource value: 0x7F070104
+			public const int notification_icon_background = 2131165444;
+			
+			// aapt resource value: 0x7F070105
+			public const int notification_template_icon_bg = 2131165445;
+			
+			// aapt resource value: 0x7F070106
+			public const int notification_template_icon_low_bg = 2131165446;
+			
+			// aapt resource value: 0x7F070107
+			public const int notification_tile_bg = 2131165447;
+			
+			// aapt resource value: 0x7F070108
+			public const int notify_panel_notification_icon_bg = 2131165448;
+			
+			// aapt resource value: 0x7F070109
+			public const int noun_Repeat2 = 2131165449;
+			
+			// aapt resource value: 0x7F07010A
+			public const int noun_Repeat3 = 2131165450;
+			
+			// aapt resource value: 0x7F07010B
+			public const int ObliqueCrunch = 2131165451;
+			
+			// aapt resource value: 0x7F07010C
+			public const int ObliqueTwists = 2131165452;
+			
+			// aapt resource value: 0x7F07010D
+			public const int OneArmToe = 2131165453;
+			
+			// aapt resource value: 0x7F07010E
+			public const int other = 2131165454;
+			
+			// aapt resource value: 0x7F07010F
+			public const int OverHeadPull = 2131165455;
+			
+			// aapt resource value: 0x7F070110
+			public const int OverheadPush = 2131165456;
+			
+			// aapt resource value: 0x7F070111
+			public const int pause = 2131165457;
+			
+			// aapt resource value: 0x7F070112
+			public const int Plank = 2131165458;
+			
+			// aapt resource value: 0x7F070113
+			public const int PlankDip = 2131165459;
+			
+			// aapt resource value: 0x7F070114
+			public const int PlankTaps = 2131165460;
+			
+			// aapt resource value: 0x7F070115
+			public const int PlankTwist = 2131165461;
+			
+			// aapt resource value: 0x7F070116
+			public const int play = 2131165462;
+			
+			// aapt resource value: 0x7F070117
+			public const int playfi = 2131165463;
+			
+			// aapt resource value: 0x7F070118
+			public const int PlieSquat = 2131165464;
+			
+			// aapt resource value: 0x7F070119
+			public const int plus = 2131165465;
+			
+			// aapt resource value: 0x7F07011A
+			public const int PullOver = 2131165466;
+			
+			// aapt resource value: 0x7F07011B
+			public const int Punches = 2131165467;
+			
+			// aapt resource value: 0x7F07011C
+			public const int PushAndPull = 2131165468;
+			
+			// aapt resource value: 0x7F07011D
+			public const int PushAndStretch = 2131165469;
+			
+			// aapt resource value: 0x7F07011E
+			public const int PushUpRotations = 2131165470;
+			
+			// aapt resource value: 0x7F07011F
+			public const int PushUps = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int RaisedCircle = 2131165472;
+			
+			// aapt resource value: 0x7F070121
+			public const int RaisedSwing = 2131165473;
+			
+			// aapt resource value: 0x7F070122
+			public const int ReachingPushup = 2131165474;
+			
+			// aapt resource value: 0x7F070123
+			public const int refresh_Icon = 2131165475;
+			
+			// aapt resource value: 0x7F070124
+			public const int relax2 = 2131165476;
+			
+			// aapt resource value: 0x7F070125
+			public const int relax3 = 2131165477;
+			
+			// aapt resource value: 0x7F070126
+			public const int relax4 = 2131165478;
+			
+			// aapt resource value: 0x7F070127
+			public const int repeat_once = 2131165479;
+			
+			// aapt resource value: 0x7F070128
+			public const int Reverse = 2131165480;
+			
+			// aapt resource value: 0x7F070129
+			public const int ReverseFly = 2131165481;
+			
+			// aapt resource value: 0x7F07012A
+			public const int ReverseLunge = 2131165482;
+			
+			// aapt resource value: 0x7F07012B
+			public const int RightCrunchs = 2131165483;
+			
+			// aapt resource value: 0x7F07012C
+			public const int rock1 = 2131165484;
+			
+			// aapt resource value: 0x7F07012D
+			public const int rock2 = 2131165485;
+			
+			// aapt resource value: 0x7F07012E
+			public const int rock3 = 2131165486;
+			
+			// aapt resource value: 0x7F07012F
+			public const int rock4 = 2131165487;
+			
+			// aapt resource value: 0x7F070130
+			public const int RondVert = 2131165488;
+			
+			// aapt resource value: 0x7F070131
+			public const int RoundPause = 2131165489;
+			
+			// aapt resource value: 0x7F070132
+			public const int RoundRouge = 2131165490;
+			
+			// aapt resource value: 0x7F070133
+			public const int RussianTwist = 2131165491;
+			
+			// aapt resource value: 0x7F070134
+			public const int save = 2131165492;
+			
+			// aapt resource value: 0x7F070136
+			public const int SchWorkouts_Tuto = 2131165494;
+			
+			// aapt resource value: 0x7F070135
+			public const int SchWorkout_Tuto = 2131165493;
+			
+			// aapt resource value: 0x7F070137
+			public const int Scissors = 2131165495;
+			
+			// aapt resource value: 0x7F070138
+			public const int ScissorsJump = 2131165496;
+			
+			// aapt resource value: 0x7F070139
+			public const int SecondLunge = 2131165497;
+			
+			// aapt resource value: 0x7F07013A
+			public const int settings = 2131165498;
+			
+			// aapt resource value: 0x7F07013B
+			public const int shopping = 2131165499;
+			
+			// aapt resource value: 0x7F07013C
+			public const int ShoppingList_Tuto = 2131165500;
+			
+			// aapt resource value: 0x7F07013D
+			public const int ShoulderPress = 2131165501;
+			
+			// aapt resource value: 0x7F07013E
+			public const int SideCrunchTick = 2131165502;
+			
+			// aapt resource value: 0x7F07013F
+			public const int SideJack = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int SideLeftPulse = 2131165504;
+			
+			// aapt resource value: 0x7F070141
+			public const int SideLunge = 2131165505;
+			
+			// aapt resource value: 0x7F070142
+			public const int SidePlank = 2131165506;
+			
+			// aapt resource value: 0x7F070143
+			public const int SideRightPulse = 2131165507;
+			
+			// aapt resource value: 0x7F070144
+			public const int SingleLegGlut = 2131165508;
+			
+			// aapt resource value: 0x7F070145
+			public const int SingleLegSquatLeft = 2131165509;
+			
+			// aapt resource value: 0x7F070146
+			public const int SingleLegSquatRight = 2131165510;
+			
+			// aapt resource value: 0x7F070147
+			public const int SitUpsTwists = 2131165511;
+			
+			// aapt resource value: 0x7F070148
+			public const int SKDlogo = 2131165512;
+			
+			// aapt resource value: 0x7F070149
+			public const int SpiderPushup = 2131165513;
+			
+			// aapt resource value: 0x7F07014A
+			public const int SplitLunges = 2131165514;
+			
+			// aapt resource value: 0x7F07014B
+			public const int SportIcon = 2131165515;
+			
+			// aapt resource value: 0x7F07014C
+			public const int Squat = 2131165516;
+			
+			// aapt resource value: 0x7F07014D
+			public const int SquatCoreTwist = 2131165517;
+			
+			// aapt resource value: 0x7F07014E
+			public const int SquatHold = 2131165518;
+			
+			// aapt resource value: 0x7F07014F
+			public const int SquatSideLeftRaise = 2131165519;
+			
+			// aapt resource value: 0x7F070150
+			public const int SquatSideRightRaise = 2131165520;
+			
+			// aapt resource value: 0x7F070151
+			public const int SquatWalk = 2131165521;
+			
+			// aapt resource value: 0x7F070152
+			public const int StandingHipExtension = 2131165522;
+			
+			// aapt resource value: 0x7F070153
+			public const int StandingLegAbduction = 2131165523;
+			
+			// aapt resource value: 0x7F070154
+			public const int StandingRaise = 2131165524;
+			
+			// aapt resource value: 0x7F070155
+			public const int StraightKick = 2131165525;
+			
+			// aapt resource value: 0x7F070156
+			public const int StraightLeftHold = 2131165526;
+			
+			// aapt resource value: 0x7F070157
+			public const int StraightLeftPulse = 2131165527;
+			
+			// aapt resource value: 0x7F070158
+			public const int StraightLegPulse = 2131165528;
+			
+			// aapt resource value: 0x7F070159
+			public const int StraightRightHold = 2131165529;
+			
+			// aapt resource value: 0x7F07015A
+			public const int StraightSideLeft = 2131165530;
+			
+			// aapt resource value: 0x7F07015B
+			public const int StraightSideRight = 2131165531;
+			
+			// aapt resource value: 0x7F07015C
+			public const int Swimmers = 2131165532;
+			
+			// aapt resource value: 0x7F07015D
+			public const int Swing = 2131165533;
+			
+			// aapt resource value: 0x7F07015E
+			public const int task = 2131165534;
+			
+			// aapt resource value: 0x7F07015F
+			public const int team = 2131165535;
+			
+			// aapt resource value: 0x7F070160
+			public const int Team2 = 2131165536;
+			
+			// aapt resource value: 0x7F070161
+			public const int timeW = 2131165537;
+			
+			// aapt resource value: 0x7F070162
+			public const int tooltip_frame_dark = 2131165538;
+			
+			// aapt resource value: 0x7F070163
+			public const int tooltip_frame_light = 2131165539;
+			
+			// aapt resource value: 0x7F070164
+			public const int TricepsDips = 2131165540;
+			
+			// aapt resource value: 0x7F070165
+			public const int UpDownPlank = 2131165541;
+			
+			// aapt resource value: 0x7F070166
+			public const int uplanteam = 2131165542;
+			
+			// aapt resource value: 0x7F070167
+			public const int ViewWorkouts = 2131165543;
+			
+			// aapt resource value: 0x7F070168
+			public const int WallSit = 2131165544;
+			
+			// aapt resource value: 0x7F070169
+			public const int WideRows = 2131165545;
+			
+			// aapt resource value: 0x7F07016A
+			public const int WideSideSquats = 2131165546;
+			
+			// aapt resource value: 0x7F07016B
+			public const int WorkoutNow = 2131165547;
+			
+			// aapt resource value: 0x7F07016C
+			public const int yoga = 2131165548;
 			
 			static Drawable()
 			{
