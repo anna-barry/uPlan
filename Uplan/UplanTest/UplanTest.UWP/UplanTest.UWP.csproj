@@ -191,7 +191,7 @@
     <Content Include="Assets\HammerCurl.png" />
     <Content Include="Assets\HighKnees.png" />
     <Content Include="Assets\IconMealPlanForSH.png" />
-    <Content Include="Assets\In&amp;Out.png" />
+    <Content Include="Assets\InAndOut.png" />
     <Content Include="Assets\InnerThightLifts.png" />
     <Content Include="Assets\JackKnives.png" />
     <Content Include="Assets\JumpingJacks.png" />
@@ -260,7 +260,7 @@
     <Content Include="Assets\relax2.mp3" />
     <Content Include="Assets\relax3.mp3" />
     <Content Include="Assets\relax4.mp3" />
-    <Content Include="Assets\repeat once.png" />
+    <Content Include="Assets\repeat_once.png" />
     <Content Include="Assets\Reverse.png" />
     <Content Include="Assets\ReverseCurl.png" />
     <Content Include="Assets\ReverseFly.png" />
@@ -274,7 +274,7 @@
     <Content Include="Assets\RoundPause.png" />
     <Content Include="Assets\RoundRouge.png" />
     <Content Include="Assets\RussianTwist.png" />
-    <Content Include="Assets\save%29.png" />
+    <Content Include="Assets\save.png" />
     <Content Include="Assets\SchWorkouts_Tuto.PNG" />
     <Content Include="Assets\SchWorkout_Tuto.PNG" />
     <Content Include="Assets\Scissors.png" />
