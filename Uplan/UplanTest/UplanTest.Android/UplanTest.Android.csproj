@@ -585,5 +585,14 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\ExCalendrier.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\aboutmetuto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\aboutusTuto.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\AbRows.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -28,10 +28,6 @@ namespace UplanTest
 
 
     {
-
-        
-        
-        
         Label Tittle = new Label { Text = "My Well Being", TextColor = Color.BlueViolet, FontSize = 40};
 
         Label QUOTESs = new Label {   VerticalTextAlignment = TextAlignment.Center, FontAttributes = FontAttributes.Italic, FontSize = 40};

@@ -33,7 +33,7 @@
 
 
 
-            <Image Source="Assets/default.png" HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
+            <Image x:Name="Default"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
 
 
             <Button x:Name="accountb" Text="Start" TextColor="White" Grid.Row="3" Grid.Column="2"  Clicked="StartCliked" BackgroundColor="BlueViolet" CornerRadius="4" ></Button>

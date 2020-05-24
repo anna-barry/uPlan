@@ -114,7 +114,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\aboutmetuto.png" />
+    <Content Include="Assets\aboutusTuto.PNG" />
     <Content Include="Assets\AbRows.png" />
+    <Content Include="Assets\addmoneytuto.PNG" />
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\Add_task_Tuto.PNG" />
@@ -178,6 +181,7 @@
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
+    <Content Include="Assets\mainmoneytuto.PNG" />
     <Content Include="Assets\moral.png" />
     <Content Include="Assets\MainForTuto.PNG" />
     <Content Include="Assets\MarchSteps.png" />
@@ -185,6 +189,7 @@
     <Content Include="Assets\MontainClimbers.png" />
     <Content Include="Assets\musicplay.png" />
     <Content Include="Assets\MyFood.png" />
+    <Content Include="Assets\MyWellTuto.png" />
     <Content Include="Assets\MyWorkoutsMainTuto.PNG" />
     <Content Include="Assets\NarrowRows.png" />
     <Content Include="Assets\NewFood.png" />
@@ -282,12 +287,9 @@
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
-
     <Content Include="Assets\timeW.png" />
-
     <Content Include="Assets\TricepsDips.png" />
     <Content Include="Assets\UpDownPlank.png" />
-
     <Content Include="Assets\uplanteam.png" />
     <Content Include="Assets\ViewWorkouts.png" />
     <Content Include="Assets\WallSit.png" />

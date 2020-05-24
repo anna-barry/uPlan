@@ -184,7 +184,7 @@
     
 
     <!-- My well being  -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/MyWellTuto.png">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -324,7 +324,7 @@
     </ContentPage>
 
     <!-- My expenses: general -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/mainmoneytuto.PNG">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -346,7 +346,7 @@
     </ContentPage>
 
     <!-- My expenses: an example of info -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/addmoneytuto.PNG">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -369,7 +369,7 @@
     </ContentPage>
 
     <!-- About ME -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/aboutmetuto.png">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -391,7 +391,7 @@
     </ContentPage>
 
     <!-- About Us -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/aboutusTuto.PNG">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
