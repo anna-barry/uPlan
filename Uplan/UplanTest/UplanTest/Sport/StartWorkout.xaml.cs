@@ -22,6 +22,8 @@ namespace UplanTest
             var c = Database.db.GetCollection<Workout>("AllWorkouts");
             var listOfWorkouts = c.Find(Query.EQ("DueDate", day.Date));
 
+            
+
             int seconds = 0;
             int kactual = 1;
             int nb_workouts = listOfWorkouts.Count();
@@ -169,14 +171,30 @@ namespace UplanTest
                                 Exerice.Text = "You have finished your workout, you should be proud of yourself";
                                 Exerice.FontSize = 30;
                                 BackgroundColor = Color.White;
-                                InTheFrame.IsVisible = false;
+                                //InTheFrame.IsVisible = false;
                                 Picture.IsVisible = false;
                                 InThePicture.IsVisible = false;
+
+                                
+                            }
+                            if (seconds >= 30 && kactual == nb_workouts && round == 2 && ActExercice == 10)
+                            {
+                                
                                 return false;
 
                             }
+                        
+                        
                             return true; // runs again, or false to stop
                         });
+
+                if (nb_workouts>0)
+                {
+                    Type.Text = "Well done";
+                    Type.FontSize = 40;
+                    Exerice.Text = "You have finished your workout, you should be proud of yourself";
+                    Exerice.FontSize = 30;
+                }
 
             }
 

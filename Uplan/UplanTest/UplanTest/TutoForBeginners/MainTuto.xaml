@@ -153,7 +153,7 @@
     </ContentPage>
 
     <!-- My fridge  -->
-    <ContentPage BackgroundColor="White">
+    <ContentPage BackgroundImageSource="Assets/tuto2.png">
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -277,7 +277,7 @@
 
 
     <!-- My workouts: view workouts -->
-    <ContentPage >
+    <ContentPage BackgroundImageSource="Assets/tuto1.png" >
         <!-- BackgroundImageSource="Assets/uplanteam.png"-->
 
         <ContentPage.Content>
@@ -300,28 +300,6 @@
         </ContentPage.Content>
     </ContentPage>
 
-    <!-- My workouts: start workout -->
-    <ContentPage BackgroundColor="White">
-        <!-- BackgroundImageSource="Assets/uplanteam.png"-->
-
-        <ContentPage.Content>
-
-            <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-
-                <Button Text="Skip All" BorderWidth="2" BorderColor="Black" BackgroundColor="FloralWhite" WidthRequest="100"  Grid.Column="10" Grid.Row="12" Clicked="SkipToTheGoodBit"/>
-
-            </Grid>
-        </ContentPage.Content>
-    </ContentPage>
 
     <!-- My expenses: general -->
     <ContentPage BackgroundImageSource="Assets/mainmoneytuto.PNG">
@@ -421,7 +399,7 @@
 
             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-                <ImageButton Source="Assets/default.png" WidthRequest="400" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="GoToApp" />
+                <ImageButton Source="Assets/default_logo.png" WidthRequest="400" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="GoToApp" />
 
             </StackLayout>
         </ContentPage.Content>

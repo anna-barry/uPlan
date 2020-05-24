@@ -88,7 +88,7 @@ namespace UplanTest
 
             EntréeCodeBarre.TextColor = Color.White; 
             EntréeCodeBarre.BackgroundColor = Color.BlueViolet;
-            EntréeCodeBarre.Placeholder = "Enter a barrcode";
+            EntréeCodeBarre.Placeholder = "Enter a barcode";
             EntréeCodeBarre.HorizontalTextAlignment = TextAlignment.Center; 
 
             valider.Clicked += new EventHandler(this.Sauvegarder_Clicked);
@@ -176,11 +176,11 @@ namespace UplanTest
                 {
                     if (DateTime.Now.Date == item.Peremption.Date)
                     {
-                        Notif_Bas.Text += $"Attention le produit {item.Name} se périme aujourd'hui \n";
+                        Notif_Bas.Text += $"IMPORTANT: the food item that is {item.Name} reaches its expiration date today \n";
                     }
                     if (DateTime.Now.Date.AddDays(+2) == item.Peremption.Date)
                     {
-                        Notif_Bas.Text += $"Attention le produit {item.Name} se périme dans deux jours \n";
+                        Notif_Bas.Text += $"IMPORTANT: the food item that is {item.Name} reaches its expiration in two days time \n";
                     }
 
                     
@@ -271,7 +271,7 @@ namespace UplanTest
                 var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
                 if (nutriInfo == null)
                 {
-                    SortieApi.Text = "Barcode Invalid";
+                    SortieApi.Text = "Invalid Barcode";
                 }
                 else
                 {
@@ -279,7 +279,7 @@ namespace UplanTest
                     if (nutriInfo.Ingredients_text != null)
                     {
                         FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g, nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text, peremption.Date, nutriInfo.Nutrition_grades, nutriInfo.Quantity);
-                        SortieApi.Text = "The pruduct has been aded with succes in your pantry";
+                        SortieApi.Text = "The product has been added with success to your pantry";
                         
                         create(); 
 
@@ -287,7 +287,7 @@ namespace UplanTest
                     }
 
                     else
-                        SortieApi.Text = "Barcode Invalid";
+                        SortieApi.Text = "Invalid Barcode";
 
 
                 }
