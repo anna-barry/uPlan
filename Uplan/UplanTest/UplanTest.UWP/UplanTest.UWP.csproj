@@ -129,6 +129,7 @@
     <Content Include="Assets\BabyJumps.png" />
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
+    <Content Include="Assets\BarbelCurl.png" />
     <Content Include="Assets\BicepExtensions.png" />
     <Content Include="Assets\BicepsCurls.png" />
     <Content Include="Assets\BigCurl.png" />
@@ -145,6 +146,7 @@
     <Content Include="Assets\ChairPushUps.png" />
     <Content Include="Assets\ClapHands.png" />
     <Content Include="Assets\ClutterBridge.png" />
+    <Content Include="Assets\ConcentrationCurl.png" />
     <Content Include="Assets\CountHold.png" />
     <Content Include="Assets\croix.png" />
     <Content Include="Assets\CrossackSquatLeft.png" />
@@ -152,6 +154,7 @@
     <Content Include="Assets\CrossCrunch.png" />
     <Content Include="Assets\CrossLeg.png" />
     <Content Include="Assets\CrossOverPulse.png" />
+    <Content Include="Assets\CrushDown.png" />
     <Content Include="Assets\CrustyLungePulse.png" />
     <Content Include="Assets\CycleAbs.png" />
     <Content Include="Assets\DeadLift.png" />
@@ -161,10 +164,14 @@
     <Content Include="Assets\DiagonalLunge.png" />
     <Content Include="Assets\DiagonalRightRaise.png" />
     <Content Include="Assets\DiamondLegLift.png" />
+    <Content Include="Assets\DipsCurl.png" />
     <Content Include="Assets\DonkeyKicks.png" />
+    <Content Include="Assets\DumbellExtensions.png" />
     <Content Include="Assets\DumbleSideRaise.png" />
     <Content Include="Assets\ElbowPlank.png" />
     <Content Include="Assets\ExCalendrier.PNG" />
+    <Content Include="Assets\ExtendedClench.png" />
+    <Content Include="Assets\Extensions.png" />
     <Content Include="Assets\eye.png" />
     <Content Include="Assets\eye2.png" />
     <Content Include="Assets\FireHydrate.png" />
@@ -227,6 +234,7 @@
     <Content Include="Assets\other.png" />
     <Content Include="Assets\ObliqueTwists.png" />
     <Content Include="Assets\OneArmToe.png" />
+    <Content Include="Assets\OverheadBarbell.png" />
     <Content Include="Assets\OverHeadPull.png" />
     <Content Include="Assets\OverheadPush.png" />
     <Content Include="Assets\pause.png" />
@@ -242,6 +250,7 @@
     <Content Include="Assets\Punches.png" />
     <Content Include="Assets\PushAndPull.png" />
     <Content Include="Assets\PushAndStretch.png" />
+    <Content Include="Assets\PushDowns.png" />
     <Content Include="Assets\PushUpRotations.png" />
     <Content Include="Assets\PushUps.png" />
     <Content Include="Assets\RaisedCircle.png" />
@@ -253,6 +262,7 @@
     <Content Include="Assets\relax4.mp3" />
     <Content Include="Assets\repeat once.png" />
     <Content Include="Assets\Reverse.png" />
+    <Content Include="Assets\ReverseCurl.png" />
     <Content Include="Assets\ReverseFly.png" />
     <Content Include="Assets\ReverseLunge.png" />
     <Content Include="Assets\RightCrunchs.png" />
@@ -269,12 +279,14 @@
     <Content Include="Assets\SchWorkout_Tuto.PNG" />
     <Content Include="Assets\Scissors.png" />
     <Content Include="Assets\ScissorsJump.png" />
+    <Content Include="Assets\SeattedBarbell.png" />
     <Content Include="Assets\SecondLunge.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\shopping.png" />
     <Content Include="Assets\ShoppingList_Tuto.PNG" />
     <Content Include="Assets\ShoulderPress.png" />
     <Content Include="Assets\SideCrunchTick.png" />
+    <Content Include="Assets\SideExtendedClench.png" />
     <Content Include="Assets\SideJack.png" />
     <Content Include="Assets\SideLeftPulse.png" />
     <Content Include="Assets\SideLunge.png" />
@@ -285,6 +297,7 @@
     <Content Include="Assets\SingleLegSquatRight.png" />
     <Content Include="Assets\SitUpsTwists.png" />
     <Content Include="Assets\SKDlogo.png" />
+    <Content Include="Assets\SkullCrusher.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
