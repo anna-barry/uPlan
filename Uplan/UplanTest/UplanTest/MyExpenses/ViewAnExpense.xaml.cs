@@ -84,11 +84,18 @@ namespace UplanTest
             List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
-            foreach (var expense in list)
-            {
+            
+                foreach (var expense in list)
+                {
+                    if (expense.Description!=null)
+                    {
+                        desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
 
-                desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
-            }
+                    }
+                   // desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
+                }
+            
+            
 
             return desc;
         }
@@ -145,6 +152,10 @@ namespace UplanTest
             string virg = "";
             bool decdid = false;
             int i = 0;
+            if (amount!=null)
+            {
+
+            
             int l = amount.Length;
             while (i < l)
             {
@@ -181,6 +192,7 @@ namespace UplanTest
             {
                 ret += (virg[i] % 48) * SquareF(i + 1, (float)0.1);
                 i++;
+            }
             }
             return ret;
         }

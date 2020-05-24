@@ -168,7 +168,7 @@ namespace UplanTest
                                 Type.FontSize = 40;
                                 Exerice.Text = "You have finished your workout, you should be proud of yourself";
                                 Exerice.FontSize = 30;
-                                BackgroundColor = Color.PeachPuff;
+                                BackgroundColor = Color.White;
                                 InTheFrame.IsVisible = false;
                                 Picture.IsVisible = false;
                                 InThePicture.IsVisible = false;

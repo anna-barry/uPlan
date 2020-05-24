@@ -42,7 +42,7 @@
             <Label Text="Amount" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="BlueViolet" />
             <Entry x:Name="amountt" Keyboard="Numeric" Placeholder="Amount" Grid.Row="2" Grid.Column="1" PlaceholderColor="BlueViolet" />
 
-            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
+            <ImageButton Source="Assets/save.png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
             <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" />
         </Grid>
     </ContentPage.Content>

@@ -87,18 +87,18 @@ namespace UplanTest
             addperemp.HorizontalTextAlignment = TextAlignment.Center; 
 
             EntréeCodeBarre.TextColor = Color.White; 
-            EntréeCodeBarre.BackgroundColor = Color.FromHex("685C69");
+            EntréeCodeBarre.BackgroundColor = Color.BlueViolet;
             EntréeCodeBarre.Placeholder = "Enter a barrcode";
             EntréeCodeBarre.HorizontalTextAlignment = TextAlignment.Center; 
 
             valider.Clicked += new EventHandler(this.Sauvegarder_Clicked);
             valider.Text = "Save";
             valider.TextColor = Color.White;
-            valider.BackgroundColor = Color.FromHex("685C69");
+            valider.BackgroundColor = Color.BlueViolet;
             valider.FontSize = 24;
 
             SiPasCodeBarre.Placeholder = "Description of the product (if it doesn't have a barcode)";
-            SiPasCodeBarre.BackgroundColor = Color.FromHex("685C69");
+            SiPasCodeBarre.BackgroundColor = Color.BlueViolet;
             SiPasCodeBarre.TextColor = Color.White;
             SiPasCodeBarre.HorizontalTextAlignment = TextAlignment.Center;
 
@@ -157,7 +157,7 @@ namespace UplanTest
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
             int longu = col.Count(); 
             int k = 1;
-            var Fridge = new Frame { BorderColor = Color.FromHex("685C69") };
+            var Fridge = new Frame { BorderColor = Color.BlueViolet };
         
             grid.Children.Add(Fridge, 1, 1);
             if(longu == 0)
@@ -199,7 +199,7 @@ namespace UplanTest
                     stack.Children.Add(btn);
                     btn.Text = item.Name;
                     btn.Clicked += new EventHandler(this.button_click);
-                    btn.BackgroundColor = Color.FromHex("685C69");
+                    btn.BackgroundColor = Color.BlueViolet;
                     btn.BorderColor = Color.FromHex("685C69");
                     btn.BorderWidth = 3; 
                     btn.TextColor = Color.White;
