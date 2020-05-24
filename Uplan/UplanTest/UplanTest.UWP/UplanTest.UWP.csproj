@@ -123,7 +123,9 @@
     <Content Include="Assets\Add_Food.png" />
     <Content Include="Assets\add_round.png" />
     <Content Include="Assets\Add_task_Tuto.PNG" />
+    <Content Include="Assets\AirPlanning.png" />
     <Content Include="Assets\alert.mp3" />
+    <Content Include="Assets\AlternateHeel.png" />
     <Content Include="Assets\B.png" />
     <Content Include="Assets\ArmCircle.png" />
     <Content Include="Assets\ArmPlunge.png" />
@@ -133,6 +135,7 @@
     <Content Include="Assets\backf.png" />
     <Content Include="Assets\backSport.png" />
     <Content Include="Assets\BarbelCurl.png" />
+    <Content Include="Assets\BentOver.png" />
     <Content Include="Assets\BicepExtensions.png" />
     <Content Include="Assets\BicepsCurls.png" />
     <Content Include="Assets\BigCurl.png" />
@@ -142,6 +145,7 @@
     <Content Include="Assets\break.png" />
     <Content Include="Assets\BreakDancerReach.png" />
     <Content Include="Assets\breakf.png" />
+    <Content Include="Assets\BulgarianSplit.png" />
     <Content Include="Assets\Burpees.png" />
     <Content Include="Assets\C.png" />
     <Content Include="Assets\Calendar.png" />
@@ -162,6 +166,7 @@
     <Content Include="Assets\CrustyLungePulse.png" />
     <Content Include="Assets\CycleAbs.png" />
     <Content Include="Assets\D.png" />
+    <Content Include="Assets\Dart.png" />
     <Content Include="Assets\DeadLift.png" />
     <Content Include="Assets\DeclinePushUps.png" />
     <Content Include="Assets\default.png" />
@@ -217,12 +222,15 @@
     <Content Include="Assets\LateralLungeLegRaise.png" />
     <Content Include="Assets\LeftCrunchs.png" />
     <Content Include="Assets\LegCurlProne.png" />
+    <Content Include="Assets\LegExtension.png" />
     <Content Include="Assets\LegPulse.png" />
     <Content Include="Assets\LegRaise.png" />
     <Content Include="Assets\LegStraight.png" />
     <Content Include="Assets\LegUp.png" />
     <Content Include="Assets\LongArmCrunches.png" />
     <Content Include="Assets\Lunge.png" />
+    <Content Include="Assets\LungeKick.png" />
+    <Content Include="Assets\LyingLeftLift.png" />
     <Content Include="Assets\mainmoneytuto.PNG" />
     <Content Include="Assets\LyingLegAbduction.png" />
     <Content Include="Assets\moral.png" />
@@ -240,6 +248,7 @@
     <Content Include="Assets\noun_Repeat2.png" />
     <Content Include="Assets\noun_Repeat3.png" />
     <Content Include="Assets\ObliqueCrunch.png" />
+    <Content Include="Assets\OneLeggedRow.png" />
     <Content Include="Assets\other.png" />
     <Content Include="Assets\ObliqueTwists.png" />
     <Content Include="Assets\OneArmToe.png" />
@@ -247,6 +256,7 @@
     <Content Include="Assets\OverHeadPull.png" />
     <Content Include="Assets\OverheadPush.png" />
     <Content Include="Assets\pause.png" />
+    <Content Include="Assets\PilateCrunch.png" />
     <Content Include="Assets\Plank.png" />
     <Content Include="Assets\PlankDip.png" />
     <Content Include="Assets\PlankTaps.png" />
@@ -280,7 +290,6 @@
     <Content Include="Assets\rock3.mp3" />
     <Content Include="Assets\rock4.mp3" />
     <Content Include="Assets\RondVert.png" />
-    <Content Include="Assets\RondOrange.png" />
     <Content Include="Assets\Rond_orange.png" />
     <Content Include="Assets\RoundPause.png" />
     <Content Include="Assets\RoundRouge.png" />
@@ -300,6 +309,8 @@
     <Content Include="Assets\SideExtendedClench.png" />
     <Content Include="Assets\SideJack.png" />
     <Content Include="Assets\SideLeftPulse.png" />
+    <Content Include="Assets\SideLegExtension.png" />
+    <Content Include="Assets\SideLegRaise.png" />
     <Content Include="Assets\SideLunge.png" />
     <Content Include="Assets\SidePlank.png" />
     <Content Include="Assets\SideRightPulse.png" />
@@ -362,8 +373,10 @@
     <Content Include="Assets\StraightLegPulse.png" />
     <Content Include="Assets\StraightSideLeft.png" />
     <Content Include="Assets\StraightSideRight.png" />
+    <Content Include="Assets\SumoSquat.png" />
     <Content Include="Assets\Swimmers.png" />
     <Content Include="Assets\Swing.png" />
+    <Content Include="Assets\TableTop.png" />
     <Content Include="Assets\task.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\Team2.png" />
