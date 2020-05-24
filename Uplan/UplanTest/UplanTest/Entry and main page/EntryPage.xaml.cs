@@ -17,6 +17,13 @@ namespace UplanTest
         {
             InitializeComponent();
             Database.Initiate();
+            Default.Source = Device.RuntimePlatform == Device.Android
+                ? ImageSource.FromFile("Resources/default.png")
+                : ImageSource.FromFile("Resources/default.png");
+
+            Default.Source= Device.RuntimePlatform == Device.UWP
+                ? ImageSource.FromFile("Assets/default.png")
+                : ImageSource.FromFile("Assets/default.png");
         }
         private void StartCliked(object sender, EventArgs e)
         {

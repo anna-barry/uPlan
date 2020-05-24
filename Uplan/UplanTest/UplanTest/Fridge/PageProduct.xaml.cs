@@ -61,11 +61,11 @@ namespace UplanTest
             stackTop.HorizontalOptions = LayoutOptions.Center;
 
             Titre.Text = produit.Name;
-            Titre.HorizontalTextAlignment = TextAlignment.End;
+            Titre.HorizontalTextAlignment = TextAlignment.Center;
             Titre.FontSize = 25;
 
             
-            Grid.SetColumnSpan(stackTop, 2); 
+           // Grid.SetColumnSpan(stackTop, 2); 
 
             stackTop.Children.Add(Titre);
             grid.Children.Add(stackTop, 0, 0);
@@ -137,7 +137,7 @@ namespace UplanTest
 
                 ImageButton save = new ImageButton
                 {
-                    Source = "Assets/save).png",
+                    Source = "Assets/save.png",
                     HeightRequest = 40,
                     HorizontalOptions = LayoutOptions.Center,
                     ClassId = produit.Name

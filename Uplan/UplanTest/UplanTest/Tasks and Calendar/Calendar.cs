@@ -243,7 +243,10 @@ namespace UplanTest
 
             }
 
-
+            if (localTime == Monday)
+            {
+                CleanDataBase(Monday);
+            }
 
             //RECUPERER PAR JOURS LES INFORMATIONS
 
@@ -2197,7 +2200,21 @@ private void SetButton(IEnumerable<SchoolTask> tasks, int rang, ref Button tasks
             }
         }
 
-        
+        public static void CleanDataBase(DateTime monday)
+        {
+            var col = Database.db.GetCollection<SchoolTask>("SchoolTasks");
+            IEnumerable<SchoolTask> databaseoftheday;
+
+            for (int i = 0; i < 7; i++)
+            {
+                databaseoftheday= col.Find(Query.EQ("DueDate", monday.AddDays(-1-i).Date));
+                foreach (var item in databaseoftheday)
+                {
+                    col.Delete(item.Id);
+                }
+            }
+
+        }
 
         public static Color getColor(string col)
         {
