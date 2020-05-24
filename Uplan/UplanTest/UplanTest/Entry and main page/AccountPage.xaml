@@ -41,7 +41,7 @@
             <Label Text="Rest Day" TextColor="BlueViolet" Grid.Row="7" Grid.Column="0" VerticalTextAlignment = "Center"/>
             <Picker x:Name="Rest_Day" WidthRequest="200" TextColor="RoyalBlue" Grid.Row="7" Grid.Column="1" />
 
-            <ImageButton x:Name="save" Source="Assets/save).png" Grid.Row="8" Grid.Column="1" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
+            <ImageButton x:Name="save" Source="Assets/save.png" Grid.Row="8" Grid.Column="1" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnButtonClicked" />
 
             
         </Grid>
