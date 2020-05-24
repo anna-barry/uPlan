@@ -126,7 +126,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\A.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UplanTest\UplanTest.csproj">
       <Project>{111A8868-D141-4CAD-BD6E-E626E730F43D}</Project>
@@ -158,7 +160,13 @@
     <AndroidResource Include="Resources\drawable\addmoneytuto.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AirPlanning.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\alert.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AlternateHeel.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ArmCircle.png" />
@@ -173,6 +181,9 @@
     <AndroidResource Include="Resources\drawable\ArmSwing.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\B.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\BabyJumps.png" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +191,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\backSport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BarbelCurl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BentOver.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\BicepExtensions.png" />
@@ -206,7 +223,13 @@
     <AndroidResource Include="Resources\drawable\breakf.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BulgarianSplit.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Burpees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\C.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Calendar.png" />
@@ -233,6 +256,9 @@
     <AndroidResource Include="Resources\drawable\ClutterBridge.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ConcentrationCurl.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\CountHold.png" />
   </ItemGroup>
   <ItemGroup>
@@ -254,10 +280,19 @@
     <AndroidResource Include="Resources\drawable\CrossOverPulse.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CrushDown.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\CrustyLungePulse.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CycleAbs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Dart.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\DeadLift.png" />
@@ -281,16 +316,31 @@
     <AndroidResource Include="Resources\drawable\DiamondLegLift.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DipsCurl.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\DonkeyKicks.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DumbellExtensions.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\DumbleSideRaise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\E.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ElbowPlank.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ExCalendrier.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ExtendedClench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Extensions.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\eye.png" />
@@ -359,6 +409,9 @@
     <AndroidResource Include="Resources\drawable\InnerThightLifts.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\interrogation.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\JackKnives.png" />
   </ItemGroup>
   <ItemGroup>
@@ -395,6 +448,9 @@
     <AndroidResource Include="Resources\drawable\LegCurlProne.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LegExtension.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\LegPulse.png" />
   </ItemGroup>
   <ItemGroup>
@@ -411,6 +467,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Lunge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LungeKick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LyingLeftLift.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\LyingLegAbduction.png" />
@@ -470,7 +532,13 @@
     <AndroidResource Include="Resources\drawable\OneArmToe.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\OneLeggedRow.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\OverheadBarbell.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\OverHeadPull.png" />
@@ -480,6 +548,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PilateCrunch.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Plank.png" />
@@ -518,6 +589,9 @@
     <AndroidResource Include="Resources\drawable\PushAndStretch.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PushDowns.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\PushUpRotations.png" />
   </ItemGroup>
   <ItemGroup>
@@ -551,6 +625,9 @@
     <AndroidResource Include="Resources\drawable\Reverse.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ReverseCurl.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ReverseFly.png" />
   </ItemGroup>
   <ItemGroup>
@@ -570,6 +647,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rock4.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Rond_orange.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\RondVert.png" />
@@ -599,6 +679,9 @@
     <AndroidResource Include="Resources\drawable\ScissorsJump.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SeattedBarbell.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\SecondLunge.png" />
   </ItemGroup>
   <ItemGroup>
@@ -617,10 +700,19 @@
     <AndroidResource Include="Resources\drawable\SideCrunchTick.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SideExtendedClench.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\SideJack.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SideLeftPulse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SideLegExtension.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SideLegRaise.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SideLunge.png" />
@@ -645,6 +737,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SKDlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SkullCrusher.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SpiderPushup.png" />
@@ -704,10 +799,16 @@
     <AndroidResource Include="Resources\drawable\StraightSideRight.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SumoSquat.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Swimmers.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Swing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\TableTop.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\task.png" />
@@ -720,6 +821,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\timeW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\trash.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\TricepsDips.png" />

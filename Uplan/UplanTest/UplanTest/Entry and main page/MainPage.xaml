@@ -103,7 +103,7 @@
 
 
                     <Label Text="Welcome to:" Grid.Row="0" Grid.Column="0" TextColor="CadetBlue" FontSize="35" Grid.ColumnSpan="3"/>
-                    <Image Source="Assets/default.png" HeightRequest="450" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Grid.Column="1"/>
+                    <Image Source="Assets/default_logo.png" HeightRequest="450" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Grid.Column="1"/>
 
                     <Label Text="We hope our application will help you in your daily activities " Grid.Row="6" Grid.Column="1" TextColor="BlueViolet" FontSize="20" Grid.ColumnSpan="3"/>
                     <Label Text="Start your organised life today by exploring our navigation menu on the left hand side" Grid.Row="7" Grid.Column="1" TextColor="CadetBlue" FontSize="20" Grid.ColumnSpan="3"/>
