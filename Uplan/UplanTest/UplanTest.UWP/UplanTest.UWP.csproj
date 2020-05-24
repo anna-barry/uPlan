@@ -302,6 +302,7 @@
     <Content Include="Assets\shopping.png" />
     <Content Include="Assets\ShoppingList_Tuto.PNG" />
     <Content Include="Assets\ShoulderPress.png" />
+    <Content Include="Assets\ShoulderPresses.png" />
     <Content Include="Assets\SideCrunchTick.png" />
     <Content Include="Assets\SideExtendedClench.png" />
     <Content Include="Assets\SideJack.png" />

@@ -173,7 +173,7 @@ namespace UplanTest
 
                 col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/SumoSquat.png", Description = "Sumo squat" });//
                 col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/SideLegRaise.png", Description = "Side leg raise" });//
-                col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/DeepSideLunge.png", Description = "Deep side lunge" });//
+                col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/SideLunge.png", Description = "Deep side lunge" });//
                 col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/LegExtension.png", Description = "Leg extension" });//
                 col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/SideLegExtension.png", Description = "Side leg extension" });//
                 col.Insert(new ListEntry { Type = "Legs2", Code = "Assets/SideLegRaise.png", Description = "Side leg raise" });//

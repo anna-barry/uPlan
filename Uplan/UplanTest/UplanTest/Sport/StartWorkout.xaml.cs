@@ -50,7 +50,7 @@ namespace UplanTest
                                 {
                                     case 1:
                                         Exerice.Text = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Description;
-                                            if (seconds == 0)
+                                            if (seconds == 1)
                                             { Picture.Source = listOfWorkouts.ElementAt(kactual - 1).Exercice1.Code; }
                                         break;
                                     case 2:
@@ -151,7 +151,10 @@ namespace UplanTest
                                         LilTime.HorizontalOptions = LayoutOptions.Center;
                                         LilTime.VerticalOptions = LayoutOptions.Center;
                                         LilTime.FontSize = 20;
-                                        InThePicture.Source = "Assets/RoundPause.png";
+                                        if (inbetween >= 30)
+                                        { InThePicture.Source = "Assets/RoundPause.png";
+                                            Picture.Source = "";
+                                        }
                                         inbetween -= 1;
                                     }
                                     else
@@ -164,14 +167,13 @@ namespace UplanTest
 
                             if (seconds >= 30 && kactual == nb_workouts && round == 2 && ActExercice == 10)
                             {
-                                Type.Text = "Well done";
-                                Type.FontSize = 40;
-                                Exerice.Text = "You have finished your workout, you should be proud of yourself";
-                                Exerice.FontSize = 30;
-                                BackgroundColor = Color.White;
+                                Type.IsVisible = false;
+                                Exerice.IsVisible = false;
                                 InTheFrame.IsVisible = false;
                                 Picture.IsVisible = false;
                                 InThePicture.IsVisible = false;
+                                FinishedType.IsVisible = true;
+                                FinishedExerice.IsVisible = true;
                                 return false;
 
                             }
