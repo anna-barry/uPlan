@@ -29,7 +29,9 @@
             <Image x:Name="Picture" Grid.Row="4" WidthRequest="200" Scale="15"/>
             <Label x:Name="Exerice" Grid.Row="5" FontSize="20" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" TextColor="White"/>
 
-
+            <Label x:Name="FinishedType" Grid.Row="1" TextColor="White" Text="Well done! You workout is finished" BackgroundColor="BlueViolet" IsVisible="False" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" />
+            <Label x:Name="FinishedExerice" Text="You can be proud of yourself" Grid.Row="5" FontSize="20" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" IsVisible="False" TextColor="White"/>
+            
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" HorizontalOptions="End" Scale="0.6" />
 
 

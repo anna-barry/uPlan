@@ -31,7 +31,7 @@
 
             <Label Text="Maximum expense" Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="BlueViolet"/>
             <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End"  HorizontalOptions="End"  Grid.Row="6" Grid.Column="0" PlaceholderColor="BlueViolet" />
-            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="6" Grid.Column="1" HeightRequest="90" WidthRequest="60" BackgroundColor="BlueViolet"/>
+            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="6" Grid.Column="1"  HeightRequest="90" WidthRequest="60" FBackgroundColor="BlueViolet" TextColor="White"/>
 
             <Label x:Name="tyype" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="BlueViolet" Grid.ColumnSpan="2" FontSize="25"/>
 
@@ -42,7 +42,7 @@
             <Label Text="Amount" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"  TextColor="BlueViolet" />
             <Entry x:Name="amountt" Keyboard="Numeric" Placeholder="Amount" Grid.Row="2" Grid.Column="1" PlaceholderColor="BlueViolet" />
 
-            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
+            <ImageButton Source="Assets/save.png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
             <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" />
         </Grid>
     </ContentPage.Content>

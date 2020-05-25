@@ -83,8 +83,18 @@ namespace UplanTest
                     string Description,
                     String Type)
         {
+
+           
+
             // Get a collection (or create, if doesn't exist)
             var col = Database.db.GetCollection<Money>("Money");
+
+
+            col.EnsureIndex(x => x.Type);
+            col.EnsureIndex(x => x.Amount);
+            col.EnsureIndex(x => x.Description);
+
+
             col.Insert(
                  new Money
                  {
