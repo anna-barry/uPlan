@@ -122,7 +122,7 @@ namespace UplanTest
 
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(50) });
-            for (int i = 1; i < 8; i++)
+            for (int i = 1; i < 10; i++)
             {
                 grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(100) });
 
@@ -180,7 +180,7 @@ namespace UplanTest
             Frame MusicW = new Frame
             {
                 BorderColor = Color.Gray,
-                //  BackgroundColor = Color.FromHex("#FFE4C0ED"),
+                
                 HasShadow = false,
                 CornerRadius = 5,
                 Padding = 15,
@@ -230,20 +230,22 @@ namespace UplanTest
 
          
          
-            grid.Children.Add(QuoteView, 1, 2);
+            grid.Children.Add(QuoteView, 2, 2);
            
-            grid.Children.Add(QUOTESs, 1, 2);
+            grid.Children.Add(QUOTESs, 2, 2);
 
-            grid.Children.Add(CView, 1, 6);
+            grid.Children.Add(CView, 2, 6);
             // grid.Children.Add(others, 2, 3);
 
-            grid.Children.Add(Tittle, 5, 1);
+            grid.Children.Add(Tittle, 3, 1);
             grid.Children.Add(back, 0, 0);
             grid.Children.Add(Tpass, 9, 1);
 
             //les musiques
 
             grid.Children.Add(MusicW, 7, 2);
+
+           
             grid.Children.Add(Stack1, 7, 3);
             grid.Children.Add(Stack2, 7, 4);
             grid.Children.Add(Stack3, 7, 5);
@@ -252,15 +254,30 @@ namespace UplanTest
             grid.Children.Add(Stack6, 8, 4);
             grid.Children.Add(Stack7, 8, 5);
             grid.Children.Add(Stack8, 8, 6);
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(Tpass, 5, 9);
+
+                grid.Children.Add(MusicW, 3, 9);
+                grid.Children.Add(Stack1, 3, 10);
+                grid.Children.Add(Stack2, 3, 11);
+                grid.Children.Add(Stack3, 3, 12);
+                grid.Children.Add(Stack4, 3, 13);
+                grid.Children.Add(Stack5, 4, 10);
+                grid.Children.Add(Stack6, 4, 11);
+                grid.Children.Add(Stack7, 4, 12);
+                grid.Children.Add(Stack8, 4, 13);
+
+            }
 
             Grid.SetColumnSpan(MusicW, 2);
             Grid.SetRowSpan(MusicW, 4);
 
 
-            grid.Children.Add(c1, 1, 7);
-            grid.Children.Add(c2, 2, 7);
-            grid.Children.Add(c3, 3, 7);
-            grid.Children.Add(c4, 4, 7);
+            grid.Children.Add(c1, 2, 7);
+            grid.Children.Add(c2, 3, 7);
+            grid.Children.Add(c3, 4, 7);
+            grid.Children.Add(c4, 5, 7);
 
             Grid.SetColumnSpan(Tittle, 2);
           
@@ -317,6 +334,12 @@ namespace UplanTest
             
             Tpass.IsVisible = true;
             grid.Children.Add(c1, 9, 1);
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(c1, 5, 9);
+
+            }
+            
             c1.HeightRequest = 80;
             back.IsVisible = true;
           
@@ -376,6 +399,10 @@ namespace UplanTest
             
             Tpass.IsVisible = true;
             grid.Children.Add(c2, 9, 1);
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(c2, 5, 9);
+            }
 
             c1.IsEnabled = false;
             c3.IsEnabled = false;
@@ -431,6 +458,10 @@ namespace UplanTest
            
             Tpass.IsVisible = true;
             grid.Children.Add(c3, 9, 1);
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(c3, 5, 9);
+            }
 
             back.IsVisible = true;
             
@@ -473,6 +504,10 @@ namespace UplanTest
         {
             Tpass.IsVisible = true;
             grid.Children.Add(c4, 9, 1);
+            if (Device.RuntimePlatform == "UWP")
+            {
+                grid.Children.Add(c4, 5, 9);
+            }
             back.IsVisible = true;
 
             c1.IsEnabled = false;
