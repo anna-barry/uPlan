@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="68bb7872-b564-4909-9339-89d93c047b96"
-    Publisher="CN=57945a54-2c81-4911-ae22-033ad58cab18"
-    Version="1.0.2.0" />
+    Name="43543Chronos2.0.Uplann"
+    Publisher="CN=6F2B632A-8D62-4380-9CB2-62615E50F4F5"
+    Version="1.0.11.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="6693f6c8-df92-4f36-8db6-2c6b30d50010" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>UplanTest.UWP</DisplayName>
-    <PublisherDisplayName>57945a54-2c81-4911-ae22-033ad58cab18</PublisherDisplayName>
+    <DisplayName>Uplann</DisplayName>
+    <PublisherDisplayName>Chronos2.0</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
