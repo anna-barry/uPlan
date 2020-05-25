@@ -30,11 +30,11 @@
 
             <!--
             <Image Source="{local:ImageResource UplanTest.default.png}"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/> -->
-
+            
             <forms:AnimationView x:Name="animationView" Animation="timeP.json" Loop="True" AutoPlay="True" HeightRequest="300" WidthRequest="300"/>
-            <Image Source="Assets/default_logo.png"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
+                <Image Source="Assets/default_logo.png"  HeightRequest="250" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
 
-            <Button x:Name="accountb" Text="Start" TextColor="White" Grid.Row="3" Grid.Column="2"  Clicked="StartCliked" BackgroundColor="BlueViolet" CornerRadius="4" ></Button>
+                <Button x:Name="accountb" Text="Start" TextColor="White" Grid.Row="3" Grid.Column="2"  Clicked="StartCliked" BackgroundColor="BlueViolet" CornerRadius="4" ></Button>
             <Button Text="New?" TextColor="White" Grid.Row="4" Grid.Column="2" Clicked="NewCliked" BackgroundColor="BlueViolet"  CornerRadius="4" />
 
         </Grid>

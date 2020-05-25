@@ -94,9 +94,7 @@ namespace UplanTest
             List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
-
-            
-                foreach (var expense in list)
+            foreach (var expense in list)
                 {
                     if (expense.Description!=null)
                     {
@@ -104,7 +102,6 @@ namespace UplanTest
 
                     }
                 }
-
             return desc;
         }
         async void OnSaveClicked(object sender, EventArgs args)

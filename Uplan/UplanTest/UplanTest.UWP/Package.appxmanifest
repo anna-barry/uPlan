@@ -9,7 +9,7 @@
   <Identity
     Name="43543Chronos2.0.Uplann"
     Publisher="CN=6F2B632A-8D62-4380-9CB2-62615E50F4F5"
-    Version="1.0.11.0" />
+    Version="1.0.13.0" />
 
   <mp:PhoneIdentity PhoneProductId="6693f6c8-df92-4f36-8db6-2c6b30d50010" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
