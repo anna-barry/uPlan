@@ -31,11 +31,11 @@
                 </Grid.RowDefinitions>
                 <!--<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
                 <Entry /> -->
-                <Label Text="Chose a date to see all the tasks due that date" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" FontSize="25" />
+                <Label Text="Chose a date to see all the tasks due that date" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" FontSize="Title" Grid.ColumnSpan="3"/>
                 <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="2" HeightRequest="10" WidthRequest="10" Scale="0.3" />
 
 
-                <Label Text="Select a date: " HorizontalTextAlignment="End" TextColor="BlueViolet" FontSize="16" Grid.Row="1" Grid.Column="0"  />
+                <Label Text="Select a date: " HorizontalTextAlignment="End" TextColor="BlueViolet" FontSize="Body" Grid.Row="1" Grid.Column="0"  />
                 <DatePicker x:Name="dpp" DateSelected="DatePicker_DateSelected" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
                 <Label x:Name="editorr" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="10"/>
 
