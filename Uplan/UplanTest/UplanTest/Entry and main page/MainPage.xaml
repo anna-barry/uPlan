@@ -7,7 +7,7 @@
              Title="Uplan"
              
              
-             MasterBehavior="Split"
+             MasterBehavior="SplitOnLandscape"
              x:Class="UplanTest.MainPage">
     
 

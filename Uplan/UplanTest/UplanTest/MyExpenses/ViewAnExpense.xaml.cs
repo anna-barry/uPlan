@@ -84,15 +84,8 @@ namespace UplanTest
             List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
-<<<<<<< HEAD
-            if (list.Count() > 1)
-            {
-                foreach (var expense in list)
-                {
 
-                    desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
-                }
-=======
+           
             
                 foreach (var expense in list)
                 {
@@ -104,12 +97,6 @@ namespace UplanTest
                    // desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
                 }
             
-            
->>>>>>> de91fd3c85017a076731c8e989bf1b1d456f7165
-
-               
-
-            }
             return desc;
         }
         async void OnSaveClicked(object sender, EventArgs args)
