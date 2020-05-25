@@ -14,7 +14,8 @@ namespace UplanTest
         public MainPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, true);
+            NavigationPage.SetHasBackButton(this, true);
         }
 
         private void Button_Clicked1(object sender, EventArgs e)

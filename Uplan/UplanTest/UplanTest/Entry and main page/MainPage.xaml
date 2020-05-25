@@ -7,13 +7,13 @@
              Title="Uplan"
              
              
-             MasterBehavior="SplitOnLandscape"
+             MasterBehavior="Split"
              x:Class="UplanTest.MainPage">
     
 
     <MasterDetailPage.Master>
         
-        <ContentPage Padding="10"  Title="Uplan" BackgroundImageSource="Assets/bleu.png">
+        <ContentPage Padding="10"  Title="Uplan" BackgroundColor="BlueViolet">
             <ContentPage.Resources>
                 <ResourceDictionary>
                     <Color x:Key="txtColor">Red</Color>

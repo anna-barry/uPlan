@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
-
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace UplanTest
 
@@ -14,6 +13,7 @@ namespace UplanTest
     public class Calendar : ContentPage
 
     {
+        
 
         private bool WorkView;
 
@@ -44,29 +44,58 @@ namespace UplanTest
         {
 
 
-            
-
             //____________________________CREATION DU GRID_____________________________________
-
+            ScrollView scroll = new ScrollView { Orientation = ScrollOrientation.Horizontal };
             var grid = new Grid();
-
-            for (int i = 0; i < 15; i++)
-
+            if (Device.RuntimePlatform == "UWP")
             {
 
-                grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+                for (int i = 0; i < 15; i++)
+
+                {
+
+                    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+                }
+
+
+
+                for (int j = 0; j < 7; j++)
+
+                {
+
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+
+                }
+
+            }
+            else
+            {
+
+                
+                scroll.Content = grid;
+                for (int i = 0; i < 15; i++)
+
+                {
+
+                    grid.RowDefinitions.Add(new RowDefinition { Height = 50 });
+
+                }
+
+
+
+                for (int j = 0; j < 7; j++)
+
+                {
+
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = 100});
+
+                }
+
 
             }
 
 
-
-            for (int j = 0; j < 7; j++)
-
-            {
-
-                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-
-            }
 
             //grid.BackgroundColor = Color.AliceBlue;
 
@@ -286,19 +315,36 @@ namespace UplanTest
             };
             swiSchool.Toggled += Switch_OnToggled;
 
-            grid.Children.Add(swiSchool, 4, 0);
+           
 
 
 
             var Work = new Label { Text = "Work", FontSize = 10, HorizontalOptions = LayoutOptions.Center };
+            if (Device.RuntimePlatform=="UWP")
+            {
+                grid.Children.Add(swiSchool, 4, 0);
+                grid.Children.Add(Work, 4, 0);
+            }
 
-            grid.Children.Add(Work, 4, 0);
+            else
+            {
+                grid.Children.Add(swiSchool, 2, 0);
+                grid.Children.Add(Work, 2, 0);
+            }
+
 
             //_____________________ Bouton Add
             ImageButton addEvent = new ImageButton();
             addEvent.Source = "Assets/add_round.png";
             addEvent.Clicked += (sender, e) => GotoNewEvent();
-            grid.Children.Add(addEvent, 0, 12);
+            if (Device.RuntimePlatform == "UWP")
+            {
+                grid.Children.Add(addEvent, 0, 12);
+            }
+            else
+            {
+                grid.Children.Add(addEvent, 0, 8);
+            }
             
             //______________________ Bouton View
             ImageButton ViewsEvents = new ImageButton();
@@ -306,9 +352,14 @@ namespace UplanTest
             ViewsEvents.WidthRequest = 40;
             ViewsEvents.HeightRequest = 40;
             ViewsEvents.Clicked += (sender, e) => GotoViewEvents();
-            grid.Children.Add(ViewsEvents,0, 13);
-
-
+            if (Device.RuntimePlatform == "UWP")
+            {
+                grid.Children.Add(ViewsEvents, 0, 13);
+            }
+            else
+            {
+                grid.Children.Add(ViewsEvents, 0, 9);
+            }
 
             Switch swiMe = new Switch
 
@@ -536,12 +587,15 @@ namespace UplanTest
                 grid.Children.Add(mon6, 0, 7);
                 buttonsonMon.Add(mon6);
 
+            if (Device.RuntimePlatform == "UWP")
+            {
 
-            //_____________________________________________________________________
 
-            //________________________Lundi_____7__________________________________
+                //_____________________________________________________________________
 
-            Button mon7 = new Button();
+                //________________________Lundi_____7__________________________________
+
+                Button mon7 = new Button();
                 bool ma7 = tasksonMon.Count<SchoolTask>() >= 7;
                 bool m7 = false;
                 if (ma7)
@@ -558,9 +612,9 @@ namespace UplanTest
                 grid.Children.Add(mon7, 0, 8);
                 buttonsonMon.Add(mon7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____8__________________________________
+                //________________________Lundi_____8__________________________________
 
                 Button mon8 = new Button();
                 bool m68 = tasksonMon.Count<SchoolTask>() >= 8;
@@ -579,9 +633,9 @@ namespace UplanTest
                 grid.Children.Add(mon8, 0, 2 + 7);
                 buttonsonMon.Add(mon8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____9__________________________________
+                //________________________Lundi_____9__________________________________
 
                 Button mon9 = new Button();
                 bool m69 = tasksonMon.Count<SchoolTask>() >= 9;
@@ -600,9 +654,9 @@ namespace UplanTest
                 grid.Children.Add(mon9, 0, 2 + 8);
                 buttonsonMon.Add(mon9);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Lundi_____10__________________________________
+                //________________________Lundi_____10__________________________________
 
                 Button mon10 = new Button();
                 bool m10 = tasksonMon.Count<SchoolTask>() >= 10;
@@ -620,10 +674,13 @@ namespace UplanTest
                 mon10.Clicked += async (sender, e) => await Alert_Clicked(resmsg10, restask10);
                 grid.Children.Add(mon10, 0, 2 + 9);
                 buttonsonMon.Add(mon10);
+            }
 
-            //_____________________________________________________________________
+            
 
-            //________________________Mardi___1____________________________________
+                            //_____________________________________________________________________
+
+                //________________________Mardi___1____________________________________
 
                 Button tue1 = new Button();
 
@@ -752,10 +809,12 @@ namespace UplanTest
                 grid.Children.Add(tue6, 1, 7);
                 buttonsonTue.Add(tue6);
 
+            if (Device.RuntimePlatform == "UWP")
+            {
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____7__________________________________
+                //________________________Mardi_____7__________________________________
 
                 Button tue7 = new Button();
                 bool tuee7 = tasksonTue.Count<SchoolTask>() >= 7;
@@ -774,9 +833,9 @@ namespace UplanTest
                 grid.Children.Add(tue7, 1, 8);
                 buttonsonTue.Add(tue7);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____8__________________________________
+                //________________________Mardi_____8__________________________________
 
                 Button tue8 = new Button();
                 bool tuee8 = tasksonTue.Count<SchoolTask>() >= 8;
@@ -795,9 +854,9 @@ namespace UplanTest
                 grid.Children.Add(tue8, 1, 2 + 7);
                 buttonsonTue.Add(tue8);
 
-            //_____________________________________________________________________
+                //_____________________________________________________________________
 
-            //________________________Mardi_____9__________________________________
+                //________________________Mardi_____9__________________________________
 
                 Button tue9 = new Button();
                 bool tuee9 = tasksonTue.Count<SchoolTask>() >= 9;
@@ -815,9 +874,9 @@ namespace UplanTest
                 tue9.Clicked += async (sender, e) => await Alert_Clicked(resmsgM9, restaskM9);
                 grid.Children.Add(tue9, 1, 2 + 8);
                 buttonsonTue.Add(tue9);
-                 //_____________________________________________________________________
+                //_____________________________________________________________________
 
-                 //________________________Mardi_____10__________________________________
+                //________________________Mardi_____10__________________________________
 
                 Button tue10 = new Button();
                 bool tuee10 = tasksonTue.Count<SchoolTask>() >= 10;
@@ -836,7 +895,7 @@ namespace UplanTest
                 grid.Children.Add(tue10, 1, 2 + 9);
                 buttonsonTue.Add(tue10);
 
-                 //_____________________________________________________________________
+            }    //_____________________________________________________________________
 
                 //________________________Mercredi___1____________________________________
 
@@ -971,9 +1030,13 @@ namespace UplanTest
                 buttonsonWed.Add(wed6);
 
 
+
+            if (Device.RuntimePlatform == "UWP")
+
+            {
                 //_____________________________________________________________________
 
-               //________________________Mercredi_____7__________________________________
+                //________________________Mercredi_____7__________________________________
 
                 Button wed7 = new Button();
                 bool wedd7 = tasksonWed.Count<SchoolTask>() >= 7;
@@ -992,7 +1055,7 @@ namespace UplanTest
 
                 grid.Children.Add(wed7, 2, 8);
                 buttonsonWed.Add(wed7);
-                 //_____________________________________________________________________
+                //_____________________________________________________________________
 
                 //________________________Mercredi_____8__________________________________
 
@@ -1031,11 +1094,11 @@ namespace UplanTest
                 SetButton(tasksonWed, 8, ref wed9, bwed9);
                 (string resmsgME9, SchoolTask restaskME9) = InitiateButtonGetMsg(tasksonWed, 8);
                 wed9.Clicked += async (sender, e) => await Alert_Clicked(resmsgME9, restaskME9);
-           
+
                 grid.Children.Add(wed9, 2, 2 + 8);
                 buttonsonWed.Add(wed9);
 
-                 //_____________________________________________________________________
+                //_____________________________________________________________________
 
                 //________________________Mercredi_____10__________________________________
 
@@ -1056,7 +1119,7 @@ namespace UplanTest
                 grid.Children.Add(wed10, 2, 2 + 9);
                 buttonsonWed.Add(wed10);
 
-                //_____________________________________________________________________
+            }    //_____________________________________________________________________
 
                 //________________________Jeudi___1____________________________________
 
@@ -1183,7 +1246,8 @@ namespace UplanTest
                 thu6.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ6, restaskJ6);
                 grid.Children.Add(thu6, 3, 7);
 
-
+            if (Device.RuntimePlatform == "UWP")
+            {
                 //_____________________________________________________________________
 
                 //________________________Jeudi_____7__________________________________
@@ -1242,7 +1306,7 @@ namespace UplanTest
                 SetButton(tasksonThu, 8, ref thu9, bthu9);
                 (string resmsgJ9, SchoolTask restaskJ9) = InitiateButtonGetMsg(tasksonThu, 8);
                 thu9.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ9, restaskJ9);
-            
+
                 grid.Children.Add(thu9, 3, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1263,8 +1327,15 @@ namespace UplanTest
                 SetButton(tasksonThu, 9, ref thu10, bthu10);
                 (string resmsgJ10, SchoolTask restaskJ10) = InitiateButtonGetMsg(tasksonThu, 9);
                 thu10.Clicked += async (sender, e) => await Alert_Clicked(resmsgJ10, restaskJ10);
-            
+
                 grid.Children.Add(thu10, 3, 2 + 9);
+
+                buttonsonThu.Add(thu7);
+                buttonsonThu.Add(thu8);
+                buttonsonThu.Add(thu9);
+                buttonsonThu.Add(thu10);
+
+            }
 
                 //__________________Add All Thursday buttons__________________________
                 buttonsonThu.Add(thu1);
@@ -1273,12 +1344,12 @@ namespace UplanTest
                 buttonsonThu.Add(thu4);
                 buttonsonThu.Add(thu5);
                 buttonsonThu.Add(thu6);
-                buttonsonThu.Add(thu7);
-                buttonsonThu.Add(thu8);
-                buttonsonThu.Add(thu9);
-                buttonsonThu.Add(thu10);
+            
+            
+               
+            
                 //_____________________________________________________________________
-
+            
                 //________________________Vendredi___1____________________________________
 
                 Button fri1 = new Button();
@@ -1404,9 +1475,14 @@ namespace UplanTest
                 grid.Children.Add(fri6, 4, 7);
 
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Vendredi_____7__________________________________
+            //________________________Vendredi_____7__________________________________
+
+            if (Device.RuntimePlatform == "UWP")
+            {
+
+
 
                 Button fri7 = new Button();
                 bool frid7 = tasksonFri.Count<SchoolTask>() >= 7;
@@ -1462,7 +1538,7 @@ namespace UplanTest
                 SetButton(tasksonFri, 8, ref fri9, bfri9);
                 (string resmsgF9, SchoolTask restaskF9) = InitiateButtonGetMsg(tasksonFri, 8);
                 fri9.Clicked += async (sender, e) => await Alert_Clicked(resmsgF9, restaskF9);
-            
+
                 grid.Children.Add(fri9, 4, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1484,7 +1560,11 @@ namespace UplanTest
                 (string resmsgF10, SchoolTask restaskF10) = InitiateButtonGetMsg(tasksonFri, 9);
                 fri10.Clicked += async (sender, e) => await Alert_Clicked(resmsgF10, restaskF10);
                 grid.Children.Add(fri10, 4, 2 + 9);
-
+                buttonsonFri.Add(fri7);
+                buttonsonFri.Add(fri8);
+                buttonsonFri.Add(fri9);
+                buttonsonFri.Add(fri10);
+            }
                 //__________________Add All Friday buttons__________________________
                 buttonsonFri.Add(fri1);
                 buttonsonFri.Add(fri2);
@@ -1492,10 +1572,7 @@ namespace UplanTest
                 buttonsonFri.Add(fri4);
                 buttonsonFri.Add(fri5);
                 buttonsonFri.Add(fri6);
-                buttonsonFri.Add(fri7);
-                buttonsonFri.Add(fri8);
-                buttonsonFri.Add(fri9);
-                buttonsonFri.Add(fri10);
+               
                 //_____________________________________________________________________
 
                 //________________________Samedi___1____________________________________
@@ -1626,9 +1703,13 @@ namespace UplanTest
                 grid.Children.Add(sat6, 5, 7);
 
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Samedi_____7__________________________________
+            //________________________Samedi_____7__________________________________
+
+            if (Device.RuntimePlatform == "UWP")
+            {
+
 
                 Button sat7 = new Button();
                 bool satd7 = tasksonSat.Count<SchoolTask>() >= 7;
@@ -1684,7 +1765,7 @@ namespace UplanTest
                 SetButton(tasksonSat, 8, ref sat9, bsat9);
                 (string resmsgSA9, SchoolTask restaskSA9) = InitiateButtonGetMsg(tasksonSat, 8);
                 sat9.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA9, restaskSA9);
-            
+
                 grid.Children.Add(sat9, 5, 2 + 8);
 
                 //_____________________________________________________________________
@@ -1707,6 +1788,11 @@ namespace UplanTest
                 sat10.Clicked += async (sender, e) => await Alert_Clicked(resmsgSA10, restaskSA10);
                 grid.Children.Add(sat10, 5, 2 + 9);
 
+                buttonsonSat.Add(sat8);
+                buttonsonSat.Add(sat9);
+                buttonsonSat.Add(sat7);
+                buttonsonSat.Add(sat10);
+            }
               //__________________Add All Saturday buttons__________________________
                 buttonsonSat.Add(sat1);
                 buttonsonSat.Add(sat2);
@@ -1714,10 +1800,7 @@ namespace UplanTest
                 buttonsonSat.Add(sat4);
                 buttonsonSat.Add(sat5);
                 buttonsonSat.Add(sat6);
-                buttonsonSat.Add(sat8);
-                buttonsonSat.Add(sat9);
-                buttonsonSat.Add(sat7);
-                buttonsonSat.Add(sat10);
+               
 
                 //_____________________________________________________________________
 
@@ -1848,9 +1931,12 @@ namespace UplanTest
                 grid.Children.Add(sun6, 6, 7);
 
 
-                //_____________________________________________________________________
+            //_____________________________________________________________________
 
-                //________________________Dimanche_____7__________________________________
+            //________________________Dimanche_____7__________________________________
+            if (Device.RuntimePlatform == "UWP")
+            {
+
 
                 Button sun7 = new Button();
                 bool sund7 = tasksonSun.Count<SchoolTask>() >= 7;
@@ -1928,18 +2014,20 @@ namespace UplanTest
                 sun10.Clicked += async (sender, e) => await Alert_Clicked(resmsgSU10, restaskSU10);
                 grid.Children.Add(sun10, 6, 2 + 9);
 
-             //__________________Add All Sunday buttons__________________________
+                buttonsonSun.Add(sun8);
+                buttonsonSun.Add(sun9);
+                buttonsonSun.Add(sun7);
+                buttonsonSun.Add(sun10);
+
+            }
+            //__________________Add All Sunday buttons__________________________
             buttonsonSun.Add(sun1);
             buttonsonSun.Add(sun2);
             buttonsonSun.Add(sun3);
             buttonsonSun.Add(sun4);
             buttonsonSun.Add(sun5);
             buttonsonSun.Add(sun6);
-            buttonsonSun.Add(sun8);
-            buttonsonSun.Add(sun9);
-            buttonsonSun.Add(sun7);
-            buttonsonSun.Add(sun10);
-
+            
             // NOTIFICATION CENTER 
 
             string res_for_notification = "Today's notifications: ";
@@ -1980,7 +2068,17 @@ namespace UplanTest
 
             var NotificationCenter = new Label { Text = res_for_notification + "\n" + "You have " + nbtask + " task(s) today", FontSize = 16, TextColor = Color.BlueViolet };
 
-            grid.Children.Add(NotificationCenter, 1, 12);
+            if (Device.RuntimePlatform == "UWP")
+            {
+                grid.Children.Add(NotificationCenter, 1, 12);
+
+            }
+            else
+            {
+                grid.Children.Add(NotificationCenter, 1, 8);
+
+            }
+            
 
             Grid.SetColumnSpan(NotificationCenter, 6);
 
@@ -1992,9 +2090,16 @@ namespace UplanTest
 
 
 
-//Affichage de la grid
+            //Affichage de la grid
 
-Content = grid;
+            if (Device.RuntimePlatform == "UWP")
+            {
+                Content = grid;
+            }
+            else
+            {
+                Content = scroll;
+            }
 
 }
 
