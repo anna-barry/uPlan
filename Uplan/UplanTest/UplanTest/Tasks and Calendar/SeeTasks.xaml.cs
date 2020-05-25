@@ -17,7 +17,7 @@ namespace UplanTest
         {
             InitializeComponent();
             string res = "These are the tasks for today you selected (" + DateTime.Today.Date.ToString("dd/MM/yyyy") + "):" + "\n" + "\n";
-            //saytheday.Text= "These are the tasks for today you selected (" + DateTime.Today.Date.ToString("dd/MM/yyyy") + "):";
+            //saytheday.Text= "These are the tasks for the day you selected (" + DateTime.Today.Date.ToString("dd/MM/yyyy") + "):";
             editorr.Text = res;
             
             //saytheday.FontAttributes = FontAttributes.Bold;

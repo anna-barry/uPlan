@@ -15,12 +15,17 @@ namespace UplanTest
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            
         }
 
         private void Button_Clicked1(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Calendar());
-            
+           
+          
+           Detail = new NavigationPage(new Calendar());
+          
+
+
         }
         private void Button_Clicked2(object sender, EventArgs e)
         {

@@ -448,15 +448,5 @@ namespace UplanTest
             }
             return res;
         }
-
-        
-
-        private async void OnCloseClicked2(object sender, EventArgs args)
-        {
-            
-            
-            await Navigation.PushAsync(new FoodPlan());
-
-        }
     }
 }

@@ -8,8 +8,8 @@
              x:Class="UplanTest.ViewAnExpense">
     <ContentPage.Content>
 
-        <Grid VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
-            <Grid.ColumnDefinitions>
+        <Grid x:Name="grid" VerticalOptions="Center" HorizontalOptions ="Center"  Margin="50">
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
 
@@ -22,18 +22,17 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="30"/>
 
-
-
-            </Grid.RowDefinitions>
-            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label Text="My Expenses" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="Large" TextColor="BlueViolet"/>
+            </Grid.RowDefinitions>-->
+            
+            <Label x:Name="typee" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" FontSize="Title"/>
+            <Label x:Name="myexp" Text="My Expenses" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="Large" TextColor="BlueViolet"/>
             <ListView x:Name="desc" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"  Grid.RowSpan="4" SeparatorColor="BlueViolet"/>
 
             <Label Text="Maximum expense" Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="BlueViolet"/>
-            <Entry x:Name="max" Keyboard="Numeric" WidthRequest="200" VerticalOptions="End"  HorizontalOptions="End"  Grid.Row="6" Grid.Column="0" PlaceholderColor="BlueViolet" />
-            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="6" Grid.Column="1"  HeightRequest="90" WidthRequest="60" BackgroundColor="BlueViolet" TextColor="White"/>
+            <Entry x:Name="max" Keyboard="Numeric" Grid.Row="6" Grid.Column="1" PlaceholderColor="BlueViolet" />
+            <Button Text="Change" Clicked="OnMaxClicked" Grid.Row="7" Grid.Column="1" BackgroundColor="BlueViolet" TextColor="White"/>
 
-            <Label x:Name="tyype" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="End" TextColor="BlueViolet" Grid.ColumnSpan="2" FontSize="25"/>
+            <Label x:Name="tyype" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" VerticalTextAlignment="End" TextColor="BlueViolet" FontSize="Large"/>
 
             <Label Text="Description" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
             <Entry x:Name="descc" WidthRequest="200" Placeholder="Description" Grid.Row="3" Grid.Column="1" PlaceholderColor="BlueViolet" />
@@ -43,7 +42,6 @@
             <Entry x:Name="amountt" Keyboard="Numeric" Placeholder="Amount" Grid.Row="2" Grid.Column="1" PlaceholderColor="BlueViolet" />
 
             <ImageButton Source="Assets/save.png" Clicked="OnSaveClicked" Grid.Row="4" Grid.Column="1"/>
-            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="4" HeightRequest="90" WidthRequest="60" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

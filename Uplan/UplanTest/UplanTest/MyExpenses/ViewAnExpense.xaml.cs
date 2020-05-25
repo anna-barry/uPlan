@@ -47,8 +47,18 @@ namespace UplanTest
                 default:
                     break;
             }
+            ScrollView scroll = new ScrollView { Orientation = ScrollOrientation.Vertical };
 
             List<string> list = DisplayExepenses(type);
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(myexp, 0, 9);
+                grid.Children.Add(desc, 0, 10);
+                Grid.SetRowSpan(desc, 3);
+                Grid.SetColumnSpan(desc, 2);
+                scroll.Content = grid;
+                Content = scroll;
+            }
             desc.ItemsSource = list;
 
             desc.ItemSelected += async (sender, e) =>
@@ -84,6 +94,7 @@ namespace UplanTest
             List<string> desc = new List<string> { };
             var c = Database.db.GetCollection<Money>("Money");
             var list = c.Find(Query.EQ("Type",type ));
+
             
                 foreach (var expense in list)
                 {
@@ -92,10 +103,7 @@ namespace UplanTest
                         desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
 
                     }
-                   // desc.Add(expense.Description + AddSpaces(expense.Description.Length) + expense.Amount);
                 }
-            
-            
 
             return desc;
         }
@@ -206,10 +214,6 @@ namespace UplanTest
                 rep--;
             }
             return y;
-        }
-        async void OnCloseClicked(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new MainExpenses());
         }
     }
 }

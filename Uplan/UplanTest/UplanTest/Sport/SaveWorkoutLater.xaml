@@ -26,9 +26,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Schedule this workout" TextColor="BlueViolet" Grid.Row="0" Grid.Column="0" FontSize="30" Grid.ColumnSpan="4"/>
+            <Label Text="Schedule this workout" TextColor="BlueViolet" Grid.Row="0" Grid.Column="0" FontSize="Large" Grid.ColumnSpan="4"/>
             <DatePicker x:Name="DatePick" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
-            <Label Text="Schedule this workout weekly?" TextColor="BlueViolet" Grid.Row="2" Grid.Column="0" FontSize="20" Grid.ColumnSpan="4"/>
+            <Label Text="Schedule this workout weekly?" TextColor="BlueViolet" Grid.Row="2" Grid.Column="0" FontSize="Title" Grid.ColumnSpan="4"/>
             <ImageButton x:Name="Oncee" Source="Assets/repeat_once.png" WidthRequest="100" Scale="3" HeightRequest="100" Grid.Row="3" Grid.Column="0" Clicked="Once" />
             <ImageButton x:Name="Twicee" Source="Assets/noun_Repeat2.png" WidthRequest="80" Scale="3" HeightRequest="80" Grid.Row="3" Grid.Column="1" Clicked="Twice" />
             <ImageButton x:Name="Thricee" Source="Assets/noun_Repeat3.png" WidthRequest="100" Scale="3" HeightRequest="100" Grid.Row="3" Grid.Column="2" Clicked="Thrice" />

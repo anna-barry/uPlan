@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="relax2.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="relax2.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.1.1" />
     <PackageReference Include="LiteDB" Version="5.0.7" />
     <PackageReference Include="Microcharts" Version="0.7.1" />

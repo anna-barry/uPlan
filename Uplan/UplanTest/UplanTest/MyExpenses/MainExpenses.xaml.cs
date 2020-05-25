@@ -50,6 +50,15 @@ namespace UplanTest
             Max.Chart.BackgroundColor= SKColors.Transparent;
             Max.Chart.LabelTextSize = 0;
 
+            if (Device.RuntimePlatform != "UWP")
+            {
+                grid.Children.Add(seeexp, 0, 20);
+                grid.Children.Add(Global, 0, 21);
+                Grid.SetRowSpan(Global, 3);
+                grid.Children.Add(maxexp, 1, 20);
+                grid.Children.Add(Max, 1, 21);
+                Grid.SetRowSpan(Max, 3);
+            }
         }
         public List<Entry2> MakeMaxChart()
         {

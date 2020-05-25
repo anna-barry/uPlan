@@ -131,7 +131,7 @@ namespace UplanTest
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Reverse fly" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/TricepsDips.png", Description = "Triceps dips" });//
-                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/DumbelSideRaise.png", Description = "Dumbel side raise" });//
+                col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/DumbleSideRaise.png", Description = "Dumbell side raise" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/SidePlank.png", Description = "Side plank" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/ReverseFly.png", Description = "Revers fly" });//
                 col.Insert(new ListEntry { Type = "Arms4", Code = "Assets/JumpingRope.png", Description = "Jumping rope" });//

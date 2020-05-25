@@ -88,7 +88,14 @@ namespace UplanTest
         Frame Tpass = new Frame { IsVisible = false, BorderColor = Color.Gray, HasShadow = false, CornerRadius = 5, Padding = 15 };
        
         public WellBeing()
+
         {
+
+            if (Device.RuntimePlatform == "Android")
+            {
+
+
+            }
 
             c1.Content = chrono1;
             c2.Content = chrono2;
@@ -136,7 +143,7 @@ namespace UplanTest
             Frame QuoteView = new Frame
             {
                 BorderColor = Color.Gray,
-              //  BackgroundColor = Color.FromHex("#FFE4C0ED"),
+              
                 HasShadow = false,
                 CornerRadius = 5,
                 Padding = 15,

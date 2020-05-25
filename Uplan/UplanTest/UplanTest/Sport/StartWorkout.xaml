@@ -14,23 +14,23 @@
                 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="30"/>
 
             </Grid.RowDefinitions>
             <Label BackgroundColor="BlueViolet" Grid.Row="0" Grid.RowSpan="2"/>
-            <Label Text="Your Workout" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="BlueViolet" TextColor="White" FontSize="30"/>
-            <Label x:Name="Type" Grid.Row="1" TextColor="White" BackgroundColor="BlueViolet" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" />
+            <Label Text="Your Workout" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="BlueViolet" TextColor="White" FontSize="Header"/>
+            <Label x:Name="Type" Grid.Row="1" TextColor="White" BackgroundColor="BlueViolet" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Title" />
             <Image x:Name="InThePicture" Grid.Row="2" Scale="2" />
             <Frame x:Name="InTheFrame" Grid.Row="2" CornerRadius="360" BackgroundColor="Transparent"/>
             <Image x:Name="Picture" Grid.Row="4" WidthRequest="200" Scale="15"/>
             <Label x:Name="Exerice" Grid.Row="5" FontSize="20" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" TextColor="White"/>
 
-            <Label x:Name="FinishedType" Grid.Row="1" TextColor="White" Text="Well done! You workout is finished" BackgroundColor="BlueViolet" IsVisible="False" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" />
-            <Label x:Name="FinishedExerice" Text="You can be proud of yourself" Grid.Row="5" FontSize="20" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" IsVisible="False" TextColor="White"/>
+            <Label x:Name="FinishedType" Grid.Row="1" TextColor="White" Text="Well done! You workout is finished" BackgroundColor="BlueViolet" IsVisible="False" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Title" />
+            <Label x:Name="FinishedExerice" Text="You can be proud of yourself" Grid.Row="5" FontSize="Title" HorizontalTextAlignment="Center" BackgroundColor="BlueViolet" IsVisible="False" TextColor="White"/>
             
             <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" HorizontalOptions="End" Scale="0.6" />
 

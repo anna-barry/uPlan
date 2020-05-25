@@ -74,13 +74,5 @@ namespace UplanTest
             
 
         }
-
-        private async void OnCloseClicked2(object sender, EventArgs args)
-        {
-            
-           Shopping_List.RefreshView();
-            await Navigation.PopAsync();
-            
-        }
     }
 }

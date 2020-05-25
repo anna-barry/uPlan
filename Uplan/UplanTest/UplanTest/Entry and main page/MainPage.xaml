@@ -5,15 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Uplan"
-             
-             
+                  
              MasterBehavior="SplitOnLandscape"
              x:Class="UplanTest.MainPage">
     
 
     <MasterDetailPage.Master>
         
-        <ContentPage Padding="10"  Title="Uplan" BackgroundImageSource="Assets/bleu.png">
+        <ContentPage Padding="10"  Title="Uplan" BackgroundColor="BlueViolet">
             <ContentPage.Resources>
                 <ResourceDictionary>
                     <Color x:Key="txtColor">Red</Color>

@@ -66,11 +66,6 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            
-            
-            
-            <ImageButton x:Name="Close" Source="Assets/croix.png" Clicked="OnCloseClicked2" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
-
             <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked2" Grid.Row="9" Grid.Column="4"/>
 
         </Grid>

@@ -23,18 +23,18 @@
 
             </Grid.RowDefinitions>
 
-            <Label Text="Add a new food" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="MediumVioletRed" Grid.ColumnSpan="4" FontSize="30"/>
-            <Label Text="Type of Food" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Button x:Name="Prot" Text="Protein" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnProtClicked"  BorderColor="SkyBlue" />
-            <Button x:Name="Carb" Text="Carbs" Grid.Row="2" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnCarbClicked"  BorderColor="SkyBlue"/>
-            <Button x:Name="Veg" Text="Vegetable" Grid.Row="2" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnVegClicked" BorderColor="SkyBlue" />
+            <Label Text="Add a new food" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="BlueViolet" Grid.ColumnSpan="4" FontSize="Header"/>
+            <Label Text="Type of Food" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
+            <Button x:Name="Prot" Text="Protein" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnProtClicked"  BorderColor="BlueViolet" />
+            <Button x:Name="Carb" Text="Carbs" Grid.Row="2" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnCarbClicked"  BorderColor="BlueViolet"/>
+            <Button x:Name="Veg" Text="Vegetable" Grid.Row="2" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="OnVegClicked" BorderColor="BlueViolet" />
 
-            <Label Text="Food Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="Violet" />
-            <Entry x:Name="desc" WidthRequest="200" Placeholder="Description" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="SkyBlue" />
+            <Label Text="Food Name" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Grid.ColumnSpan="2" TextColor="BlueViolet" />
+            <Entry x:Name="desc" WidthRequest="200" Placeholder="Description" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" PlaceholderColor="BlueViolet" />
 
-            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60" />
+            <ImageButton Source="Assets/croix.png" Clicked="OnCloseClicked" Grid.Row="0" Grid.Column="5" HeightRequest="90" WidthRequest="60"/>
 
-            <ImageButton Source="Assets/save).png" Clicked="OnSaveClicked" Grid.Row="9" Grid.Column="3"/>
+            <ImageButton Source="Assets/save.png" Clicked="OnSaveClicked" Grid.Row="9" Grid.Column="3"/>
             <!-- Grid.RowSpan="2" Grid.ColumnSpan="2"-->
 
 

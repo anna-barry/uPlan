@@ -79,6 +79,11 @@ namespace UplanTest
 
             Task_consuming.SelectedIndex = timeconsuminglevel.CurrentIndex;
 
+            if (Device.RuntimePlatform != "UWP")
+            {
+                Close.IsVisible = false;
+            }
+
 
         }
 
