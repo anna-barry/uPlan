@@ -19,12 +19,12 @@ namespace UplanTest
             InitializeComponent();
             Database.Initiate();
 
-            
-           /* Default.Source = Device.RuntimePlatform == Device.Android
-                ? ImageSource.FromFile("Resources/default.png")
-                : ImageSource.FromFile("Resources/default.png");
 
-            Default.Source= Device.RuntimePlatform == Device.UWP
+            
+               // ? ImageSource.FromFile("Resources/default.png")
+                //: ImageSource.FromFile("Resources/default.png");
+
+          /*  DefauDevice.RuntimePlatform == Device.UWP
                 ? ImageSource.FromFile("Assets/default.png")
                 : ImageSource.FromFile("Assets/default.png");*/
         }
@@ -32,6 +32,7 @@ namespace UplanTest
         {
             started = true;
            // Database.Initiate();
+           
             Navigation.PushAsync(new MainPage());
         }
         private void NewCliked(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace UplanTest
            // started = true;
            
             Navigation.PushAsync(new AccountPage());
+            
         }
 
     }
