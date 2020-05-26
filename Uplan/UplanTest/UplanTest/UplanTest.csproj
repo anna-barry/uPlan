@@ -12,10 +12,22 @@
 
   <ItemGroup>
     <None Remove="relax2.mp3" />
+    <None Remove="relax3.mp3" />
+    <None Remove="relax4.mp3" />
+    <None Remove="rock1.mp3" />
+    <None Remove="rock2.mp3" />
+    <None Remove="rock3.mp3" />
+    <None Remove="rock4.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="relax2.mp3" />
+    <Content Include="relax3.mp3" />
+    <Content Include="relax4.mp3" />
+    <Content Include="rock1.mp3" />
+    <Content Include="rock2.mp3" />
+    <Content Include="rock3.mp3" />
+    <Content Include="rock4.mp3" />
   </ItemGroup>
 
   <ItemGroup>

@@ -33,8 +33,8 @@
             <StackLayout  x:Name="Stack3"  Grid.Row="4" Grid.Column="1"  BackgroundColor="#B907B9" Padding="20">
                 <Label Text="Relax3" HeightRequest="30"  VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
-                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay3"/>
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked="ToPause3" />
                   
 
                 </StackLayout>
@@ -43,8 +43,8 @@
             <StackLayout  x:Name="Stack4" Grid.Row="5" Grid.Column="1" BackgroundColor="#E10CE1" Padding="20">
                 <Label Text="Relax4" HeightRequest="30" HorizontalTextAlignment="Center"  VerticalTextAlignment="End"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" />
-                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/playfi.png"  HeightRequest="30" Clicked="ToPlay4"/>
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked="ToPause4"/>
                
 
                 </StackLayout>
@@ -53,8 +53,8 @@
             <StackLayout x:Name="Stack5" BackgroundColor="#056899" Padding="20">
                 <Label Text="Rock1" HeightRequest="30" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
-                    <ImageButton Source="Assets/playfi.png" HeightRequest="30" />
-                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" />
+                    <ImageButton Source="Assets/playfi.png" HeightRequest="30" Clicked="ToPlay5" />
+                    <ImageButton Source="Assets/pause.png"  HeightRequest="30" Clicked="ToPause5" />
 
                 </StackLayout>
             </StackLayout>

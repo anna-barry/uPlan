@@ -563,7 +563,13 @@ namespace UplanTest
             musik.p2.Pause();
             musik.p3.Pause();
             musik.p4.Pause();
-            musik.p1.Load("relax2.mp3");
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
+
+
+            musik.p1.Load("rock3.mp3");
             musik.p1.Play();
         }
         void ToPause1(System.Object sender, System.EventArgs e)
@@ -574,10 +580,14 @@ namespace UplanTest
         void ToPlay2(System.Object sender, System.EventArgs e)
         {
             musik.p1.Pause();
-            musik.p3.Pause(); //Coupe les autres
+            musik.p3.Pause();
             musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
 
-            musik.p2.Load("relax3.mp3");
+            musik.p2.Load("relax2.mp3");
             musik.p2.Play();
         }
         void ToPause2(System.Object sender, System.EventArgs e)
@@ -588,60 +598,109 @@ namespace UplanTest
         {
             musik.p1.Pause();
             musik.p2.Pause();
-            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
 
-
-            musik.p3.Load("relax4.mp3");
+            musik.p3.Load("relax3.mp3");
+            musik.p3.Play();
        
         }
         void ToPause3(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+
+            musik.p3.Pause();
         }
+          
         void ToPlay4(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Load("relax3.mp3");
-            musik.p2.Play();
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
+
+
+            musik.p4.Load("relax4.mp3");
+            musik.p4.Play();
+
         }
         void ToPause4(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+            musik.p4.Pause();
         }
         void ToPlay5(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Load("relax3.mp3");
-            musik.p2.Play();
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
+            musik.p5.Load("rock1.mp3");
+            musik.p5.Play();
         }
         void ToPause5(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+            musik.p5.Pause();
         }
         void ToPlay6(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Load("relax3.mp3");
-            musik.p2.Play();
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p7.Pause();
+            musik.p8.Pause();
+
+
+            musik.p6.Load("rock2.mp3");
+            musik.p6.Play();
         }
         void ToPause6(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+            musik.p6.Pause();
         }
         void ToPlay7(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Load("relax3.mp3");
-            musik.p2.Play();
+
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p8.Pause();
+
+            musik.p7.Load("rock3.mp3");
+            musik.p7.Play();
         }
         void ToPause7(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+            musik.p7.Pause();
         }
         void ToPlay8(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Load("relax3.mp3");
-            musik.p2.Play();
+            musik.p1.Pause();
+            musik.p2.Pause();
+            musik.p3.Pause();
+            musik.p4.Pause();
+            musik.p5.Pause();
+            musik.p6.Pause();
+            musik.p7.Pause();
+            musik.p8.Load("rock4.mp3");
+            musik.p8.Play();
         }
         void ToPause8(System.Object sender, System.EventArgs e)
         {
-            musik.p2.Pause();
+            musik.p8.Pause();
         }
 
 
