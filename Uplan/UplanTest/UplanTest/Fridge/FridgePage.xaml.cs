@@ -82,7 +82,7 @@ namespace UplanTest
 
            
             addperemp.Text = "Peremption date:";
-            addperemp.TextColor = Color.White;
+            addperemp.TextColor = Color.Black;
             addperemp.VerticalTextAlignment = TextAlignment.End;
             addperemp.HorizontalTextAlignment = TextAlignment.Center; 
 
