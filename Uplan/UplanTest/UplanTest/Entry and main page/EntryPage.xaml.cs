@@ -33,7 +33,7 @@ namespace UplanTest
             started = true;
            // Database.Initiate();
            
-            Navigation.PushAsync(new MainPage());
+             Navigation.PushAsync(new MainPage());
         }
         private void NewCliked(object sender, EventArgs e)
         {

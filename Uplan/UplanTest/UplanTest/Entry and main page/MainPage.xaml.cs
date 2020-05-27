@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace UplanTest
 {
@@ -14,9 +16,32 @@ namespace UplanTest
         public MainPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+
+            if (Device.RuntimePlatform != "UWP")
+            {
+                i1.BackgroundColor = Color.BlueViolet;
+                i2.BackgroundColor = Color.BlueViolet;
+                i3.BackgroundColor = Color.BlueViolet;
+                i4.BackgroundColor = Color.BlueViolet;
+                i5.BackgroundColor = Color.BlueViolet;
+                i6.BackgroundColor = Color.BlueViolet;
+                i7.BackgroundColor = Color.BlueViolet;
+                i8.BackgroundColor = Color.BlueViolet;
+
+                WB.FontSize = 18;
+
+                /*i1.On<Android>()
+                    .SetIsShadowEnabled(false);*/
+            }
+
+
             
         }
+       
+
+	
+
+
 
         private void Button_Clicked1(object sender, EventArgs e)
         {
