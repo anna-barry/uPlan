@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using LiteDB;
 using Xamarin.Forms;
-
+using System.Runtime;
+using System.Runtime.InteropServices;
 using Xamarin.Forms.Xaml;
 
 namespace UplanTest
@@ -15,7 +17,10 @@ namespace UplanTest
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FridgePage : ContentPage
     {
-        Label Notif_Bas = new Label(); 
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
+        Label Notif_Bas = new Label();
         Entry EntréeCodeBarre = new Entry();
         Label SortieApi = new Label();
         Button valider = new Button();
@@ -27,13 +32,13 @@ namespace UplanTest
 
         public FridgePage()
         {
-      
+
 
             ApiHelper.InitializeClient();
-             
 
 
-           
+
+
             ScrollView scrollView = new ScrollView { Orientation = ScrollOrientation.Vertical };
             scrollView.Content = grid;
             Content = scrollView;
@@ -42,7 +47,7 @@ namespace UplanTest
             int longu = col.Count();
 
 
-             
+
 
 
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(10) });
@@ -72,23 +77,26 @@ namespace UplanTest
 
 
 
-            
-            TextFridge.HorizontalTextAlignment = TextAlignment.Center;
-            
 
-            var AddProduct = new Label { Text = "Add a product", TextColor = Color.White,  HorizontalTextAlignment = TextAlignment.Center,FontAttributes =  FontAttributes.Bold, FontSize = 30};
+            TextFridge.HorizontalTextAlignment = TextAlignment.Center;
+
+
+            var AddProduct = new Label { Text = "Add a product", TextColor = Color.White, HorizontalTextAlignment = TextAlignment.Center, FontAttributes = FontAttributes.Bold, FontSize = 30 };
             grid.Children.Add(AddProduct, 2, 0);
 
 
-           
-            addperemp.Text = "Peremption date:";
-            addperemp.VerticalTextAlignment = TextAlignment.End;
-            addperemp.HorizontalTextAlignment = TextAlignment.Center; 
 
-            EntréeCodeBarre.TextColor = Color.White; 
+            addperemp.Text = "Peremption date:";
+
+            addperemp.TextColor = Color.Black;
+
+            addperemp.VerticalTextAlignment = TextAlignment.End;
+            addperemp.HorizontalTextAlignment = TextAlignment.Center;
+
+            EntréeCodeBarre.TextColor = Color.White;
             EntréeCodeBarre.BackgroundColor = Color.BlueViolet;
-            EntréeCodeBarre.Placeholder = "Enter a barcode";
-            EntréeCodeBarre.HorizontalTextAlignment = TextAlignment.Center; 
+            EntréeCodeBarre.Placeholder = "Enter a barrcode";
+            EntréeCodeBarre.HorizontalTextAlignment = TextAlignment.Center;
 
             valider.Clicked += new EventHandler(this.Sauvegarder_Clicked);
             valider.Text = "Save";
@@ -101,15 +109,14 @@ namespace UplanTest
             SiPasCodeBarre.TextColor = Color.White;
             SiPasCodeBarre.HorizontalTextAlignment = TextAlignment.Center;
 
-            
 
-            SortieApi.TextColor = Color.White;
+
             SortieApi.FontSize = 15;
             SortieApi.HorizontalTextAlignment = TextAlignment.Center;
 
-            create(); 
+            create();
 
-            
+
 
 
 
@@ -126,13 +133,13 @@ namespace UplanTest
             grid.Children.Add(valider, 2, 8);
             grid.Children.Add(SortieApi, 2, 10);
             grid.Children.Add(Notif_Bas, 1, longu + 12);
-           
+
 
             Grid.SetRowSpan(EntréeCodeBarre, 2);
             Grid.SetRowSpan(peremption, 2);
             Grid.SetRowSpan(valider, 2);
             Grid.SetColumnSpan(Notif_Bas, 2);
-            Grid.SetRowSpan(SiPasCodeBarre, 2); 
+            Grid.SetRowSpan(SiPasCodeBarre, 2);
 
 
             ImageButton Close = new ImageButton();
@@ -141,57 +148,57 @@ namespace UplanTest
             Close.Clicked += (sender, e) => OnCloseClicked2();
             grid.Children.Add(Close, 3, 0);
 
-            
+
 
 
             grid.BackgroundColor = Color.White;
 
-            create(); 
+            create();
 
         }
-       
+
         public void create()
         {
 
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
-            int longu = col.Count(); 
+            int longu = col.Count();
             int k = 1;
-            var Fridge = new Frame { BorderColor = Color.BlueViolet };
-        
+            var Fridge = new Frame { BorderColor = Color.FromHex("685C69") };
+
             grid.Children.Add(Fridge, 1, 1);
-            if(longu == 0)
+            if (longu == 0)
             {
-                Grid.SetRowSpan(Fridge, 1); 
+                Grid.SetRowSpan(Fridge, 1);
             }
             else
             {
-                Grid.SetRowSpan(Fridge, longu );
+                Grid.SetRowSpan(Fridge, longu);
             }
-            
-            Notif_Bas.Text = ""; 
+
+            Notif_Bas.Text = "";
             foreach (var item in col.FindAll())
             {
                 if (DateTime.Now.Date <= item.Peremption.Date)
                 {
                     if (DateTime.Now.Date == item.Peremption.Date)
                     {
-                        Notif_Bas.Text += $"IMPORTANT: the food item that is {item.Name} reaches its expiration date today \n";
+                        Notif_Bas.Text += $"IMPORTANT: the product {item.Name} is good until today! \n";
                     }
                     if (DateTime.Now.Date.AddDays(+2) == item.Peremption.Date)
                     {
-                        Notif_Bas.Text += $"IMPORTANT: the food item that is {item.Name} reaches its expiration in two days time \n";
+                        Notif_Bas.Text += $"IMPORTANT: the product {item.Name} needs to be eaten before two days time!\n";
                     }
 
-                    
+
 
                     StackLayout stack = new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
                         Spacing = 0,
-                        
-                        
+
+
                     };
-                     
+
 
                     Button btn = new Button();
                     grid.Children.Add(stack, 1, k);
@@ -200,28 +207,28 @@ namespace UplanTest
                     btn.Clicked += new EventHandler(this.button_click);
                     btn.BackgroundColor = Color.BlueViolet;
                     btn.BorderColor = Color.FromHex("685C69");
-                    btn.BorderWidth = 3; 
+                    btn.BorderWidth = 3;
                     btn.TextColor = Color.White;
-                   
+
 
                     ImageButton delete = new ImageButton
                     {
                         Source = "Assets/trash.png",
                         BorderColor = Color.White,
-                        WidthRequest = 50, 
-                        Margin = new Thickness(0, 1, 2, 0), 
-                        CornerRadius = 5, 
-                        
-                    };
-                    delete.ClassId =Convert.ToString( item.Id);
+                        WidthRequest = 50,
+                        Margin = new Thickness(0, 1, 2, 0),
+                        CornerRadius = 5,
 
-                    delete.Clicked += new EventHandler(this.Delete_Clicked); 
-                    
+                    };
+                    delete.ClassId = Convert.ToString(item.Id);
+
+                    delete.Clicked += new EventHandler(this.Delete_Clicked);
+
                     stack.Children.Add(delete);
 
                     btn.HorizontalOptions = LayoutOptions.FillAndExpand;
 
-                   
+
                 }
 
                 else
@@ -238,9 +245,9 @@ namespace UplanTest
         {
             var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
             ImageButton delete = sender as ImageButton;
-            int id = Convert.ToInt32 (delete.ClassId); 
+            int id = Convert.ToInt32(delete.ClassId);
             col.Delete(id);
-            Navigation.PushAsync(new FridgePage()); 
+            Navigation.PushAsync(new FridgePage());
         }
 
         void button_click(System.Object sender, System.EventArgs e)
@@ -255,45 +262,56 @@ namespace UplanTest
         }
         async private void Sauvegarder_Clicked(System.Object sender, System.EventArgs e)
         {
-            var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
-            if (EntréeCodeBarre.Text == null|| EntréeCodeBarre.Text == "")
+            int Desc;
+            if (!InternetGetConnectedState(out Desc, 0))
             {
-                if(SiPasCodeBarre.Text != null)
-                {
-                    FrigoBaseDeDonnée.InsertProduct(null, SiPasCodeBarre.Text, -1, -1, -1, null, null, null,-1,null , peremption.Date, null, null);
-                 
-                    create(); 
-                }
+                SortieApi.Text = "You are not connected to the Internet";
             }
             else
             {
-                var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
-                if (nutriInfo == null)
+                var col = Database.db.GetCollection<FrigoBaseDeDonnée>("FrigoBaseDeDonnée");
+                if (EntréeCodeBarre.Text == null || EntréeCodeBarre.Text == "")
                 {
-                    SortieApi.Text = "Invalid Barcode";
+                    if (SiPasCodeBarre.Text != null)
+                    {
+                        FrigoBaseDeDonnée.InsertProduct(null, SiPasCodeBarre.Text, -1, -1, -1, null, null, null, -1, null, peremption.Date, null, null);
+
+                        create();
+                    }
                 }
                 else
                 {
-                   
-                    if (nutriInfo.Ingredients_text != null)
+                    var nutriInfo = await InfoResponseApi.LoadInfo((EntréeCodeBarre.Text));
+                    if (nutriInfo == null)
                     {
-                        FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g, nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text, peremption.Date, nutriInfo.Nutrition_grades, nutriInfo.Quantity);
-                        SortieApi.Text = "The product has been added with success to your pantry";
-                        
-                        create(); 
+                        SortieApi.Text = "Invalid Barcode";
+                    }
+                    else
+                    {
+
+                        if (nutriInfo.Ingredients_text != null)
+                        {
+                            FrigoBaseDeDonnée.InsertProduct(EntréeCodeBarre.Text, nutriInfo.Product_name_fr, nutriInfo.Nutriments.Sugars_100g, nutriInfo.Nutriments.Salt_100g, nutriInfo.Nutriments.Fat_100g, nutriInfo.Nutrient_levels.Salt, nutriInfo.Nutrient_levels.Sugars, nutriInfo.Nutrient_levels.Fat, nutriInfo.Nutriments.Proteins_100g, nutriInfo.Ingredients_text, peremption.Date, nutriInfo.Nutrition_grades, nutriInfo.Quantity);
+                            SortieApi.Text = "The product has been added with succes to your pantry";
+
+                            create();
+
+
+                        }
+
+                        else
+                            SortieApi.Text = "Invalid Barcode";
 
 
                     }
-
-                    else
-                        SortieApi.Text = "Invalid Barcode";
-
-
                 }
             }
-            
+
+
 
         }
+
+
 
         private async void OnCloseClicked2()
         {

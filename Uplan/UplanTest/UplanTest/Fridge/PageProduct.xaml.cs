@@ -64,8 +64,17 @@ namespace UplanTest
             Titre.HorizontalTextAlignment = TextAlignment.Center;
             Titre.FontSize = 25;
 
-            
-           // Grid.SetColumnSpan(stackTop, 2); 
+
+            // Grid.SetColumnSpan(stackTop, 2); 
+            ImageButton Close = new ImageButton();
+            Close.Source = "Assets/croix.png";
+            Close.HeightRequest = 50;
+            Close.Scale = 0.5;
+            Close.VerticalOptions = LayoutOptions.Start;
+            Close.Clicked += (sender, e) => {
+                Navigation.PopAsync();
+            };
+            stackTop.Children.Add(Close);
 
             stackTop.Children.Add(Titre);
             grid.Children.Add(stackTop, 0, 0);
